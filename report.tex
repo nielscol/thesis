@@ -1,0 +1,185 @@
+\input{setup}
+
+\pagestyle{fancy}
+% \renewcommand{\sectionmark}[1]{\markboth{ #1}{}}
+% \renewcommand{\subsectionmark}[1]{\markboth{\thesection\ #1}{\thesubsection\ #1}}
+\fancyhf{}
+% \rhead{\fontfamily{\sfdefault}\selectfont \textbf{\rightmark}}
+% \lhead{\fontfamily{\sfdefault}\selectfont \textbf{Thesis}}
+% \rfoot{\fontfamily{\sfdefault}\selectfont \textbf{Page \thepage}}
+% \lfoot{\fontfamily{\sfdefault}\selectfont \textbf{Cole Nielsen}} % \today
+\fancyhead[LE,RO]{\fontfamily{\sfdefault}\selectfont \textbf{\rightmark}}
+% \fancyhead[RE,LO]{Guides and tutorials}
+% \fancyfoot[CE,CO]{\rightmark}
+\fancyfoot[LE,RO]{\fontfamily{\sfdefault}\selectfont \textbf{Page \thepage}}
+\title{\textbf{}}
+\date{}
+
+\sloppy\RaggedRight\raggedbottom
+\begin{document}	
+	\input{cover}
+	\pagebreak
+	\thispagestyle{blank}
+	\null\pagebreak
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Abstract
+	\justify
+	\setcounter{page}{1}
+	% \pagebreak
+	\thispagestyle{nohdr}
+	\large\fontfamily{\sfdefault}\selectfont \		
+	\begin{abstract} \large\fontfamily{\rmdefault}\selectfont \
+		
+		\vspace{-2em}An integer-N all digital phase locked loop (ADPLL) frequency synthesizer implemented 22nm FD-SOI (22FDX) technology is presented in this paper, achieving a power consumption of \hl{X} $\mu$W at 2.448 GHz, a jitter FOM of \hl{X} dB, and an active area of \hl{X} mm$^2$. This design emphasizes power reducing architectural choices for application to low duty cyce wake up receivers (WURx), utiling low complexity, bias and reference free circuits. Included is a novel, pseudo-differential voltage controlled ring oscillator utilizing FD-SOI backgates to implement both frequency tuning and differential behavior. This oscillator achieves high oscillator tuning gain with rail-to-rail input range, whilst utilizing no current biasing. Capactive DACs are utilized to provide digital control to the oscillator with minimum power draw. A low complexity band-bang phase detector (BBPD) and all digital loop filter, with no divider in steady state implement the remaining portions of the PLL. Calibration of the PLL is implemented utilizing a synchronous counter-based frequency error detection scheme coupled with a coarse bank of tuning capacitors.
+	\end{abstract}
+	% \section*{Abstract}
+	% fjdsfkajjlkf
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Preface
+	\pagebreak
+	\thispagestyle{nohdr}
+	\null\pagebreak
+	\thispagestyle{nohdr}
+	\large\fontfamily{\sfdefault}\selectfont 
+	\Huge\textbf{Preface.}\\
+	\epigraph{Simplicity is the ultimate sophistication.}{\textit{Leonardo da Vinci}}
+	\large\fontfamily{\rmdefault}\selectfont 
+	\vspace{1em}
+	I would like to thank my advisors Trond Ytterdal and Carsten Wulff for providing me the oppourtunities to futher my knowledge and experience in the dark arts of circuit design.
+
+	\par I also thank my family for their continual open support of my life endeavors.
+
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Project Description
+	\pagebreak
+	\thispagestyle{nohdr}
+	\null\pagebreak
+	\thispagestyle{nohdr}
+	\large\fontfamily{\sfdefault}\selectfont 
+	\Huge\textbf{Problem description.}\\
+	% \vspace{1em}
+	\large\fontfamily{\rmdefault}\selectfont 
+	
+	The intent of this project is to develop an ultra low power, integer-N ADPLL frequency synthesizer for applications to wake up receiver (WURX) radio circuits. The target technology is Global Foundaries 22FDX fully-depeleted silicon on insulator (FD-SOI), a 22nm process node. The implemented PLL is intended for use in duty cycled wake up receiver WURX circuits applications, with on the order of 1\% active time. Thus, the design must feature low power consumption in inactive (sleep) states, and rapid wake-up/resume. The required specifications for this PLL design are given in table \ref{reqs}\\
+		\begin{table}[htb!]
+			\centering
+			\def\arraystretch{1.5}		
+			\setlength\arrayrulewidth{1pt}
+			\setlength{\tabcolsep}{1em} % for the horizontal padding
+			\fontfamily{\sfdefault}\selectfont 
+			\begin{tabular}{|l|r|l|}	
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Specification} & \cellcolor{gray!40}\textbf{Unit}\\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Power & $\leq$ 100 &  $\mu$W  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} CNR\tablefootnote{Carrier to noise ratio.} & $\geq$ 20 &  20 dBc  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Reference frequency\tablefootnote{Divided frequencies (powers of 2) are also acceptable.} &  32  &  MHz  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Synthesized frequency & 2.448 &  MHz  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Area & $\leq$ 0.01 &  mm$^2$  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Lock time (cold-start) & $\leq$ 20 & $\mu$s  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Re-lock time (sleep-resume) & $\leq$ 5 & $\mu$s  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} FOM$_{\Phi n}$\tablefootnote{ FOM$_{\Phi n} = 10\log_{10}\left(\frac{\sigma_{t_j}^2}{(\textnormal{1 s})^2}\cdot\frac{\textnormal{Power}}{\textnormal{1 mW}}\right)$, where $\sigma_{t_j}$ is the measured RMS timing jitter of the PLL.} & $\leq$ -230 & dB  \\ 
+				\hline 
+			\end{tabular} 
+			\caption{Design required specifications.}
+			\label{reqs}
+		\end{table} 
+	\large\fontfamily{\rmdefault}\selectfont 
+	\par This work is in part a continuation of the author's previous work \cite{Me} on the optimization and simulation of integer-N ADPLL, which focused on automation of loop filter design. The architectural proceeded with in this work are motivated through findings of this work, particularly the usage of bang-bang phase detector with proportional-integral (PI) controller based loop filter. This architecture was found to be advantageous in terms of complexity and optimizability, providing for a known good starting point on this project.
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% % Preface
+	% \pagebreak
+	% \thispagestyle{nohdr}
+	% \null\pagebreak
+	% \thispagestyle{nohdr}
+	% \large\fontfamily{\sfdefault}\selectfont 
+	% \Huge\textbf{Preface.}\\
+	% \vspace{1em}
+	% \large\fontfamily{\rmdefault}\selectfont 
+	% \lipsum[1]
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Contents, list of tables and figures
+	\fontfamily{\sfdefault}\selectfont 
+	\thispagestyle{nohdr}
+	\null\pagebreak
+	\thispagestyle{nohdr}
+	\null\pagebreak
+	\tableofcontents
+	\pagebreak
+	\listoffigures
+	\listoftables
+
+	% \vhrulefill{\lineheight}
+
+	\fontfamily{\rmdefault}\selectfont 
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Abbreviations
+	\pagebreak
+	\FloatBarrier
+	\input{abbrev.tex}
+	\FloatBarrier\pagebreak
+	\null
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	\pagebreak\FloatBarrier
+
+	\section{Introduction}\label{intro}
+	\input{intro.tex}
+	\pagebreak\FloatBarrier
+
+	\section{Theory}\label{theory}
+	\input{theory.tex}
+	% \input{theory2.tex}
+	% \section{Methods}\label{methods}
+	\FloatBarrier\newpage
+	\section{Design}\label{design}
+	\input{methods.tex}
+    % \section{Results}
+	
+	\FloatBarrier\pagebreak
+	\section{Results}\label{results}
+	\input{results.tex}
+
+	\FloatBarrier\pagebreak
+
+	\section{Discussion}\label{disco}
+    \input{disco.tex}
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+    \FloatBarrier
+
+    \pagebreak
+    \section{Conclusion} \label{conclusion}
+    In this work, an automatic framework for the design and optimization of all digital PLL loop filters has been introduced. The framework allows for input of target PLL specifications, for which a digital implementation-ready filter design will be generated having (a) minimized lock time or (b) minimized phase noise in terms of integrated power, subject to specified lock time constraints. The framework additionally performs post-optimization on the generated loop filter design to ensure performance including effects of quantization in the digital loop filter. A time domain PLL simulation engine is included within the framework to verify the performance of the designed filters for acceptable phase noise, lock time and stability. It was shown in this work that the designed and optimized filters correlate with the results found with the implemented simulator. Furthermore, the design of a fast-locking and phase noise-minimized PLL using loop filter gear-shifting was demonstrated and shown to correlate with simulation.
+
+    This work will be applied in a later thesis project undertaken by the author of this work concerning the design of an ultra-low power ADPLL, in order to assist and accelerate the design process. 
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% References
+    \pagebreak
+	\printbibliography
+
+
+	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+	% Appendix
+	\pagebreak
+	\input{appendix}
+	% \input{ring_osc_tuning}
+
+
+\end{document}

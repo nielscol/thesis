@@ -1,0 +1,285 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.20)  5 MAY 2020 12:36
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**cover.tex
+(/home/cole/Documents/pll/thesis_paper/cover.tex
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.3 	\thispagestyle{firstpage}
+                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.5 	\includegraphics
+                     [width=0.5\linewidth]{logo_ntnu_eng_black.png} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 	\includegraphics[
+                      width=0.5\linewidth]{logo_ntnu_eng_black.png} \\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.5 	\includegraphics[width=0.5\linewidth]
+                                          {logo_ntnu_eng_black.png} \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.5 	\includegraphics[width=0.5\linewidth]
+                                          {logo_ntnu_eng_black.png} \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.5 	\includegraphics[width=0.5\linewidth]{logo_
+                                                ntnu_eng_black.png} \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+! Extra }, or forgotten $.
+l.5 ...dth=0.5\linewidth]{logo_ntnu_eng_black.png}
+                                                   \\
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.7 	\huge
+           Ultra Low Power Frequency Synthesizer\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 	\huge
+           \textbf{Cole Nielsen}\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.11 	\large
+            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.14 	\FloatBarrier
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.15 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (164.00792pt too wide) in paragraph at lines 5--15
+[]\OT1/cmss/m/n/10 [width=0.5]logo$[]\OML/cmm/m/it/10 tnu[]ng[]lack:png[] 
+ []
+
+
+Overfull \hbox (176.12631pt too wide) in paragraph at lines 5--15
+\OML/cmm/m/it/10 UltraLowPowerFrequencySynthesizer[] 
+ []
+
+
+Overfull \hbox (56.9669pt too wide) in paragraph at lines 5--15
+[][] 
+ []
+
+
+Overfull \hbox (221.55214pt too wide) in paragraph at lines 5--15
+\OML/cmm/m/it/10 ElectronicSystemsDesign; SpecializationProject[] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 	\begin{tabular}
+                     {@{} l  l}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<recently read> \FloatBarrier 
+                              
+l.23 	\FloatBarrier
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (204.41698pt too wide) in paragraph at lines 18--27
+[][] 
+ []
+
+
+Overfull \hbox (18.55562pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Nor-
+ []
+
+
+Overfull \hbox (14.33334pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 we-
+ []
+
+
+Overfull \hbox (17.36115pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 gian
+ []
+
+
+Overfull \hbox (17.76393pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Uni-
+ []
+
+
+Overfull \hbox (15.80559pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 ver-
+ []
+
+
+Overfull \hbox (14.16667pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 sity
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (15.72223pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Sci-
+ []
+
+
+Overfull \hbox (18.5pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 ence
+ []
+
+
+Overfull \hbox (15.13892pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 and
+ []
+
+
+Overfull \hbox (23.36111pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Tech-
+ []
+
+
+Overfull \hbox (15.8889pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 nol-
+ []
+
+
+Overfull \hbox (14.61116pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 ogy 
+ []
+
+
+Overfull \hbox (49.55565pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Department
+ []
+
+
+Overfull \hbox (8.05559pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 of
+ []
+
+
+Overfull \hbox (20.58333pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Elec-
+ []
+
+
+Overfull \hbox (24.02782pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 tronic
+ []
+
+
+Overfull \hbox (17.33336pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 Sys-
+ []
+
+
+Overfull \hbox (19.83334pt too wide) in paragraph at lines 18--27
+\OT1/cmss/m/n/10 tems 
+ []
+
+)
+! Emergency stop.
+<*> cover.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 15 strings out of 492982
+ 377 string characters out of 6134896
+ 54913 words of memory out of 5000000
+ 3678 multiletter control sequences out of 15000+600000
+ 4239 words of font info for 16 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,6n,12p,94b,102s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

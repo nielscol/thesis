@@ -1,0 +1,11 @@
+PWD /home/cole/Documents/pll/report
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/cole/Documents/pll/report/ring_osc_tuning.tex
+OUTPUT /home/cole/Documents/pll/report/ring_osc_tuning.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT /home/cole/Documents/pll/report/ring_osc_tuning.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

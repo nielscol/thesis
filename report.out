@@ -1,0 +1,103 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Main Contributions}{section.1}% 2
+\BOOKMARK [1][-]{section.2}{Theory}{}% 3
+\BOOKMARK [2][-]{subsection.2.1}{Fully Depleted Silicon on Insulator \(FD-SOI\)}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{MOSFET Models}{section.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.1}{I-V relations}{subsection.2.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Body Effect}{subsection.2.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Basic PLL}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{PLL Synthesizer Architecture}{section.2}% 9
+\BOOKMARK [3][-]{subsubsection.2.4.1}{Phase Detector}{subsection.2.4}% 10
+\BOOKMARK [3][-]{subsubsection.2.4.2}{Bang-bang phase detector}{subsection.2.4}% 11
+\BOOKMARK [3][-]{subsubsection.2.4.3}{BBPD Noise}{subsection.2.4}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.4}{Divider}{subsection.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.5}{Loop Filter}{subsection.2.4}% 14
+\BOOKMARK [3][-]{subsubsection.2.4.6}{Loop Filter Discretization and Digitization}{subsection.2.4}% 15
+\BOOKMARK [3][-]{subsubsection.2.4.7}{Voltage/Digitally Controlled Oscillator}{subsection.2.4}% 16
+\BOOKMARK [3][-]{subsubsection.2.4.8}{Closed Loop PLL Transfer Function}{subsection.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.5}{Phase noise}{section.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.5.1}{Relation to Power spectral density}{subsection.2.5}% 19
+\BOOKMARK [3][-]{subsubsection.2.5.2}{Leeson's model}{subsection.2.5}% 20
+\BOOKMARK [3][-]{subsubsection.2.5.3}{Phase Noise Figures of Merit}{subsection.2.5}% 21
+\BOOKMARK [3][-]{subsubsection.2.5.4}{Ring Oscillator Phase Noise}{subsection.2.5}% 22
+\BOOKMARK [2][-]{subsection.2.6}{PLL Phase Noise}{section.2}% 23
+\BOOKMARK [3][-]{subsubsection.2.6.1}{PLL Noise Transfer Functions}{subsection.2.6}% 24
+\BOOKMARK [3][-]{subsubsection.2.6.2}{PLL Output-referred Noise}{subsection.2.6}% 25
+\BOOKMARK [1][-]{section.3}{Design}{}% 26
+\BOOKMARK [2][-]{subsection.3.1}{Proposed Architecture - ADPLL}{section.3}% 27
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Power budget}{subsection.3.1}% 28
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Floorplan}{subsection.3.1}% 29
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Dividerless PLL}{subsection.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.2}{Bang-Bang Phase Detector}{section.3}% 31
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Circuit}{subsection.3.2}% 32
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Layout}{subsection.3.2}% 33
+\BOOKMARK [2][-]{subsection.3.3}{Loop Filter}{section.3}% 34
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Proportional-integral Loop Filter}{subsection.3.3}% 35
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Optimal Filter Selection}{subsection.3.3}% 36
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Settling Time}{subsection.3.3}% 37
+\BOOKMARK [3][-]{subsubsection.3.3.4}{Filter Design for Synchronous counter}{subsection.3.3}% 38
+\BOOKMARK [3][-]{subsubsection.3.3.5}{PI-controller phase margin}{subsection.3.3}% 39
+\BOOKMARK [3][-]{subsubsection.3.3.6}{Discretization of Loop Filter}{subsection.3.3}% 40
+\BOOKMARK [3][-]{subsubsection.3.3.7}{Implementation}{subsection.3.3}% 41
+\BOOKMARK [3][-]{subsubsection.3.3.8}{Loop Filter Quantization Noise Optimization}{subsection.3.3}% 42
+\BOOKMARK [3][-]{subsubsection.3.3.9}{Loop Filter Transfer Function Error Optimization}{subsection.3.3}% 43
+\BOOKMARK [3][-]{subsubsection.3.3.10}{Approach 2: Results of Transient and Phase Noise Simulation}{subsection.3.3}% 44
+\BOOKMARK [3][-]{subsubsection.3.3.11}{Approach 2: Results of Parameter Sweep and Variational Analysis}{subsection.3.3}% 45
+\BOOKMARK [3][-]{subsubsection.3.3.12}{Cyclostationary nonsense}{subsection.3.3}% 46
+\BOOKMARK [3][-]{subsubsection.3.3.13}{Filter Design}{subsection.3.3}% 47
+\BOOKMARK [2][-]{subsection.3.4}{Ring oscillator}{section.3}% 48
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Channel length consideration}{subsection.3.4}% 49
+\BOOKMARK [3][-]{subsubsection.3.4.2}{22FDX considerations}{subsection.3.4}% 50
+\BOOKMARK [3][-]{subsubsection.3.4.3}{Ring oscillator frequency derivation}{subsection.3.4}% 51
+\BOOKMARK [3][-]{subsubsection.3.4.4}{Finding "426830A gch"526930B \040and C}{subsection.3.4}% 52
+\BOOKMARK [3][-]{subsubsection.3.4.5}{Handling unequal NMOS/PMOS}{subsection.3.4}% 53
+\BOOKMARK [3][-]{subsubsection.3.4.6}{Solving for oscillator frequency and power}{subsection.3.4}% 54
+\BOOKMARK [3][-]{subsubsection.3.4.7}{Ring oscillator backgate tuning derivation}{subsection.3.4}% 55
+\BOOKMARK [3][-]{subsubsection.3.4.8}{DCO Gain Uncertainty}{subsection.3.4}% 56
+\BOOKMARK [3][-]{subsubsection.3.4.9}{DCO Sensitivity}{subsection.3.4}% 57
+\BOOKMARK [3][-]{subsubsection.3.4.10}{temp}{subsection.3.4}% 58
+\BOOKMARK [3][-]{subsubsection.3.4.11}{Delay cell}{subsection.3.4}% 59
+\BOOKMARK [2][-]{subsection.3.5}{Full circuit}{section.3}% 60
+\BOOKMARK [3][-]{subsubsection.3.5.1}{Layout}{subsection.3.5}% 61
+\BOOKMARK [2][-]{subsection.3.6}{CDAC}{section.3}% 62
+\BOOKMARK [3][-]{subsubsection.3.6.1}{Circuit}{subsection.3.6}% 63
+\BOOKMARK [3][-]{subsubsection.3.6.2}{Layout}{subsection.3.6}% 64
+\BOOKMARK [2][-]{subsection.3.7}{Logic}{section.3}% 65
+\BOOKMARK [3][-]{subsubsection.3.7.1}{Circuit}{subsection.3.7}% 66
+\BOOKMARK [3][-]{subsubsection.3.7.2}{Layout}{subsection.3.7}% 67
+\BOOKMARK [2][-]{subsection.3.8}{Output buffer}{section.3}% 68
+\BOOKMARK [3][-]{subsubsection.3.8.1}{Circuit}{subsection.3.8}% 69
+\BOOKMARK [3][-]{subsubsection.3.8.2}{Layout}{subsection.3.8}% 70
+\BOOKMARK [2][-]{subsection.3.9}{Synchronous Counter}{section.3}% 71
+\BOOKMARK [3][-]{subsubsection.3.9.1}{Circuit}{subsection.3.9}% 72
+\BOOKMARK [3][-]{subsubsection.3.9.2}{Layout}{subsection.3.9}% 73
+\BOOKMARK [1][-]{section.4}{Results}{}% 74
+\BOOKMARK [2][-]{subsection.4.1}{Power breakdown}{section.4}% 75
+\BOOKMARK [2][-]{subsection.4.2}{Ring oscillator}{section.4}% 76
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Phase Noise}{subsection.4.2}% 77
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Tuning}{subsection.4.2}% 78
+\BOOKMARK [3][-]{subsubsection.4.2.3}{Waveforms}{subsection.4.2}% 79
+\BOOKMARK [2][-]{subsection.4.3}{10b CDAC}{section.4}% 80
+\BOOKMARK [2][-]{subsection.4.4}{3b CDAC}{section.4}% 81
+\BOOKMARK [2][-]{subsection.4.5}{Bang-bang phase detector}{section.4}% 82
+\BOOKMARK [2][-]{subsection.4.6}{Logic}{section.4}% 83
+\BOOKMARK [2][-]{subsection.4.7}{Synchronous counter}{section.4}% 84
+\BOOKMARK [1][-]{section.5}{Discussion}{}% 85
+\BOOKMARK [2][-]{subsection.5.1}{State of art}{section.5}% 86
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Results Comparison of Design Approaches}{subsection.5.1}% 87
+\BOOKMARK [2][-]{subsection.5.2}{Areas of Improvement}{section.5}% 88
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 89
+\BOOKMARK [1][-]{appendix.A}{Layout}{}% 90
+\BOOKMARK [2][-]{subsection.A.1}{Ring Oscillator}{appendix.A}% 91
+\BOOKMARK [3][-]{subsubsection.A.1.1}{Full oscillator layout}{subsection.A.1}% 92
+\BOOKMARK [3][-]{subsubsection.A.1.2}{Pseudodifferential inverter delay cell}{subsection.A.1}% 93
+\BOOKMARK [3][-]{subsubsection.A.1.3}{Capaitor tuning bank}{subsection.A.1}% 94
+\BOOKMARK [2][-]{subsection.A.2}{10b CDAC}{appendix.A}% 95
+\BOOKMARK [3][-]{subsubsection.A.2.1}{Full CDAC Layout}{subsection.A.2}% 96
+\BOOKMARK [3][-]{subsubsection.A.2.2}{64 unit capacitor sub-bank}{subsection.A.2}% 97
+\BOOKMARK [2][-]{subsection.A.3}{CDAC unit switch}{appendix.A}% 98
+\BOOKMARK [2][-]{subsection.A.4}{3b CDAC}{appendix.A}% 99
+\BOOKMARK [2][-]{subsection.A.5}{Buffer}{appendix.A}% 100
+\BOOKMARK [2][-]{subsection.A.6}{BBPD}{appendix.A}% 101
+\BOOKMARK [2][-]{subsection.A.7}{SPNR Logic}{appendix.A}% 102
+\BOOKMARK [1][-]{appendix.B}{Estimating PSD with Autoregressive Model}{}% 103
