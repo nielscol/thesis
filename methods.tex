@@ -7,16 +7,20 @@
 The primary objective in this work is to obtain a very low $100\mu$W power consumption for a 2.448 GHz PLL frequency synthesizer, while achieving a carrier-to-noise ratio for the synthesized signal of $>$20 dB. Consequently, the design philosophy adhered to in this work is pursue simplicity wherever possible, in order to reduce number of sources of power draw and noise. Furthermore, this design is targeted to allow duty cycled operation to further reduce power. Thus, an all-digital architecture has been selected to enable the possibility to save the PLL state, enter an ultra-low-power sleep state, and then resume from the stored state rapidly, without requiring relocking of the PLL. 
 
 \subsection{Proposed Architecture - ADPLL}\label{pll_arch}
+	The undertaken PLL architecture is in figure \ref{fig:pll_arch}. It comprises primarily of five components: (1) counter-based phase detector for initial start up, (2) bang-bang phase detector for steady state feedback, (3) proportional-integral controller loop filter, (4) DCO implemented as a VCO plus capacitive DACs, and (5) a control and calibration engine, consisting of digital logic. The rationale for this architecture will be described in the following subsections.
+	\subsubsection{Block diagram}
 			\begin{figure}[htb!]
 		        \centering
 		        \includegraphics[width=1\textwidth, angle=0]{./figs/design/pll_master_arch_final}
 			    \caption{ADPLL Architecture.}
 			    \label{fig:pll_arch}
 			\end{figure}
-	The undertaken PLL architecture is in figure \ref{fig:pll_arch}. It comprises primarily of five components: (1) counter-based phase detector for initial start up, (2) bang-bang phase detector for steady state feedback, (3) proportional-integral controller loop filter, (4) DCO implemented as a VCO plus capacitive DACs, and (5) a control and calibration engine, consisting of digital logic. This design was achieved via minimization of complexity. First, the need of a divider is removed from the design by the usage of both the counter phase detector and BBPD. For initial cold start up of the PLL from an unknown state, the counter-based phase detector functions as a low-resolution replacement for a divider and linear phase detector. When near steady state, the counter-PD is disabled and replaced by BBPD feedback, which will maintain the PLL at steady state. The removal of a divider results in lower power consumption, and less noise added in-loop. The usage of only a BBPD in steady state further reduces power, as it is a minimum complexity phase detector. This is expected without significant performance degredation, as with proper optimization, BBPD PLLs can obtain comparable perform to linear charge-pump style PLLs \cite{xu_abidi_2017}. Additional power improvements are obtained in the usage of digital logic to implement the loop filter, using a simple PI-controller architecture. The final power saving move is implemented in a DCO based on the combination of several CDACs with a voltage controlled ring oscillator. This reduces to near zero the static curent draw associated with control of the VCO. The overall design is implemented with no static current paths, other than that associated with leakage, achieved by favoring static logic derived components throughout the PLL.
 
+	\subsubsection{Power Saving Approach}
+	Power savings have been attempted by minimization of complexity. First, the need of a divider is removed from the design by the usage of both the counter phase detector and BBPD. For initial cold start up of the PLL from an unknown state, the counter-based phase detector functions as a low-resolution replacement for a divider and linear phase detector. When near steady state, the counter-PD is disabled and replaced by BBPD feedback, which will maintain the PLL at steady state. The removal of a divider results in lower power consumption, and less noise added in-loop. The usage of only a BBPD in steady state further reduces power, as it is a minimum complexity phase detector. This is expected without significant performance degredation, as with proper optimization, BBPD PLLs can obtain comparable perform to linear charge-pump style PLLs \cite{xu_abidi_2017}. Additional power improvements are obtained in the usage of digital logic to implement the loop filter, using a simple PI-controller architecture. A divided power domain approach is used here, split between (1) 0.5V for loop filter, calibration and control logic, and (2) 0.8V for the analog portions, which constitute the DCO, in addition to the phase detectors. Multiple power domains allows for reduction of the digital logic power expenditure, while allowing for sufficient voltage for proper oscillator function. The final power saving move is implemented in a DCO based on the combination of several CDACs with a voltage controlled ring oscillator. This reduces to near zero the static curent draw associated with control of the VCO. The overall design is implemented with no static current paths, other than that associated with leakage, achieved by favoring static logic derived components throughout the PLL.
 
-	A further feature gained in the proposed all-digital architecture is the ability to abruptly save the state of the PLL digitally and place it into an ultra low power sleep mode, and then later resume the PLL from the saved state. Figure \ref{fig:pll_sleep} demonstrate such operation, where $t_{l1}$ is the lock time from cold start, and $t_{l2}$ is the time to relock from a resume. This functionality enables the ability to rapidly duty cycle the PLL between active and sleep states, with minimal time to relock. Power consumption of the PLL is reduced by a factor that is the duty cycle which it is operated, and in this design can enable as low as 1$\mu$W power consumption as 1\% duty cycle. 
+	\subsubsection{PLL Sleep Capability}
+	A feature gained in the proposed all-digital architecture is the ability to abruptly save the state of the PLL digitally and place all unneeded components into an ultra low power sleep mode, and then later resume the PLL from the saved state. Figure \ref{fig:pll_sleep} demonstrate such operation, where $t_{l1}$ is the lock time from cold start, and $t_{l2}$ is the time to relock from a resume state. It is expected that slight drift in the oscillator characteristics will occur when resuming, so the relock time will likely be nonzero. However, the relock time is substantially lower than relocking from a cold state. This functionality enables the ability to rapidly duty cycle the PLL between active and sleep states. Power consumption of the PLL is reduced by a factor that is the duty cycle which it is operated; for example, 100$\mu$W nominal power consumption with 1\% duty cycle will result in 1$\mu$W average draw, which is attractive for wireless devices (particularly wake up radios).
 
 			\begin{figure}[htb!]
 			        \centering
@@ -32,9 +36,8 @@ The primary objective in this work is to obtain a very low $100\mu$W power consu
 % 	\caption{PLL with parallel bang-bang phase detector and TDC.}
 % 	\label{fig:tdc_bbpll}
 % \end{figure}
-
-The proposed digital architecture also enables a form of fast-locking via gear switching of the loop filter \cite{staszewski_balsara_2007}. In this work, the counter-based TDC is initially used for large frequency and phase errors with a loop filter optimized for speed, which after locking can be changed (gear-switched) to a BBPD optimized loop filter chosen to minimize total phase-noise. Design of optimal filters will be discused later on.
-
+	\subsubsection{Gear switching}
+	The proposed digital architecture enables the ability to dynamically alter the loop filter response. This can be used to speed up lock from a cold state by using a lock time optimized filter initially, and then switch to a phase noise optimized filter after achieving initial lock. This approach is called gear switching \cite{staszewski_balsara_2007}, and is employed in this work by utilizing different loop filters for the start-up synchronous counter phase detector operation and the steady state BBPD operation.
 	
 	\subsubsection{Power budget}
 	The below power budget was used in the design process to divide up the 100 $\mu$W allotment between the different PLL components. In order to minimize oscillator phase noise, as large of a portion was allotted to the oscillator, being 80\%. 
@@ -57,10 +60,10 @@ The proposed digital architecture also enables a form of fast-locking via gear s
 
 
 	\subsubsection{Floorplan}
-	The below floor plan (dimensions in microns) has been devised to meet the area requirement of $<$ 0.01 mm$^2$.
+	The below floor plan (dimensions in microns) has been devised to meet the area requirement of $<$ 0.01 mm$^2$. The dimensions are 60$\mu$m x 85$\mu$m, with an area of 0.0051 mm$^2$.
 		\begin{figure}[htb!]
 	        \centering
-	        \includegraphics[width=0.6\textwidth, angle=0]{./figs/pll_floorplan2}
+	        \includegraphics[width=0.75\textwidth, angle=0]{./figs/design/pll_floorplan3}
 		    \caption{PLL floorplan.}
 		\end{figure}
 
@@ -72,7 +75,9 @@ The proposed digital architecture also enables a form of fast-locking via gear s
 	\label{fig:bbpll_full_noise}
 \end{figure}
 
-In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector phase noise component (equation \ref{eq:out_psd_bbpd_pll}) contains a term proportional to $N^2$, that is the detector noise will grow with the square of the PLL divider ratio. It is, however, possible to remove this $N^2$ dependency by usage of oscillator sub-sampling within the PLL \cite{Gao2015}. This is achieved by directly sampling the PLL output at a rate equivalent to the reference frequency. This is equivalent to removing the divider from the PLL loop and directly connecting the PLL output to the phase detector, which has been employed in this work (see figure \ref{fig:pll_arch}). To lock to the desired frequency, though, it must be guaranteed that the PLL frequency at the start of sub-sampling operation be within $f_{ref}/2$ of the target frequency (the PLL will lock to the nearest multiple of the reference frequency). In this work, this is achieved through sequencing at startup through two phase detectors. A synchronous counter phase detector (which emulates both a divider and phase detector) initially locks the PLL within $f_{ref}/2$ of the target frequency, after which the PLL is operated in sub-sampling bang-bang phase detector.
+In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector phase noise component (equation \ref{eq:out_psd_bbpd_pll}) contains a term proportional to $N^2$, that is the detector noise will grow with the square of the PLL divider ratio. It is, however, possible to remove this $N^2$ dependency by usage of oscillator sub-sampling within the PLL \cite{Gao2015}. This is achieved by directly sampling the PLL output at a rate equivalent to the reference frequency. This is equivalent to removing the divider from the PLL loop and directly connecting the PLL output to the phase detector, which has been employed in this work (see figure \ref{fig:pll_arch}). The removal of the divider also removes any PLL noise contributions resulting from divider jitter. 
+
+ In a dividerless PLL, it must be guaranteed that the PLL frequency at the start of sub-sampling operation be within $f_{ref}/2$ of the target frequency (the PLL will lock to the nearest multiple of the reference frequency). In this work, this is achieved through sequencing at startup through two phase detectors. A synchronous counter phase detector (which emulates both a divider and phase detector) initially locks the PLL within $f_{ref}/2$ of the target frequency, after which the PLL is operated in sub-sampling bang-bang phase detector.
 
   In accordance to the change to a dividerless operation, the PLL closed loop transfer function has been rederived in equation \ref{eq:cont_pll_tf2}. Furthermore, new expressions for PLL output phase noise with a BBPD is given in equation \ref{eq:out_psd_bbpd_pll2}, and PLL output oscillator noise with a ring oscillator is given in equation \ref{eq:out_psd_dco_pll2}, for the noise model in figure \ref{fig:bbpll_full_noise}. Noise due to the loop filter here is ignored, as it will be possible to adjust the loop filter datapath resolution to make digital quantizaiton noise effects negligible.
 		\begin{align} \label{eq:cont_pll_tf2}
@@ -84,6 +89,7 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 		\begin{align}\label{eq:out_psd_dco_pll2}
 			S_{\Phi n_{DCO,out}}(f) &= \mathcal{L}_{min}(f)\left|\frac{\Phi_{out}(f)}{q_{n_{DCO}}(f)}\right|^2 = \frac{7.33k_BT}{P}\left(\frac{f_0}{f}\right)^2|1-\textnormal{T}(f)|^2 
 		\end{align}
+
 
 % ################################################################################################
 % ################################################################################################
@@ -310,14 +316,14 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 
 
-		\FloatBarrier
-		\subsubsection{Layout}
-			\hl{Area?}
-			\begin{figure}[htb!]
-			        \centering
-			        \includegraphics[width=\textwidth, angle=0]{./figs/layout/layout_bbpd}
-			    \caption{Single ended bang-bang phase detector.}
-			\end{figure}
+		% \FloatBarrier
+		% \subsubsection{Layout}
+		% 	\hl{Area?}
+		% 	\begin{figure}[htb!]
+		% 	        \centering
+		% 	        \includegraphics[width=\textwidth, angle=0]{./figs/layout/layout_bbpd}
+		% 	    \caption{Single ended bang-bang phase detector.}
+		% 	\end{figure}
 
 % ################################################################################################
 % ################################################################################################
@@ -327,11 +333,11 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 % ################################################################################################
 	\FloatBarrier
 	\subsection{Loop Filter}
-	For selection of a loop filter, some basic criteria have been selected:
+	For selection of a loop filter, some basic criteria have been selected for desirable synthesizer behavior:
 	\begin{enumerate}[itemsep=0pt,label=\protect\mycirc{\arabic*}]
 		\setlength\itemsep{-0.8em}
-		\item Zero steady state phase error, to ensure accuracy of synthesized frequency.
-		\item Minimize complexity of implemented logic, i.e. minimize the number of poles and zeros.
+		\item Zero steady state error, for accuracy of the synthesized frequency.
+		\item Minimize complexity of implemented logic (i.e. minimize the number of loop filter poles and zeros).
 		\item Low pass response of PLL in closed-loop.
 	\end{enumerate}
 	From this author's previous work \cite{Me}, it was established that the pole-zero filter satisfying these requirements is a proportional-integral controller.
@@ -346,7 +352,7 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 				T(s) = \frac{\Phi_{out}(s)}{\Phi_{ref}(s)} =  \frac{ 2\pi K_{BBPD}K_{DCO}K_{i} \left(\frac{s}{\omega_z} + 1\right) }{s^2 + 2\pi K_{BBPD}K_{DCO}K_{i}\left(\frac{s}{\omega_z} + 1\right) }
 			\end{equation}
 \subsubsection{Optimal Filter Selection}
-			Optimization of loop filter will be attempted to minimizing the total integrated phase noise power out of the PLL, while keeping the filter bandwidth low enough to acheive satisfactory oversampling for acceptable performance. A limit of loop bandwidth $BW_{loop}$ = 0.1$f_{ref}$ is employed here, which is a figure commonly cited in PLL literature from \cite{gardner_1980}. Higher degrees of oversampling lead to deviations between continuous PLL models and real sampled-PLL performance. 
+			Optimization of loop filter will be attempted to minimizing the total integrated phase noise power out of the PLL, while keeping the filter bandwidth low enough to acheive satisfactory oversampling for acceptable performance. A limit of loop bandwidth $BW_{loop}$ = 0.1$f_{ref}$ is employed here, which is a figure commonly cited in PLL literature from \cite{gardner_1980}. Lower degrees of oversampling lead to deviations between continuous PLL models and real sampled-PLL performance. 
 
 			First, some mathematical simplifications of the PLL model are introduced. Rewriting equation \ref{eq:pi_bbpdpll_tf} with substitutions $\omega_z = K_i/K_p$ and $\mathrm{K} = 2\pi K_{BBPD}K_{DCO}K_{i}$:
 			\begin{equation} \label{eq:simp_pi_pll_tf}
@@ -356,25 +362,25 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\begin{equation}
 				s^2 + s\frac{K}{\omega_z} + K = s^2 + s2\zeta\omega_n + \omega_n^2
 			\end{equation}
-			Thus, $\omega_n = \sqrt{K}$, and $\omega_z = \sqrt{K}/2\zeta$. The poles of equation \ref{eq:simp_pi_pll_tf} are then located at s = $\zeta\sqrt{K} \pm j\sqrt{K}\sqrt{1-\zeta^2}$. The settling time constant of the PLL is determined by the real portion of dominant pole of equation \ref{eq:simp_pi_pll_tf}:
+			Thus, $\omega_n = \sqrt{K}$, and $\omega_z = \sqrt{K}/2\zeta$. The poles of equation \ref{eq:simp_pi_pll_tf} are then located at s = $\zeta\sqrt{K} \pm j\sqrt{K}\sqrt{1-\zeta^2}$. The time constant of the PLL is obtained from the real portion of the dominant pole in equation \ref{eq:simp_pi_pll_tf}:
 			\begin{equation}
 				\tau = \frac{1}{|\min(\Re(\{s_{p1}, s_{p2}\}))|}
 			\end{equation}
-			 It is decidedly of interest to minimize settling time of the PLL (i.e. time constant), thus maximizing the frequency of the dominant pole of the PLL is of interest. Based on the pole-zero plot of figure \ref{fig:pi_pll_pz}, it is seen the dominant pole of equation \ref{eq:simp_pi_pll_tf} is maximized with $\zeta=1$. The shown pole and zero loci are oriented based on increasing $\zeta$ values. According to Razavi \cite{razavi_2017}, $\zeta$ is usually 
-			"chosen to be $>\sqrt{2}/2$ or even 1 to avoid excessive ringing." It has according been chosen to fix $\zeta=1$ for the PI-controller. 
+			 It is of interest to minimize settling time of the PLL (i.e. time constant), thus maximizing the frequency of the dominant pole of the PLL is of interest. In the pole-zero plot of figure \ref{fig:pi_pll_pz}, the dominant pole of equation \ref{eq:simp_pi_pll_tf} is observed to be maximized with $\zeta=1$ (loci are oriented based on increasing $\zeta$ values). Citing Razavi \cite{razavi_2017}, $\zeta$ is typically 
+			"chosen to be $>\sqrt{2}/2$ or even 1 to avoid excessive ringing." According it has been chosen to fix $\zeta=1$ for the PI-controller. 
 			\begin{figure}[htb!]
 				\center\include{./figs/pi_pz_plot}
 				\caption{PI-controller PLL pole-zero locations.}
 				\label{fig:pi_pll_pz}
 			\end{figure}
 			\FloatBarrier
-			To illustrate the effect of the damping ratio $\zeta$, figure \ref{fig:pi_pll_response} illustratesexample frequency and step responses of a PI-controlled PLL. It is observed that increasing ringing and peaking is obtained with increasing values of $\zeta$. This is undesirable from a stability standpoint, and increased peaking in the PLL transfer function will increase output phase noise contributions, also undesirable. Therefore, the selection of $\zeta=1$ is solidified.
-			\begin{figure}[htb!]
-				\center\includegraphics[width=1.0\textwidth, angle=0]{figs/pi_pll_response.pdf}
-				\caption{Example PI-PLL responses with varied $\zeta$.}
-				\label{fig:pi_pll_response}
-			\end{figure}
-			\FloatBarrier
+			% To illustrate the effect of the damping ratio $\zeta$, figure \ref{fig:pi_pll_response} illustratesexample frequency and step responses of a PI-controlled PLL. It is observed that increasing ringing and peaking is obtained with increasing values of $\zeta$. This is undesirable from a stability standpoint, and increased peaking in the PLL transfer function will increase output phase noise contributions, also undesirable. Therefore, the selection of $\zeta=1$ is solidified.
+			% \begin{figure}[htb!]
+			% 	\center\includegraphics[width=1.0\textwidth, angle=0]{figs/pi_pll_response.pdf}
+			% 	\caption{Example PI-PLL responses with varied $\zeta$.}
+			% 	\label{fig:pi_pll_response}
+			% \end{figure}
+			% \FloatBarrier
 			With $\zeta$ is constrained to 1, the final simplified PLL closed loop transfer function is in equation \ref{eq:simp_pi_pll_tf_z1}. The form of this equation is favorable for integration, due to the selection of $\zeta$=1.
 			\begin{equation} \label{eq:simp_pi_pll_tf_z1}
 				T(s) = \frac{2\sqrt{K}s + K }{s^2 + 2\sqrt{K}s + K}
@@ -398,7 +404,7 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\end{align} 
 
 			The total PLL phase noise power associated with the oscillator, $\sigma_{\Phi_{n,DCO}}^2$ is achieved by integrating equation \ref{eq:out_psd_dco_pll4} with respect to frequency.
-			\begin{align}\label{eq:out_psd_dco_pll4} \sigma_{\Phi_{n,DCO}}^2 =
+			\begin{align}\label{eq:out_psd_dco_pll5} \sigma_{\Phi_{n,DCO}}^2 =
 				\int_{-\infty}^{\infty} S_{\Phi n_{DCO,out}}(f)df &=
 				S_{0_{osc}}\int_{-\infty}^{\infty}\frac{f^2}{\left(f^2+\frac{K}{(2\pi)^2}\right)^2}df
 				\\ &= S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} 
@@ -422,7 +428,7 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\end{align} 
 
 			The total PLL phase noise power associated with the BBPD, $\sigma_{\Phi_{n,BBPD}}^2$ is achieved by integrating equation \ref{eq:out_psd_bbpd_pll4} with respect to frequency:
-			\begin{align}\label{eq:out_psd_bbpd_pll4} 
+			\begin{align}\label{eq:out_psd_bbpd_pll5} 
 				\sigma_{\Phi_{n,BBPD}}^2 & =
 				\frac{\frac{\pi}{2}(\sigma^2_{\phi_j} +
 				\sigma^2_{\phi_n})-\sigma^2_{\phi_n}}{f_{ref}}\int_{-\infty}^{\infty}\frac{4\frac{K}{(2\pi)^2}f^2
@@ -467,7 +473,7 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 				\sqrt{10}} 
 			\end{equation} 
 
-			As mentioned before, it is advisable to observe a limit of loop bandwidth $BW_{loop}$ = 0.1$f_{ref}$. The coefficient $\alpha$ is defined here now to describe the loop bandwidth-reference frequency ratio, where $BW_{loop} = \alpha f_{ref}$. Interestingly, solving the system of equations given by equation \ref{eq:k_opt} and equation \ref{eq:loop_bw} provides an ideal ratio of $BW_{loop}$ and $f_{ref}$, being $\alpha$=0.28, which exceeds the rule of thumb $\alpha$=0.1. Thus, in the case that $\alpha$ must be constrained for sampling reasons, equation \ref{eq:k_alpha} is found to determine K. Thus with a 16 MHz referece, and $\alpha$=1, $K=1.64\times10^{13}$. 
+			As mentioned before, it is advisable to observe a limit of loop bandwidth $BW_{loop}$ = 0.1$f_{ref}$. The coefficient $\alpha$ is defined here now to describe the loop bandwidth-reference frequency ratio, where $BW_{loop} = \alpha f_{ref}$. Interestingly, solving the system of equations given by equation \ref{eq:k_opt} and equation \ref{eq:loop_bw} provides an ideal ratio of $BW_{loop}$ and $f_{ref}$, being $\alpha$=0.28, which exceeds the rule of thumb $\alpha$=0.1. Thus, in the case that $\alpha$ must be constrained for sampling reasons, equation \ref{eq:k_alpha} is found to determine K. Thus with a 16 MHz reference, and $\alpha$=1, $K=1.64\times10^{13}$. 
 			\begin{equation}\label{eq:k_alpha} 
 				K_\alpha = \frac{(2\pi\alpha f_{ref})^2}{3
 				+ \sqrt{10}} 
@@ -497,19 +503,30 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\end{align}
 	
 	\FloatBarrier
-	\subsubsection{Settling Time}
-		If $\zeta$ is constrained to $\leq 1$:
-		\begin{equation}
-			\tau = \frac{1}{|\min(\Re(\{s_{p1}, s_{p2}\}))|} = \frac{1}{\zeta\sqrt{K}}
-		\end{equation}
-		Thus settling time is:
-		\begin{equation}
-			t_s = \frac{-\ln(\delta)}{\zeta\sqrt{K}} = \frac{-\ln\left(\frac{f_{tol}}{|f_i - Nf_{ref}|}\right)}{\zeta\sqrt{K}} 
-		\end{equation}
 
 		\subsubsection{Filter Design for Synchronous counter}
-			\hl{WIP}
-			Use fixed damping=1, maximize loop bandwidth, use Kpd of synchronous counter. Estimate settling time. 
+			As gear-switching is intended to be used in this work, a separate loop filter will be calculated that is optimized for settling time (i.e. lock time) with the synchronous counter phase detector during initial start up. It was determined in the previous section that the poles of the PI-PLL occur at s = $\zeta\sqrt{K} \pm j\sqrt{K}\sqrt{1-\zeta^2}$, as a conjugate pair. Taking the real portion (same for both) provides for the value of the PLL time constant:
+			\begin{equation}
+				\tau = \frac{1}{|\min(\Re(\{s_{p1}, s_{p2}\}))|} = \frac{1}{\zeta\sqrt{K}}
+			\end{equation}
+			If $\delta$ is considered that fraction of the initial frequency error during the lock process that may be achieved for lock, then the PLL lock time is given by equation \ref{eq:locktime}. $\delta$ can be also stated in terms of initial frequency error $\Delta f$, and the frequency tolerance from steady state $f_{tol}$ that is considered to be in lock for a given application.
+			\begin{equation}\label{eq:locktime}
+				t_s = \frac{-\ln(\delta)}{\zeta\sqrt{K}} = \frac{-\ln\left(\frac{f_{tol}}{|\Delta f|}\right)}{\zeta\sqrt{K}}
+			\end{equation}
+			It is observed that lock time is decreased by increasing the value of both $\zeta$ and $K$. Again, the constraint $\zeta$=1 due to its favorable characteristics. Thus, it is of interest here to maximize the value of $K$. It is seen that in equation \ref{eq:loop_bw} $K\propto BW_{loop}^2$, thus loop bandwidth should be maximized. Again defining a constraint between loop bandwidth and reference frequency of $\alpha = BW_{loop}/f_{ref}$, equation \ref{eq:k_alpha} can be used to determine the optimal selection of $K$ for a given $\alpha$ and $f_{ref}$. Plugging this into equation \ref{eq:locktime} yields equation \ref{eq:locktime2}.
+			\begin{equation}\label{eq:locktime2}
+				t_s =  \frac{-\sqrt{3+\sqrt{10}}\ln\left(\frac{f_{tol}}{|\Delta f|}\right)}{2\pi\alpha f_{ref}}
+			\end{equation}
+			Now, these defined filters parameters will be translated into a filter design. Again, the definitions $K=2\pi K_{PD}K_{DCO}K_{i}$ and $\omega_z = K_i/K_p$ are used. A detector gain $K_{PD}$ must be defined first for the synchronous counter. Since the synchronous counter counts cycles, it in effects converts $2\pi$ of phase into an increment of count of 1. Thus the gain is:
+			\begin{equation}
+				K_{PD} = \frac{1}{2\pi}
+			\end{equation}
+			The parameters $K_i$, $K_p$ and $\omega_z$ are then solved for, to result in equations \ref{eq:kp_sc} to \ref{eq:wz_sc}.
+			\begin{align}
+				K_p & = \frac{4\pi\alpha f_{ref}}{\sqrt{3+\sqrt{10}}K_{DCO}}\label{eq:kp_sc}\\
+				K_i & = \frac{(2\pi\alpha f_{ref})^2}{(3+\sqrt{10})K_{DCO}}\\
+				\omega_z &= \frac{\pi\alpha f_{ref}}{\sqrt{3+\sqrt{10}}K_{DCO}}\label{eq:wz_sc}
+			\end{align}
 
 		\subsubsection{PI-controller phase margin}\label{pi_phase_margin}
 			The PI-PLL architecture of this work has a phase margin determined by the damping ratio $\zeta$, given by equation \ref{eq:pm_pi_pll}. Figure \ref{fig:phase_margin} shows phase margin versus $0 \geq \zeta \geq 1$ of the PI-controller PLL. It is recommended to use at least 30-60 degrees in phase margin to achieve stability \cite{ogata_2010_stability}. In this work, $\zeta$ = 1 has been used, so a phase margin of 76 degrees is expected, and accordingly stability should be expected.
@@ -540,8 +557,13 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 					% y[n] = x[n]\frac{K_i\omega_pT}{\omega_z}\frac{1+\omega_zT}{1+\omega_pT} - x[n-1]\frac{K_i\omega_pT}{\omega_z}\frac{1}{1+\omega_pT} + y[n-1]\frac{2+\omega_pT}{1+\omega_pT} - y[n-2]\frac{1}{1+\omega_pT}\\
 					% = a_0x[n] + a_1x[n-1] - b_1y[n-1] - b_2x[n-2] 
 		\begin{align}
-			b_0 &= K_p (1+\omega_z\Delta T_s)=\frac{\sqrt{K}\sqrt{\sigma^2_{\phi_j} + \sigma^2_{\phi_n}}}{\sqrt{2\pi}K_{DCO}}\left(1+\frac{\sqrt{K}}{2f_{ref}}\right)\label{eq:b0}\\
-			 b_1 &= -K_p = - \frac{\sqrt{K}\sqrt{\sigma^2_{\phi_j} + \sigma^2_{\phi_n}}}{\sqrt{2\pi}K_{DCO}}\label{eq:b1}
+			b_0 &= K_p (1+\omega_z\Delta T_s)\\
+			 b_1 &= -K_p 
+		\end{align}
+		In the case of a BBPD PLL:
+		\begin{align}
+			b_0 &= \frac{\sqrt{K}\sqrt{\sigma^2_{\phi_j} + \sigma^2_{\phi_n}}}{\sqrt{2\pi}K_{DCO}}\left(1+\frac{\sqrt{K}}{2f_{ref}}\right)\label{eq:b0}\\
+			 b_1 &=  - \frac{\sqrt{K}\sqrt{\sigma^2_{\phi_j} + \sigma^2_{\phi_n}}}{\sqrt{2\pi}K_{DCO}}\label{eq:b1}
 		\end{align}
 		If design of the PLL is with fixed target for $\sigma^2_{\phi_n}$ (CNR), has a known $\sigma^2_{\phi_j}$ for the BBPD, and $\alpha$ is selected to be constant (i.e. 0.1), the filter coefficients may be calculated as in equations \ref{eq:b0_} and \ref{eq:b1_}.
 
@@ -555,7 +577,15 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 
 		\subsubsection{Implementation}
-			The filter has been chosen to be implemented with separate parts to implement the feedforward parts for each phase detector of the PI-controller, but with a common integrator at the output, as shown in figure \ref{fig:pi_dig_imp}. This approach to reduce power in steady state operation (using the BBPD). The rationale is that the synchronous counter is a linear detector, thus requires multipliers in the datapath to implement the filter, whereas the BBPD only outputs two values, so the multipliers can be replaces with multiplexers that select between two products ($\pm b_0$ and $\pm b_1$) depending on the input. It is lower energy to operate a multiplexer than an array multiplier due to substantially lower complexity of logic, so the usage of two multiplexers in steady to implement the multipliers will result in substantial power savings. The usage of a common integrator used in both detector modes allows for continuity of output stage during transition between detector modes. 
+			The filter has been chosen to be implemented with separate parts to implement the feedforward parts for each phase detector of the PI-controller, but with a common integrator at the output, as shown in figure \ref{fig:pi_dig_imp}. This approach to reduce power in steady state operation (using the BBPD). The rationale is that the synchronous counter is a linear detector, thus requires multipliers in the datapath to implement the filter, whereas the BBPD only outputs two values (+1 and -1), so the multipliers can be replaced with multiplexers that select between two sets of possible products ($\pm b_0$ and $\pm b_1$) depending on the input. It is lower energy to operate a multiplexer than an array multiplier due to substantially lower complexity of logic, so the usage of two multiplexers in steady to implement the multipliers will result in substantial power savings. The usage of a common integrator used in both detector modes allows for seamless continuity of output value during transition between detector modes. 
+
+			The computed filter coefficients $\{b_0$, $b_1\}$ for the PLL must be digitized into finite length signed two's complement words. A two's complement data word contains one sign bit, and variable number of bits representing the integer and fractional portions of the encoded number. The author of this work has previously devised a method \cite{Me} for automatically computing the number of bits required to represent a filter in PLL. First, the selection of number of integer bits \texttt{int\_bits} is determined by considering the integer part of the discrete filter coefficients. If the integer portions of the filter coefficients $\{b_0$, $b_1\}$ are divided into positive and negative valued sets \texttt{pos\_ints} and \texttt{neg\_ints}, is therefore given in equation \ref{eq:int_bits}. Computation of the fractional portion is more complicated, and is based on reducing the quantization noise floor of the loop filter below other noise components of the PLL. The PLL design framework from \cite{Me} will be used in this work for determining the minimum digitized representation size of filter coefficients.
+			\begin{align}
+				\mathtt{pos\_int\_bits} &= \left\lfloor \log_2\left(\max\left(\left\lfloor \mathtt{pos\_ints} \right\rfloor\right)\right) \right\rfloor +1\\
+				\mathtt{neg\_int\_bits} &= \left\lceil \log_2\left(\max\left(\left\lfloor \mathtt{neg\_ints} \right\rfloor\right)\right) \right\rceil\\
+				\mathtt{int\_bits} &= \max(\mathtt{\{pos\_int\_bits}, \mathtt{neg\_int\_bits}\})\label{eq:int_bits}
+			\end{align}
+
 
 			\begin{figure}[htb!]
 			        \centering
@@ -595,58 +625,6 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 
 
-\subsubsection{Loop Filter Quantization Noise Optimization}\label{lf_quant_noise_opt}
-
-
-	\begin{figure}[htb!]
-	    \centering
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	        \center\include{figs/lf_quant_noise_model}
-	        \caption{ }
-	        \label{fig:lf_quant_noise_model}
-	    \end{subfigure}%
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	       \center\includegraphics[width=1\textwidth, angle=0]{figs/lf_quant_noise.pdf}
-	        \caption{ }
-	        \label{fig:lf_quant_mse}
-	    \end{subfigure}
-	    % \caption{Approximate model for ring oscillator inverter delay cell.}
-	    \label{fig:lf_quant_noise_opt}
-	    \caption{\textbf{(a)} Model for determining quantization noise of loop filter, \textbf{(b)} Quantization noise power power out of an example loop filter versus data word resolution.}
-	\end{figure}
-
-
-
-
-% \begin{figure}[htb!]
-% 	\center\includegraphics[width=0.5\textwidth, angle=0]{figs/lf_quant_noise.pdf}
-% 	\caption{Quantization noise power power out of an example loop filter versus data word resolution.}
-% 	\label{fig:lf_quant_mse}
-% \end{figure}
-
-
-\subsubsection{Loop Filter Transfer Function Error Optimization}
-
-\begin{figure}[htb!]
-    \centering
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth, angle=0]{figs/tf_quant_error.pdf}
-        \caption{ }
-        \label{fig:tf_curves_quant_error}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-        \centering
-        \includegraphics[width=1\textwidth, angle=0]{figs/tf_mse.pdf}
-        \caption{ }
-        \label{fig:tf_mse}
-    \end{subfigure}
-    % \caption{Approximate model for ring oscillator inverter delay cell.}
-    \label{fig:tf_quant_error}
-    \caption{\textbf{(a)} Example filter error due to coefficient quantization, \textbf{(b)} Example MSE error of filter design due to coefficient quantization.}
-\end{figure}
 \FloatBarrier
 
 
@@ -654,8 +632,9 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 
 
-		\subsubsection{Approach 2: Results of Transient and Phase Noise Simulation}
-		It is observed that the fast lock gear converges the PLL to steady state in approximately 6 $\mu$s as seen in the transient step simulation in figures \ref{fig:trans_lf_fast} and \ref{fig:trans_inst_freq_fast}, where an initial frequency error of 0.5\% {12 MHz} is used. Figure \ref{fig:trans_det_fast} shows the output of the TDC and BBPD, it is seen that BBPD feedback has a high density at approximately 11 $\mu$s, implicating steady state conditions. Finally, the computed phase noise spectrum of figure \ref{fig:trans_phase_noise_fast} demonstrates that there is some discrepancy between the ideal designed response and that simulated, albeit the bandwidth appears correct. The phase noise spectrum discrepancy is likely due to the model used in the optimization for the BBPD, which uses a linearized model of the BBPD with only idealized DCO and detector noise considered. This does not accurately account for all quantization and discretization emergent behaviors in the discrete time behavioral simulation possibly being manifested here. 
+		\subsubsection{Behavioral Verification of PLL Design}
+		\hl{Need to rerun this...}
+		It is observed that the fast lock gear converges the PLL to steady state in approximately X $\mu$s as seen in the transient step simulation in figures \ref{fig:trans_lf_fast} and \ref{fig:trans_inst_freq_fast}, where an initial frequency error of X\% (X MHz) is used. Figure \ref{fig:trans_det_fast} shows the output of the SC and BBPD, it is seen that BBPD feedback has a high density at approximately X $\mu$s, implicating steady state conditions. Finally, the computed phase noise spectrum is in figure \ref{fig:trans_phase_noise_fast}.
 
 			\begin{figure}[htb!]
 			    \centering
@@ -694,26 +673,9 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			    \label{fig:trans_sim2_fast}
 			    \caption{Simulation with 12 MHz (0.5\%) initial frequency error: \textbf{(a)} BBPD/TDC detector responses, \textbf{(b)} PLL output phase noise power spectrum.}
 			\end{figure}
-		\subsubsection{Approach 2: Results of Parameter Sweep and Variational Analysis}
-		The same parameter sweeps for $K_{DCO}$ and initial frequency error of approach 1 were applied here. In figures \ref{fig:sweep_kdco_fast} and \ref{fig:sweep_finit_fast}, the results of these sweeps are shown. The loop filter gear switching mechanism as modeled in the simulation waits a fixed time interval before switching gears, in this case chosen to be 2.0 times the estimated lock time given in table \ref{filter_params_fast_lock}. This interval has provided sufficient settling within the simulated parameter range of $K_{DCO}$ and initial frequency error that lock time stability is observed under most conditions, except under high offset for $K_{DCO}$ and initial frequency error. It was established for this simulation results that tolerance range for $K_{DCO}$ is -6950/+9750 Hz/LSB from the nominal 10000 Hz/LSB value, and the capture range is 168 MHz. Figures \ref{fig:mc_trans_fast} and \ref{fig:mc_hist_fast} demonstrate a variational simulation of the PLL using Monte-Carlo sampling, with 1000 samples. The simulation was configured to vary $K_{DCO}$ with a standard deviation of 20 \% of the nominal value, and to vary the initial starting frequency with a standard deviation of 60 MHz (2.5 \% of the final frequency). It was observed that the PLL stably locked for all simulation instances, a mean lock time of 5.96 $\mu$s was achieved. This value correlates well with the estimate of 5.52 $\mu$s from the filter design process. The upper bound for a 99\% confidence interval of lock time is 11.625 $\mu$s, thus meeting the 25$\mu$s lock time specification with considerable margin. The extracted PLL performance parameters from these simulations of this gear-switching PLL is in table \ref{simulation_params_fast}. 
-			\begin{figure}[htb!]
-			    \centering
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/_kdco_sweep_fast.pdf}
-			        \caption{ }
-			        \label{fig:sweep_kdco_fast}
-			    \end{subfigure}%
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/finit_sweep_fast.pdf}
-			        \caption{ }
-			        \label{fig:sweep_finit_fast}
-			    \end{subfigure}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			    \label{fig:sweep_sim_fast}
-			    \caption{\textbf{(a)} PLL lock time simulation with KDCO swept, 12 MHz (0.5\%) initial frequency error, \textbf{(b)} PLL lock time simulation with initial frequency error swept.}
-			\end{figure}
+
+		\FloatBarrier
+		Figures \ref{fig:mc_trans_fast} and \ref{fig:mc_hist_fast} demonstrate a variational simulation of the PLL using Monte-Carlo sampling, with 1000 samples. The simulation was configured to vary $K_{DCO}$ with a standard deviation of X \% of the nominal value, and to vary the initial starting frequency with a standard deviation of X MHz (X \% of the final frequency). It was observed that the PLL stably locked for all simulation instances, a mean lock time of X $\mu$s was achieved. This value correlates well with the estimate of X $\mu$s from the filter design process. The upper bound for a 99\% confidence interval of lock time is X $\mu$s, thus meeting the X$\mu$s lock time specification with considerable margin. The extracted PLL performance parameters from these simulations of this gear-switching PLL is in table \ref{simulation_params_fast}. 
 
 			\begin{figure}[htb!]
 			    \centering
@@ -743,17 +705,13 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_{DCO}$ Tolerance}  & -6950/+9750 & Hz/LSB \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Mean lock time}  & X& $\mu$s \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Capture range}  & 168 ($\pm 84$)& MHz\\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Lock time $\sigma$} &X & $\mu$s\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Mean lock time}  & 5.961688& $\mu$s \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Lock time 99 \% CI upper bound} & X & $\mu$s\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Lock time $\sigma$} & 3.611130 & $\mu$s\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Lock time 99 \% CI upper bound} & 11.625  & $\mu$s\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Residual phase modulation} & $4.367535\times10^{-2}$ & rad$^2$\\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Residual phase modulation} & X $\times10^{-X}$ & rad$^2$\\ 
 				\hline 
 			\end{tabular} 
 
@@ -763,243 +721,122 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\label{simulation_params_fast}
 		\end{table}
 
-
-		\subsubsection{Cyclostationary nonsense}
-
+			\FloatBarrier\subsection{Emergent Bang-Bang PLL Phase Noise}\label{sec:bb_noise}
+			Since the output of BBPD is quantized to $\pm$ 1, the use of a PI loop filter architecture results in only 4 possible values that node {\color{blue}\textbf{x}} can be valued as shown in the simplified BBPD-PLL model of figure \ref{fig:simp_bbpdpll}. These are $\lfloor b_0+b_1 \rfloor$, $\lfloor b_0-b_1 \rfloor$, $\lfloor -b_0+b_1 \rfloor$, $\lfloor -b_0-b_1 \rfloor$. The result of this is the loop filter output {\color{teal}\textbf{w}} must increment by one of these four values every reference cycle. 
 
 		\begin{figure}
-			\includegraphics[width=0.8\textwidth, angle=0]{./figs/simplified_bbpll}
+			\center\includegraphics[width=0.8\textwidth, angle=0]{./figs/design/simplified_bbpll}
+			\caption{Simplified model of BBPD-PLL}
+			\label{fig:simp_bbpdpll}
 		\end{figure}
-		\begin{itemize}[itemsep=4pt,label=\protect---]
+		The worst case scenario of this is the BBPD outputting an alternating sequence of +1/-1/+1/-1... , for which the output will toggle between $\lfloor b_0-b_1 \rfloor$ and $\lfloor -b_0+b_1 \rfloor$. In terms of frequency, the output will shift up and down by $K_{DCO}\lfloor b_0-b_1 \rfloor$ and $\lfloor -b_0+b_1 \rfloor$ every other cycle, which can be substantial depending on the product of those factors. In the phase domain, this results in a cyclostationary triangle-wave like phase trajectory (ignoring other sources of phase noise), as shown in figure \ref{fig:cylostationary}. The worst case increment in phase per cycle is given in equation \ref{eq:cyclo_dph}. In the frequency domain, this cyclostationary behavior can result in spurs, as shown in figure \ref{fig:cylostationary_spurs}. When phase noise from other processes in the PLL are large enough that the they dwarf the worst case cyclostationary behavior, it is expected that output of the BBPD will be stochastically scrambled and the cyclostationary effects will be subsided. 
 
-			\item Output of BBPD is quantized $\pm$ 1. With PI loop filter architecture, there are only 4 possible values that the output {\color{teal}\textbf{w}} can increment by: $\lfloor b_0+b_1 \rfloor$, $\lfloor b_0-b_1 \rfloor$, $\lfloor -b_0+b_1 \rfloor$, $\lfloor -b_0-b_1 \rfloor$.
-			\item In steady state, with the BBPD outputting a worst case sequence of +1/-1/+1/-1... , the output will toggle betwwen $\lfloor b_0-b_1 \rfloor$ and $\lfloor -b_0+b_1 \rfloor$.
-			\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
-				\item Current optimization yields $b_0$ = 8.899856, $b_1$ = -8.301153 
-				\item Thus output {\color{teal}\textbf{w}} will increment by +17, -18, +17, -18 ...
-				\item Essentially output will make large-ish jumps in frequency every reference cycle
-			\end{itemize}
-		\end{itemize}
+		\begin{equation}\label{eq:cyclo_dph}
+			\Delta \Phi = \frac{2\pi|b_0-b_1|K_{DCO}}{f_{ref}}
+		\end{equation}
 
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
 	        \centering
 	        \includegraphics[width=0.8\textwidth, angle=0]{./figs/bbpd_resolution_phase_walk}
+	        \caption{ }
+	        \label{fig:cylostationary}
 	    \end{subfigure}%
 	    \begin{subfigure}{0.5\textwidth}
 	        \centering
 	        \center\includegraphics[width=0.8\textwidth, angle=0]{./figs/spurs_dco}
+	        \caption{ }
+	        \label{fig:cylostationary_spurs}
 	    \end{subfigure}
-	    % \caption{Approximate model for ring oscillator inverter delay cell.}
-	\end{figure}
-		\begin{itemize}[itemsep=4pt,label=\protect---]
-
-			\item Worst case input sequence results in square wave frequency modulation, which in the phase domain creates a cyclostationary triangle wave with period $f_{ref}$/2. This creates \textbf{SPURS} at $f_{ref}$/2.
-			\item In general, $f_{ref}$ $>>$ $K_{DCO}|b_0-b_1|$ (frequency deviation), so spurs are not generated at the deviation frequencies.
-			\item With 1 LSB deviation per ref. cycle, a -62 dBc spur (SSB) is expected $f_{ref}$/2.
-			\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
-			\item Under my current $b_0$, $b_1$, this spur will be -37 dBc.
-		\end{itemize}
-		\end{itemize}
-
-
-
-			% \vspace{100em}
-			\begin{itemize}[itemsep=4pt,label=\protect---]
-				\item \textbf{Cyclostationary (+1, -1, +1, -1, ...):}
-				\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
-					\item Under my system parameters, the total phase noise power from resolution effects is -34 dBc, essentially all of which is in the first spur at $f_{ref}/2$.
-					\begin{equation}
-						\Delta \Phi  = \frac{2\pi|b_0-b_1|K_{DCO}}{f_{ref}}
-					\end{equation}
-					\begin{equation}
-						\sigma_{\Phi rj}  = \frac{\pi|b_0-b_1|K_{DCO}}{\sqrt{3}f_{ref}}
-					\end{equation}
-				\end{itemize}
-			\item \textbf{General note:} the phase noise from this source must $<<$ than target SNR for PLL application. Can use these relations to find limits for maximum $K_{DCO}$ before resolution jitter is dominant.			
-		\end{itemize}
-
-
-			% \vspace{100em}
-			\begin{itemize}[itemsep=4pt,label=\protect---]
-
-				\item \textbf{Average case:}
-				\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
-					\item All transitions equally likely out of BBPD.
-					\item Under my system parameters, the total phase noise power from resolution effects is -29.4 dBc (simulated).
-					\item Phase noise is bimodal. The total RMS phase noise power is approximately equal to the absolute value of the distribution means.
-					\begin{equation}
-						\mu = \pm\frac{\pi|b_0-b_1|K_{DCO}}{f_{ref}}, \hspace{2em}\sigma_{\Phi rj} \approx |\mu|
-					\end{equation}
-				\end{itemize}
-			\end{itemize}
-	\vspace{-3em}
-	\begin{figure}[htb!]
-	    \centering
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	        \includegraphics[width=0.8\textwidth, angle=0]{./figs/bbpd_rw}
-	    \end{subfigure}%
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	        \center\includegraphics[width=0.8\textwidth, angle=0]{./figs/bbpd_rw_hist}
-	    \end{subfigure}
-	    % \caption{Approximate model for ring oscillator inverter delay cell.}
+	    \caption{\textbf{(a)} Worst case cyclostationary behavior of BBPD-PLL, \textbf{(b)} Resulting in spurs from worst case cyclostationary behavior.}
+	    \label{fig:cyclostationary_nonsense}
 	\end{figure}
 
 
+	Even if cyclostationary effects are avoided, the quantization of the loop filter output to increments of the four aforementioned values results in an additive phase noise contribution to the PLL. The estimated that the RMS contribution of phase noise to the PLL output due to the quantized steps in frequency from bang-bang operation $\sigma_{\Phi_{BB}}$ is given in figure \ref{eq:bb_jitter}. If this component approaches the magnitude of the other phase noise components, the model assumptions for the BBPD theory derived in this work may be invalid, so prudent selection of parameters should be made to reduce $\sigma_{\Phi_{n_{BB}}}$.
 
-			% \vspace{100em}
-			\begin{itemize}[itemsep=4pt,label=\protect---]
-				\item Found an interesting dissertation on BBPD PLLs [3], which shows that the linearized BBPD gain model I have been using (K$_{BBPD}$ = $2/\sqrt{2\pi}\sigma_{\Phi_n}$) is not totally correct. 
-				\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
-						\item Due to BBPF-PLL resolution jitter, varies depending if resolution jitter or if random noise is the dominant component.
-				\end{itemize}
-				\item Need to account for this in my filter optimization code...
-				\item An approximation, with random/uncorrelated noise with $\sigma_{\Phi uc}$, and resolution jitter $\sigma_{\Phi{rj}}$ (based on variable substitution of [3]'s theory):
-				\begin{equation}
-					K_{BBPD} = \frac{1}{\sqrt{2\pi}\sigma_{\Phi uc}}\left[1+ e^{-\frac{1}{2}\left(\frac{\sigma_{\Phi{rj}}}{\sigma_{\Phi uc}}\right)^2} \right]
-				\end{equation}
-					\begin{equation}
-						\sigma_{\Phi rj} \approx \frac{\pi|b_0-b_1|K_{DCO}}{f_{ref}}
-					\end{equation}
-				\item Currently, I should be well into the random noise dominated regime.
-			\end{itemize}
+		\begin{equation}\label{eq:bb_jitter}
+			\sigma_{\Phi_{n_{BB}}} \approx \frac{\pi|b_0-b_1|K_{DCO}}{f_{ref}}
+		\end{equation}
+	If $\alpha$ is used to described to loop bandwidth ratio-reference frequency ratio, the quantity $|b_0-b_1|$ is provided in equation \ref{eq:b1_b0}. In the case where $\alpha$ is small (circa 0.1 as followed in this work), $|b_0-b_1| \approx |2b_1|$, so $\sigma_{\Phi_{n_{BB}}}$ may be approximated as in equation \ref{eq:bb_jitter2}
+	\begin{equation}\label{eq:b1_b0}
+			|b_0-b_1| = \left(2 + \frac{\pi \alpha}{\sqrt{3+\sqrt{10}}}\right)|b_1|
+	\end{equation}
+	\begin{equation}\label{eq:bb_jitter2}
+		\sigma_{\Phi_{n_{BB}}} \approx \frac{2\pi b_1K_{DCO}}{f_{ref}}
+	\end{equation}	
+	If the dominant noise sources are assumed to be $\sigma^2_{\Phi_{n_{BB}}}$ and oscillator noise, the total phase noise $\sigma^2_{\Phi_{n}}$ equals that in equation \ref{eq:bb_osc_noise}.
+	\begin{equation}\label{eq:bb_osc_noise}
+		\sigma_{\Phi_{n}}^2 = \sigma_{\Phi_{n,DCO}}^2 + \sigma^2_{\Phi_{n_{BB}}} = S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} + \left( \frac{2\pi b_1K_{DCO}}{f_{ref}} \right)^2
+	\end{equation}
+	Redefining equation \ref{eq:b1} using $\sigma^2_{\Phi_{n_{BB}}}$ and oscillator noise as the phase noise sources results in equation \ref{eq:b1__}.
+		\begin{align}
+			 b_1 &=  - \frac{\sqrt{K}\sqrt{\sigma_{\Phi_{n,DCO}}^2 + \sigma^2_{\Phi_{n_{BB}}} }}{\sqrt{2\pi}K_{DCO}} = - \frac{\sqrt{K}\sqrt{  S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} + \left( \frac{2\pi b_1K_{DCO}}{f_{ref}} \right)^2 }}{\sqrt{2\pi}K_{DCO}}\label{eq:b1__} 
+		\end{align}
+	A resulting expression for $\sigma^2_{\Phi_{n_{BB}}}$ is obtained by solving the system of equations given by \ref{eq:bb_jitter2} and \ref{eq:b1_}.
+	 	\begin{equation}
+	 		\sigma^2_{\Phi_{n_{BB}}} = \frac{2\pi^3\sqrt{K}S_{0_{osc}}}{f_{ref}^2  - 2\pi K} = \frac{4\pi^4\alpha S_{0_{osc}}}{f_{ref}\sqrt{3+\sqrt{10}}}\cdot \frac{1}{1-\frac{8\pi^3\alpha^2}{\sqrt{3+\sqrt{10}}}}
+	 	\end{equation}
+	This equation grows asymptotically to infinity with $K=f_{ref}^2/2\pi$, equating to $\alpha = \sqrt{3+\sqrt{10}}/(2\pi)^{3/2}$  = 0.158. $\sigma^2_{\Phi_{n_{BB}}}$ approaches zero for increasingly small values of $\alpha$. Rewriting equation \ref{eq:bb_osc_noise} with the new finding for $\sigma^2_{\Phi_{n_{BB}}}$ results in equation \ref{eq:bb_osc_noise2}. Now $\sigma_{\Phi_{n}}^2$ may be minimized for noise by solving $d\sigma_{\Phi_{n}}^2(K)/dK =0$, yielding equation \ref{eq:kopt_bb}. It is also determined that the optimal value of $\alpha$ =is in equation \ref{eq:alpha_opt_bb}, and the optimal total phase noise power is in equation \ref{eq:pn_opt_bb}.
+	\begin{equation}\label{eq:bb_osc_noise2}
+		\sigma_{\Phi_{n}}^2 = \sigma_{\Phi_{n,DCO}}^2 + \sigma^2_{\Phi_{n_{BB}}} = S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} + \frac{2\pi^3\sqrt{K}S_{0_{osc}}}{f_{ref}^2  - 2\pi K}
+	\end{equation}
+	\begin{equation} \label{eq:kopt_bb}
+		K_{opt} = \frac{f_{ref}^2}{6\pi^2}
+	\end{equation}
+	\begin{equation} \label{eq:alpha_opt_bb}
+		\alpha_{opt} = \frac{\sqrt{3+\sqrt{10}}}{2\pi^2\sqrt{6}} = 0.0513
+	\end{equation}
+	\begin{equation} \label{eq:pn_opt_bb}
+		\left.\sigma_{\Phi_{n}}^2 \right|_{K_{opt}} = \frac{3\sqrt{6}\pi^4S_{0_{osc}}}{f_{ref}}\cdot\frac{1}{3\pi - 1}
+	\end{equation}
+	In the case of this work with a target of 2.448 GHz, 16 MHz reference, and 300K ambient temperature, the theoretical obtainable CNR is 19.2 dB, or $\sigma_{\Phi_{n}}^2$ = 0.012 rad$^2$. The discrete time filter coefficients for this optimization case are provided in equations \ref{eq:b0_bb} and \ref{eq:b1_bb}.
+	\begin{align}
+		b_0 &= \frac{\sqrt{\pi f_{ref}\sqrt{6}S_{0_{osc}}}}{2K_{DCO}\sqrt{3\pi-1}}\left( 1 + \frac{1}{2\sqrt{6}\pi} \right) \label{eq:b0_bb}\\
+		b_1 &= -\frac{\sqrt{\pi f_{ref}\sqrt{6}S_{0_{osc}}}}{2K_{DCO}\sqrt{3\pi-1}}\label{eq:b1_bb}\\
+	\end{align}
+
+	\subsubsection{Choice of Optimization Strategy}
+	Depending on the implementation, either the noise contributions from the phase detector or due to the bang-bang behavior may be the second most dominant noise source after the oscillator. The recommended strategy to calculate the optimal filter design using both approaches, and select the one that results in a larger total phase noise value $\sigma_{\Phi_{n}}^2$.
+
+
+	% \vspace{-3em}
+	% \begin{figure}[htb!]
+	%     \centering
+	%     \begin{subfigure}{0.5\textwidth}
+	%         \centering
+	%         \includegraphics[width=0.8\textwidth, angle=0]{./figs/bbpd_rw}
+	%     \end{subfigure}%
+	%     \begin{subfigure}{0.5\textwidth}
+	%         \centering
+	%         \center\includegraphics[width=0.8\textwidth, angle=0]{./figs/bbpd_rw_hist}
+	%     \end{subfigure}
+	%     % \caption{Approximate model for ring oscillator inverter delay cell.}
+	% \end{figure}
+
+
+
+			% % \vspace{100em}
+			% \begin{itemize}[itemsep=4pt,label=\protect---]
+			% 	\item Found an interesting dissertation on BBPD PLLs [3], which shows that the linearized BBPD gain model I have been using (K$_{BBPD}$ = $2/\sqrt{2\pi}\sigma_{\Phi_n}$) is not totally correct. 
+			% 	\begin{itemize}[itemsep=4pt,label=\protect$\bullet$]
+			% 			\item Due to BBPF-PLL resolution jitter, varies depending if resolution jitter or if random noise is the dominant component.
+			% 	\end{itemize}
+			% 	\item Need to account for this in my filter optimization code...
+			% 	\item An approximation, with random/uncorrelated noise with $\sigma_{\Phi uc}$, and resolution jitter $\sigma_{\Phi{rj}}$ (based on variable substitution of [3]'s theory):
+			% 	\begin{equation}
+			% 		K_{BBPD} = \frac{1}{\sqrt{2\pi}\sigma_{\Phi uc}}\left[1+ e^{-\frac{1}{2}\left(\frac{\sigma_{\Phi{rj}}}{\sigma_{\Phi uc}}\right)^2} \right]
+			% 	\end{equation}
+			% 		\begin{equation}
+			% 			\sigma_{\Phi rj} \approx \frac{\pi|b_0-b_1|K_{DCO}}{f_{ref}}
+			% 		\end{equation}
+			% 	\item Currently, I should be well into the random noise dominated regime.
+			% \end{itemize}
 
 	
-			\begin{figure}[htb!]
-			        \centering
-			        \includegraphics[width=1\textwidth, angle=0]{./figs/kbbpd}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			\end{figure}
 
-	\subsubsection{Filter Design}
-		\begin{table}[h!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|l|r|l|}
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $2.982197\times10^{12}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $2.982197\times10^{8}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $2.115052\times10^{2}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $2.244064\times10^5$ & Hz\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $2.3014397180\times10^2$  &\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-2.1150524223\times10^2$  & \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_0$}  & $1.0\times10^0$  &\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_1$}  & $-1.0\times10^0$  & \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_2$}  & $0.0\times10^0$  & \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $5.333423\times10^5$ & Hz \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $4.527067\times10^{-6}$ & seconds \\
-				\hline 
-			\end{tabular} 
-			% \caption{Assigned specifications for branch line hybrid design.}
-			% \label{asgn_specs}
-			\caption{PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.}
-			\label{filter_params_fast_lock}
-		\end{table}   
 
-		\begin{table}[h!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|l|r|l|}
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $5.325862\times12^{12}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $1.271456\times10^{10}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.101813\times10^{4}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $1.836596\times10^5$ & Hz\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $1.1812790734\times10^4$  &\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.1018130778\times10^4$  & \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_0$}  & $1.0\times10^0$  &\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_1$}  & $-1.0\times10^0$  & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_2$}  & $0.0\times10^0$  & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_{bb}$}  & $1.0\times10^0$  & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $9.117332\times10^5$ & Hz \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.978130\times10^{-7}$ & seconds \\
-				\hline 
-			\end{tabular} 
-			% \caption{Assigned specifications for branch line hybrid design.}
-			% \label{asgn_specs}
-			\caption{PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.}
-			\label{filter_params_bbpd_low_noise}
-		\end{table}   
-
-		\begin{table}[h!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|l|r|r|l|}
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Value (digital) } & \cellcolor{gray!40}\textbf{Value Error}\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Total dataword bits  & 20 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Sign bits  & 1 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Integer bits & 8 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Fractional bits  & 11 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{red} (gear 1)} & $2.301440\times10^2$ & \texttt{0b01110011000100100111}  & $+7.116930\times10^{-5}$\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{red} (gear 1)} & $-2.115054\times10^2$ & \texttt{0b11110110001111110101}  & $-1.288619\times10^{-4}$\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_0$} {\color{red} (gear 1)} & $1.0\times10^0$ & \texttt{0b00000000100000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_1$} {\color{red} (gear 1)} & $-1.0\times10^0$ & \texttt{0b11111111100000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_2$} {\color{red} (gear 1)} & $0.0\times10^0$ & \texttt{0b00000000000000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_{bb}$} {\color{red} (gear 1)} & $0.0\times10^0$ & \texttt{0b00000000000000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{blue} (gear 2)} & $8.899902\times10^0$ & \texttt{0b00000100011100110011}  & $+4.616306\times10^{-5}$\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{blue} (gear 2)} & $-8.301270\times10^0$ & \texttt{0b11111011110110010111}  & $-1.168639\times10^{-4}$\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_0$} {\color{blue} (gear 2)} & $1.0\times10^0$ & \texttt{0b00000000100000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_1$} {\color{blue} (gear 2)} & $-1.0\times10^0$ & \texttt{0b11111111100000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$a_2$} {\color{blue} (gear 2)} & $0.0\times10^0$ & \texttt{0b00000000000000000000} & $0.0\times10^0$ \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_{bb}$} {\color{blue} (gear 2)} & $1.0\times10^0$ & \texttt{0b00000000100000000000} & $1\times10^0$ \\ 
-				\hline 
-			\end{tabular} 
-			% \caption{Assigned specifications for branch line hybrid design.}
-			% \label{asgn_specs}
-			\caption{Loop filter parameters after digitization and optimization for data word length, gear 1 and gear 2.}
-			\label{dig_filter_params_fast}
-		\end{table}  
 
 % ################################################################################################
 % ################################################################################################
@@ -1012,11 +849,19 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 	Hajimiri's oscillator impulse sensitivity function (ISF) paper \cite{Hajimiri1998} suggests that it is favorable for an oscillator to have as symmetric rise and fall time. Higher symmetry of waveform results in a lower corner frequency for flicker noise, thus low frequency phase noise will be improved.
 
+	 Could not get 2 quadrature oscillator stage to oscillate. Period is 4tpd, thus a transition occurs every 2tpd. Propogation delay is 0.69tau, so a transition every 1.38tau, which equates to enough time to settle to 75\% of the final voltage. Because of partial settling, the oscillation dies in a couple cycles, and is not viable here. To achieve quadrature, 4 stages must be used, however, this was slow to acheive the target 2.448 GHz. Thus, use of sub-harmonic oscillator (show edge combining) due to speed limitations (need short channel length to get right speed, unfortunately phase noise degrades).
+
+	 Compare RO model (back gate linearity, VDD tuning) to data. There is agreement.
 
 	\subsubsection{Channel length consideration}
 	Based on the 22FDX process:
 	Notes, from the derived theory, it is expected that power should be fixed for fixed w/l (true except for small channel length), frequency to decrease. Increased phase noise is seen near 20nm according to the 5nm PLL, explain+cite. Recommened to avoid min. channel length. 
 
+	Scaling of device channel length has a great impact on phase noise for ring oscillators, according to \cite{Liu2020} takes form of equation \ref{eq:liu_pn_scaling}. $V_{DD}$ is the supply voltage, $V_t$ is the threshold voltage, $P_{DC}$ is the oscillator power consumption, $\gamma p$ and $\gamma n$ are the respective PMOS and NMOS noise factors, $f_0$ is the oscillator frequency, and $f$ is the offset from the carrier for the phase noise. It is expected that excess noise factor of the transistor will increase with decreasing channel length \cite{Antonopoulos2013}, thus unavoidably phase noise will also increase following equation \ref{eq:liu_pn_scaling}.
+
+	\begin{equation} \label{eq:liu_pn_scaling}
+		\mathcal {L}(f) =\frac {2kT}{P_{\textrm {DC}}}\left ({\frac {V_{\textrm {DD}}}{V_{\textrm {DD}}-V_{t}} (\gamma _{N}+\gamma _{P}+1)}\right)\left ({\frac {f_{0}}{f}}\right)^{2}
+	\end{equation}
 
 		\begin{figure}[htb!]
 		    \centering
@@ -1444,21 +1289,6 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 				\item I require $<$ 1\% fractional tuning range to achieve my $K_{DCO}$ with a 10b DAC, this will not work. The (W/L) becomes large to achieve a high inverter ratio, thus increases power too much.
 			\end{itemize}
 
-			\hspace{1em}\textbf{Single ended outputs:}
-			\vspace{-1em}
-			\begin{figure}[htb!]
-			        \centering
-			        \includegraphics[width=0.7\textwidth, angle=0]{./figs/parallel_osc_wfm}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			\end{figure}
-			\vspace{-1em}
-			\hspace{1em}\textbf{Common mode voltage:}
-			\vspace{-1em}
-			\begin{figure}[htb!]
-			        \centering
-			        \includegraphics[width=0.7\textwidth, angle=0]{./figs/parallel_cmv}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			\end{figure}
 
 
 			\begin{itemize}[itemsep=4pt,label=\protect---]
@@ -1499,11 +1329,6 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 				\item I have observed a decease in $\gamma$ at higher back gate biases, this and mobility degredation(??) might explain this trend.
 			\end{itemize}
 
-			\begin{figure}[htb!]
-			        \centering
-			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/telescopic_kcvo_vbg}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			\end{figure}
 
 
 			% \vspace{100em}
@@ -1517,8 +1342,9 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.65\textwidth, angle=0]{./figs/telescopic_pseudodiff_delay_cell_all_tune}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
+			        \includegraphics[height=0.6\textheight, angle=0]{./figs/design/delay_cell_pd_inv}
+			    \caption{Backgate coupled pseudo-differential inverter delay cell with fine and medium tuning ranges.}
+			    \label{fig:pd_delay_cell_fine_med}
 			\end{figure}
 
 			\begin{figure}[htb!]
@@ -1536,26 +1362,100 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			        \label{fig:osc_cmv}
 			    \end{subfigure}
 			    % \caption{x.}
-			    \label{fig:osc_waves}
 			    \caption{\textbf{(a)} Oscillator single-ended waveforms, \textbf{(b)} Oscillator common mode voltage waveform.}
+			    \label{fig:osc_waves}
 			\end{figure} 
 
 
 		\subsection{Full circuit}
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/design/ro_6st_simple}
+			    \caption{Basic differential ring oscillator circuit.}
+			    \label{fig:basic_6stg_ro}
+			\end{figure}
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=1.0\textwidth, angle=0]{./figs/design/ro_12ph_quad}
+			    \caption{Third subharmonic to quadrature full rate conversion.}
+			    \label{fig:ro_phases}
+			\end{figure}
+
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.5\textwidth, angle=0]{./figs/design/delay_cell_symbol_full}
+			    \caption{Ring oscillator delay cell symbol.}
+			    \label{fig:delay_cell_symbol}
+			\end{figure}
+
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/design/delay_cell_full}
+			    \caption{Ring oscillator delay cell full circuit.}
+			    \label{fig:delay_cell_circuit}
+			\end{figure}
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=1.5\textwidth, angle=90]{./figs/design/rosc_full_6stg}
+			    \caption{Ring oscillator full schematic.}
+			    \label{fig:full_6sg_ro}
+			\end{figure}
+
 		\subsubsection{Layout}
 % ################################################################################################
 % ################################################################################################
 	\FloatBarrier
-	\subsection{CDAC}
+	\subsection{CDAC - Fine Range}
+	Resolution of may be analyzed in terms of the smallest possible change of the output of the loop filter. In \ref{sec:bb_noise}, it was found that the possible increments for the loop filter are $\lfloor b_0+b_1 \rfloor$, $\lfloor b_0-b_1 \rfloor$, $\lfloor -b_0+b_1 \rfloor$, $\lfloor -b_0-b_1 \rfloor$. Evaluating these different possibilities, it is determined that the smallest maginitude occurs with the following.
+	\begin{equation}
+		|b_0+b_1| = \frac{\sqrt{K}}{2f_{ref}}
+	\end{equation}
+	The minimum increment $|b_0+b_1|$ should be atleast be unity, corresponding to one LSB change of the DAC. Thus a constraint for the PLL is created in equation \ref{eq:dac_constraint}.
+	\begin{equation}\label{eq:dac_constraint}
+		\sqrt{K} \geq 2f_{ref}
+	\end{equation}
+	Applying this to the filter coefficients in the case of the bang-bang emergent phase noise optimized case, equations \ref{eq:b0_bb} and \ref{eq:b1_bb}, results in the constraint for $K_{DCO}$ in equation \ref{eq:kdco_constraint}.
+
+	\begin{equation}\label{eq:kdco_constraint}
+		K_{DCO} \leq \frac{\sqrt{f_{ref}\sqrt{6}S_{0_{osc}}}}{4\sqrt{6\pi}\sqrt{3\pi-1}}
+	\end{equation}
+	With a reference level of $V_{DD}$, a voltage gain of the ring oscillator of $K_{VCO}$ Hz/V, and $N$ bits in the CDAC, the DCO gain $K_{DCO}$ is given in equation \ref{eq:kdco_kvco}.
+	\begin{equation}\label{eq:kdco_kvco}
+		K_{DCO} = \frac{V_{DD}K_{VCO}}{2^N}
+	\end{equation}
+	Combining \ref{eq:kdco_constraint} and \ref{eq:kdco_kvco} result in an expression for minimum number of DAC bits (using rail to rail reference levels), given in equation \ref{eq:min_dac_bits}
+	\begin{equation}\label{eq:min_dac_bits}
+		N_{min} = \left\lceil \log_2\left( \frac{4V_{DD}K_{VCO}\sqrt{6\pi}\sqrt{3\pi-1} }{\sqrt{f_{ref}\sqrt{6}S_{0_{osc}}}} \right)\right\rceil
+	\end{equation}
+	Using the values $S_{0_{osc}}$ = 11885 and $K_{VCO}$ = 5.378 kHz/mV obtained from phase noise simulation of the oscillator, $f_ref$ = 16 MHz, $V_{DD}$ = 0.8, the minimum number of bits is $N_{min}$ = 9 bits. It has been decided therefore that to add a factor of safety, a 10 bit CDAC for fine tuning will be implmented.
+
+		\subsubsection{Circuit}
+		It was attempted to maximize capacitance for a 10 bit DAC in an area constrained to 50x15$\mu$m. MOM capacitors with 2 fF per unit were achieved with a unit cell of dimension 3$\mu$m x 200 nm, using 5 metal layers (C1-C5) to form the capacitor.
+	
 		\subsubsection{Circuit}
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=\textwidth, angle=0]{./figs/cdac_10b}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
+			        \includegraphics[width=\textwidth, angle=0]{./figs/design/cdac_10b}
+			    \caption{10b CDAC.}
+			    \label{fig:10b_cdac_cir}
+			\end{figure}
+
+		\subsubsection{Layout}
+	\FloatBarrier
+	\subsection{CDAC - Medium Range}
+	Selection of the medium tuning range DAC resolution has been cordinated with the fine range to provide continuity of tuning. Both tuning ranges are operated in steady state mode. The $K_{DCO}$ granularity of the medium range LSB must be larger than that of the MSB for the fine range, but smaller than that total range of the fine range. The inequality in equation \ref{eq:3b_cdac_ineq} determines the range of bits which those criteria are satisfied.
+	\begin{equation}
+		\log_2\left( \frac{K_{VCO,med}}{K_{VCO,fine}}\right) \leq N \leq \log_2\left( \frac{2K_{VCO,med}}{K_{VCO,fine}}\right)
+	\end{equation}
+	For the implemented oscillator, $K_{VCO,med}$ = 30.92 kHz/mV, and $K_{VCO,fine}$ = 5.378 kHz/mV. Thus the acceptable range of bits is 2.52 $\leq$ N $\leq$ 3.52. Therefore, the number of bits for the medium DAC is 3 bits.
+		\subsubsection{Circuit}
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=\textwidth, angle=0]{./figs/design/cdac_3b}
+			    \caption{3b CDAC.}
+			    \label{fig:3b_cdac_cir}
 			\end{figure}
 		\subsubsection{Layout}
-
-
 
 
 
@@ -1613,7 +1513,8 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			\begin{figure}[htb!]
 			        \centering
 			        \includegraphics[width=0.9\textwidth, angle=0]{./figs/pll_asm}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
+			    \caption{ASM chart for PLL state machine.}
+			    \label{fig:asm}
 			\end{figure}
 
 
@@ -1634,11 +1535,20 @@ In the PLL theory (section \ref{sec:pll_output_noise}), the derived PLL detector
 			    % \caption{Approximate model for ring oscillator inverter delay cell.}
 			\end{figure}
 
+% ################################################################################################
+% ################################################################################################
+	\FloatBarrier
+	\subsection{Level Shifter}
+	Due to the split power domains, a level shifter is required interface the two domains.
 
+		\subsubsection{Circuit}
 
-
-
-
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.9\textwidth, angle=0]{./figs/design/level_shift}
+			    \caption{Approximate model for ring oscillator inverter delay cell.}
+			    \label{fig:level_shifter}
+			\end{figure}
 
 
 

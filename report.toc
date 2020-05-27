@@ -4,204 +4,222 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1}Main Contributions}{15}{subsection.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Theory}{16}{section.2}
+\contentsline {section}{\numberline {2}Theory}{17}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Fully Depleted Silicon on Insulator (FD-SOI)}{16}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Fully Depleted Silicon on Insulator (FD-SOI)}{17}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}MOSFET Models}{16}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}MOSFET Models}{17}{subsection.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.1}I-V relations}{16}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.1}I-V relations}{17}{subsubsection.2.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Body Effect}{18}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2}Body Effect}{19}{subsubsection.2.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Basic PLL}{19}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Basic PLL}{20}{subsection.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}PLL Synthesizer Architecture}{20}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.4}PLL Synthesizer Architecture}{21}{subsection.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.1}Phase Detector}{20}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1}Phase Detector}{21}{subsubsection.2.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.2}Bang-bang phase detector}{20}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.2}Bang-bang phase detector}{21}{subsubsection.2.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.3}BBPD Noise}{21}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.3}BBPD Noise}{22}{subsubsection.2.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.4}Divider}{22}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.4}Divider}{23}{subsubsection.2.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.5}Loop Filter}{22}{subsubsection.2.4.5}
+\contentsline {subsubsection}{\numberline {2.4.5}Loop Filter}{23}{subsubsection.2.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.6}Loop Filter Discretization and Digitization}{23}{subsubsection.2.4.6}
+\contentsline {subsubsection}{\numberline {2.4.6}Loop Filter Discretization and Digitization}{24}{subsubsection.2.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.7}Voltage/Digitally Controlled Oscillator}{24}{subsubsection.2.4.7}
+\contentsline {subsubsection}{\numberline {2.4.7}Voltage/Digitally Controlled Oscillator}{25}{subsubsection.2.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.4.8}Closed Loop PLL Transfer Function}{25}{subsubsection.2.4.8}
+\contentsline {subsubsection}{\numberline {2.4.8}Closed Loop PLL Transfer Function}{26}{subsubsection.2.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Phase noise}{25}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.5}Phase noise}{26}{subsection.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.1}Relation to Power spectral density}{25}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.1}Relation to Power spectral density}{26}{subsubsection.2.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.2}Leeson's model}{27}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.2}Leeson's model}{28}{subsubsection.2.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.3}Phase Noise Figures of Merit}{28}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.3}Phase Noise Figures of Merit}{29}{subsubsection.2.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.5.4}Ring Oscillator Phase Noise}{28}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.4}Ring Oscillator Phase Noise}{29}{subsubsection.2.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6}PLL Phase Noise}{29}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.6}PLL Phase Noise}{30}{subsection.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.1}PLL Noise Transfer Functions}{29}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.1}PLL Noise Transfer Functions}{30}{subsubsection.2.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.6.2}PLL Output-referred Noise}{30}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.2}PLL Output-referred Noise}{31}{subsubsection.2.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Design}{32}{section.3}
+\contentsline {section}{\numberline {3}Design}{33}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Proposed Architecture - ADPLL}{32}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.1}Proposed Architecture - ADPLL}{33}{subsection.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.1}Power budget}{33}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1}Block diagram}{33}{subsubsection.3.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.2}Floorplan}{34}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2}Power Saving Approach}{33}{subsubsection.3.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.1.3}Dividerless PLL}{34}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3}PLL Sleep Capability}{34}{subsubsection.3.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Bang-Bang Phase Detector}{35}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.1.4}Gear switching}{35}{subsubsection.3.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.1}Circuit}{37}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.1.5}Power budget}{35}{subsubsection.3.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.2.2}Layout}{38}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.1.6}Floorplan}{35}{subsubsection.3.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Loop Filter}{39}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.1.7}Dividerless PLL}{35}{subsubsection.3.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.1}Proportional-integral Loop Filter}{39}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {3.2}Bang-Bang Phase Detector}{37}{subsection.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.2}Optimal Filter Selection}{40}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Circuit}{39}{subsubsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.3}Settling Time}{45}{subsubsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3}Loop Filter}{40}{subsection.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.4}Filter Design for Synchronous counter}{45}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.1}Proportional-integral Loop Filter}{40}{subsubsection.3.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.5}PI-controller phase margin}{45}{subsubsection.3.3.5}
+\contentsline {subsubsection}{\numberline {3.3.2}Optimal Filter Selection}{41}{subsubsection.3.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.6}Discretization of Loop Filter}{46}{subsubsection.3.3.6}
+\contentsline {subsubsection}{\numberline {3.3.3}Filter Design for Synchronous counter}{45}{subsubsection.3.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.7}Implementation}{47}{subsubsection.3.3.7}
+\contentsline {subsubsection}{\numberline {3.3.4}PI-controller phase margin}{46}{subsubsection.3.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.8}Loop Filter Quantization Noise Optimization}{48}{subsubsection.3.3.8}
+\contentsline {subsubsection}{\numberline {3.3.5}Discretization of Loop Filter}{47}{subsubsection.3.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.9}Loop Filter Transfer Function Error Optimization}{48}{subsubsection.3.3.9}
+\contentsline {subsubsection}{\numberline {3.3.6}Implementation}{48}{subsubsection.3.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.10}Approach 2: Results of Transient and Phase Noise Simulation}{48}{subsubsection.3.3.10}
+\contentsline {subsubsection}{\numberline {3.3.7}Behavioral Verification of PLL Design}{49}{subsubsection.3.3.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.11}Approach 2: Results of Parameter Sweep and Variational Analysis}{49}{subsubsection.3.3.11}
+\contentsline {subsection}{\numberline {3.4}Emergent Bang-Bang PLL Phase Noise}{51}{subsection.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.12}Cyclostationary nonsense}{51}{subsubsection.3.3.12}
+\contentsline {subsubsection}{\numberline {3.4.1}Choice of Optimization Strategy}{54}{subsubsection.3.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.3.13}Filter Design}{54}{subsubsection.3.3.13}
+\contentsline {subsection}{\numberline {3.5}Ring oscillator}{55}{subsection.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Ring oscillator}{55}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.5.1}Channel length consideration}{55}{subsubsection.3.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Channel length consideration}{55}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.5.2}22FDX considerations}{56}{subsubsection.3.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}22FDX considerations}{56}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Ring oscillator frequency derivation}{58}{subsubsection.3.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.3}Ring oscillator frequency derivation}{58}{subsubsection.3.4.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Finding $\delimiter "426830A g_{ch}\delimiter "526930B $ and C}{59}{subsubsection.3.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.4}Finding $\delimiter "426830A g_{ch}\delimiter "526930B $ and C}{59}{subsubsection.3.4.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Handling unequal NMOS/PMOS}{60}{subsubsection.3.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.5}Handling unequal NMOS/PMOS}{60}{subsubsection.3.4.5}
+\contentsline {subsubsection}{\numberline {3.5.6}Solving for oscillator frequency and power}{61}{subsubsection.3.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.6}Solving for oscillator frequency and power}{61}{subsubsection.3.4.6}
+\contentsline {subsubsection}{\numberline {3.5.7}Ring oscillator backgate tuning derivation}{61}{subsubsection.3.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.7}Ring oscillator backgate tuning derivation}{61}{subsubsection.3.4.7}
+\contentsline {subsubsection}{\numberline {3.5.8}DCO Gain Uncertainty}{62}{subsubsection.3.5.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.8}DCO Gain Uncertainty}{62}{subsubsection.3.4.8}
+\contentsline {subsubsection}{\numberline {3.5.9}DCO Sensitivity}{63}{subsubsection.3.5.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.9}DCO Sensitivity}{63}{subsubsection.3.4.9}
+\contentsline {subsubsection}{\numberline {3.5.10}temp}{64}{subsubsection.3.5.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.10}temp}{64}{subsubsection.3.4.10}
+\contentsline {subsubsection}{\numberline {3.5.11}Delay cell}{65}{subsubsection.3.5.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.11}Delay cell}{65}{subsubsection.3.4.11}
+\contentsline {subsection}{\numberline {3.6}Full circuit}{68}{subsection.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Full circuit}{68}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.6.1}Layout}{68}{subsubsection.3.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Layout}{68}{subsubsection.3.5.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}CDAC}{71}{subsection.3.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.6.1}Circuit}{71}{subsubsection.3.6.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.6.2}Layout}{71}{subsubsection.3.6.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Logic}{71}{subsection.3.7}
+\contentsline {subsection}{\numberline {3.7}CDAC - Fine Range}{72}{subsection.3.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.7.1}Circuit}{72}{subsubsection.3.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.7.2}Layout}{72}{subsubsection.3.7.2}
+\contentsline {subsubsection}{\numberline {3.7.2}Circuit}{73}{subsubsection.3.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8}Output buffer}{75}{subsection.3.8}
+\contentsline {subsubsection}{\numberline {3.7.3}Layout}{73}{subsubsection.3.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.8.1}Circuit}{75}{subsubsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8}CDAC - Medium Range}{73}{subsection.3.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.8.2}Layout}{75}{subsubsection.3.8.2}
+\contentsline {subsubsection}{\numberline {3.8.1}Circuit}{73}{subsubsection.3.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9}Synchronous Counter}{76}{subsection.3.9}
+\contentsline {subsubsection}{\numberline {3.8.2}Layout}{73}{subsubsection.3.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.9.1}Circuit}{77}{subsubsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9}Logic}{74}{subsection.3.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.9.2}Layout}{77}{subsubsection.3.9.2}
+\contentsline {subsubsection}{\numberline {3.9.1}Circuit}{75}{subsubsection.3.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Results}{78}{section.4}
+\contentsline {subsubsection}{\numberline {3.9.2}Layout}{75}{subsubsection.3.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Power breakdown}{78}{subsection.4.1}
+\contentsline {subsection}{\numberline {3.10}Level Shifter}{78}{subsection.3.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Ring oscillator}{78}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {3.10.1}Circuit}{78}{subsubsection.3.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Phase Noise}{78}{subsubsection.4.2.1}
+\contentsline {subsection}{\numberline {3.11}Output buffer}{78}{subsection.3.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Tuning}{78}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {3.11.1}Circuit}{78}{subsubsection.3.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Waveforms}{79}{subsubsection.4.2.3}
+\contentsline {subsubsection}{\numberline {3.11.2}Layout}{78}{subsubsection.3.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}10b CDAC}{80}{subsection.4.3}
+\contentsline {subsection}{\numberline {3.12}Synchronous Counter}{79}{subsection.3.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}3b CDAC}{80}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {3.12.1}Circuit}{80}{subsubsection.3.12.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Bang-bang phase detector}{80}{subsection.4.5}
+\contentsline {subsubsection}{\numberline {3.12.2}Layout}{80}{subsubsection.3.12.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6}Logic}{82}{subsection.4.6}
+\contentsline {section}{\numberline {4}Results}{81}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7}Synchronous counter}{82}{subsection.4.7}
+\contentsline {subsection}{\numberline {4.1}Power breakdown}{81}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Discussion}{83}{section.5}
+\contentsline {subsection}{\numberline {4.2}Phase Noise}{81}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}State of art}{83}{subsection.5.1}
+\contentsline {subsection}{\numberline {4.3}Start-up Transient}{81}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Results Comparison of Design Approaches}{84}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {4.4}Ring oscillator}{81}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Areas of Improvement}{84}{subsection.5.2}
+\contentsline {subsubsection}{\numberline {4.4.1}Phase Noise}{81}{subsubsection.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Conclusion}{85}{section.6}
+\contentsline {subsubsection}{\numberline {4.4.2}Tuning}{82}{subsubsection.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Layout}{88}{appendix.A}
+\contentsline {subsubsection}{\numberline {4.4.3}Waveforms}{83}{subsubsection.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Ring Oscillator}{88}{subsection.A.1}
+\contentsline {subsection}{\numberline {4.5}10b CDAC}{84}{subsection.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.1.1}Full oscillator layout}{88}{subsubsection.A.1.1}
+\contentsline {subsection}{\numberline {4.6}3b CDAC}{84}{subsection.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.1.2}Pseudodifferential inverter delay cell}{89}{subsubsection.A.1.2}
+\contentsline {subsection}{\numberline {4.7}Bang-bang phase detector}{84}{subsection.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.1.3}Capaitor tuning bank}{89}{subsubsection.A.1.3}
+\contentsline {subsection}{\numberline {4.8}Loop filter}{85}{subsection.4.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2}10b CDAC}{90}{subsection.A.2}
+\contentsline {subsubsection}{\numberline {4.8.1}Filter Design}{85}{subsubsection.4.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.2.1}Full CDAC Layout}{90}{subsubsection.A.2.1}
+\contentsline {subsection}{\numberline {4.9}Logic}{87}{subsection.4.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {A.2.2}64 unit capacitor sub-bank}{91}{subsubsection.A.2.2}
+\contentsline {section}{\numberline {5}Discussion}{88}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3}CDAC unit switch}{91}{subsection.A.3}
+\contentsline {subsection}{\numberline {5.1}State of art}{88}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4}3b CDAC}{92}{subsection.A.4}
+\contentsline {subsection}{\numberline {5.2}Areas of improvement}{88}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5}Buffer}{93}{subsection.A.5}
+\contentsline {subsubsection}{\numberline {5.2.1}Subharmonic oscillator}{88}{subsubsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.6}BBPD}{94}{subsection.A.6}
+\contentsline {subsubsection}{\numberline {5.2.2}CDAC switching noise}{88}{subsubsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.7}SPNR Logic}{95}{subsection.A.7}
+\contentsline {section}{\numberline {6}Conclusion}{89}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Estimating PSD with Autoregressive Model}{96}{appendix.B}
+\contentsline {section}{\numberline {A}Layout}{92}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.1}Ring Oscillator}{92}{subsection.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.1}Full oscillator layout}{92}{subsubsection.A.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.2}Pseudodifferential inverter delay cell}{93}{subsubsection.A.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.1.3}Capaitor tuning bank}{93}{subsubsection.A.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.2}10b CDAC}{94}{subsection.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.2.1}Full CDAC Layout}{94}{subsubsection.A.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {A.2.2}64 unit capacitor sub-bank}{95}{subsubsection.A.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.3}CDAC unit switch}{95}{subsection.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.4}3b CDAC}{96}{subsection.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.5}Buffer}{97}{subsection.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.6}BBPD}{98}{subsection.A.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.7}SPNR Logic}{99}{subsection.A.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B}Estimating PSD with Autoregressive Model}{100}{appendix.B}

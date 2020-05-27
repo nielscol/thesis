@@ -97,8 +97,8 @@
       \strng{authorbibnamehash}{f82e20b27c9cc12227f64bcffa331f85}
       \strng{authornamehash}{f82e20b27c9cc12227f64bcffa331f85}
       \strng{authorfullhash}{9728f4671b82e47f4c9b8257d6bbd997}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 {IEEE} International Solid-State Circuits Conference ({ISSCC})}
@@ -152,8 +152,8 @@
       \strng{authorbibnamehash}{32d83f81f04da103523fd86258c3ad3a}
       \strng{authornamehash}{32d83f81f04da103523fd86258c3ad3a}
       \strng{authorfullhash}{83067fe5be92fd04fcedfbe4c895ba18}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 {IEEE} Radio Frequency Integrated Circuits Symposium ({RFIC})}
@@ -347,8 +347,8 @@
       \strng{authorbibnamehash}{8cf31a79b0445f84b7f34e43e05b00b5}
       \strng{authornamehash}{8cf31a79b0445f84b7f34e43e05b00b5}
       \strng{authorfullhash}{c3c65c3a99d42f2c631ffd045a53d821}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2012 Symposium on {VLSI} Technology ({VLSIT})}
@@ -387,8 +387,8 @@
       \strng{authorbibnamehash}{fccd5deb8deccd1eea91f57d0b309461}
       \strng{authornamehash}{fccd5deb8deccd1eea91f57d0b309461}
       \strng{authorfullhash}{fccd5deb8deccd1eea91f57d0b309461}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{ESSDERC} 2019 - 49th European Solid-State Device Research Conference ({ESSDERC})}
@@ -625,8 +625,8 @@
       \strng{authorbibnamehash}{7833629adaf08c7851937901cb752049}
       \strng{authornamehash}{7833629adaf08c7851937901cb752049}
       \strng{authorfullhash}{7833629adaf08c7851937901cb752049}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Digital signal processing: principles, algorithms, and applications}
@@ -647,8 +647,8 @@
       \strng{authorbibnamehash}{035b411326410a2d1e442f55d65be276}
       \strng{authornamehash}{035b411326410a2d1e442f55d65be276}
       \strng{authorfullhash}{035b411326410a2d1e442f55d65be276}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -936,8 +936,8 @@
       \strng{authorbibnamehash}{0572267591cb5951df5865cef7d6e7d6}
       \strng{authornamehash}{0572267591cb5951df5865cef7d6e7d6}
       \strng{authorfullhash}{0572267591cb5951df5865cef7d6e7d6}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Journal of Solid-State Circuits}
@@ -1181,8 +1181,8 @@
       \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
       \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
       \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Modern control engineering}
@@ -1212,8 +1212,8 @@
       \strng{authorbibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
       \strng{authornamehash}{0d0df3a36edd84f6dc6485d80c951f96}
       \strng{authorfullhash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
@@ -1231,6 +1231,284 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/4.658619
+      \endverb
+    \endentry
+    \entry{Liu2020}{article}{}
+      \name{author}{16}{}{%
+        {{hash=22c326fd27c6f478a3540133ece73ae9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Bangan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=af3aadc5bc670d087a757b72c2e1d7db}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yuncheng},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f3920f144106b9de720faf0b2e0f2227}{%
+           family={Qiu},
+           familyi={Q\bibinitperiod},
+           given={Junjun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c4c9d9df45da87565484b688262cc2aa}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hongye},
+           giveni={H\bibinitperiod}}}%
+        {{hash=1b014ebb7bdc3c37a75eb6c8fbd38ce0}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=10600ac0794d18b986f7e18ee13c30cf}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Dingxin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=57ee6a8f6e2ba249b1190f9a04a90702}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Haosheng},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8e448470980462cb6c82de10f864754c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d3baa12157ddb92d68251d3d40c1d6e5}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=80c88b1c7cc92f9bcb33605a25e00dab}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0edf823817160c6cdac491529bb26995}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0d521f7ad6986c69415eb133b4f0d14f}{%
+           family={Shirane},
+           familyi={S\bibinitperiod},
+           given={Atsushi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=853b671ca291ad5190a4b3e7140421b0}{%
+           family={Kurosu},
+           familyi={K\bibinitperiod},
+           given={Hitoshi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bbefb74cec61e33c780945b925e5215c}{%
+           family={Nakane},
+           familyi={N\bibinitperiod},
+           given={Yoshinori},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ef9334bd50565f17088afb6034fc155f}{%
+           family={Masaki},
+           familyi={M\bibinitperiod},
+           given={Shunichiro},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3134100734d80d842cb6d38960bb5964}{%
+           family={Okada},
+           familyi={O\bibinitperiod},
+           given={Kenichi},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers ({IEEE})}%
+      }
+      \strng{namehash}{48ac76a5bf92dba3357cd9a962649cca}
+      \strng{fullhash}{0a4eb7579aa3a04fc782c32cf149e261}
+      \strng{bibnamehash}{48ac76a5bf92dba3357cd9a962649cca}
+      \strng{authorbibnamehash}{48ac76a5bf92dba3357cd9a962649cca}
+      \strng{authornamehash}{48ac76a5bf92dba3357cd9a962649cca}
+      \strng{authorfullhash}{0a4eb7579aa3a04fc782c32cf149e261}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Solid-State Circuits Letters}
+      \field{title}{A Fully-Synthesizable Fractional-N Injection-Locked {PLL} for Digital Clocking with Triangle/Sawtooth Spread-Spectrum Modulation Capability in 5-nm {CMOS}}
+      \field{volume}{3}
+      \field{year}{2020}
+      \field{pages}{34\bibrangedash 37}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/lssc.2020.2967744
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/lssc.2020.2967744
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/lssc.2020.2967744
+      \endverb
+    \endentry
+    \entry{Antonopoulos2013}{article}{}
+      \name{author}{8}{}{%
+        {{hash=f97e4d6e2317deb756cb5c167cbe06d3}{%
+           family={Antonopoulos},
+           familyi={A\bibinitperiod},
+           given={Angelos},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5d9e3843fd4470b3302953543ef2f48f}{%
+           family={Bucher},
+           familyi={B\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c06e04f45f52e7f0f95351c268e837f1}{%
+           family={Papathanasiou},
+           familyi={P\bibinitperiod},
+           given={Kostas},
+           giveni={K\bibinitperiod}}}%
+        {{hash=08be802d9924ebddb476b5c3390ba28b}{%
+           family={Mavredakis},
+           familyi={M\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=432af385fe8b139486b1b79d3ac0d4f7}{%
+           family={Makris},
+           familyi={M\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b0b36198fcc84298483310ee236b4644}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Rupendra\bibnamedelima Kumar},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=f1febeb05f1863bdcce46df72b7cc9fb}{%
+           family={Sakalas},
+           familyi={S\bibinitperiod},
+           given={Paulius},
+           giveni={P\bibinitperiod}}}%
+        {{hash=aeb0fc4bac4ab853799b9592f527d6da}{%
+           family={Schroter},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers ({IEEE})}%
+      }
+      \strng{namehash}{a98e923637061b27cb665bd13d8f8601}
+      \strng{fullhash}{ac92ca5406d54017e8a6421e7179283e}
+      \strng{bibnamehash}{a98e923637061b27cb665bd13d8f8601}
+      \strng{authorbibnamehash}{a98e923637061b27cb665bd13d8f8601}
+      \strng{authornamehash}{a98e923637061b27cb665bd13d8f8601}
+      \strng{authorfullhash}{ac92ca5406d54017e8a6421e7179283e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Transactions on Electron Devices}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{{CMOS} Small-Signal and Thermal Noise Modeling at High Frequencies}
+      \field{volume}{60}
+      \field{year}{2013}
+      \field{pages}{3726\bibrangedash 3733}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ted.2013.2283511
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/ted.2013.2283511
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/ted.2013.2283511
+      \endverb
+    \endentry
+    \entry{Liu2019}{article}{}
+      \name{author}{11}{}{%
+        {{hash=680ba965f1288ce628be425682130667}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Hanli},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0d521f7ad6986c69415eb133b4f0d14f}{%
+           family={Shirane},
+           familyi={S\bibinitperiod},
+           given={Atsushi},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3134100734d80d842cb6d38960bb5964}{%
+           family={Okada},
+           familyi={O\bibinitperiod},
+           given={Kenichi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=1b014ebb7bdc3c37a75eb6c8fbd38ce0}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c4c9d9df45da87565484b688262cc2aa}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Hongye},
+           giveni={H\bibinitperiod}}}%
+        {{hash=a5e6d766a2140e858d36e85e1ac9f19e}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=76844708c567daff960915d4aacd3a05}{%
+           family={Siriburanon},
+           familyi={S\bibinitperiod},
+           given={Teerachot},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d3baa12157ddb92d68251d3d40c1d6e5}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8e448470980462cb6c82de10f864754c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Yun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=58a8e16940961ee191334af9a2428927}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e8fb669a363f5affa08aadf992c62fe4}{%
+           family={Someya},
+           familyi={S\bibinitperiod},
+           given={Teruki},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers ({IEEE})}%
+      }
+      \strng{namehash}{1616fd3056125370b5d058178277a977}
+      \strng{fullhash}{9ab14be007f775f89fce48196136da85}
+      \strng{bibnamehash}{1616fd3056125370b5d058178277a977}
+      \strng{authorbibnamehash}{1616fd3056125370b5d058178277a977}
+      \strng{authornamehash}{1616fd3056125370b5d058178277a977}
+      \strng{authorfullhash}{9ab14be007f775f89fce48196136da85}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{A 265-$\mu$W Fractional-$N$ Digital {PLL} With Seamless Automatic Switching Sub-Sampling/Sampling Feedback Path and Duty-Cycled Frequency-Locked Loop in 65-nm {CMOS}}
+      \field{volume}{54}
+      \field{year}{2019}
+      \field{pages}{3478\bibrangedash 3492}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/jssc.2019.2936967
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/jssc.2019.2936967
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/jssc.2019.2936967
       \endverb
     \endentry
     \entry{proakis_1993_psd}{inbook}{}
@@ -1255,8 +1533,8 @@
       \strng{authorbibnamehash}{7833629adaf08c7851937901cb752049}
       \strng{authornamehash}{7833629adaf08c7851937901cb752049}
       \strng{authorfullhash}{7833629adaf08c7851937901cb752049}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Digital signal processing: principles, algorithms, and applications}
