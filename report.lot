@@ -1,21 +1,31 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Design required specifications.\relax }}{5}{table.caption.1}
+\contentsline {table}{\numberline {1}{\ignorespaces Design required specifications.\relax }}{3}{table.caption.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2}{\ignorespaces Schematic simulation of TSPC DFF.\relax }}{39}{table.caption.27}
+\contentsline {table}{\numberline {2}{\ignorespaces Power budget for design process.\relax }}{35}{table.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3}{\ignorespaces PLL parameters extracted from variance and parameter sweep simulations.\relax }}{51}{table.caption.36}
+\contentsline {table}{\numberline {3}{\ignorespaces Schematic simulation of TSPC DFF.\relax }}{39}{table.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4}{\ignorespaces 22FDX core NFET threshold voltage and body effect coefficient extraction.\relax }}{58}{table.caption.43}
+\contentsline {table}{\numberline {4}{\ignorespaces 22FDX core NFET threshold voltage and body effect coefficient extraction.\relax }}{42}{table.caption.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5}{\ignorespaces 22FDX core PFET threshold voltage and body effect coefficient extraction.\relax }}{58}{table.caption.44}
+\contentsline {table}{\numberline {5}{\ignorespaces 22FDX core PFET threshold voltage and body effect coefficient extraction.\relax }}{42}{table.caption.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.\relax }}{82}{table.caption.68}
+\contentsline {table}{\numberline {6}{\ignorespaces PLL parameters extracted from variance and parameter sweep simulations.\relax }}{75}{table.caption.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.\relax }}{86}{table.caption.77}
+\contentsline {table}{\numberline {7}{\ignorespaces Power breakdown.\relax }}{85}{table.caption.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {8}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{86}{table.caption.78}
+\contentsline {table}{\numberline {8}{\ignorespaces Area breakdown.\relax }}{85}{table.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {9}{\ignorespaces Loop filter parameters after digitization and optimization for data word length, gear 1 and gear 2.\relax }}{86}{table.caption.79}
+\contentsline {table}{\numberline {9}{\ignorespaces Ring oscillator performance parameters.\relax }}{87}{table.caption.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {10}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{88}{table.caption.80}
+\contentsline {table}{\numberline {10}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.\relax }}{88}{table.caption.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {11}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.\relax }}{92}{table.caption.89}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {12}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{92}{table.caption.90}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {13}{\ignorespaces Loop filter digitized coefficients.\relax }}{93}{table.caption.91}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {14}{\ignorespaces Synthesisized logic counts.\relax }}{93}{table.caption.92}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {15}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{94}{table.caption.93}

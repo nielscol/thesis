@@ -10,7 +10,7 @@
 	
 	\subsection{MOSFET Models}
 
-	\subsubsection{I-V relations}
+	\subsubsection{I-V relations}\label{sec:mos_iv}
 	Basic models that describe the large signal current-voltage relations of a Metal Oxide Semiconductor Field Effect Transistor (MOSFET) are introduced here, based wholy from \cite{razavi_2017}. For the purposes of this work, a MOSFET is schematically represented in the manner of figure \ref{fig:mos_symbols}, with gate (G), drain (D), source (S) and backgate (B) terminals. Several operating regimes occur depending on the relation of the terminal voltages. Relevant to the scope of this work, are the linear, saturated and velocity saturated regions of MOSFET operation. Nominally, it is expected that when configured as in figure \ref{fig:vgs_sweep}, sweeping the gate-source voltage ($V_{GS}$), with the drain-source voltage ($V_{DS}$) set greater than 0 in the case of a NFET, that an increasing amount of current will enter the MOSFET drain after crossing a threshold voltage ($V_{TH}$). $V_{TH}$ is predominantly dependent of physical configuration of a FET (dimensions, doping, material), however is impacted by the backgate bias in what is termed "the body effect". A more detailed description of each operating regime will be given in the following discourse.
 
 			\begin{figure}[htb!]
@@ -75,9 +75,39 @@
 		\gamma = \frac{C_{ox,bg}}{C_{ox,fg}}
 	\end{equation}
 	Given a nominal threshold voltage of $V_{TH0}$, in FD-SOI, the threshold voltage can be calculated as:
-	\begin{equation}
+	\begin{equation}\label{eq:body_effect}
 		V_{TH} = V_{TH0} - \gamma V_{BS}
 	\end{equation}
+
+	\subsubsection{Linearization of MOSFET models}
+	Under conditions where a MOSFET is held at near constant bias levels, with only minor variations around the DC operating level, simpler linearized models of the transistors can be developed. For the different operating regions of the MOSFET, the I-V relations can be generalized in terms of the function $I_D(V_{GS}, V_{DS}, V_{BS})$. Linearization is then obtained by parameterizing the slope of $I_D$ with respect to the potentials $V_{GS}, V_{DS}, V_{BS}$. The resulting parameters (given as equations \ref{eq:gm} to \ref{eq:fet_out_r}) are the transconductance $g_m$, relating gate drive to drain current, transconductance $g_{mb}$, relating body drive to drain current, and resistance $r_o$, relating drain voltage to drain current. Due to linearization, the current contributions are superimposed to determine total drain current. The linearized circuit which replaces the four terminal MOSFET symbols of figure \ref{fig:mos_symbols} is given by the linearized circuit of figure \ref{fig:ss_model}.
+
+	\begin{align}
+		g_m & = \frac{\partial }{\partial V_{GS}}I_D(V_{GS}, V_{DS}, V_{BS}) \label{eq:gm}\\
+		g_{mb} & = \frac{\partial }{\partial V_{BS}}I_D(V_{GS}, V_{DS}, V_{BS})\\
+		r_o &= \left(\frac{\partial }{\partial V_{DS}}I_D(V_{GS}, V_{DS}, V_{BS})\right)^{-1}\label{eq:fet_out_r}
+	\end{align}
+		\begin{figure}[htb!]
+		        \centering
+		        \includegraphics[width=1\textwidth, angle=0]{./figs/theory/lin_oppoint}
+		    \caption{Transconductances as slope localized at operating point of I-V curve.}
+		    \label{fig:lin_oppoint}
+		\end{figure}
+
+		\begin{figure}[htb!]
+		        \centering
+		        \includegraphics[width=0.4\textwidth, angle=0]{./figs/theory/ss_model}
+		    \caption{Linearized (small-signal) MOSFET model.}
+		    \label{fig:ss_model}
+		\end{figure}
+		\FloatBarrier
+	A useful relation based on this linearization can be determined, based on the FD-SOI body effect equation \ref{eq:body_effect}, and the I-V relations for the three MOSFET operation regions discussed in section \ref{sec:mos_iv}. Computation of $g_{m}$ and $g_{mb}$ for all three regions with the FD-SOI body effect yields the same result given in equation \ref{eq:gm_gmb_relation}. This is that $g_{mb}$ and $g_{m}$ are related by the body effect coefficient $\gamma$.
+	\begin{equation}\label{eq:gm_gmb_relation}
+	g_{mb} = \gamma g_{m}
+	\end{equation}
+
+		
+
 
 
 	\subsection{Basic PLL}
@@ -300,34 +330,34 @@
 			    \label{fig:leeson_pn}
 			\end{figure}
 
-		The equation for $\mathcal{L}(\Delta f)$ (from \cite{lee_hajimiri_2000}) is in equation \ref{eq:leesons}, and is dependent on temperature T, excess noise factor F, oscillator power P, oscillator Q factor, and the transition frequencies $f_1$ and $f_2$ that separate the different noise regions. It is of interest to note that the phase noise relative to the carrier will increase as power decreases, which provides challenge for creating low power oscillators with acceptable phase noise characteristics. 
+		The equation for $\mathcal{L}(\Delta f)$ (from \cite{lee_hajimiri_2000}) is in equation \ref{eq:leesons}, and is dependent on temperature T, excess noise factor F, DC oscillator power $P_{DC}$, oscillator Q factor, and the transition frequencies $f_1$ and $f_2$ that separate the different noise regions. It is of interest to note that the phase noise relative to the carrier will increase as power decreases, which provides challenge for creating low power oscillators with acceptable phase noise characteristics. 
 		\begin{equation}\label{eq:leesons}
-		\mathcal{L}(\Delta f) = 10\log_{10}\left[\frac{2\text{F}k_B\text{T}}{\text{P}}\left(1+\left(\frac{f_2}{2Q\Delta f}\right)^2\right)\left(1+\frac{f_1}{|\Delta f|}\right)\right] = S_{\Phi n_{DCO}}(\Delta f)
+		\mathcal{L}(\Delta f) = 10\log_{10}\left[\frac{2\text{F}k_B\text{T}}{P_{DC}}\left(1+\left(\frac{f_2}{2Q\Delta f}\right)^2\right)\left(1+\frac{f_1}{|\Delta f|}\right)\right] = S_{\Phi n_{DCO}}(\Delta f)
 		\end{equation}
 		For notational consistency, the following redefinition is used in the remainder of this paper: $S_{\Phi n_{DCO}}(f) = \mathcal{L}(\Delta f)|_{\Delta f = f}$
 
 	\subsubsection{Phase Noise Figures of Merit}
 	A common method to assign a figure of merit (FOM) to oscillator phase noise performance is to utilize the below relation \cite{Kinget1999}. Such a model assumes linear tradeoffs between power, frequency, and phase noise, and assumes that the rolloff of phase noise will occur with -20 dB/decade. A Lower FOM here is better.
 	\begin{equation}\label{eq:fom_pn}
-		\textnormal{FOM}_{\textnormal{pn}} = 10\log_{10}\left(\frac{\textnormal{Power}}{\textnormal{1 mW}}\cdot\left(\frac{\Delta f}{f_0}\right)^2\right) + \mathcal{L}(\Delta f)
+		\textnormal{FOM}_{\textnormal{pn}} = 10\log_{10}\left(\frac{P_{DC}}{\textnormal{1 mW}}\cdot\left(\frac{\Delta f}{f_0}\right)^2\right) + \mathcal{L}(\Delta f)
 	\end{equation}
 	Another FOM applied to PLLs is provided below, based on the RMS jitter of the PLL \cite{XiangGao2009}. Here, RMS jitter is used as the phase spectrum of a PLL is often more complicated than a simple oscillator, containing spurs, in-band phase noise supression, and peaking resulting from the PLL loop filter. It should be noted that RMS jitter (in time) is tied directly to total phase noise power, as expected by Parseval's theorem \cite{parseval_1799}.  Lower is better again with this FOM. 
 	\begin{equation}\label{eq:fom_jitter}
-		\textnormal{FOM}_{\textnormal{jitter}} = 10\log_{10}\left(\frac{\sigma_{t_j}^2}{(\textnormal{1 s})^2}\cdot\frac{\textnormal{Power}}{\textnormal{1 mW}}\right)
+		\textnormal{FOM}_{\textnormal{jitter}} = 10\log_{10}\left(\frac{\sigma_{t_j}^2}{(\textnormal{1 s})^2}\cdot\frac{P_{DC}}{\textnormal{1 mW}}\right)
 	\end{equation}
 	\begin{equation}
 		\sigma_{t_j}^2 = \frac{\mathrm{Var}[\Phi_{n}(t)]}{\omega_0^2}
 	\end{equation}
 	In general, a good figure of merit is arrived to be decreasing power and/or minimizing total phase noise power. 
 	
-	\subsubsection{Ring Oscillator Phase Noise}
-	Oscillator phase noise for ring oscillators has a well defined limit as determined by analysis of noise of ideal RC circuits \cite{Navid2005}, which is provided in equation \ref{eq:ro_pn}. Note that his model is limited to analyzing the-20 dB/decade part of an oscillator's spectrum as seen by Leeson's model.
+	\subsubsection{Ring Oscillator Phase Noise}\label{sec:ro_pn_limit}
+	Oscillator phase noise for ring oscillators has a well defined limit as determined by analysis of noise of ideal RC circuits \cite{Navid2005}, which is provided in equation \ref{eq:ro_pn}. Note that his model is limited to analyzing the -20 dB/decade part of an oscillator's spectrum as seen by Leeson's model. 
 	\begin{equation}\label{eq:ro_pn}
-		\mathcal{L}_{min}(\Delta f)= 10\log 10\left(\frac{7.33k_BT}{P}\left(\frac{f_0}{\Delta f}\right)^2\right)
+		\mathcal{L}_{min}(\Delta f)= 10\log 10\left(\frac{7.33k_BT}{P_{DC}}\left(\frac{f_0}{\Delta f}\right)^2\right)
 	\end{equation}
 	Applying this to the phase noise FOM equation \ref{eq:fom_pn}, a limit for ring oscillator phase noise FOM is determined in equation \ref{eq:ro_fom_limit}.
 	\begin{equation}\label{eq:ro_fom_limit}
-		\textnormal{FOM}_{\textnormal{jitter}}(T) = 10\log 10\left(7330k_BT\right)
+		\textnormal{FOM}_{\textnormal{pn,min}} = 10\log 10\left(7330k_BT\right)
 	\end{equation}
 	At 300K, it is then expected that the jitter FOM for a ring oscillator should approach -165.2 dB. An example state of art comparison figure in \ref{fig:lc_ro_fom} shows clustering by oscillator type of jitter FOM calculated in various published works in \cite{Tohidian2015}. It is seen the FOM value calculated from theory is close to that seen implemented hardware.
 	\begin{figure}[htb!]

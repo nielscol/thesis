@@ -1109,130 +1109,6 @@
       \verb https://doi.org/10.1109/4.16303
       \endverb
     \endentry
-    \entry{ogata_2010_pid}{inbook}{}
-      \name{author}{1}{}{%
-        {{hash=72cb1e667ce543119df1b777c0db24de}{%
-           family={Ogata},
-           familyi={O\bibinitperiod},
-           given={Katsuhiko},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Prentice Hall}%
-      }
-      \strng{namehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{fullhash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{bibnamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Modern control engineering}
-      \field{title}{Chapter 8 PID Controllers and Modified PID Controllers}
-      \field{year}{2010}
-    \endentry
-    \entry{gardner_1980}{article}{}
-      \name{author}{1}{}{%
-        {{hash=89f8acc357a52f941eeea0000d1fa10d}{%
-           family={Gardner},
-           familyi={G\bibinitperiod},
-           given={F.},
-           giveni={F\bibinitperiod}}}%
-      }
-      \strng{namehash}{89f8acc357a52f941eeea0000d1fa10d}
-      \strng{fullhash}{89f8acc357a52f941eeea0000d1fa10d}
-      \strng{bibnamehash}{89f8acc357a52f941eeea0000d1fa10d}
-      \strng{authorbibnamehash}{89f8acc357a52f941eeea0000d1fa10d}
-      \strng{authornamehash}{89f8acc357a52f941eeea0000d1fa10d}
-      \strng{authorfullhash}{89f8acc357a52f941eeea0000d1fa10d}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Communications}
-      \field{month}{11}
-      \field{number}{11}
-      \field{title}{Charge-Pump Phase-Lock Loops}
-      \field{volume}{28}
-      \field{year}{1980}
-      \field{pages}{1849\bibrangedash 1858}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1109/tcom.1980.1094619
-      \endverb
-    \endentry
-    \entry{ogata_2010_stability}{inbook}{}
-      \name{author}{1}{}{%
-        {{hash=72cb1e667ce543119df1b777c0db24de}{%
-           family={Ogata},
-           familyi={O\bibinitperiod},
-           given={Katsuhiko},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Prentice Hall}%
-      }
-      \strng{namehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{fullhash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{bibnamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
-      \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Modern control engineering}
-      \field{title}{7-6 Stability Analysis}
-      \field{year}{2010}
-    \endentry
-    \entry{Hajimiri1998}{article}{}
-      \name{author}{2}{}{%
-        {{hash=d85c5078a4edc604243a894378f4397b}{%
-           family={Hajimiri},
-           familyi={H\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=95303190f9506c11a57ab038b9e87429}{%
-           family={Lee},
-           familyi={L\bibinitperiod},
-           given={T.H.},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{publisher}{2}{%
-        {Institute of Electrical}%
-        {Electronics Engineers ({IEEE})}%
-      }
-      \strng{namehash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \strng{fullhash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \strng{bibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \strng{authorbibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \strng{authornamehash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \strng{authorfullhash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
-      \field{number}{2}
-      \field{title}{A general theory of phase noise in electrical oscillators}
-      \field{volume}{33}
-      \field{year}{1998}
-      \field{pages}{179\bibrangedash 194}
-      \range{pages}{16}
-      \verb{doi}
-      \verb 10.1109/4.658619
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1109/4.658619
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/4.658619
-      \endverb
-    \endentry
     \entry{Liu2020}{article}{}
       \name{author}{16}{}{%
         {{hash=22c326fd27c6f478a3540133ece73ae9}{%
@@ -1326,8 +1202,8 @@
       \strng{authorbibnamehash}{48ac76a5bf92dba3357cd9a962649cca}
       \strng{authornamehash}{48ac76a5bf92dba3357cd9a962649cca}
       \strng{authorfullhash}{0a4eb7579aa3a04fc782c32cf149e261}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Solid-State Circuits Letters}
@@ -1399,8 +1275,8 @@
       \strng{authorbibnamehash}{a98e923637061b27cb665bd13d8f8601}
       \strng{authornamehash}{a98e923637061b27cb665bd13d8f8601}
       \strng{authorfullhash}{ac92ca5406d54017e8a6421e7179283e}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Transactions on Electron Devices}
@@ -1420,6 +1296,192 @@
       \verb{url}
       \verb https://doi.org/10.1109/ted.2013.2283511
       \endverb
+    \endentry
+    \entry{Jacquemod2019}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=46c5b1a15ac249933d31dc7bc06067a9}{%
+           family={Jacquemod},
+           familyi={J\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e26e6d454ce57a4d87850a1f56cc1550}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=603115557f77767a281a4fd295b3f78e}{%
+           family={Leduc},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=61263ecfe811599acac812e511bf512f}{%
+           family={Foucauld},
+           familyi={F\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=493ac21832c59dbdd301a325c4f83521}{%
+           family={Prouvee},
+           familyi={P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7ed7c190734908f33eccff4fdebc2a1d}{%
+           family={Blampey},
+           familyi={B\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{fb7c3229c663d35a8c1de2036ab39176}
+      \strng{fullhash}{1d5198fee8158c70fead721ad2f97094}
+      \strng{bibnamehash}{fb7c3229c663d35a8c1de2036ab39176}
+      \strng{authorbibnamehash}{fb7c3229c663d35a8c1de2036ab39176}
+      \strng{authornamehash}{fb7c3229c663d35a8c1de2036ab39176}
+      \strng{authorfullhash}{1d5198fee8158c70fead721ad2f97094}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 {IFIP}/{IEEE} 27th International Conference on Very Large Scale Integration ({VLSI}-{SoC})}
+      \field{month}{10}
+      \field{title}{New design of analog and mixed-signal cells using back-gate cross-coupled structure}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1109/vlsi-soc.2019.8920390
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/vlsi-soc.2019.8920390
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/vlsi-soc.2019.8920390
+      \endverb
+    \endentry
+    \entry{Hajimiri1998}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d85c5078a4edc604243a894378f4397b}{%
+           family={Hajimiri},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=95303190f9506c11a57ab038b9e87429}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={T.H.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Institute of Electrical}%
+        {Electronics Engineers ({IEEE})}%
+      }
+      \strng{namehash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \strng{fullhash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \strng{bibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \strng{authorbibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \strng{authornamehash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \strng{authorfullhash}{0d0df3a36edd84f6dc6485d80c951f96}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
+      \field{number}{2}
+      \field{title}{A general theory of phase noise in electrical oscillators}
+      \field{volume}{33}
+      \field{year}{1998}
+      \field{pages}{179\bibrangedash 194}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/4.658619
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/4.658619
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/4.658619
+      \endverb
+    \endentry
+    \entry{ogata_2010_pid}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=72cb1e667ce543119df1b777c0db24de}{%
+           family={Ogata},
+           familyi={O\bibinitperiod},
+           given={Katsuhiko},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{fullhash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{bibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Modern control engineering}
+      \field{title}{Chapter 8 PID Controllers and Modified PID Controllers}
+      \field{year}{2010}
+    \endentry
+    \entry{gardner_1980}{article}{}
+      \name{author}{1}{}{%
+        {{hash=89f8acc357a52f941eeea0000d1fa10d}{%
+           family={Gardner},
+           familyi={G\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{89f8acc357a52f941eeea0000d1fa10d}
+      \strng{fullhash}{89f8acc357a52f941eeea0000d1fa10d}
+      \strng{bibnamehash}{89f8acc357a52f941eeea0000d1fa10d}
+      \strng{authorbibnamehash}{89f8acc357a52f941eeea0000d1fa10d}
+      \strng{authornamehash}{89f8acc357a52f941eeea0000d1fa10d}
+      \strng{authorfullhash}{89f8acc357a52f941eeea0000d1fa10d}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Communications}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Charge-Pump Phase-Lock Loops}
+      \field{volume}{28}
+      \field{year}{1980}
+      \field{pages}{1849\bibrangedash 1858}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/tcom.1980.1094619
+      \endverb
+    \endentry
+    \entry{ogata_2010_stability}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=72cb1e667ce543119df1b777c0db24de}{%
+           family={Ogata},
+           familyi={O\bibinitperiod},
+           given={Katsuhiko},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{fullhash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{bibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Modern control engineering}
+      \field{title}{7-6 Stability Analysis}
+      \field{year}{2010}
     \endentry
     \entry{Liu2019}{article}{}
       \name{author}{11}{}{%
@@ -1509,6 +1571,146 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/jssc.2019.2936967
+      \endverb
+    \endentry
+    \entry{Palaniappan2018}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=eeec8b8f2f4038ed31c73b61e0ddc907}{%
+           family={Palaniappan},
+           familyi={P\bibinitperiod},
+           given={Arjun\bibnamedelima Ramaswami},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=0333e2ea434ea8d31041a911017bb512}{%
+           family={Siek},
+           familyi={S\bibinitperiod},
+           given={Liter},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{fullhash}{e28d634074b704057664b8c79d5152f0}
+      \strng{bibnamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authorbibnamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authornamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authorfullhash}{e28d634074b704057664b8c79d5152f0}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 {IEEE} Nordic Circuits and Systems Conference ({NORCAS}): {NORCHIP} and International Symposium of System-on-Chip ({SoC})}
+      \field{month}{10}
+      \field{title}{A 0.0186 mm2, 0.65 V Supply, 9.53 ps {RMS} Jitter All-Digital {PLL} for Medical Implants}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1109/norchip.2018.8573491
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/norchip.2018.8573491
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/norchip.2018.8573491
+      \endverb
+    \endentry
+    \entry{Zhang2019}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=56bda333ab85070cdf1934ac222e12aa}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhao},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=24e4d9872981b17144dc1bff19646cf0}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Guang},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1e2d1c0c2da0698df72fc8239a262d2d}{%
+           family={Yue},
+           familyi={Y\bibinitperiod},
+           given={C.\bibnamedelimi Patrick},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{024bf95d08a7640810d1714e49c3599e}
+      \strng{fullhash}{024bf95d08a7640810d1714e49c3599e}
+      \strng{bibnamehash}{024bf95d08a7640810d1714e49c3599e}
+      \strng{authorbibnamehash}{024bf95d08a7640810d1714e49c3599e}
+      \strng{authornamehash}{024bf95d08a7640810d1714e49c3599e}
+      \strng{authorfullhash}{024bf95d08a7640810d1714e49c3599e}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 Symposium on {VLSI} Circuits}
+      \field{month}{6}
+      \field{title}{A 0.25-0.4V, Sub-0.11mW/{GHz}, 0.15-1.6GHz {PLL} Using an Offset Dual-Path Loop Architecture with Dynamic Charge Pumps}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.23919/vlsic.2019.8778061
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.23919/vlsic.2019.8778061
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.23919/vlsic.2019.8778061
+      \endverb
+    \endentry
+    \entry{Xiang2020}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=aab48a593b7c2ec1d9370ae11c6fdea3}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e62bbb6917a96eeb6cde5452f24d8cd1}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Yongping},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0f0db1237ef28b1353f42aa8f52b268b}{%
+           family={Ayers},
+           familyi={A\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=451f8e5c62fbec604f0d298fd364254e}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8d3346030389bb4358dd53ef845ff0b1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{fullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
+      \strng{bibnamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authorbibnamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authornamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authorfullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 {IEEE} Custom Integrated Circuits Conference ({CICC})}
+      \field{month}{3}
+      \field{title}{A 0.5V-to-0.9V 0.2GHz-to-5GHz Ultra-Low-Power Digitally-Assisted Analog Ring {PLL} with Less Than 200ns Lock Time in 22nm {FinFET} {CMOS} Technology}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1109/cicc48029.2020.9075897
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/cicc48029.2020.9075897
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/cicc48029.2020.9075897
       \endverb
     \endentry
     \entry{proakis_1993_psd}{inbook}{}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.20)  27 MAY 2020 04:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.20)  29 MAY 2020 12:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -29,8 +29,325 @@ Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2015/03/17 v1.2c Input encoding file
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0100 (decimal 256)
+   defining Unicode char U+0101 (decimal 257)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+0108 (decimal 264)
+   defining Unicode char U+0109 (decimal 265)
+   defining Unicode char U+010A (decimal 266)
+   defining Unicode char U+010B (decimal 267)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0112 (decimal 274)
+   defining Unicode char U+0113 (decimal 275)
+   defining Unicode char U+0114 (decimal 276)
+   defining Unicode char U+0115 (decimal 277)
+   defining Unicode char U+0116 (decimal 278)
+   defining Unicode char U+0117 (decimal 279)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011C (decimal 284)
+   defining Unicode char U+011D (decimal 285)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0120 (decimal 288)
+   defining Unicode char U+0121 (decimal 289)
+   defining Unicode char U+0122 (decimal 290)
+   defining Unicode char U+0123 (decimal 291)
+   defining Unicode char U+0124 (decimal 292)
+   defining Unicode char U+0125 (decimal 293)
+   defining Unicode char U+0128 (decimal 296)
+   defining Unicode char U+0129 (decimal 297)
+   defining Unicode char U+012A (decimal 298)
+   defining Unicode char U+012B (decimal 299)
+   defining Unicode char U+012C (decimal 300)
+   defining Unicode char U+012D (decimal 301)
+   defining Unicode char U+012E (decimal 302)
+   defining Unicode char U+012F (decimal 303)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0134 (decimal 308)
+   defining Unicode char U+0135 (decimal 309)
+   defining Unicode char U+0136 (decimal 310)
+   defining Unicode char U+0137 (decimal 311)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013B (decimal 315)
+   defining Unicode char U+013C (decimal 316)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0145 (decimal 325)
+   defining Unicode char U+0146 (decimal 326)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+014C (decimal 332)
+   defining Unicode char U+014D (decimal 333)
+   defining Unicode char U+014E (decimal 334)
+   defining Unicode char U+014F (decimal 335)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0156 (decimal 342)
+   defining Unicode char U+0157 (decimal 343)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015C (decimal 348)
+   defining Unicode char U+015D (decimal 349)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+0168 (decimal 360)
+   defining Unicode char U+0169 (decimal 361)
+   defining Unicode char U+016A (decimal 362)
+   defining Unicode char U+016B (decimal 363)
+   defining Unicode char U+016C (decimal 364)
+   defining Unicode char U+016D (decimal 365)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0172 (decimal 370)
+   defining Unicode char U+0173 (decimal 371)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+01CD (decimal 461)
+   defining Unicode char U+01CE (decimal 462)
+   defining Unicode char U+01CF (decimal 463)
+   defining Unicode char U+01D0 (decimal 464)
+   defining Unicode char U+01D1 (decimal 465)
+   defining Unicode char U+01D2 (decimal 466)
+   defining Unicode char U+01D3 (decimal 467)
+   defining Unicode char U+01D4 (decimal 468)
+   defining Unicode char U+01E2 (decimal 482)
+   defining Unicode char U+01E3 (decimal 483)
+   defining Unicode char U+01E6 (decimal 486)
+   defining Unicode char U+01E7 (decimal 487)
+   defining Unicode char U+01E8 (decimal 488)
+   defining Unicode char U+01E9 (decimal 489)
+   defining Unicode char U+01EA (decimal 490)
+   defining Unicode char U+01EB (decimal 491)
+   defining Unicode char U+01F0 (decimal 496)
+   defining Unicode char U+01F4 (decimal 500)
+   defining Unicode char U+01F5 (decimal 501)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+0232 (decimal 562)
+   defining Unicode char U+0233 (decimal 563)
+   defining Unicode char U+1E02 (decimal 7682)
+   defining Unicode char U+1E03 (decimal 7683)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2010 (decimal 8208)
+   defining Unicode char U+2011 (decimal 8209)
+   defining Unicode char U+2012 (decimal 8210)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2015 (decimal 8213)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+   defining Unicode char U+1E20 (decimal 7712)
+   defining Unicode char U+1E21 (decimal 7713)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A0 (decimal 160)
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AD (decimal 173)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0174 (decimal 372)
+   defining Unicode char U+0175 (decimal 373)
+   defining Unicode char U+0176 (decimal 374)
+   defining Unicode char U+0177 (decimal 375)
+   defining Unicode char U+0218 (decimal 536)
+   defining Unicode char U+0219 (decimal 537)
+   defining Unicode char U+021A (decimal 538)
+   defining Unicode char U+021B (decimal 539)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -199,6 +516,8 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
 )
 \Hy@SavedSpaceFactor=\count101
 
@@ -660,7 +979,7 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-Package hyperref Info: Option `colorlinks' set `true' on input line 39.
+Package hyperref Info: Option `colorlinks' set `true' on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -692,10 +1011,10 @@ Package: times 2005/04/12 PSNFSS-v9.2a (SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
-Package newfloat Info: New float `mycapequ' with options `' on input line 80.
+Package newfloat Info: New float `mycapequ' with options `' on input line 85.
 \c@mycapequ=\count316
 \newfloat@ftype=\count317
-Package newfloat Info: float type `mycapequ'=8 on input line 80.
+Package newfloat Info: float type `mycapequ'=8 on input line 85.
 \c@submycapequ=\count318
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/inconsolata.sty
@@ -719,7 +1038,81 @@ Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-)
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+))
 LaTeX Info: Redefining \oldstylenums on input line 334.
 Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
 Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
@@ -1089,8 +1482,9 @@ File: english.lbx 2017/12/19 v3.10 biblatex localization (PK/JW/AB)
 (/home/cole/Documents/pll/thesis_paper/./figs/leeson_pn.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/discrete_pll_full_noise.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/bbpll_full_noise.aux)
-(/home/cole/Documents/pll/thesis_paper/./figs/pi_pz_plot.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/filter_arch_pi.aux)
+(/home/cole/Documents/pll/thesis_paper/./figs/pi_pz_plot.aux)
+(/home/cole/Documents/pll/thesis_paper/figs/aperture_noise2.aux)
 
 LaTeX Warning: Label `fig:osc_se_waves' multiply defined.
 
@@ -1129,10 +1523,10 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 19.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 19.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1224,9 +1618,9 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 19.
-Package biblatex Info: Input encoding 'latin1' detected.
+Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'latin1'.
+(biblatex)             Assuming data encoding 'utf8'.
 \openout4 = `report.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
@@ -1242,18 +1636,18 @@ tim
 )
 ABD: EveryShipout initializing macros
 (/home/cole/Documents/pll/thesis_paper/cover.tex
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 4.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 4.
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
-File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-<logo_ntnu_eng_black.png, id=457, 449.5194pt x 98.0463pt>
+<logo_ntnu_eng_black.png, id=473, 449.5194pt x 98.0463pt>
 File: logo_ntnu_eng_black.png Graphic file (type png)
 <use logo_ntnu_eng_black.png>
 Package pdftex.def Info: logo_ntnu_eng_black.png  used on input line 5.
 (pdftex.def)             Requested size: 227.62206pt x 49.64687pt.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 9.
 LaTeX Font Info:    Try loading font information for U+msa on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1266,78 +1660,85 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/cole/Documents/pll/t
-hesis_paper/logo_ntnu_eng_black.png>] [2]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 32.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 42.
+hesis_paper/logo_ntnu_eng_black.png>]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 44.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 	\thispagestyle
-                    {nohdr} [1]pdfTeX warning (ext4): destination with the same
- identifier (name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
 l.44 	\thispagestyle
-                    {nohdr} [2]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 47.
- [3] [4]
+                    {nohdr} [1]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 47.
+ [2]
 Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
-[5] [6] (/home/cole/Documents/pll/thesis_paper/report.toc
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 3.
- [7] [8])
+[3] (/home/cole/Documents/pll/thesis_paper/report.toc
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+ [4] [5] [6])
 \tf@toc=\write7
 \openout7 = `report.toc'.
 
- [9]
-(/home/cole/Documents/pll/thesis_paper/report.lof [10] [11])
+ [7]
+(/home/cole/Documents/pll/thesis_paper/report.lof [8] [9])
 \tf@lof=\write8
 \openout8 = `report.lof'.
 
 
-(/home/cole/Documents/pll/thesis_paper/report.lot)
+(/home/cole/Documents/pll/thesis_paper/report.lot [10])
 \tf@lot=\write9
 \openout9 = `report.lot'.
 
- [12]
+ [11]
 (/home/cole/Documents/pll/thesis_paper/abbrev.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
-) [13] [14]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
+) [12] [13]
 (/home/cole/Documents/pll/thesis_paper/intro.tex
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 14.
- [15]) [16]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 14.
+ [14]) [15]
 (/home/cole/Documents/pll/thesis_paper/theory.tex
-<./figs/theory/wiatr1-p4-wiatr-large.png, id=892, 823.075pt x 215.80624pt>
+<./figs/theory/wiatr1-p4-wiatr-large.png, id=950, 823.075pt x 215.80624pt>
 File: ./figs/theory/wiatr1-p4-wiatr-large.png Graphic file (type png)
 <use ./figs/theory/wiatr1-p4-wiatr-large.png>
 Package pdftex.def Info: ./figs/theory/wiatr1-p4-wiatr-large.png  used on input
  line 6.
 (pdftex.def)             Requested size: 455.24411pt x 119.36226pt.
- [17 <./figs/theory/wiatr1-p4-wiatr-large.png>]
-<./figs/theory/fet_symbols.pdf, id=906, 189.70876pt x 104.39pt>
+ [16 <./figs/theory/wiatr1-p4-wiatr-large.png>]
+<./figs/theory/fet_symbols.pdf, id=963, 189.70876pt x 104.39pt>
 File: ./figs/theory/fet_symbols.pdf Graphic file (type pdf)
 <use ./figs/theory/fet_symbols.pdf>
 Package pdftex.def Info: ./figs/theory/fet_symbols.pdf  used on input line 18.
 (pdftex.def)             Requested size: 227.62206pt x 125.25461pt.
-<./figs/theory/vgs_sweep.pdf, id=907, 358.33875pt x 119.44624pt>
+<./figs/theory/vgs_sweep.pdf, id=964, 358.33875pt x 119.44624pt>
 File: ./figs/theory/vgs_sweep.pdf Graphic file (type pdf)
 <use ./figs/theory/vgs_sweep.pdf>
 Package pdftex.def Info: ./figs/theory/vgs_sweep.pdf  used on input line 25.
 (pdftex.def)             Requested size: 364.19667pt x 121.40704pt.
- [18 <./figs/theory/fet_symbols.pdf> <./figs/theory/vgs_sweep.pdf>] [19]
+ [17 <./figs/theory/fet_symbols.pdf> <./figs/theory/vgs_sweep.pdf>] [18]
+<./figs/theory/lin_oppoint.pdf, id=996, 449.68pt x 112.42pt>
+File: ./figs/theory/lin_oppoint.pdf Graphic file (type pdf)
+<use ./figs/theory/lin_oppoint.pdf>
+Package pdftex.def Info: ./figs/theory/lin_oppoint.pdf  used on input line 92.
+(pdftex.def)             Requested size: 455.24411pt x 113.81604pt.
+<./figs/theory/ss_model.pdf, id=997, 155.58125pt x 137.51375pt>
+File: ./figs/theory/ss_model.pdf Graphic file (type pdf)
+<use ./figs/theory/ss_model.pdf>
+Package pdftex.def Info: ./figs/theory/ss_model.pdf  used on input line 99.
+(pdftex.def)             Requested size: 182.09486pt x 160.94919pt.
+ [19 <./figs/theory/lin_oppoint.pdf>]
 \openout2 = `./figs/basic_feedback.aux'.
 
- (/home/cole/Documents/pll/thesis_paper/./figs/basic_feedback.tex
-<./figs/basic_feedback.pdf, id=935, 381.425pt x 128.48pt>
+
+(/home/cole/Documents/pll/thesis_paper/./figs/basic_feedback.tex
+<./figs/basic_feedback.pdf, id=1015, 381.425pt x 128.48pt>
 File: ./figs/basic_feedback.pdf Graphic file (type pdf)
 <use ./figs/basic_feedback.pdf>
 Package pdftex.def Info: ./figs/basic_feedback.pdf  used on input line 19.
@@ -1350,12 +1751,12 @@ Overfull \hbox (5.61903pt too wide) in paragraph at lines 19--19
 ) [20
 
 
- <./figs/basic_feedback.pdf>]
+ <./figs/theory/ss_model.pdf> <./figs/basic_feedback.pdf>]
 \openout2 = `./figs/basic_pll.aux'.
 
 
 (/home/cole/Documents/pll/thesis_paper/./figs/basic_pll.tex
-<./figs/basic_pll.pdf, id=951, 489.83pt x 213.79875pt>
+<./figs/basic_pll.pdf, id=1031, 489.83pt x 213.79875pt>
 File: ./figs/basic_pll.pdf Graphic file (type pdf)
 <use ./figs/basic_pll.pdf>
 Package pdftex.def Info: ./figs/basic_pll.pdf  used on input line 23.
@@ -1365,30 +1766,29 @@ Overfull \hbox (5.6183pt too wide) in paragraph at lines 23--23
 [][] 
  []
 
-)
-<./figs/theory/bbpd_nonlinear.pdf, id=953, 170.6375pt x 95.35625pt>
-File: ./figs/theory/bbpd_nonlinear.pdf Graphic file (type pdf)
-<use ./figs/theory/bbpd_nonlinear.pdf>
-Package pdftex.def Info: ./figs/theory/bbpd_nonlinear.pdf  used on input line 1
-28.
-(pdftex.def)             Requested size: 170.71654pt x 95.40692pt.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 129.
-<./figs/theory/bbpd_timing.pdf, id=954, 236.885pt x 104.39pt>
-File: ./figs/theory/bbpd_timing.pdf Graphic file (type pdf)
-<use ./figs/theory/bbpd_timing.pdf>
-Package pdftex.def Info: ./figs/theory/bbpd_timing.pdf  used on input line 134.
-
-(pdftex.def)             Requested size: 227.62206pt x 100.3104pt.
- [21
+) [21
 
 
  <./figs/basic_pll.pdf>]
-<./figs/theory/bbpd_linearized.pdf, id=970, 170.6375pt x 95.35625pt>
+<./figs/theory/bbpd_nonlinear.pdf, id=1043, 170.6375pt x 95.35625pt>
+File: ./figs/theory/bbpd_nonlinear.pdf Graphic file (type pdf)
+<use ./figs/theory/bbpd_nonlinear.pdf>
+Package pdftex.def Info: ./figs/theory/bbpd_nonlinear.pdf  used on input line 1
+58.
+(pdftex.def)             Requested size: 170.71654pt x 95.40692pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <9> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 159.
+<./figs/theory/bbpd_timing.pdf, id=1044, 236.885pt x 104.39pt>
+File: ./figs/theory/bbpd_timing.pdf Graphic file (type pdf)
+<use ./figs/theory/bbpd_timing.pdf>
+Package pdftex.def Info: ./figs/theory/bbpd_timing.pdf  used on input line 164.
+
+(pdftex.def)             Requested size: 227.62206pt x 100.3104pt.
+<./figs/theory/bbpd_linearized.pdf, id=1050, 170.6375pt x 95.35625pt>
 File: ./figs/theory/bbpd_linearized.pdf Graphic file (type pdf)
 <use ./figs/theory/bbpd_linearized.pdf>
 Package pdftex.def Info: ./figs/theory/bbpd_linearized.pdf  used on input line 
-150.
+180.
 (pdftex.def)             Requested size: 182.09486pt x 101.76535pt.
  [22 <./figs/theory/bbpd_nonlinear.pdf> <./figs/theory/bbpd_timing.pdf> <./figs
 /theory/bbpd_linearized.pdf>]
@@ -1396,7 +1796,7 @@ Package pdftex.def Info: ./figs/theory/bbpd_linearized.pdf  used on input line
 
 
 (/home/cole/Documents/pll/thesis_paper/./figs/digital_div.tex
-<./figs/digital_div.pdf, id=993, 260.975pt x 143.53625pt>
+<./figs/digital_div.pdf, id=1073, 260.975pt x 143.53625pt>
 File: ./figs/digital_div.pdf Graphic file (type pdf)
 <use ./figs/digital_div.pdf>
 Package pdftex.def Info: ./figs/digital_div.pdf  used on input line 15.
@@ -1414,7 +1814,7 @@ Overfull \hbox (7.22528pt too wide) in paragraph at lines 15--15
 
 
 (/home/cole/Documents/pll/thesis_paper/./figs/direct_type_1_primed.tex
-<./figs/direct_type_1_primed.pdf, id=1026, 292.09125pt x 161.60374pt>
+<./figs/direct_type_1_primed.pdf, id=1104, 292.09125pt x 161.60374pt>
 File: ./figs/direct_type_1_primed.pdf Graphic file (type pdf)
 <use ./figs/direct_type_1_primed.pdf>
 Package pdftex.def Info: ./figs/direct_type_1_primed.pdf  used on input line 26
@@ -1429,17 +1829,17 @@ Overfull \hbox (5.00429pt too wide) in paragraph at lines 26--26
 
 
  <./figs/direct_type_1_primed.pdf>]
-<./figs/theory/phase_noise_psd.pdf, id=1048, 173.64874pt x 108.405pt>
+<./figs/theory/phase_noise_psd.pdf, id=1127, 173.64874pt x 108.405pt>
 File: ./figs/theory/phase_noise_psd.pdf Graphic file (type pdf)
 <use ./figs/theory/phase_noise_psd.pdf>
 Package pdftex.def Info: ./figs/theory/phase_noise_psd.pdf  used on input line 
-262.
+292.
 (pdftex.def)             Requested size: 227.62206pt x 142.1042pt.
  [26] [27 <./figs/theory/phase_noise_psd.pdf>]
 \openout2 = `./figs/leeson_pn.aux'.
 
  (/home/cole/Documents/pll/thesis_paper/./figs/leeson_pn.tex
-<./figs/leeson_pn.pdf, id=1083, 249.93375pt x 141.52875pt>
+<./figs/leeson_pn.pdf, id=1163, 249.93375pt x 141.52875pt>
 File: ./figs/leeson_pn.pdf Graphic file (type pdf)
 <use ./figs/leeson_pn.pdf>
 Package pdftex.def Info: ./figs/leeson_pn.pdf  used on input line 22.
@@ -1449,22 +1849,21 @@ Overfull \hbox (5.72165pt too wide) in paragraph at lines 22--22
 [][] 
  []
 
-) [28
+) [28] [29
 
 
  <./figs/leeson_pn.pdf>]
-<./figs/lc_ro_fom_comparison.png, id=1106, 1441.385pt x 689.57625pt>
+<./figs/lc_ro_fom_comparison.png, id=1197, 1441.385pt x 689.57625pt>
 File: ./figs/lc_ro_fom_comparison.png Graphic file (type png)
 <use ./figs/lc_ro_fom_comparison.png>
-Package pdftex.def Info: ./figs/lc_ro_fom_comparison.png  used on input line 33
+Package pdftex.def Info: ./figs/lc_ro_fom_comparison.png  used on input line 36
 4.
 (pdftex.def)             Requested size: 455.24411pt x 217.78586pt.
- [29]
 \openout2 = `./figs/discrete_pll_full_noise.aux'.
 
 
 (/home/cole/Documents/pll/thesis_paper/./figs/discrete_pll_full_noise.tex
-<./figs/discrete_pll_full_noise.pdf, id=1124, 766.865pt x 177.66376pt>
+<./figs/discrete_pll_full_noise.pdf, id=1201, 766.865pt x 177.66376pt>
 File: ./figs/discrete_pll_full_noise.pdf Graphic file (type pdf)
 <use ./figs/discrete_pll_full_noise.pdf>
 Package pdftex.def Info: ./figs/discrete_pll_full_noise.pdf  used on input line
@@ -1476,31 +1875,31 @@ Overfull \hbox (4.82135pt too wide) in paragraph at lines 30--30
  []
 
 )
-Overfull \hbox (5.61688pt too wide) in paragraph at lines 30--346
+Overfull \hbox (5.61688pt too wide) in paragraph at lines 30--376
  [][] 
  []
 
-[30
+[30 <./figs/lc_ro_fom_comparison.png>] [31
 
 
- <./figs/lc_ro_fom_comparison.png> <./figs/discrete_pll_full_noise.pdf>]
-[31]) [32] (/home/cole/Documents/pll/thesis_paper/methods.tex
-<./figs/design/pll_master_arch_final.pdf, id=1163, 1010.77625pt x 303.1325pt>
+ <./figs/discrete_pll_full_noise.pdf>]) [32] (/home/cole/Documents/pll/thesis_p
+aper/methods.tex
+<./figs/design/pll_master_arch_final.pdf, id=1245, 1010.77625pt x 303.1325pt>
 File: ./figs/design/pll_master_arch_final.pdf Graphic file (type pdf)
 <use ./figs/design/pll_master_arch_final.pdf>
 Package pdftex.def Info: ./figs/design/pll_master_arch_final.pdf  used on input
  line 14.
 (pdftex.def)             Requested size: 455.24411pt x 136.52863pt.
  [33 <./figs/design/pll_master_arch_final.pdf>]
-<./figs/design/pll_sleep.pdf, id=1173, 342.27875pt x 173.64874pt>
+<./figs/design/pll_sleep.pdf, id=1255, 342.27875pt x 173.64874pt>
 File: ./figs/design/pll_sleep.pdf Graphic file (type pdf)
 <use ./figs/design/pll_sleep.pdf>
 Package pdftex.def Info: ./figs/design/pll_sleep.pdf  used on input line 27.
 (pdftex.def)             Requested size: 273.14923pt x 138.58797pt.
  [34 <./figs/design/pll_sleep.pdf>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
-<./figs/design/pll_floorplan3.pdf, id=1182, 200.75pt x 110.4125pt>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+<./figs/design/pll_floorplan3.pdf, id=1264, 200.75pt x 110.4125pt>
 File: ./figs/design/pll_floorplan3.pdf Graphic file (type pdf)
 <use ./figs/design/pll_floorplan3.pdf>
 Package pdftex.def Info: ./figs/design/pll_floorplan3.pdf  used on input line 6
@@ -1510,7 +1909,7 @@ Package pdftex.def Info: ./figs/design/pll_floorplan3.pdf  used on input line 6
 
 
 (/home/cole/Documents/pll/thesis_paper/./figs/bbpll_full_noise.tex
-<./figs/bbpll_full_noise.pdf, id=1183, 670.505pt x 141.52875pt>
+<./figs/bbpll_full_noise.pdf, id=1265, 670.505pt x 141.52875pt>
 File: ./figs/bbpll_full_noise.pdf Graphic file (type pdf)
 <use ./figs/bbpll_full_noise.pdf>
 Package pdftex.def Info: ./figs/bbpll_full_noise.pdf  used on input line 26.
@@ -1524,23 +1923,23 @@ Overfull \hbox (4.82112pt too wide) in paragraph at lines 26--26
 
 
  <./figs/bbpll_full_noise.pdf>]
-<./figs/design/bbpd_.pdf, id=1216, 182.6825pt x 111.41624pt>
+<./figs/design/bbpd_.pdf, id=1296, 182.6825pt x 111.41624pt>
 File: ./figs/design/bbpd_.pdf Graphic file (type pdf)
 <use ./figs/design/bbpd_.pdf>
 Package pdftex.def Info: ./figs/design/bbpd_.pdf  used on input line 100.
 (pdftex.def)             Requested size: 182.09486pt x 111.06235pt.
-<./figs/bbpd_jitter.pdf, id=1219, 333.245pt x 243.91125pt>
+<./figs/bbpd_jitter.pdf, id=1299, 333.245pt x 243.91125pt>
 File: ./figs/bbpd_jitter.pdf Graphic file (type pdf)
 <use ./figs/bbpd_jitter.pdf>
 Package pdftex.def Info: ./figs/bbpd_jitter.pdf  used on input line 108.
 (pdftex.def)             Requested size: 273.14923pt x 199.93779pt.
-<figs/design/bbpd_noise_nonlinear.pdf, id=1220, 218.8175pt x 96.36pt>
+<figs/design/bbpd_noise_nonlinear.pdf, id=1300, 218.8175pt x 96.36pt>
 File: figs/design/bbpd_noise_nonlinear.pdf Graphic file (type pdf)
 <use figs/design/bbpd_noise_nonlinear.pdf>
 Package pdftex.def Info: figs/design/bbpd_noise_nonlinear.pdf  used on input li
 ne 117.
 (pdftex.def)             Requested size: 182.09833pt x 80.19048pt.
-<figs/design/bbpd_noise_linear.pdf, id=1221, 266.9975pt x 107.40125pt>
+<figs/design/bbpd_noise_linear.pdf, id=1301, 266.9975pt x 107.40125pt>
 File: figs/design/bbpd_noise_linear.pdf Graphic file (type pdf)
 <use figs/design/bbpd_noise_linear.pdf>
 Package pdftex.def Info: figs/design/bbpd_noise_linear.pdf  used on input line 
@@ -1550,58 +1949,280 @@ Package pdftex.def Info: figs/design/bbpd_noise_linear.pdf  used on input line
 [37 <./figs/design/bbpd_.pdf>] [38 <./figs/bbpd_jitter.pdf> </home/cole/Documen
 ts/pll/thesis_paper/figs/design/bbpd_noise_nonlinear.pdf> </home/cole/Documents
 /pll/thesis_paper/figs/design/bbpd_noise_linear.pdf>]
-<./figs/design/tspc_.pdf, id=1254, 291.0875pt x 197.73875pt>
+<./figs/design/tspc_.pdf, id=1335, 291.0875pt x 197.73875pt>
 File: ./figs/design/tspc_.pdf Graphic file (type pdf)
 <use ./figs/design/tspc_.pdf>
 Package pdftex.def Info: ./figs/design/tspc_.pdf  used on input line 239.
 (pdftex.def)             Requested size: 273.14923pt x 185.56668pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 244.
+ [39 <./figs/design/tspc_.pdf>] [40]
+<./figs/design/vth_vbs.pdf, id=1360, 462.52798pt x 346.89601pt>
+File: ./figs/design/vth_vbs.pdf Graphic file (type pdf)
+<use ./figs/design/vth_vbs.pdf>
+Package pdftex.def Info: ./figs/design/vth_vbs.pdf  used on input line 356.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/vth_slope_vbs.pdf, id=1361, 462.52798pt x 346.89601pt>
+File: ./figs/design/vth_slope_vbs.pdf Graphic file (type pdf)
+<use ./figs/design/vth_slope_vbs.pdf>
+Package pdftex.def Info: ./figs/design/vth_slope_vbs.pdf  used on input line 36
+2.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/vth.pdf, id=1362, 462.52798pt x 346.89601pt>
+File: ./figs/design/vth.pdf Graphic file (type pdf)
+<use ./figs/design/vth.pdf>
+Package pdftex.def Info: ./figs/design/vth.pdf  used on input line 376.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/gamma.pdf, id=1363, 462.52798pt x 346.89601pt>
+File: ./figs/design/gamma.pdf Graphic file (type pdf)
+<use ./figs/design/gamma.pdf>
+Package pdftex.def Info: ./figs/design/gamma.pdf  used on input line 382.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+ [41 <./figs/design/vth_vbs.pdf> <./figs/design/vth_slope_vbs.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/vth_slope_vbs.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./figs/design/vth.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/vth.pdf): PDF inclusion: multiple 
+pdfs with page group included in a single page
+> <./figs/design/gamma.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/gamma.pdf): PDF inclusion: multipl
+e pdfs with page group included in a single page
+>] [42]
+<./figs/design/22fdx_rosc_fom.pdf, id=1607, 491.436pt x 345.4506pt>
+File: ./figs/design/22fdx_rosc_fom.pdf Graphic file (type pdf)
+<use ./figs/design/22fdx_rosc_fom.pdf>
+Package pdftex.def Info: ./figs/design/22fdx_rosc_fom.pdf  used on input line 4
+66.
+(pdftex.def)             Requested size: 227.62206pt x 160.0056pt.
+<./figs/design/22fdx_rosc_freq.pdf, id=1608, 462.52798pt x 346.89601pt>
+File: ./figs/design/22fdx_rosc_freq.pdf Graphic file (type pdf)
+<use ./figs/design/22fdx_rosc_freq.pdf>
+Package pdftex.def Info: ./figs/design/22fdx_rosc_freq.pdf  used on input line 
+472.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/22fdx_rosc_power.pdf, id=1609, 462.52798pt x 346.89601pt>
+File: ./figs/design/22fdx_rosc_power.pdf Graphic file (type pdf)
+<use ./figs/design/22fdx_rosc_power.pdf>
+Package pdftex.def Info: ./figs/design/22fdx_rosc_power.pdf  used on input line
+ 485.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/22fdx_rosc_pn_1mhz.pdf, id=1610, 462.52798pt x 346.89601pt>
+File: ./figs/design/22fdx_rosc_pn_1mhz.pdf Graphic file (type pdf)
+<use ./figs/design/22fdx_rosc_pn_1mhz.pdf>
+Package pdftex.def Info: ./figs/design/22fdx_rosc_pn_1mhz.pdf  used on input li
+ne 491.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+ [43 <./figs/design/22fdx_rosc_fom.pdf> <./figs/design/22fdx_rosc_freq.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_freq.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./figs/design/22fdx_rosc_power.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_power.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./figs/design/22fdx_rosc_pn_1mhz.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_pn_1mhz.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+<figs/theory/osc_waves.pdf, id=1839, 565.11125pt x 162.6075pt>
+File: figs/theory/osc_waves.pdf Graphic file (type pdf)
+<use figs/theory/osc_waves.pdf>
+Package pdftex.def Info: figs/theory/osc_waves.pdf  used on input line 507.
+(pdftex.def)             Requested size: 364.19667pt x 104.79791pt.
+<figs/design/inv_rc_model.pdf, id=1840, 227.85126pt x 174.6525pt>
+File: figs/design/inv_rc_model.pdf Graphic file (type pdf)
+<use figs/design/inv_rc_model.pdf>
+Package pdftex.def Info: figs/design/inv_rc_model.pdf  used on input line 516.
+(pdftex.def)             Requested size: 227.62206pt x 174.4815pt.
+<figs/design/inv_waves.pdf, id=1841, 226.8475pt x 168.63pt>
+File: figs/design/inv_waves.pdf Graphic file (type pdf)
+<use figs/design/inv_waves.pdf>
+Package pdftex.def Info: figs/design/inv_waves.pdf  used on input line 522.
+(pdftex.def)             Requested size: 182.09833pt x 135.36475pt.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 532.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [44 </home/cole/Documents/pll/thesis_paper/figs/theory/osc_waves.pdf> </home/
+cole/Documents/pll/thesis_paper/figs/design/inv_rc_model.pdf> </home/cole/Docum
+ents/pll/thesis_paper/figs/design/inv_waves.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 548.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 244.
-<./figs/jitter_pdfs.pdf, id=1257, 646.0938pt x 351.23221pt>
-File: ./figs/jitter_pdfs.pdf Graphic file (type pdf)
-<use ./figs/jitter_pdfs.pdf>
-Package pdftex.def Info: ./figs/jitter_pdfs.pdf  used on input line 285.
-(pdftex.def)             Requested size: 318.66948pt x 173.24147pt.
- [39 <./figs/design/tspc_.pdf>] [40 <./figs/jitter_pdfs.pdf>]
-\openout2 = `./figs/pi_pz_plot.aux'.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delimiter' on input line 548.
 
 
-(/home/cole/Documents/pll/thesis_paper/./figs/pi_pz_plot.tex
-<./figs/pi_pz_plot.pdf, id=1341, 441.65pt x 176.66pt>
-File: ./figs/pi_pz_plot.pdf Graphic file (type pdf)
-<use ./figs/pi_pz_plot.pdf>
-Package pdftex.def Info: ./figs/pi_pz_plot.pdf  used on input line 19.
-(pdftex.def)             Requested size: 309.15288pt x 123.66115pt.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 548.
 
-Overfull \hbox (5.61911pt too wide) in paragraph at lines 19--19
-[][] 
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\delimiter' on input line 548.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 548.
+
+[45] [46] [47]
+Overfull \hbox (51.48584pt too wide) detected at line 662
+ []$[][]$ []  
  []
 
-) [41
-
-
- <./figs/pi_pz_plot.pdf>] [42] [43]
-<./figs/design/alpha_v_pn.pdf, id=1392, 462.52798pt x 346.89601pt>
-File: ./figs/design/alpha_v_pn.pdf Graphic file (type pdf)
-<use ./figs/design/alpha_v_pn.pdf>
-Package pdftex.def Info: ./figs/design/alpha_v_pn.pdf  used on input line 485.
-(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
- [44] [45 <./figs/design/alpha_v_pn.pdf>] [46]
-<figs/damping_vs_pm.pdf, id=1493, 462.52798pt x 346.89601pt>
-File: figs/damping_vs_pm.pdf Graphic file (type pdf)
-<use figs/damping_vs_pm.pdf>
-Package pdftex.def Info: figs/damping_vs_pm.pdf  used on input line 537.
+[48] [49]
+<figs/backgate_rosc_tuning2.pdf, id=1916, 175.65625pt x 143.53625pt>
+File: figs/backgate_rosc_tuning2.pdf Graphic file (type pdf)
+<use figs/backgate_rosc_tuning2.pdf>
+Package pdftex.def Info: figs/backgate_rosc_tuning2.pdf  used on input line 701
+.
+(pdftex.def)             Requested size: 182.09486pt x 148.80984pt.
+ [50 </home/cole/Documents/pll/thesis_paper/figs/backgate_rosc_tuning2.pdf>]
+<./figs/design/jacqu2-1-large.png, id=1928, 823.075pt x 823.075pt>
+File: ./figs/design/jacqu2-1-large.png Graphic file (type png)
+<use ./figs/design/jacqu2-1-large.png>
+Package pdftex.def Info: ./figs/design/jacqu2-1-large.png  used on input line 7
+14.
+(pdftex.def)             Requested size: 264.0424pt x 264.04245pt.
+ [51 <./figs/design/jacqu2-1-large.png>]
+<./figs/design/fig_10a_.pdf, id=1944, 108.405pt x 123.46124pt>
+File: ./figs/design/fig_10a_.pdf Graphic file (type pdf)
+<use ./figs/design/fig_10a_.pdf>
+Package pdftex.def Info: ./figs/design/fig_10a_.pdf  used on input line 725.
+(pdftex.def)             Requested size: 150.23138pt x 171.11891pt.
+<./figs/design/fig_10b.pdf, id=1945, 180.675pt x 173.64874pt>
+File: ./figs/design/fig_10b.pdf Graphic file (type pdf)
+<use ./figs/design/fig_10b.pdf>
+Package pdftex.def Info: ./figs/design/fig_10b.pdf  used on input line 731.
+(pdftex.def)             Requested size: 150.23138pt x 144.39073pt.
+<./figs/design/fig_10c.pdf, id=1946, 156.585pt x 129.48375pt>
+File: ./figs/design/fig_10c.pdf Graphic file (type pdf)
+<use ./figs/design/fig_10c.pdf>
+Package pdftex.def Info: ./figs/design/fig_10c.pdf  used on input line 737.
+(pdftex.def)             Requested size: 150.23138pt x 124.23381pt.
+<./figs/design/pseudodiff_bw.pdf, id=1947, 120.45pt x 227.85126pt>
+File: ./figs/design/pseudodiff_bw.pdf Graphic file (type pdf)
+<use ./figs/design/pseudodiff_bw.pdf>
+Package pdftex.def Info: ./figs/design/pseudodiff_bw.pdf  used on input line 75
+0.
+(pdftex.def)             Requested size: 136.57462pt x 258.3798pt.
+<./figs/design/pseudodiff_buff_linear.pdf, id=1948, 156.585pt x 243.91125pt>
+File: ./figs/design/pseudodiff_buff_linear.pdf Graphic file (type pdf)
+<use ./figs/design/pseudodiff_buff_linear.pdf>
+Package pdftex.def Info: ./figs/design/pseudodiff_buff_linear.pdf  used on inpu
+t line 757.
+(pdftex.def)             Requested size: 159.33821pt x 248.20929pt.
+ [52 <./figs/design/fig_10a_.pdf> <./figs/design/fig_10b.pdf> <./figs/design/fi
+g_10c.pdf> <./figs/design/pseudodiff_bw.pdf> <./figs/design/pseudodiff_buff_lin
+ear.pdf>]
+<./figs/design/parallel_delay_cell2.pdf, id=1976, 219.82124pt x 297.11pt>
+File: ./figs/design/parallel_delay_cell2.pdf Graphic file (type pdf)
+<use ./figs/design/parallel_delay_cell2.pdf>
+Package pdftex.def Info: ./figs/design/parallel_delay_cell2.pdf  used on input 
+line 787.
+(pdftex.def)             Requested size: 227.62206pt x 307.66331pt.
+<./figs/design/tele_delay_cell2.pdf, id=1977, 123.46124pt x 378.41376pt>
+File: ./figs/design/tele_delay_cell2.pdf Graphic file (type pdf)
+<use ./figs/design/tele_delay_cell2.pdf>
+Package pdftex.def Info: ./figs/design/tele_delay_cell2.pdf  used on input line
+ 793.
+(pdftex.def)             Requested size: 114.64632pt x 351.39154pt.
+<./figs/design/tuning.pdf, id=1979, 114.4275pt x 114.4275pt>
+File: ./figs/design/tuning.pdf Graphic file (type pdf)
+<use ./figs/design/tuning.pdf>
+Package pdftex.def Info: ./figs/design/tuning.pdf  used on input line 814.
+(pdftex.def)             Requested size: 182.09486pt x 182.10297pt.
+ [53]
+<./figs/design/ratio_lvtnfet_pfet.pdf, id=1986, 462.52798pt x 346.89601pt>
+File: ./figs/design/ratio_lvtnfet_pfet.pdf Graphic file (type pdf)
+<use ./figs/design/ratio_lvtnfet_pfet.pdf>
+Package pdftex.def Info: ./figs/design/ratio_lvtnfet_pfet.pdf  used on input li
+ne 834.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/ratio_slvtnfet_pfet.pdf, id=1987, 462.52798pt x 346.89601pt>
+File: ./figs/design/ratio_slvtnfet_pfet.pdf Graphic file (type pdf)
+<use ./figs/design/ratio_slvtnfet_pfet.pdf>
+Package pdftex.def Info: ./figs/design/ratio_slvtnfet_pfet.pdf  used on input l
+ine 840.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+ [54 <./figs/design/parallel_delay_cell2.pdf> <./figs/design/tele_delay_cell2.p
+df> <./figs/design/tuning.pdf>] [55 <./figs/design/ratio_lvtnfet_pfet.pdf> <./f
+igs/design/ratio_slvtnfet_pfet.pdf
+
+pdfTeX warning: pdflatex (file ./figs/design/ratio_slvtnfet_pfet.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+>]
+<./figs/design/delay_cell_pd_inv.pdf, id=2126, 219.82124pt x 574.145pt>
+File: ./figs/design/delay_cell_pd_inv.pdf Graphic file (type pdf)
+<use ./figs/design/delay_cell_pd_inv.pdf>
+Package pdftex.def Info: ./figs/design/delay_cell_pd_inv.pdf  used on input lin
+e 904.
+(pdftex.def)             Requested size: 161.44759pt x 421.67413pt.
+<./figs/results/osc_se_waves.pdf, id=2127, 462.52798pt x 346.89601pt>
+File: ./figs/results/osc_se_waves.pdf Graphic file (type pdf)
+<use ./figs/results/osc_se_waves.pdf>
+Package pdftex.def Info: ./figs/results/osc_se_waves.pdf  used on input line 91
+3.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/results/osc_cmv.pdf, id=2128, 462.52798pt x 346.89601pt>
+File: ./figs/results/osc_cmv.pdf Graphic file (type pdf)
+<use ./figs/results/osc_cmv.pdf>
+Package pdftex.def Info: ./figs/results/osc_cmv.pdf  used on input line 919.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/design/ro_6st_simple.pdf, id=2129, 441.65pt x 104.39pt>
+File: ./figs/design/ro_6st_simple.pdf Graphic file (type pdf)
+<use ./figs/design/ro_6st_simple.pdf>
+Package pdftex.def Info: ./figs/design/ro_6st_simple.pdf  used on input line 93
+4.
+(pdftex.def)             Requested size: 364.19667pt x 86.08615pt.
+<./figs/design/ro_12ph_quad.pdf, id=2130, 652.4375pt x 429.605pt>
+File: ./figs/design/ro_12ph_quad.pdf Graphic file (type pdf)
+<use ./figs/design/ro_12ph_quad.pdf>
+Package pdftex.def Info: ./figs/design/ro_12ph_quad.pdf  used on input line 940
+.
+(pdftex.def)             Requested size: 455.24411pt x 299.77094pt.
+<./figs/design/delay_cell_symbol_full.pdf, id=2131, 252.945pt x 186.6975pt>
+File: ./figs/design/delay_cell_symbol_full.pdf Graphic file (type pdf)
+<use ./figs/design/delay_cell_symbol_full.pdf>
+Package pdftex.def Info: ./figs/design/delay_cell_symbol_full.pdf  used on inpu
+t line 947.
+(pdftex.def)             Requested size: 227.62206pt x 168.0091pt.
+<./figs/design/delay_cell_full.pdf, id=2132, 567.11874pt x 574.145pt>
+File: ./figs/design/delay_cell_full.pdf Graphic file (type pdf)
+<use ./figs/design/delay_cell_full.pdf>
+Package pdftex.def Info: ./figs/design/delay_cell_full.pdf  used on input line 
+954.
+(pdftex.def)             Requested size: 364.19667pt x 368.72185pt.
+<./figs/design/rosc_full_6stg.pdf, id=2133, 891.33pt x 258.9675pt>
+File: ./figs/design/rosc_full_6stg.pdf Graphic file (type pdf)
+<use ./figs/design/rosc_full_6stg.pdf>
+Package pdftex.def Info: ./figs/design/rosc_full_6stg.pdf  used on input line 9
+60.
+(pdftex.def)             Requested size: 682.86617pt x 198.40189pt.
+
+
+LaTeX Warning: Float too large for page by 0.08308pt on input line 963.
+
+[56]
+
+LaTeX Warning: Text page 57 contains only floats.
+
+[57 <./figs/design/delay_cell_pd_inv.pdf> <./figs/results/osc_se_waves.pdf> <./
+figs/results/osc_cmv.pdf
+
+pdfTeX warning: pdflatex (file ./figs/results/osc_cmv.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>] [58 <./figs/design/ro_6st_simple.pdf> <./figs/design/ro_12ph_quad.pdf> <./fi
+gs/design/delay_cell_symbol_full.pdf>] [59 <./figs/design/delay_cell_full.pdf>]
+[60 <./figs/design/rosc_full_6stg.pdf>]
 \openout2 = `./figs/filter_arch_pi.aux'.
 
- (/home/cole/Documents/pll/thesis_paper/./figs/filter_arch_pi.tex
-<./figs/filter_arch_pi.pdf, id=1501, 580.1675pt x 167.62625pt>
+
+(/home/cole/Documents/pll/thesis_paper/./figs/filter_arch_pi.tex
+<./figs/filter_arch_pi.pdf, id=2278, 580.1675pt x 167.62625pt>
 File: ./figs/filter_arch_pi.pdf Graphic file (type pdf)
 <use ./figs/filter_arch_pi.pdf>
 Package pdftex.def Info: ./figs/filter_arch_pi.pdf  used on input line 27.
@@ -1611,64 +2232,118 @@ Overfull \hbox (5.61786pt too wide) in paragraph at lines 27--27
 [][] 
  []
 
-) [47
+) [61
+
+]
+\openout2 = `./figs/pi_pz_plot.aux'.
+
+ (/home/cole/Documents/pll/thesis_paper/./figs/pi_pz_plot.tex
+<./figs/pi_pz_plot.pdf, id=2297, 441.65pt x 176.66pt>
+File: ./figs/pi_pz_plot.pdf Graphic file (type pdf)
+<use ./figs/pi_pz_plot.pdf>
+Package pdftex.def Info: ./figs/pi_pz_plot.pdf  used on input line 19.
+(pdftex.def)             Requested size: 309.15288pt x 123.66115pt.
+
+Overfull \hbox (5.61911pt too wide) in paragraph at lines 19--19
+[][] 
+ []
+
+) [62
 
 
- </home/cole/Documents/pll/thesis_paper/figs/damping_vs_pm.pdf> <./figs/filter_
-arch_pi.pdf>]
-LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 582.
+ <./figs/filter_arch_pi.pdf>] [63
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
-File: ot1zi4.fd 2018/01/14 OT1/zi4 (Inconsolata)
+ <./figs/pi_pz_plot.pdf>] [64] [65]
+<./figs/design/alpha_v_pn.pdf, id=2362, 462.52798pt x 346.89601pt>
+File: ./figs/design/alpha_v_pn.pdf Graphic file (type pdf)
+<use ./figs/design/alpha_v_pn.pdf>
+Package pdftex.def Info: ./figs/design/alpha_v_pn.pdf  used on input line 1150.
+
+(pdftex.def)             Requested size: 273.14923pt x 204.8733pt.
+
+[66 <./figs/design/alpha_v_pn.pdf>]
+<./figs/design/simplified_bbpll.pdf, id=2438, 412.54124pt x 113.42375pt>
+File: ./figs/design/simplified_bbpll.pdf Graphic file (type pdf)
+<use ./figs/design/simplified_bbpll.pdf>
+Package pdftex.def Info: ./figs/design/simplified_bbpll.pdf  used on input line
+ 1188.
+(pdftex.def)             Requested size: 364.19667pt x 100.13338pt.
+ [67 <./figs/design/simplified_bbpll.pdf>]
+<./figs/bbpd_resolution_phase_walk.pdf, id=2455, 183.68625pt x 122.4575pt>
+File: ./figs/bbpd_resolution_phase_walk.pdf Graphic file (type pdf)
+<use ./figs/bbpd_resolution_phase_walk.pdf>
+Package pdftex.def Info: ./figs/bbpd_resolution_phase_walk.pdf  used on input l
+ine 1202.
+(pdftex.def)             Requested size: 182.09833pt x 121.40706pt.
+<./figs/spurs_dco.pdf, id=2456, 462.52798pt x 346.89601pt>
+File: ./figs/spurs_dco.pdf Graphic file (type pdf)
+<use ./figs/spurs_dco.pdf>
+Package pdftex.def Info: ./figs/spurs_dco.pdf  used on input line 1208.
+(pdftex.def)             Requested size: 182.09833pt x 136.57513pt.
+
+[68 <./figs/bbpd_resolution_phase_walk.pdf> <./figs/spurs_dco.pdf>] [69]
+[70]
+<figs/damping_vs_pm.pdf, id=2560, 462.52798pt x 346.89601pt>
+File: figs/damping_vs_pm.pdf Graphic file (type pdf)
+<use figs/damping_vs_pm.pdf>
+Package pdftex.def Info: figs/damping_vs_pm.pdf  used on input line 1303.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+ [71]
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 1350.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
-LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 12.0pt on input line 582.
- [48]
-<./figs/mux_datapath.pdf, id=1574, 451.6875pt x 322.20375pt>
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 12.0pt on input line 1350.
+
+[72 </home/cole/Documents/pll/thesis_paper/figs/damping_vs_pm.pdf>]
+<./figs/mux_datapath.pdf, id=2634, 451.6875pt x 322.20375pt>
 File: ./figs/mux_datapath.pdf Graphic file (type pdf)
 <use ./figs/mux_datapath.pdf>
-Package pdftex.def Info: ./figs/mux_datapath.pdf  used on input line 592.
+Package pdftex.def Info: ./figs/mux_datapath.pdf  used on input line 1360.
 (pdftex.def)             Requested size: 341.43307pt x 243.56961pt.
-<figs/trans_loop_filter_fast.pdf, id=1579, 462.52798pt x 346.89601pt>
+<figs/trans_loop_filter_fast.pdf, id=2640, 462.52798pt x 346.89601pt>
 File: figs/trans_loop_filter_fast.pdf Graphic file (type pdf)
 <use figs/trans_loop_filter_fast.pdf>
-Package pdftex.def Info: figs/trans_loop_filter_fast.pdf  used on input line 64
-3.
+Package pdftex.def Info: figs/trans_loop_filter_fast.pdf  used on input line 14
+14.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<figs/trans_inst_freq_fast.pdf, id=1580, 462.52798pt x 346.89601pt>
+<figs/trans_inst_freq_fast.pdf, id=2641, 462.52798pt x 346.89601pt>
 File: figs/trans_inst_freq_fast.pdf Graphic file (type pdf)
 <use figs/trans_inst_freq_fast.pdf>
-Package pdftex.def Info: figs/trans_inst_freq_fast.pdf  used on input line 649.
-
+Package pdftex.def Info: figs/trans_inst_freq_fast.pdf  used on input line 1420
+.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<figs/trans_tdc_bbpd_fast.pdf, id=1581, 462.52798pt x 346.89601pt>
+<figs/trans_tdc_bbpd_fast.pdf, id=2642, 462.52798pt x 346.89601pt>
 File: figs/trans_tdc_bbpd_fast.pdf Graphic file (type pdf)
 <use figs/trans_tdc_bbpd_fast.pdf>
-Package pdftex.def Info: figs/trans_tdc_bbpd_fast.pdf  used on input line 662.
+Package pdftex.def Info: figs/trans_tdc_bbpd_fast.pdf  used on input line 1433.
+
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<figs/trans_phase_noise_fast.pdf, id=1582, 462.52798pt x 346.89601pt>
+<figs/trans_phase_noise_fast.pdf, id=2643, 462.52798pt x 346.89601pt>
 File: figs/trans_phase_noise_fast.pdf Graphic file (type pdf)
 <use figs/trans_phase_noise_fast.pdf>
-Package pdftex.def Info: figs/trans_phase_noise_fast.pdf  used on input line 66
-8.
+Package pdftex.def Info: figs/trans_phase_noise_fast.pdf  used on input line 14
+39.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
- [49 <./figs/mux_datapath.pdf>]
-<figs/mc_trans_2x.pdf, id=1598, 462.52798pt x 346.89601pt>
+ [73 <./figs/mux_datapath.pdf>]
+<figs/mc_trans_2x.pdf, id=2657, 462.52798pt x 346.89601pt>
 File: figs/mc_trans_2x.pdf Graphic file (type pdf)
 <use figs/mc_trans_2x.pdf>
-Package pdftex.def Info: figs/mc_trans_2x.pdf  used on input line 684.
+Package pdftex.def Info: figs/mc_trans_2x.pdf  used on input line 1455.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<figs/mc_hist_fast_2x.pdf, id=1599, 462.52798pt x 346.89601pt>
+<figs/mc_hist_fast_2x.pdf, id=2658, 462.52798pt x 346.89601pt>
 File: figs/mc_hist_fast_2x.pdf Graphic file (type pdf)
 <use figs/mc_hist_fast_2x.pdf>
-Package pdftex.def Info: figs/mc_hist_fast_2x.pdf  used on input line 690.
+Package pdftex.def Info: figs/mc_hist_fast_2x.pdf  used on input line 1461.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50 </home/cole/Documents/pll/thesis_paper/figs/trans_loop_filter_fast.pdf> </h
+[74 </home/cole/Documents/pll/thesis_paper/figs/trans_loop_filter_fast.pdf> </h
 ome/cole/Documents/pll/thesis_paper/figs/trans_inst_freq_fast.pdf
 
 pdfTeX warning: pdflatex (file /home/cole/Documents/pll/thesis_paper/figs/trans
@@ -1684,444 +2359,209 @@ _tdc_bbpd_fast.pdf): PDF inclusion: multiple pdfs with page group included in a
 pdfTeX warning: pdflatex (file /home/cole/Documents/pll/thesis_paper/figs/trans
 _phase_noise_fast.pdf): PDF inclusion: multiple pdfs with page group included i
 n a single page
->]
-<./figs/design/simplified_bbpll.pdf, id=1786, 412.54124pt x 113.42375pt>
-File: ./figs/design/simplified_bbpll.pdf Graphic file (type pdf)
-<use ./figs/design/simplified_bbpll.pdf>
-Package pdftex.def Info: ./figs/design/simplified_bbpll.pdf  used on input line
- 728.
-(pdftex.def)             Requested size: 364.19667pt x 100.13338pt.
- [51 </home/cole/Documents/pll/thesis_paper/figs/mc_trans_2x.pdf> </home/cole/D
-ocuments/pll/thesis_paper/figs/mc_hist_fast_2x.pdf
+>] [75 </home/cole/Documents/pll/thesis_paper/figs/mc_trans_2x.pdf> </home/cole
+/Documents/pll/thesis_paper/figs/mc_hist_fast_2x.pdf
 
 pdfTeX warning: pdflatex (file /home/cole/Documents/pll/thesis_paper/figs/mc_hi
 st_fast_2x.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
-> <./figs/design/simplified_bbpll.pdf>]
-<./figs/bbpd_resolution_phase_walk.pdf, id=1905, 183.68625pt x 122.4575pt>
-File: ./figs/bbpd_resolution_phase_walk.pdf Graphic file (type pdf)
-<use ./figs/bbpd_resolution_phase_walk.pdf>
-Package pdftex.def Info: ./figs/bbpd_resolution_phase_walk.pdf  used on input l
-ine 742.
-(pdftex.def)             Requested size: 182.09833pt x 121.40706pt.
-<./figs/spurs_dco.pdf, id=1906, 462.52798pt x 346.89601pt>
-File: ./figs/spurs_dco.pdf Graphic file (type pdf)
-<use ./figs/spurs_dco.pdf>
-Package pdftex.def Info: ./figs/spurs_dco.pdf  used on input line 748.
-(pdftex.def)             Requested size: 182.09833pt x 136.57513pt.
- [52 <./figs/bbpd_resolution_phase_walk.pdf> <./figs/spurs_dco.pdf>] [53] [54]
-<./figs/design/22fdx_rosc_fom.pdf, id=2006, 491.436pt x 345.4506pt>
-File: ./figs/design/22fdx_rosc_fom.pdf Graphic file (type pdf)
-<use ./figs/design/22fdx_rosc_fom.pdf>
-Package pdftex.def Info: ./figs/design/22fdx_rosc_fom.pdf  used on input line 8
-68.
-(pdftex.def)             Requested size: 227.62206pt x 160.0056pt.
-<./figs/design/22fdx_rosc_freq.pdf, id=2007, 462.52798pt x 346.89601pt>
-File: ./figs/design/22fdx_rosc_freq.pdf Graphic file (type pdf)
-<use ./figs/design/22fdx_rosc_freq.pdf>
-Package pdftex.def Info: ./figs/design/22fdx_rosc_freq.pdf  used on input line 
-874.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/22fdx_rosc_power.pdf, id=2008, 462.52798pt x 346.89601pt>
-File: ./figs/design/22fdx_rosc_power.pdf Graphic file (type pdf)
-<use ./figs/design/22fdx_rosc_power.pdf>
-Package pdftex.def Info: ./figs/design/22fdx_rosc_power.pdf  used on input line
- 887.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/22fdx_rosc_pn_1mhz.pdf, id=2009, 462.52798pt x 346.89601pt>
-File: ./figs/design/22fdx_rosc_pn_1mhz.pdf Graphic file (type pdf)
-<use ./figs/design/22fdx_rosc_pn_1mhz.pdf>
-Package pdftex.def Info: ./figs/design/22fdx_rosc_pn_1mhz.pdf  used on input li
-ne 893.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
- [55]
-<./figs/design/vth_vbs.pdf, id=2017, 462.52798pt x 346.89601pt>
-File: ./figs/design/vth_vbs.pdf Graphic file (type pdf)
-<use ./figs/design/vth_vbs.pdf>
-Package pdftex.def Info: ./figs/design/vth_vbs.pdf  used on input line 921.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/vth_slope_vbs.pdf, id=2018, 462.52798pt x 346.89601pt>
-File: ./figs/design/vth_slope_vbs.pdf Graphic file (type pdf)
-<use ./figs/design/vth_slope_vbs.pdf>
-Package pdftex.def Info: ./figs/design/vth_slope_vbs.pdf  used on input line 92
-7.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
- [56 <./figs/design/22fdx_rosc_fom.pdf> <./figs/design/22fdx_rosc_freq.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_freq.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./figs/design/22fdx_rosc_power.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_power.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
-> <./figs/design/22fdx_rosc_pn_1mhz.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/22fdx_rosc_pn_1mhz.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
 >]
-<./figs/design/vth.pdf, id=2247, 462.52798pt x 346.89601pt>
-File: ./figs/design/vth.pdf Graphic file (type pdf)
-<use ./figs/design/vth.pdf>
-Package pdftex.def Info: ./figs/design/vth.pdf  used on input line 941.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/gamma.pdf, id=2248, 462.52798pt x 346.89601pt>
-File: ./figs/design/gamma.pdf Graphic file (type pdf)
-<use ./figs/design/gamma.pdf>
-Package pdftex.def Info: ./figs/design/gamma.pdf  used on input line 947.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
- [57 <./figs/design/vth_vbs.pdf> <./figs/design/vth_slope_vbs.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/vth_slope_vbs.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./figs/design/vth.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/vth.pdf): PDF inclusion: multiple 
-pdfs with page group included in a single page
-> <./figs/design/gamma.pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/gamma.pdf): PDF inclusion: multipl
-e pdfs with page group included in a single page
->]
-<figs/theory/osc_waves.pdf, id=2472, 565.11125pt x 162.6075pt>
-File: figs/theory/osc_waves.pdf Graphic file (type pdf)
-<use figs/theory/osc_waves.pdf>
-Package pdftex.def Info: figs/theory/osc_waves.pdf  used on input line 1027.
-(pdftex.def)             Requested size: 364.19667pt x 104.79791pt.
-<figs/theory/inv_rc_model.pdf, id=2473, 300.12125pt x 191.71625pt>
-File: figs/theory/inv_rc_model.pdf Graphic file (type pdf)
-<use figs/theory/inv_rc_model.pdf>
-Package pdftex.def Info: figs/theory/inv_rc_model.pdf  used on input line 1036.
-
-(pdftex.def)             Requested size: 227.62206pt x 145.40747pt.
-<figs/theory/inv_waves.pdf, id=2474, 226.8475pt x 168.63pt>
-File: figs/theory/inv_waves.pdf Graphic file (type pdf)
-<use figs/theory/inv_waves.pdf>
-Package pdftex.def Info: figs/theory/inv_waves.pdf  used on input line 1042.
-(pdftex.def)             Requested size: 182.09833pt x 135.36475pt.
- [58 </home/cole/Documents/pll/thesis_paper/figs/theory/osc_waves.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 1052
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1062.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 1062.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 1062.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\delimiter' on input line 1062.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1062.
-
-[59 </home/cole/Documents/pll/thesis_paper/figs/theory/inv_rc_model.pdf> </home
-/cole/Documents/pll/thesis_paper/figs/theory/inv_waves.pdf>]
-Overfull \hbox (54.67484pt too wide) detected at line 1083
-[]\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = []
- [][] [] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 I[] \OT1/cmr/m/n/12 = [] [][] []
-
- []
-
-[60] [61]
-<figs/backgate_rosc_tuning2.pdf, id=2519, 175.65625pt x 143.53625pt>
-File: figs/backgate_rosc_tuning2.pdf Graphic file (type pdf)
-<use figs/backgate_rosc_tuning2.pdf>
-Package pdftex.def Info: figs/backgate_rosc_tuning2.pdf  used on input line 114
-7.
-(pdftex.def)             Requested size: 136.57462pt x 111.60957pt.
- [62 </home/cole/Documents/pll/thesis_paper/figs/backgate_rosc_tuning2.pdf>]
-Overfull \hbox (51.48584pt too wide) detected at line 1181
- []$[][]$ []  
- []
-
-[63] [64]
-<./figs/parallel_delay_cell.pdf, id=2553, 307.1475pt x 297.11pt>
-File: ./figs/parallel_delay_cell.pdf Graphic file (type pdf)
-<use ./figs/parallel_delay_cell.pdf>
-Package pdftex.def Info: ./figs/parallel_delay_cell.pdf  used on input line 125
-0.
-(pdftex.def)             Requested size: 364.19667pt x 352.31856pt.
- [65 <./figs/parallel_delay_cell.pdf>]
-<./figs/design/ratio_lvtnfet_pfet.pdf, id=2563, 462.52798pt x 346.89601pt>
-File: ./figs/design/ratio_lvtnfet_pfet.pdf Graphic file (type pdf)
-<use ./figs/design/ratio_lvtnfet_pfet.pdf>
-Package pdftex.def Info: ./figs/design/ratio_lvtnfet_pfet.pdf  used on input li
-ne 1268.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/ratio_slvtnfet_pfet.pdf, id=2564, 462.52798pt x 346.89601pt>
-File: ./figs/design/ratio_slvtnfet_pfet.pdf Graphic file (type pdf)
-<use ./figs/design/ratio_slvtnfet_pfet.pdf>
-Package pdftex.def Info: ./figs/design/ratio_slvtnfet_pfet.pdf  used on input l
-ine 1274.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/tele_delay_cell.pdf, id=2565, 210.7875pt x 378.41376pt>
-File: ./figs/tele_delay_cell.pdf Graphic file (type pdf)
-<use ./figs/tele_delay_cell.pdf>
-Package pdftex.def Info: ./figs/tele_delay_cell.pdf  used on input line 1304.
-(pdftex.def)             Requested size: 264.0424pt x 474.02649pt.
- [66 <./figs/design/ratio_lvtnfet_pfet.pdf> <./figs/design/ratio_slvtnfet_pfet.
-pdf
-
-pdfTeX warning: pdflatex (file ./figs/design/ratio_slvtnfet_pfet.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->] [67 <./figs/tele_delay_cell.pdf>]
-<./figs/design/delay_cell_pd_inv.pdf, id=2697, 219.82124pt x 574.145pt>
-File: ./figs/design/delay_cell_pd_inv.pdf Graphic file (type pdf)
-<use ./figs/design/delay_cell_pd_inv.pdf>
-Package pdftex.def Info: ./figs/design/delay_cell_pd_inv.pdf  used on input lin
-e 1343.
-(pdftex.def)             Requested size: 161.44759pt x 421.67413pt.
-<./figs/results/osc_se_waves.pdf, id=2698, 462.52798pt x 346.89601pt>
-File: ./figs/results/osc_se_waves.pdf Graphic file (type pdf)
-<use ./figs/results/osc_se_waves.pdf>
-Package pdftex.def Info: ./figs/results/osc_se_waves.pdf  used on input line 13
-52.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_cmv.pdf, id=2699, 462.52798pt x 346.89601pt>
-File: ./figs/results/osc_cmv.pdf Graphic file (type pdf)
-<use ./figs/results/osc_cmv.pdf>
-Package pdftex.def Info: ./figs/results/osc_cmv.pdf  used on input line 1358.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/design/ro_6st_simple.pdf, id=2700, 441.65pt x 104.39pt>
-File: ./figs/design/ro_6st_simple.pdf Graphic file (type pdf)
-<use ./figs/design/ro_6st_simple.pdf>
-Package pdftex.def Info: ./figs/design/ro_6st_simple.pdf  used on input line 13
-71.
-(pdftex.def)             Requested size: 364.19667pt x 86.08615pt.
-<./figs/design/ro_12ph_quad.pdf, id=2701, 652.4375pt x 429.605pt>
-File: ./figs/design/ro_12ph_quad.pdf Graphic file (type pdf)
-<use ./figs/design/ro_12ph_quad.pdf>
-Package pdftex.def Info: ./figs/design/ro_12ph_quad.pdf  used on input line 137
-7.
-(pdftex.def)             Requested size: 455.24411pt x 299.77094pt.
-<./figs/design/delay_cell_symbol_full.pdf, id=2702, 252.945pt x 186.6975pt>
-File: ./figs/design/delay_cell_symbol_full.pdf Graphic file (type pdf)
-<use ./figs/design/delay_cell_symbol_full.pdf>
-Package pdftex.def Info: ./figs/design/delay_cell_symbol_full.pdf  used on inpu
-t line 1384.
-(pdftex.def)             Requested size: 227.62206pt x 168.0091pt.
-<./figs/design/delay_cell_full.pdf, id=2703, 567.11874pt x 574.145pt>
-File: ./figs/design/delay_cell_full.pdf Graphic file (type pdf)
-<use ./figs/design/delay_cell_full.pdf>
-Package pdftex.def Info: ./figs/design/delay_cell_full.pdf  used on input line 
-1391.
-(pdftex.def)             Requested size: 364.19667pt x 368.72185pt.
-<./figs/design/rosc_full_6stg.pdf, id=2704, 891.33pt x 258.9675pt>
-File: ./figs/design/rosc_full_6stg.pdf Graphic file (type pdf)
-<use ./figs/design/rosc_full_6stg.pdf>
-Package pdftex.def Info: ./figs/design/rosc_full_6stg.pdf  used on input line 1
-397.
-(pdftex.def)             Requested size: 682.86617pt x 198.40189pt.
-
-
-LaTeX Warning: Float too large for page by 0.08308pt on input line 1400.
-
-[68 <./figs/design/delay_cell_pd_inv.pdf>]
-
-LaTeX Warning: Text page 69 contains only floats.
-
-[69 <./figs/results/osc_se_waves.pdf> <./figs/results/osc_cmv.pdf
-
-pdfTeX warning: pdflatex (file ./figs/results/osc_cmv.pdf): PDF inclusion: mult
-iple pdfs with page group included in a single page
-> <./figs/design/ro_6st_simple.pdf> <./figs/design/ro_12ph_quad.pdf>] [70 <./fi
-gs/design/delay_cell_symbol_full.pdf> <./figs/design/delay_cell_full.pdf>]
-[71 <./figs/design/rosc_full_6stg.pdf>]
-<./figs/design/cdac_10b.pdf, id=2843, 514.92375pt x 144.54pt>
+<./figs/design/cdac_10b.pdf, id=2967, 514.92375pt x 144.54pt>
 File: ./figs/design/cdac_10b.pdf Graphic file (type pdf)
 <use ./figs/design/cdac_10b.pdf>
-Package pdftex.def Info: ./figs/design/cdac_10b.pdf  used on input line 1436.
+Package pdftex.def Info: ./figs/design/cdac_10b.pdf  used on input line 1570.
 (pdftex.def)             Requested size: 455.24411pt x 127.79106pt.
- [72
-
-]
-
-LaTeX Warning: Reference `eq:3b_cdac_ineq' on page 73 undefined on input line 1
-444.
-
-<./figs/design/cdac_3b.pdf, id=2853, 406.51875pt x 144.54pt>
+ [76 <./figs/design/cdac_10b.pdf>]
+<./figs/design/cdac_3b.pdf, id=2979, 406.51875pt x 144.54pt>
 File: ./figs/design/cdac_3b.pdf Graphic file (type pdf)
 <use ./figs/design/cdac_3b.pdf>
-Package pdftex.def Info: ./figs/design/cdac_3b.pdf  used on input line 1452.
+Package pdftex.def Info: ./figs/design/cdac_3b.pdf  used on input line 1587.
 (pdftex.def)             Requested size: 455.24411pt x 161.87044pt.
-[73 <./figs/design/cdac_10b.pdf>]
-<./figs/pll_reset.pdf, id=2862, 192.72pt x 131.49126pt>
+ [77 <./figs/design/cdac_3b.pdf>]
+<./figs/pll_reset.pdf, id=2988, 192.72pt x 131.49126pt>
 File: ./figs/pll_reset.pdf Graphic file (type pdf)
 <use ./figs/pll_reset.pdf>
-Package pdftex.def Info: ./figs/pll_reset.pdf  used on input line 1487.
+Package pdftex.def Info: ./figs/pll_reset.pdf  used on input line 1622.
 (pdftex.def)             Requested size: 364.19667pt x 248.48766pt.
- [74 <./figs/design/cdac_3b.pdf>]
-<./figs/pll_asm.pdf, id=2874, 766.865pt x 736.7525pt>
+ [78 <./figs/pll_reset.pdf>]
+<./figs/pll_asm.pdf, id=3002, 766.865pt x 736.7525pt>
 File: ./figs/pll_asm.pdf Graphic file (type pdf)
 <use ./figs/pll_asm.pdf>
-Package pdftex.def Info: ./figs/pll_asm.pdf  used on input line 1513.
+Package pdftex.def Info: ./figs/pll_asm.pdf  used on input line 1648.
 (pdftex.def)             Requested size: 409.71692pt x 393.63594pt.
-<./figs/pnr_digital.png, id=2875, 471.7625pt x 894.34125pt>
-File: ./figs/pnr_digital.png Graphic file (type png)
-<use ./figs/pnr_digital.png>
-Package pdftex.def Info: ./figs/pnr_digital.png  used on input line 1532.
-(pdftex.def)             Requested size: 273.14923pt x 517.83127pt.
- [75 <./figs/pll_reset.pdf>] [76 <./figs/pll_asm.pdf>] [77 <./figs/pnr_digital.
-png (PNG copy)>]
-<./figs/design/level_shift.pdf, id=2899, 258.9675pt x 138.5175pt>
+ [79 <./figs/pll_asm.pdf>]
+<./figs/design/level_shift.pdf, id=3013, 258.9675pt x 138.5175pt>
 File: ./figs/design/level_shift.pdf Graphic file (type pdf)
 <use ./figs/design/level_shift.pdf>
-Package pdftex.def Info: ./figs/design/level_shift.pdf  used on input line 1546
+Package pdftex.def Info: ./figs/design/level_shift.pdf  used on input line 1681
 .
 (pdftex.def)             Requested size: 409.71692pt x 219.17438pt.
- [78
+ [80 <./figs/design/level_shift.pdf>]
+\openout2 = `figs/aperture_noise2.aux'.
 
- <./figs/design/level_shift.pdf>]
-<./figs/pseudiff_buffer.pdf, id=2908, 240.9pt x 257.96375pt>
-File: ./figs/pseudiff_buffer.pdf Graphic file (type pdf)
-<use ./figs/pseudiff_buffer.pdf>
-Package pdftex.def Info: ./figs/pseudiff_buffer.pdf  used on input line 1583.
-(pdftex.def)             Requested size: 364.19667pt x 390.03064pt.
- [79 <./figs/pseudiff_buffer.pdf>]
-<./figs/sync_counter.pdf, id=2918, 965.6075pt x 167.62625pt>
+ (/home/cole/Documents/pll/thesis_paper/figs/aperture_noise2.tex
+<./figs/aperture_noise2.pdf, id=3028, 334.24875pt x 135.50626pt>
+File: ./figs/aperture_noise2.pdf Graphic file (type pdf)
+<use ./figs/aperture_noise2.pdf>
+Package pdftex.def Info: ./figs/aperture_noise2.pdf  used on input line 25.
+(pdftex.def)             Requested size: 417.8099pt x 169.38237pt.
+
+Overfull \hbox (9.40877pt too wide) in paragraph at lines 25--25
+[][] 
+ []
+
+) [81]
+<./figs/design/pseudiff_buffer.pdf, id=3044, 240.9pt x 227.85126pt>
+File: ./figs/design/pseudiff_buffer.pdf Graphic file (type pdf)
+<use ./figs/design/pseudiff_buffer.pdf>
+Package pdftex.def Info: ./figs/design/pseudiff_buffer.pdf  used on input line 
+1730.
+(pdftex.def)             Requested size: 250.38564pt x 236.83107pt.
+ [82
+
+
+ <./figs/aperture_noise2.pdf>]
+<./figs/sync_counter.pdf, id=3052, 965.6075pt x 167.62625pt>
 File: ./figs/sync_counter.pdf Graphic file (type pdf)
 <use ./figs/sync_counter.pdf>
-Package pdftex.def Info: ./figs/sync_counter.pdf  used on input line 1622.
+Package pdftex.def Info: ./figs/sync_counter.pdf  used on input line 1748.
 (pdftex.def)             Requested size: 455.24411pt x 79.02733pt.
-<./figs/sc_decoder.pdf, id=2919, 369.38pt x 158.5925pt>
+<./figs/sc_decoder.pdf, id=3053, 369.38pt x 158.5925pt>
 File: ./figs/sc_decoder.pdf Graphic file (type pdf)
 <use ./figs/sc_decoder.pdf>
-Package pdftex.def Info: ./figs/sc_decoder.pdf  used on input line 1630.
+Package pdftex.def Info: ./figs/sc_decoder.pdf  used on input line 1756.
 (pdftex.def)             Requested size: 364.19667pt x 156.36816pt.
-
-[80 <./figs/sync_counter.pdf>])
+ [83 <./figs/design/pseudiff_buffer.pdf> <./figs/sync_counter.pdf>]) [84 <./fig
+s/sc_decoder.pdf>]
 (/home/cole/Documents/pll/thesis_paper/results.tex
-<./figs/results/osc_pnoise.pdf, id=2929, 462.52798pt x 346.89601pt>
+<example-image.pdf, id=3075, 321.2pt x 240.9pt>
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 50.
+(pdftex.def)             Requested size: 295.90588pt x 221.93578pt.
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 90.
+(pdftex.def)             Requested size: 295.90588pt x 221.93578pt.
+ [85 </usr/share/texlive/texmf-dist/tex/latex/mwe/example-image.pdf>]
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 98.
+(pdftex.def)             Requested size: 295.90588pt x 221.93578pt.
+ [86]
+<./figs/results/osc_pnoise.pdf, id=3091, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_pnoise.pdf Graphic file (type pdf)
 <use ./figs/results/osc_pnoise.pdf>
-Package pdftex.def Info: ./figs/results/osc_pnoise.pdf  used on input line 12.
-(pdftex.def)             Requested size: 295.90588pt x 221.93858pt.
- [81 <./figs/sc_decoder.pdf>]
-<./figs/results/osc_f_vs_vdd.pdf, id=2938, 462.52798pt x 346.89601pt>
+Package pdftex.def Info: ./figs/results/osc_pnoise.pdf  used on input line 132.
+
+(pdftex.def)             Requested size: 250.38564pt x 187.79214pt.
+<./figs/results/freq_pdf.pdf, id=3092, 462.52798pt x 346.89601pt>
+File: ./figs/results/freq_pdf.pdf Graphic file (type pdf)
+<use ./figs/results/freq_pdf.pdf>
+Package pdftex.def Info: ./figs/results/freq_pdf.pdf  used on input line 141.
+(pdftex.def)             Requested size: 250.38564pt x 187.79214pt.
+ [87 <./figs/results/osc_pnoise.pdf> <./figs/results/freq_pdf.pdf
+
+pdfTeX warning: pdflatex (file ./figs/results/freq_pdf.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+<./figs/results/osc_f_vs_vdd.pdf, id=3206, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_vs_vdd.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_vs_vdd.pdf>
-Package pdftex.def Info: ./figs/results/osc_f_vs_vdd.pdf  used on input line 48
-.
+Package pdftex.def Info: ./figs/results/osc_f_vs_vdd.pdf  used on input line 17
+5.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_f_gain_vs_vdd.pdf, id=2939, 462.52798pt x 346.89601pt>
+<./figs/results/osc_f_gain_vs_vdd.pdf, id=3207, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_gain_vs_vdd.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_gain_vs_vdd.pdf>
 Package pdftex.def Info: ./figs/results/osc_f_gain_vs_vdd.pdf  used on input li
-ne 54.
+ne 181.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_f_vs_med.pdf, id=2940, 462.52798pt x 346.89601pt>
+<./figs/results/osc_f_vs_med.pdf, id=3208, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_vs_med.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_vs_med.pdf>
-Package pdftex.def Info: ./figs/results/osc_f_vs_med.pdf  used on input line 67
-.
+Package pdftex.def Info: ./figs/results/osc_f_vs_med.pdf  used on input line 19
+4.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_f_gain_vs_med.pdf, id=2941, 462.52798pt x 346.89601pt>
+<./figs/results/osc_f_gain_vs_med.pdf, id=3209, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_gain_vs_med.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_gain_vs_med.pdf>
 Package pdftex.def Info: ./figs/results/osc_f_gain_vs_med.pdf  used on input li
-ne 73.
+ne 200.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_f_vs_fine.pdf, id=2942, 462.52798pt x 346.89601pt>
+<./figs/results/osc_f_vs_fine.pdf, id=3210, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_vs_fine.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_vs_fine.pdf>
-Package pdftex.def Info: ./figs/results/osc_f_vs_fine.pdf  used on input line 8
-7.
+Package pdftex.def Info: ./figs/results/osc_f_vs_fine.pdf  used on input line 2
+14.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/osc_f_gain_vs_fine.pdf, id=2943, 462.52798pt x 346.89601pt>
+<./figs/results/osc_f_gain_vs_fine.pdf, id=3211, 462.52798pt x 346.89601pt>
 File: ./figs/results/osc_f_gain_vs_fine.pdf Graphic file (type pdf)
 <use ./figs/results/osc_f_gain_vs_fine.pdf>
 Package pdftex.def Info: ./figs/results/osc_f_gain_vs_fine.pdf  used on input l
-ine 93.
+ine 220.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-[82 <./figs/results/osc_pnoise.pdf> <./figs/results/osc_f_vs_vdd.pdf
-
-pdfTeX warning: pdflatex (file ./figs/results/osc_f_vs_vdd.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./figs/results/osc_f_gain_vs_vdd.pdf
+<./figs/results/kvco_pdf.pdf, id=3212, 462.52798pt x 346.89601pt>
+File: ./figs/results/kvco_pdf.pdf Graphic file (type pdf)
+<use ./figs/results/kvco_pdf.pdf>
+Package pdftex.def Info: ./figs/results/kvco_pdf.pdf  used on input line 233.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+ [88 <./figs/results/osc_f_vs_vdd.pdf> <./figs/results/osc_f_gain_vs_vdd.pdf
 
 pdfTeX warning: pdflatex (file ./figs/results/osc_f_gain_vs_vdd.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./figs/results/osc_f_vs_med.pdf
+
+pdfTeX warning: pdflatex (file ./figs/results/osc_f_vs_med.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+> <./figs/results/osc_f_gain_vs_med.pdf
+
+pdfTeX warning: pdflatex (file ./figs/results/osc_f_gain_vs_med.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >]
 File: ./figs/results/osc_se_waves.pdf Graphic file (type pdf)
 <use ./figs/results/osc_se_waves.pdf>
-Package pdftex.def Info: ./figs/results/osc_se_waves.pdf  used on input line 10
-8.
+Package pdftex.def Info: ./figs/results/osc_se_waves.pdf  used on input line 24
+4.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
 File: ./figs/results/osc_cmv.pdf Graphic file (type pdf)
 <use ./figs/results/osc_cmv.pdf>
-Package pdftex.def Info: ./figs/results/osc_cmv.pdf  used on input line 114.
+Package pdftex.def Info: ./figs/results/osc_cmv.pdf  used on input line 250.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/10b_cdac_se_inl.pdf, id=3106, 462.52798pt x 346.89601pt>
+<./figs/results/10b_cdac_se_inl.pdf, id=3430, 462.52798pt x 346.89601pt>
 File: ./figs/results/10b_cdac_se_inl.pdf Graphic file (type pdf)
 <use ./figs/results/10b_cdac_se_inl.pdf>
 Package pdftex.def Info: ./figs/results/10b_cdac_se_inl.pdf  used on input line
- 132.
+ 266.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/10b_cdac_se_dnl.pdf, id=3107, 462.52798pt x 346.89601pt>
+<./figs/results/10b_cdac_se_dnl.pdf, id=3431, 462.52798pt x 346.89601pt>
 File: ./figs/results/10b_cdac_se_dnl.pdf Graphic file (type pdf)
 <use ./figs/results/10b_cdac_se_dnl.pdf>
 Package pdftex.def Info: ./figs/results/10b_cdac_se_dnl.pdf  used on input line
- 138.
+ 272.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
- [83 <./figs/results/osc_f_vs_med.pdf> <./figs/results/osc_f_gain_vs_med.pdf
-
-pdfTeX warning: pdflatex (file ./figs/results/osc_f_gain_vs_med.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./figs/results/osc_f_vs_fine.pdf
-
-pdfTeX warning: pdflatex (file ./figs/results/osc_f_vs_fine.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./figs/results/osc_f_gain_vs_fine.pdf
+ [89 <./figs/results/osc_f_vs_fine.pdf> <./figs/results/osc_f_gain_vs_fine.pdf
 
 pdfTeX warning: pdflatex (file ./figs/results/osc_f_gain_vs_fine.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
+> <./figs/results/kvco_pdf.pdf
+
+pdfTeX warning: pdflatex (file ./figs/results/kvco_pdf.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
 >]
-<./figs/results/10b_cdac_diff_inl.pdf, id=3330, 462.52798pt x 346.89601pt>
+<./figs/results/10b_cdac_diff_inl.pdf, id=3605, 462.52798pt x 346.89601pt>
 File: ./figs/results/10b_cdac_diff_inl.pdf Graphic file (type pdf)
 <use ./figs/results/10b_cdac_diff_inl.pdf>
 Package pdftex.def Info: ./figs/results/10b_cdac_diff_inl.pdf  used on input li
-ne 153.
+ne 287.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/10b_cdac_diff_dnl.pdf, id=3331, 462.52798pt x 346.89601pt>
+<./figs/results/10b_cdac_diff_dnl.pdf, id=3606, 462.52798pt x 346.89601pt>
 File: ./figs/results/10b_cdac_diff_dnl.pdf Graphic file (type pdf)
 <use ./figs/results/10b_cdac_diff_dnl.pdf>
 Package pdftex.def Info: ./figs/results/10b_cdac_diff_dnl.pdf  used on input li
-ne 159.
+ne 293.
 (pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/cdac_3b_inl.pdf, id=3332, 462.52798pt x 346.89601pt>
-File: ./figs/results/cdac_3b_inl.pdf Graphic file (type pdf)
-<use ./figs/results/cdac_3b_inl.pdf>
-Package pdftex.def Info: ./figs/results/cdac_3b_inl.pdf  used on input line 176
-.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/cdac_3b_dnl.pdf, id=3333, 462.52798pt x 346.89601pt>
-File: ./figs/results/cdac_3b_dnl.pdf Graphic file (type pdf)
-<use ./figs/results/cdac_3b_dnl.pdf>
-Package pdftex.def Info: ./figs/results/cdac_3b_dnl.pdf  used on input line 182
-.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/cdf.pdf, id=3334, 462.52798pt x 346.89601pt>
-File: ./figs/results/cdf.pdf Graphic file (type pdf)
-<use ./figs/results/cdf.pdf>
-Package pdftex.def Info: ./figs/results/cdf.pdf  used on input line 200.
-(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
-<./figs/results/pdf.pdf, id=3335, 484.209pt x 346.89601pt>
-File: ./figs/results/pdf.pdf Graphic file (type pdf)
-<use ./figs/results/pdf.pdf>
-Package pdftex.def Info: ./figs/results/pdf.pdf  used on input line 206.
-(pdftex.def)             Requested size: 227.62206pt x 163.07289pt.
- [84 <./figs/results/10b_cdac_se_inl.pdf> <./figs/results/10b_cdac_se_dnl.pdf
+ [90 <./figs/results/10b_cdac_se_inl.pdf> <./figs/results/10b_cdac_se_dnl.pdf
 
 pdfTeX warning: pdflatex (file ./figs/results/10b_cdac_se_dnl.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
@@ -2134,18 +2574,29 @@ sion: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./figs/results/10b_cdac_diff_dnl.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 10.0pt on input line 300.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[85 <./figs/results/cdac_3b_inl.pdf> <./figs/results/cdac_3b_dnl.pdf
+<./figs/results/cdac_3b_inl.pdf, id=3761, 462.52798pt x 346.89601pt>
+File: ./figs/results/cdac_3b_inl.pdf Graphic file (type pdf)
+<use ./figs/results/cdac_3b_inl.pdf>
+Package pdftex.def Info: ./figs/results/cdac_3b_inl.pdf  used on input line 310
+.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/results/cdac_3b_dnl.pdf, id=3762, 462.52798pt x 346.89601pt>
+File: ./figs/results/cdac_3b_dnl.pdf Graphic file (type pdf)
+<use ./figs/results/cdac_3b_dnl.pdf>
+Package pdftex.def Info: ./figs/results/cdac_3b_dnl.pdf  used on input line 316
+.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/results/cdf.pdf, id=3763, 462.52798pt x 346.89601pt>
+File: ./figs/results/cdf.pdf Graphic file (type pdf)
+<use ./figs/results/cdf.pdf>
+Package pdftex.def Info: ./figs/results/cdf.pdf  used on input line 334.
+(pdftex.def)             Requested size: 227.62206pt x 170.71628pt.
+<./figs/results/pdf.pdf, id=3764, 484.209pt x 346.89601pt>
+File: ./figs/results/pdf.pdf Graphic file (type pdf)
+<use ./figs/results/pdf.pdf>
+Package pdftex.def Info: ./figs/results/pdf.pdf  used on input line 340.
+(pdftex.def)             Requested size: 227.62206pt x 163.07289pt.
+ [91 <./figs/results/cdac_3b_inl.pdf> <./figs/results/cdac_3b_dnl.pdf
 
 pdfTeX warning: pdflatex (file ./figs/results/cdac_3b_dnl.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
@@ -2157,103 +2608,122 @@ pdfTeX warning: pdflatex (file ./figs/results/cdf.pdf): PDF inclusion: multiple
 
 pdfTeX warning: pdflatex (file ./figs/results/pdf.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
->]) [86] [87] (/home/cole/Documents/pll/thesis_paper/disco.tex
-<./figs/liu24-fom.png, id=3670, 823.075pt x 646.415pt>
+>]
+LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
+(Font)              scaled to size 10.0pt on input line 433.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[92]) [93] (/home/cole/Documents/pll/thesis_paper/disco.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
+
+Overfull \hbox (2.91246pt too wide) in paragraph at lines 21--21
+ []|\T1/ptm/b/n/8 NORCHIP'18 
+ []
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 51.
+<./figs/liu24-fom.png, id=3954, 823.075pt x 646.415pt>
 File: ./figs/liu24-fom.png Graphic file (type png)
 <use ./figs/liu24-fom.png>
-Package pdftex.def Info: ./figs/liu24-fom.png  used on input line 28.
+Package pdftex.def Info: ./figs/liu24-fom.png  used on input line 66.
 (pdftex.def)             Requested size: 227.62206pt x 178.76581pt.
-<./figs/liu_5nm.png, id=3671, 823.075pt x 482.80376pt>
+<./figs/liu_5nm.png, id=3955, 823.075pt x 482.80376pt>
 File: ./figs/liu_5nm.png Graphic file (type png)
 <use ./figs/liu_5nm.png>
-Package pdftex.def Info: ./figs/liu_5nm.png  used on input line 34.
+Package pdftex.def Info: ./figs/liu_5nm.png  used on input line 72.
 (pdftex.def)             Requested size: 227.62206pt x 133.51918pt.
-) [88 <./figs/liu24-fom.png> <./figs/liu_5nm.png>] [89]
-LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 7.0pt on input line 175.
-LaTeX Font Info:    Font shape `OT1/zi4/m/n' will be
-(Font)              scaled to size 5.0pt on input line 175.
- [90] [91]
-(/home/cole/Documents/pll/thesis_paper/appendix.tex
-<./figs/layout/layout_osc.pdf, id=3744, 224.84pt x 434.62375pt>
+[94] [95 <./figs/liu24-fom.png> <./figs/liu_5nm.png>]
+File: example-image.pdf Graphic file (type pdf)
+<use example-image.pdf>
+Package pdftex.def Info: example-image.pdf  used on input line 119.
+(pdftex.def)             Requested size: 295.90588pt x 221.93578pt.
+ [96]) [97] [98] [99]
+[100] (/home/cole/Documents/pll/thesis_paper/appendix.tex
+<./figs/layout/layout_osc.pdf, id=4062, 224.84pt x 434.62375pt>
 File: ./figs/layout/layout_osc.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_osc.pdf>
 Package pdftex.def Info: ./figs/layout/layout_osc.pdf  used on input line 8.
 (pdftex.def)             Requested size: 272.70908pt x 527.08731pt.
- [92 <./figs/layout/layout_osc.pdf>]
-<./figs/layout/layout_ro_pseudodiff_inv.pdf, id=3804, 441.65pt x 316.18124pt>
+ [101 <./figs/layout/layout_osc.pdf>]
+<./figs/layout/layout_ro_pseudodiff_inv.pdf, id=4122, 441.65pt x 316.18124pt>
 File: ./figs/layout/layout_ro_pseudodiff_inv.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_ro_pseudodiff_inv.pdf>
 Package pdftex.def Info: ./figs/layout/layout_ro_pseudodiff_inv.pdf  used on in
 put line 15.
 (pdftex.def)             Requested size: 364.19667pt x 260.74178pt.
-<./figs/layout/layout_pvt_bank.pdf, id=3805, 417.56pt x 434.62375pt>
+<./figs/layout/layout_pvt_bank.pdf, id=4123, 417.56pt x 434.62375pt>
 File: ./figs/layout/layout_pvt_bank.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_pvt_bank.pdf>
 Package pdftex.def Info: ./figs/layout/layout_pvt_bank.pdf  used on input line 
 22.
 (pdftex.def)             Requested size: 273.14923pt x 284.32584pt.
- [93 <./figs/layout/layout_ro_pseudodiff_inv.pdf> <./figs/layout/layout_pvt_ban
-k.pdf>]
-<./figs/layout/layout_cdac_10b.pdf, id=3913, 136.51pt x 434.62375pt>
+ [102 <./figs/layout/layout_ro_pseudodiff_inv.pdf> <./figs/layout/layout_pvt_ba
+nk.pdf>]
+<./figs/layout/layout_cdac_10b.pdf, id=4232, 136.51pt x 434.62375pt>
 File: ./figs/layout/layout_cdac_10b.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_cdac_10b.pdf>
 Package pdftex.def Info: ./figs/layout/layout_cdac_10b.pdf  used on input line 
 30.
 (pdftex.def)             Requested size: 187.65079pt x 597.3699pt.
- [94 <./figs/layout/layout_cdac_10b.pdf>]
-<./figs/layout/layout_cdac_unit_capbank.pdf, id=3965, 441.65pt x 100.375pt>
+ [103 <./figs/layout/layout_cdac_10b.pdf>]
+<./figs/layout/layout_cdac_unit_capbank.pdf, id=4285, 441.65pt x 100.375pt>
 File: ./figs/layout/layout_cdac_unit_capbank.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_cdac_unit_capbank.pdf>
 Package pdftex.def Info: ./figs/layout/layout_cdac_unit_capbank.pdf  used on in
 put line 37.
 (pdftex.def)             Requested size: 455.24411pt x 103.4701pt.
-<./figs/layout/layout_cdac_sw.pdf, id=3966, 337.26pt x 430.60875pt>
+<./figs/layout/layout_cdac_sw.pdf, id=4286, 337.26pt x 430.60875pt>
 File: ./figs/layout/layout_cdac_sw.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_cdac_sw.pdf>
 Package pdftex.def Info: ./figs/layout/layout_cdac_sw.pdf  used on input line 4
 4.
 (pdftex.def)             Requested size: 227.62206pt x 290.62863pt.
- [95 <./figs/layout/layout_cdac_unit_capbank.pdf> <./figs/layout/layout_cdac_sw
-.pdf>]
-<./figs/layout/layout_cdac_3b.pdf, id=4067, 232.87pt x 434.62375pt>
+ [104 <./figs/layout/layout_cdac_unit_capbank.pdf> <./figs/layout/layout_cdac_s
+w.pdf>]
+<./figs/layout/layout_cdac_3b.pdf, id=4386, 232.87pt x 434.62375pt>
 File: ./figs/layout/layout_cdac_3b.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_cdac_3b.pdf>
 Package pdftex.def Info: ./figs/layout/layout_cdac_3b.pdf  used on input line 5
 1.
 (pdftex.def)             Requested size: 320.11015pt x 597.3699pt.
- [96 <./figs/layout/layout_cdac_3b.pdf>]
-<./figs/layout/layout_buffer.pdf, id=4144, 337.26pt x 434.62375pt>
+
+[105 <./figs/layout/layout_cdac_3b.pdf>]
+<./figs/layout/layout_buffer.pdf, id=4462, 337.26pt x 434.62375pt>
 File: ./figs/layout/layout_buffer.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_buffer.pdf>
 Package pdftex.def Info: ./figs/layout/layout_buffer.pdf  used on input line 58
 .
 (pdftex.def)             Requested size: 364.19667pt x 469.34686pt.
- [97 <./figs/layout/layout_buffer.pdf>]
-<./figs/layout/layout_bbpd.pdf, id=4196, 441.65pt x 197.73875pt>
+ [106 <./figs/layout/layout_buffer.pdf>]
+<./figs/layout/layout_bbpd.pdf, id=4515, 441.65pt x 197.73875pt>
 File: ./figs/layout/layout_bbpd.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_bbpd.pdf>
 Package pdftex.def Info: ./figs/layout/layout_bbpd.pdf  used on input line 65.
 (pdftex.def)             Requested size: 455.24411pt x 203.83612pt.
-<./figs/layout/layout_bbpd_pseudodiff.pdf, id=4197, 441.65pt x 331.2375pt>
+<./figs/layout/layout_bbpd_pseudodiff.pdf, id=4516, 441.65pt x 331.2375pt>
 File: ./figs/layout/layout_bbpd_pseudodiff.pdf Graphic file (type pdf)
 <use ./figs/layout/layout_bbpd_pseudodiff.pdf>
 Package pdftex.def Info: ./figs/layout/layout_bbpd_pseudodiff.pdf  used on inpu
 t line 70.
 (pdftex.def)             Requested size: 455.24411pt x 341.45135pt.
- [98 <./figs/layout/layout_bbpd.pdf> <./figs/layout/layout_bbpd_pseudodiff.pdf>
-]
-<./figs/layout/pnr_digital.png, id=4297, 471.7625pt x 894.34125pt>
+ [107 <./figs/layout/layout_bbpd.pdf> <./figs/layout/layout_bbpd_pseudodiff.pdf
+>]
+<./figs/layout/pnr_digital.png, id=4615, 471.7625pt x 894.34125pt>
 File: ./figs/layout/pnr_digital.png Graphic file (type png)
 <use ./figs/layout/pnr_digital.png>
 Package pdftex.def Info: ./figs/layout/pnr_digital.png  used on input line 77.
 (pdftex.def)             Requested size: 296.57848pt x 562.2286pt.
- [99 <./figs/layout/pnr_digital.png (PNG copy)>])
+ [108 <./figs/layout/pnr_digital.png (PNG copy)>])
 
-Package caption Warning: Unused \captionsetup[mycapequ] on input line 81.
+Package caption Warning: Unused \captionsetup[mycapequ] on input line 86.
 See the caption package documentation for explanation.
 
-[100]
+[109]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (/home/cole/Documents/pll/thesis_paper/report.aux
@@ -2264,15 +2734,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
 (/home/cole/Documents/pll/thesis_paper/./figs/leeson_pn.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/discrete_pll_full_noise.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/bbpll_full_noise.aux)
+(/home/cole/Documents/pll/thesis_paper/./figs/filter_arch_pi.aux)
 (/home/cole/Documents/pll/thesis_paper/./figs/pi_pz_plot.aux)
-(/home/cole/Documents/pll/thesis_paper/./figs/filter_arch_pi.aux))
+(/home/cole/Documents/pll/thesis_paper/figs/aperture_noise2.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D66DE249D0AF1B90AEABF33D0DEA5DF5;8118.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 3099C069E77059F5308D2524B5267A36;8683.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2283,15 +2751,30 @@ Package logreq Info: Writing requests to 'report.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 29619 strings out of 492982
- 545009 string characters out of 6134896
- 1073585 words of memory out of 5000000
- 31942 multiletter control sequences out of 15000+600000
- 51182 words of font info for 107 fonts, out of 8000000 for 9000
+ 30301 strings out of 492982
+ 552790 string characters out of 6134896
+ 1089208 words of memory out of 5000000
+ 32539 multiletter control sequences out of 15000+600000
+ 84237 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,77p,1872b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exi
+ 57i,18n,77p,2070b,1470s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
@@ -2300,39 +2783,40 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 , replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/
-texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /home/cole/Documents/pll/thesis_paper/report.pdf (102 pages, 
-3899615 bytes).
+texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/share/texlive/texmf-di
+st/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/h
+elvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr
+o8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /home/cole/Documents/pll/thesis_paper/report.pdf (110 pages, 
+3963177 bytes).
 PDF statistics:
- 4525 PDF objects out of 5155 (max. 8388607)
- 2608 compressed objects within 27 object streams
- 530 named destinations out of 1000 (max. 500000)
- 1409 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4857 PDF objects out of 5155 (max. 8388607)
+ 2862 compressed objects within 29 object streams
+ 583 named destinations out of 1000 (max. 500000)
+ 1496 words of extra memory for PDF output out of 10000 (max. 10000000)
 

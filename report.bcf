@@ -4,11 +4,11 @@
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
       <bcf:key>output_encoding</bcf:key>
-      <bcf:value>latin1</bcf:value>
+      <bcf:value>utf8</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>input_encoding</bcf:key>
-      <bcf:value>latin1</bcf:value>
+      <bcf:value>utf8</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>debug</bcf:key>
@@ -1954,24 +1954,29 @@
     <bcf:citekey order="33">Gao2015</bcf:citekey>
     <bcf:citekey order="34">Razavi2020</bcf:citekey>
     <bcf:citekey order="35">Yuan1989</bcf:citekey>
-    <bcf:citekey order="36">Me</bcf:citekey>
-    <bcf:citekey order="37">ogata_2010_pid</bcf:citekey>
-    <bcf:citekey order="38">gardner_1980</bcf:citekey>
-    <bcf:citekey order="39">razavi_2017</bcf:citekey>
-    <bcf:citekey order="40">ogata_2010_stability</bcf:citekey>
-    <bcf:citekey order="41">Me</bcf:citekey>
-    <bcf:citekey order="42">Me</bcf:citekey>
-    <bcf:citekey order="43">Hajimiri1998</bcf:citekey>
-    <bcf:citekey order="44">Liu2020</bcf:citekey>
-    <bcf:citekey order="45">Antonopoulos2013</bcf:citekey>
-    <bcf:citekey order="46">Razavi2020</bcf:citekey>
-    <bcf:citekey order="47">Liu2020</bcf:citekey>
-    <bcf:citekey order="48">Liu2019</bcf:citekey>
+    <bcf:citekey order="36">Liu2020</bcf:citekey>
+    <bcf:citekey order="37">Antonopoulos2013</bcf:citekey>
+    <bcf:citekey order="38">Jacquemod2019</bcf:citekey>
+    <bcf:citekey order="39">Hajimiri1998</bcf:citekey>
+    <bcf:citekey order="40">Me</bcf:citekey>
+    <bcf:citekey order="41">ogata_2010_pid</bcf:citekey>
+    <bcf:citekey order="42">gardner_1980</bcf:citekey>
+    <bcf:citekey order="43">razavi_2017</bcf:citekey>
+    <bcf:citekey order="44">ogata_2010_stability</bcf:citekey>
+    <bcf:citekey order="45">Me</bcf:citekey>
+    <bcf:citekey order="46">Me</bcf:citekey>
+    <bcf:citekey order="47">Me</bcf:citekey>
+    <bcf:citekey order="48">weste_harris_2011</bcf:citekey>
     <bcf:citekey order="49">Liu2019</bcf:citekey>
-    <bcf:citekey order="50">Liu2020</bcf:citekey>
-    <bcf:citekey order="51">Liu2019</bcf:citekey>
-    <bcf:citekey order="52">Liu2020</bcf:citekey>
-    <bcf:citekey order="53">proakis_1993_psd</bcf:citekey>
+    <bcf:citekey order="50">Palaniappan2018</bcf:citekey>
+    <bcf:citekey order="51">Liu2020</bcf:citekey>
+    <bcf:citekey order="52">Zhang2019</bcf:citekey>
+    <bcf:citekey order="53">Xiang2020</bcf:citekey>
+    <bcf:citekey order="54">Liu2019</bcf:citekey>
+    <bcf:citekey order="55">Liu2020</bcf:citekey>
+    <bcf:citekey order="56">Liu2019</bcf:citekey>
+    <bcf:citekey order="57">Liu2020</bcf:citekey>
+    <bcf:citekey order="58">proakis_1993_psd</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

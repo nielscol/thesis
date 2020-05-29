@@ -1,5 +1,7 @@
 \documentclass[twoside,10pt,a4paper]{article}
-\usepackage[latin1]{inputenc}
+% \usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc} % usually not needed (loaded by default)
+\usepackage[T1]{fontenc}
 % \usepackage{amsmath}
 \usepackage{amsfonts}
 % \usepackage{amssymb}
@@ -46,6 +48,9 @@
 \definecolor{lightgray}{rgb}{.93,.93,.93}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
 \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\usepackage{array}
+\newcolumntype{?}{!{\vrule width 1.5pt}}
 
 \usepackage{helvet}
 \usepackage{times}
