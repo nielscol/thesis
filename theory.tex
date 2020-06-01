@@ -1,5 +1,5 @@
 	\subsection{Fully Depleted Silicon on Insulator (FD-SOI)}
-	FD-SOI is a process technology that implements complementary metal oxide semiconductor (CMOS) transistors with an insulating layer of oxide, referred to as a burried oxide (BOX), between the channel of the transistors and the silicon substrate \cite{Planes2012}. The addition of such an oxide reduces capacitances of the fabricated transistors to the silicon substrate, resulting in lower overall capacitance than in bulk CMOS technologies. Thus higher frequency of operating is possible versus similar sized bulk process nodes. A further feature introduced by FD-SOI technology is the ability to form isolated wells beneath fabricated devices \cite{Wiatr2019}, which remained electrically isolated from the transistors via the BOX and from the substrate due to PN junctions inherent in well formation. This opens the possibility to achieve biasing across a wide voltage range of the regions below individual transistors (both for PMOS and NMOS devices), which enables tuning of individual transistor threshold voltages by exploitation of the MOS body effect. The well beneath a FD-SOI transistor is referred to as the "backgate". The implementation these features in the Global Foundaries 22FDX process is shown in figure \ref{fig:22fdx_wells}. 
+	FD-SOI is a process technology that implements complementary metal oxide semiconductor (CMOS) transistors with an insulating layer of oxide, referred to as a burried oxide (BOX), between the channel of the transistors and the silicon substrate \cite{Planes2012}. The addition of such an oxide reduces capacitances of the fabricated transistors to the silicon substrate, resulting in lower overall capacitance than in bulk CMOS technologies. Thus higher frequency of operating is possible versus similar sized bulk process nodes. A further feature introduced by FD-SOI technology is the ability to form isolated wells beneath fabricated devices \cite{Wiatr2019}, which remain electrically isolated from the transistors via the BOX and from the substrate due to PN junctions inherent in well formation. This opens the possibility to achieve biasing across a wide voltage range of the regions below individual transistors (both for PMOS and NMOS devices), which enables tuning of individual transistor threshold voltages by exploitation of the MOS body effect. The well beneath a FD-SOI transistor is referred to as the "backgate". The implementation these features in the Global Foundaries 22FDX process is shown in figure \ref{fig:22fdx_wells}. 
 	
 			\begin{figure}[htb!]
 			        \centering
@@ -41,7 +41,7 @@
 	\end{equation}
 
 	\textbf{Saturation Region}
-	Saturation region occurs when $|V_{DS}| > |V_{GS}-V_{TH}|$. Notably, dependence of drain current on $V_{DS}$ is reduced, and in the case of the ideal models considered here the effect of $V_{DS}$ are completely negated.
+	Saturation region occurs when $|V_{DS}| > |V_{GS}-V_{TH}|$. Notably, dependence of drain current on $V_{DS}$ is reduced, and in the case of the ideal models considered here, the effect of $V_{DS}$ are completely negated.
 	\begin{equation}
 		I_D = \frac{1}{2}\mu_n C_{ox} \left(\frac{W}{L}\right)(V_{GS}-V_{TH})^2
 	\end{equation}
@@ -54,11 +54,11 @@
 	\end{equation}
 
 	\subsubsection{Body Effect}
-	Application of a bias to the substrate below a bulk MOSFET, or to the well below a FD-SOI MOSFET has a direct effect on the threshold voltage of a MOSFET. For a bulk MOSFET, change of body bias affects the width of source-drain and source-body depletions, which consequently can increase or decrease the magnitude of the channel inversion charge as seen by the gate terminal. This corresponds to a differential in the threshold voltage. The below equation \cite{razavi_2017} quantifies this effect for bulk devices. $\gamma$ is the body effect coefficient, $2\Phi_F$ represents the MOS surface potential. $V_{TH}$ is non-linearly related to the source-body voltage $V_{SB}$.
+	Application of a bias to the substrate below a bulk MOSFET, or to the well below a FD-SOI MOSFET, has a direct effect on the threshold voltage of a MOSFET. For a bulk MOSFET, change of body bias affects the width of source-drain and source-body depletions, which consequently can increase or decrease the magnitude of the channel depletion charge as seen by the gate terminal needed to achieve channel inversion. This corresponds to a differential in the threshold voltage. The below equation \cite{razavi_2017} quantifies this effect for bulk devices. $\gamma$ is the body effect coefficient, $2\Phi_F$ represents the MOS surface potential. $V_{TH}$ is non-linearly related to the source-body voltage $V_{SB}$.
 	\begin{equation}
 		V_{TH} = V_{TH0} + \gamma\left( \sqrt{2\Phi_F + V_{SB}} - \sqrt{|2\Phi_F|} \right)
 	\end{equation}
-	In the case of FD-SOI transistors, the nature of the body effect is modified due to the presence of the BOX. Thus, an approximate derivation for body effect will be provided here. In FD-SOI, the active channel region is thin, and under strong inversion, the entire channel region is depleted of charge. Supposing a channel height Z and doping $N_A$, the total inversion charge (i.e. to deplete the channel) is $Q_{d} = N_AZ$. With oxide capacitance $C_{ox,fg}$ associated with the front gate, the portion of the threshold voltage associated with total depletion of the channel is, from the front gate perspective:
+	In the case of FD-SOI transistors, the nature of the body effect is modified due to the presence of the BOX. Thus, an approximate derivation for body effect will be provided here. In FD-SOI, the active channel region is thin, and under strong inversion, the entire channel region is depleted of charge. Supposing a channel height Z and channel doping $N_A$, the total charge to deplete the channel for inversion to occur is $Q_{d} = N_AZ$. With oxide capacitance $C_{ox,fg}$ associated with the front gate, the portion of the threshold voltage associated with total depletion of the channel is, from the front gate perspective:
 	\begin{equation}
 		V_{d,fg} = \frac{Q_d}{C_{ox,fg}} = \frac{N_AZ}{C_{ox,fg}} 
 	\end{equation}
@@ -70,17 +70,17 @@
 	\begin{equation}
 		\Delta V_{th,bg}= \frac{C_{ox,bg}}{C_{ox,fg}}V_{BS} 
 	\end{equation}	
-	This is linear with applied back gate bias, and that the strength of the coupling is tunable by the ratio of front gate and back gate capacitances. Typically this ration is $<<1$. If we define the body effect coefficient $\gamma$ as:
+	This is linear with applied back gate bias, and that the strength of the coupling is tunable by the ratio of front gate and back gate capacitances. Typically this ratio is $<<1$. If we define the body effect coefficient $\gamma$ as:
 	\begin{equation}
 		\gamma = \frac{C_{ox,bg}}{C_{ox,fg}}
 	\end{equation}
-	Given a nominal threshold voltage of $V_{TH0}$, in FD-SOI, the threshold voltage can be calculated as:
+	Given a nominal threshold voltage of $V_{TH0}$, in FD-SOI, the threshold voltage can be represented as:
 	\begin{equation}\label{eq:body_effect}
 		V_{TH} = V_{TH0} - \gamma V_{BS}
 	\end{equation}
 
 	\subsubsection{Linearization of MOSFET models}
-	Under conditions where a MOSFET is held at near constant bias levels, with only minor variations around the DC operating level, simpler linearized models of the transistors can be developed. For the different operating regions of the MOSFET, the I-V relations can be generalized in terms of the function $I_D(V_{GS}, V_{DS}, V_{BS})$. Linearization is then obtained by parameterizing the slope of $I_D$ with respect to the potentials $V_{GS}, V_{DS}, V_{BS}$. The resulting parameters (given as equations \ref{eq:gm} to \ref{eq:fet_out_r}) are the transconductance $g_m$, relating gate drive to drain current, transconductance $g_{mb}$, relating body drive to drain current, and resistance $r_o$, relating drain voltage to drain current. Due to linearization, the current contributions are superimposed to determine total drain current. The linearized circuit which replaces the four terminal MOSFET symbols of figure \ref{fig:mos_symbols} is given by the linearized circuit of figure \ref{fig:ss_model}.
+	Under conditions where a MOSFET is held at near constant bias levels, with only minor variations around the DC operating level, simpler linearized models of the transistors can be developed. For the different operating regions of the MOSFET, the I-V relations can be generalized in terms of the function $I_D(V_{GS}, V_{DS}, V_{BS})$. Linearization is then obtained by calculating the slope of $I_D$ with respect to the potentials $V_{GS}, V_{DS}, V_{BS}$. The resulting parameters (given as equations \ref{eq:gm} to \ref{eq:fet_out_r}) are the transconductance $g_m$, relating gate drive to drain current, transconductance $g_{mb}$, relating body drive to drain current, and resistance $r_o$, relating drain voltage to drain current. Due to linearization, the current contributions are superimposed to determine total drain current. The linearized circuit which replaces the four terminal MOSFET symbols of figure \ref{fig:mos_symbols} is given by the linearized circuit of figure \ref{fig:ss_model}.
 
 	\begin{align}
 		g_m & = \frac{\partial }{\partial V_{GS}}I_D(V_{GS}, V_{DS}, V_{BS}) \label{eq:gm}\\
@@ -143,7 +143,7 @@
 		Further explaination of these components will be hereafter made.
 
 		\subsubsection{Phase Detector}
-		A phase detector acts as the summation point of figure \ref{fig:basic_fb}, which measures the phase error $\Phi_e$ between the reference signal and the output of the PLL. The phase error then is then used by the controller, which is implemented as the loop filter. Such a phase detector may also have intrinsic gain, given by $K_{PD}$.
+		A phase detector acts as the summation point of figure \ref{fig:basic_fb}, which measures the phase error $\Phi_e$ between the reference signal and the output of the PLL. The phase error is then used by the controller, which is implemented as the loop filter, to adjust the PLL's state. Such a phase detector may also have intrinsic gain, given by $K_{PD}$.
 		\begin{equation}
 			\Phi_e(s) = K_{PD}(\Phi_{ref}(s) - \Phi_{div}(s))
 		\end{equation}
@@ -218,7 +218,7 @@
 			\end{equation}
 			
 		\subsubsection{Loop Filter Discretization and Digitization}\label{lf-discretization}
-			In PLLs which sample on a fixed interval, defined by a reference clock frequency $f_{ref}$, derivation of a discrete time controller model is necessary. This is derived from the continuous canonical loop filter (equation \ref{eq:lf_general_form}) via application of a continous s-domain to discrete z-domain transformation. Strictly speaking, $z^{-1} = e^{-s\Delta T_s}$ for values on the unit circle, i.e. r=1 \cite{proakis_1993_z}. However, if the PLL sampling rate $f_s$=$f_{ref}$ is constrained to be sufficiently higher than the implemented filter bandwidth (i.e. PLL loop bandwidth, $BW_{loop}$), a simpler transformation using a truncated Taylor series approximation is applicable. Given the $1/\Delta T_s$=$f_{s}$ as the relation for sampling rate, then:
+			In PLLs which sample on a fixed interval defined by a reference clock frequency $f_{ref}$, derivation of a discrete time controller model is necessary. This is derived from the general form continuous loop filter (equation \ref{eq:lf_general_form}) via application of a continous s-domain to discrete z-domain transformation. Strictly speaking, $z^{-1} = e^{-s\Delta T_s}$ for values on the unit circle, i.e. r=1 \cite{proakis_1993_z}. If the PLL sampling rate $f_s$=$f_{ref}$ is constrained to be sufficiently higher than the implemented filter bandwidth (i.e. PLL loop bandwidth, $BW_{loop}$), a simpler transformation using a truncated Taylor series approximation is applicable. Given the $1/\Delta T_s$=$f_{s}$ as the relation for sampling rate, then:
 			\begin{align*}
 				z^{-1} &= e^{-s\Delta T_s} && \text{(definition of z on unit circle)} \\
 				&= \sum_{k=0}^\infty\frac{(-s\Delta T_s)^k}{k!} && \text{(exponential Taylor series)} \\
@@ -249,7 +249,7 @@
 
 			
 		\subsubsection{Voltage/Digitally Controlled Oscillator}
-			A controlled oscillator is an oscillator with frequency controlled by an input signal. When this input signal takes the form of an analog voltage $\textnormal{V}_{ctrl}$, it is referred to as a voltage controlled oscillator (VCO). Otherwise, when controlled digitally with an oscillator tuning work (OTW) u[n], it is referred to as a digitally controlled oscillator (DCO). Nominally, a controlled oscillator is characterized by its gain, in the case of a VCO is $K_{VCO} = \partial f/\partial \textnormal{V}_{ctrl}$. With a DCO, the gain is $K_{DCO} = \Delta f/LSB$, that is the change in frequency per least significant bit. Analyzed in terms of phase (for the VCO case), an oscillator can be seen as a time-phase integrator, provided a nominal oscillator frequency of $f_0$:
+			A controlled oscillator is an oscillator with frequency controlled by an input signal. When this input signal takes the form of an analog voltage $\textnormal{V}_{ctrl}$, it is referred to as a voltage controlled oscillator (VCO). Otherwise, when controlled digitally with an oscillator tuning word (OTW) u[n], it is referred to as a digitally controlled oscillator (DCO). Nominally, a controlled oscillator is characterized by its gain, in the case of a VCO is $K_{VCO} = \partial f/\partial \textnormal{V}_{ctrl}$. With a DCO, the gain is $K_{DCO} = \Delta f/LSB$, that is the change in frequency per least significant bit. Analyzed in terms of phase (for the VCO case), an oscillator can be seen as a time-phase integrator, provided a nominal oscillator frequency of $f_0$:
 			\begin{equation}\label{eq:vco_ph}
 				\Phi_{VCO}(t) = \Phi_{out}(t) = \int2\pi(K_{VCO}\textnormal{V}_{ctrl}(t) + f_0)\mathrm{dt}
 			\end{equation}
@@ -351,7 +351,7 @@
 	In general, a good figure of merit is arrived to be decreasing power and/or minimizing total phase noise power. 
 	
 	\subsubsection{Ring Oscillator Phase Noise}\label{sec:ro_pn_limit}
-	Oscillator phase noise for ring oscillators has a well defined limit as determined by analysis of noise of ideal RC circuits \cite{Navid2005}, which is provided in equation \ref{eq:ro_pn}. Note that his model is limited to analyzing the -20 dB/decade part of an oscillator's spectrum as seen by Leeson's model. 
+	Oscillator phase noise for ring oscillators has a well defined limit as determined by analysis of noise of ideal RC circuits \cite{Navid2005}, which is provided in equation \ref{eq:ro_pn}. Note that this model is limited to analyzing the -20 dB/decade part of an oscillator's spectrum as seen by Leeson's model. 
 	\begin{equation}\label{eq:ro_pn}
 		\mathcal{L}_{min}(\Delta f)= 10\log 10\left(\frac{7.33k_BT}{P_{DC}}\left(\frac{f_0}{\Delta f}\right)^2\right)
 	\end{equation}
@@ -359,7 +359,7 @@
 	\begin{equation}\label{eq:ro_fom_limit}
 		\textnormal{FOM}_{\textnormal{pn,min}} = 10\log 10\left(7330k_BT\right)
 	\end{equation}
-	At 300K, it is then expected that the jitter FOM for a ring oscillator should approach -165.2 dB. An example state of art comparison figure in \ref{fig:lc_ro_fom} shows clustering by oscillator type of jitter FOM calculated in various published works in \cite{Tohidian2015}. It is seen the FOM value calculated from theory is close to that seen implemented hardware.
+	At 300K, it is expected that the jitter FOM for a ring oscillator should approach -165.2 dB. An example state of art comparison figure in \ref{fig:lc_ro_fom} shows clustering by oscillator type of jitter FOM calculated in various published works in \cite{Tohidian2015}. It is seen the FOM value calculated from theory is close to that seen implemented hardware.
 	\begin{figure}[htb!]
 		\center\includegraphics[width=1\textwidth, angle=0]{./figs/lc_ro_fom_comparison}
 		\caption{FOM$_{jitter}$ of various LC and ring oscillators \cite{Tohidian2015}.}
@@ -392,7 +392,7 @@
 	\end{align}
 
 	\subsubsection{PLL Output-referred Noise}\label{sec:pll_output_noise}
-		Using the noise transfer functions, the expressions for noise power spectrum of the BBPD (equation \ref{eq:bbpd_noise_psd}) and the noise spectrum of a ring oscillator (equation \ref{eq:ro_pn}), the PLL output phase noise spectrum of each component is determined by multiply the respective noise transfer function with the respective noise spectral density. Here it is found that the BBPD noise component out of the PLL is given in equation \ref{eq:out_psd_bbpd_pll}, and the oscillator component is given in equation \ref{eq:out_psd_dco_pll}. The loop filter and divider components are here ignored, as they will be shown not be relevant in this work. 
+		Using the noise transfer functions, the expressions for noise power spectrum of the BBPD (equation \ref{eq:bbpd_noise_psd}) and the noise spectrum of a ring oscillator (equation \ref{eq:ro_pn}), the PLL output phase noise spectrum of each component is determined by multiplying the magnitude squared of each noise transfer function with the respective noise spectral density. Here it is found that the BBPD noise component out of the PLL is given in equation \ref{eq:out_psd_bbpd_pll}, and the oscillator component is given in equation \ref{eq:out_psd_dco_pll}. The loop filter and divider components are here ignored, as they will be shown not be relevant in this work. 
 
 		% \begin{equation}\label{eq:bbpd_noise_psd}
 		% 	S_{ n_{BBPD}(f)} = \frac{\sigma_{n_{BBPD}}^2}{\Delta f} = \frac{\left(1-\frac{2}{\pi}\right)}{f_{ref}}
@@ -407,14 +407,14 @@
 			S_{\Phi n_{BBPD,out}}(f) &= S_{n_{BBPD}}(f)\left|\frac{\Phi_{out}(f)}{q_{n_{BBPD}}(f)}\right|^2 = \frac{\left(\frac{\pi}{2}-1\right)}{f_{ref}}\left|\sigma_{\Phi_e}\mathrm{N}\hat{\mathrm{T}}(f)\right|^2
 		\end{align}
 		\begin{align}\label{eq:out_psd_dco_pll}
-			S_{\Phi n_{DCO,out}}(f) &= \mathcal{L}_{min}(f)\left|\frac{\Phi_{out}(f)}{q_{n_{DCO}}(f)}\right|^2 = \frac{7.33k_BT}{P}\left(\frac{f_0}{\Delta f}\right)^2|1-\hat{\textnormal{T}}(\Delta f)|^2 
+			S_{\Phi n_{DCO,out}}(f) &= \mathcal{L}_{min}(f)\left|\frac{\Phi_{out}(f)}{q_{n_{DCO}}(f)}\right|^2 = \frac{7.33k_BT}{P}\left(\frac{f_0}{f}\right)^2|1-\hat{\textnormal{T}}(f)|^2 
 		\end{align}
 		The total output noise power spectral density is given as the sum of the components, presuming independence of all noise sources. Following the results of section \ref{sec:pn_to_psd}, which determined that oscillator power spectrum is equivalent to the phase noise power spectrum for zero mean phase noise with low power, the final oscillator power spectrum at $\Delta f$ from the carrier is in equation \ref{eq:pll_noise_psd}.
 		\begin{align}
 			S_{n_{PLL}}(f_{osc} + \Delta f) &= S_{\Phi n_{BBPD,out}}(\Delta f) + S_{\Phi n_{DCO,out}}(\Delta f)\label{eq:pll_noise_psd}\\
 			&= \frac{\left(\frac{\pi}{2}-1\right)}{f_{ref}}\left|\sigma_{\Phi_e}\mathrm{N}\hat{\mathrm{T}}(\Delta f)\right|^2 + \frac{7.33k_BT}{P}\left(\frac{f_0}{\Delta f}\right)^2|1-\hat{\textnormal{T}}({\Delta f})|^2
 		\end{align}
-		A complexity arises in equation \ref{eq:pll_noise_psd} due to the fact that the power spectum is a function of the root mean squared (RMS) phase error, $\sigma_{\Phi_e}$. $\sigma_{\Phi_e}$ may be calculated as equation \ref{eq:rpm}. Computation of the power spectrum therefore requires derivation of a closed form solution for $\sigma_{\Phi_e}$ accounting for the PLL transfer function, which coupled with PLL power spectral density equation can be solved in a system of equations to result in a closed form solution of the power spectral density. 
+		A complexity arises in equation \ref{eq:pll_noise_psd} due to the fact that the power spectum is a function of the root mean squared (RMS) phase error, $\sigma_{\Phi_e}$. $\sigma_{\Phi_e}$ may be calculated as equation \ref{eq:rpm}. It is seen that the spectrum and $\sigma_{\Phi_e}$ are cyclically defined, so a system of equations formed by the two must be solved to determine the final noise spectrum.
 
 		\begin{equation}\label{eq:rpm}
 			\sigma_{\Phi_e} = \sqrt{2\int_0^\infty S_{n_{PLL}}(f_{osc} + \Delta f)d\Delta f}
@@ -434,3 +434,9 @@
 	% 	    \label{fig:pll_pn_opt_ex}
 	% 	\end{figure}
 \FloatBarrier{\color{white}.}
+
+
+\pagebreak
+\section{Redefining Requirements}
+\hl{I've decided to have problem description state radio requirements of intended system, and then here I will derive the requirement for CNR of the PLL to meet those radio requirements from a BER vs CNR simulation. }
+The requirements imposed on this PLL are defined in terms of a radio system for which it will be a component of. First, the modulation scheme of this system is described. Gaussian frequency shift keying with bandwidth-time (BT) product of 0.3 is utilized as the basic scheme, With a nominal bit rate of 1 Mbps. Under such circumstances, 1 and 0 are respectively encoded as $\pm$250 kHz of frequency deviation from the carrier. In order to improve bit error rate, while mantaining compatability with 1 Mbps tramsitters, a modified data rate of 250 ksymbols/s is used where one data symbol \hl{WIP... skip this for now.}

@@ -1,18 +1,18 @@
 [0] Config.pm:302> INFO - This is Biber 2.9
 [0] Config.pm:305> INFO - Logfile is 'report.blg'
-[24] biber:313> INFO - === fr. mai 29, 2020, 08:50:56
-[42] Biber.pm:371> INFO - Reading 'report.bcf'
-[88] Biber.pm:857> INFO - Found 36 citekeys in bib section 0
-[98] Biber.pm:3981> INFO - Processing section 0
+[21] biber:313> INFO - === ma. juni  1, 2020, 17:29:53
+[39] Biber.pm:371> INFO - Reading 'report.bcf'
+[89] Biber.pm:857> INFO - Found 38 citekeys in bib section 0
+[99] Biber.pm:3981> INFO - Processing section 0
 [108] Biber.pm:4154> INFO - Looking for bibtex format file 'mybib.bib' for section 0
-[110] bibtex.pm:1468> INFO - LaTeX decoding ...
-[174] bibtex.pm:1294> INFO - Found BibTeX data source 'mybib.bib'
-[278] Utils.pm:169> WARN - month field 'Apr' in entry 'parseval_1799' is not an integer - this will probably not sort properly.
-[347] Utils.pm:169> WARN - month field 'Nov' in entry 'gardner_1980' is not an integer - this will probably not sort properly.
-[401] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[401] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[401] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[401] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
-[423] bbl.pm:617> INFO - Writing 'report.bbl' with encoding 'UTF-8'
-[436] bbl.pm:720> INFO - Output to report.bbl
-[437] Biber.pm:110> INFO - WARNINGS: 2
+[111] bibtex.pm:1468> INFO - LaTeX decoding ...
+[179] bibtex.pm:1294> INFO - Found BibTeX data source 'mybib.bib'
+[304] Utils.pm:169> WARN - month field 'Apr' in entry 'parseval_1799' is not an integer - this will probably not sort properly.
+[381] Utils.pm:169> WARN - month field 'Nov' in entry 'gardner_1980' is not an integer - this will probably not sort properly.
+[440] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[440] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[440] Biber.pm:3809> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[440] Biber.pm:3815> INFO - No sort tailoring available for locale 'en-US'
+[464] bbl.pm:617> INFO - Writing 'report.bbl' with encoding 'UTF-8'
+[480] bbl.pm:720> INFO - Output to report.bbl
+[480] Biber.pm:110> INFO - WARNINGS: 2

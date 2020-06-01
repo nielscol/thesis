@@ -85,6 +85,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 
 
 \subsection{Phase Noise}
+	\hl{Bandwidth and integrated phase noise power values.}
 		\begin{figure}[htb!]
 	        \centering
 	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
@@ -93,6 +94,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 		\end{figure}
 
 \subsection{Start-up Transient}
+	\hl{Lock time value.}
 		\begin{figure}[htb!]
 	        \centering
 	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
@@ -102,7 +104,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 {\color{white}.}
 
 \FloatBarrier\pagebreak
-\subsection{Voltage Controlled Oscillator}
+\subsection{Voltage Controlled Oscillator}\label{sec:ro_results}
 
 		\begin{table}[htb!]
 			\centering
@@ -257,7 +259,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 			\end{figure} 
 	\FloatBarrier
 \FloatBarrier
-\subsection{10b CDAC}
+\subsection{10b CDAC}\label{sec:res_cdac_10b}
 
 	\begin{figure}[htb!]
 	    \centering
@@ -301,7 +303,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 
 
 \FloatBarrier\pagebreak
-\subsection{3b CDAC}
+\subsection{3b CDAC}\label{sec:res_cdac_3b}
 
 	\begin{figure}[htb!]
 	    \centering
@@ -324,7 +326,7 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 
 
 \FloatBarrier
-\subsection{Bang-bang phase detector}
+\subsection{Bang-bang phase detector}\label{sec:res_bbpd}
 With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 
 	\begin{figure}[htb!]
@@ -347,7 +349,7 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 	\end{figure} 
 
 \FloatBarrier\pagebreak
-\subsection{Loop filter }
+\subsection{Loop filter }\label{sec:rec_lf}
 	\subsubsection{Optimal Paramters}
 		\begin{table}[h!]
 			\centering
@@ -358,26 +360,26 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $2.982197\times10^{12}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $1.6400055\times10^{15}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $2.982197\times10^{8}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $3.904893\times10^{11}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $2.115052\times10^{2}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.928457\times10^4$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $2.244064\times10^5$ & Hz\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $3.222697\times10^5$ & Hz\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $2.3014397180\times10^2$  &\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $4.369015\times10^4$  &\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-2.1150524223\times10^2$  & \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.92845\times10^4$  & \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $5.333423\times10^5$ & Hz \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $1.6\times10^6$ & Hz \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $4.527067\times10^{-6}$ & seconds \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.65873\times10^{-7}$ & seconds \\
 				\hline 
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}
 			% \label{asgn_specs}
-			\caption{PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.}
+			\caption{PLL parameters determined from filter design and optimization process for fast lock speed with synchronous counter feedback.}
 			\label{filter_params_fast_lock}
 		\end{table}   
 
@@ -390,21 +392,21 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $5.325862\times12^{12}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $9.64757\times12^{12}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $1.271456\times10^{10}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $2.991366\times10^{7}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.101813\times10^{4}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.926152\times10^{1}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $1.836596\times10^5$ & Hz\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $0.494343\times10^5$ & Hz\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $1.1812790734\times10^4$  &\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $2.300073\times10^1$  &\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.1018130778\times10^4$  & \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.926152\times10^1$  & \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $9.117332\times10^5$ & Hz \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $1.227156\times10^6$ & Hz \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.978130\times10^{-7}$ & seconds \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.65873\times10^{-7}$ & seconds \\
 				\hline 
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}
@@ -426,17 +428,17 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} Sign bits  & 1 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Integer bits & 5 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Integer bits & 4 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Fractional bits  & 10 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Fractional bits  & 11 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{red} (gear 1)} & $2.301440\times10^2$ & \texttt{0b01110011000100100111}  & $+7.116930\times10^{-5}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{red} (gear 1)} & $2.301440\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{red} (gear 1)} & $-2.115054\times10^2$ & \texttt{0b11110110001111110101}  & $-1.288619\times10^{-4}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{red} (gear 1)} & $-2.115054\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{blue} (gear 2)} & $8.899902\times10^0$ & \texttt{0b00000100011100110011}  & $+4.616306\times10^{-5}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{blue} (gear 2)} & $2.300073\times10^1$ & \texttt{0bX}  & $+x\times10^{-x}$ \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{blue} (gear 2)} & $-8.301270\times10^0$ & \texttt{0b11111011110110010111}  & $-1.168639\times10^{-4}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{blue} (gear 2)} & $-1.926152\times10^1$ & \texttt{0bX}  & $+x\times10^{-x}$\\
 				\hline 
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}

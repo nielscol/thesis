@@ -170,6 +170,91 @@
       \verb https://doi.org/10.1109/rfic.2017.7969047
       \endverb
     \endentry
+    \entry{Tamura2020}{inproceedings}{}
+      \name{author}{11}{}{%
+        {{hash=1ecfb75bf169c09bf26ac7d224fe48bf}{%
+           family={Tamura},
+           familyi={T\bibinitperiod},
+           given={Masahisa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fa1d09eff72da99756f10b9c9bbcab98}{%
+           family={Takano},
+           familyi={T\bibinitperiod},
+           given={Hideyuki},
+           giveni={H\bibinitperiod}}}%
+        {{hash=396e62173416e823f97ce856d887b7d4}{%
+           family={Shinke},
+           familyi={S\bibinitperiod},
+           given={Satoru},
+           giveni={S\bibinitperiod}}}%
+        {{hash=249e8c4faea198399044e115c62c4379}{%
+           family={Fujita},
+           familyi={F\bibinitperiod},
+           given={Hiroaki},
+           giveni={H\bibinitperiod}}}%
+        {{hash=572c52230229f2dc976da302e1b6dbe5}{%
+           family={Nakahara},
+           familyi={N\bibinitperiod},
+           given={Hironori},
+           giveni={H\bibinitperiod}}}%
+        {{hash=9450184bca01b0b07cec1f7b2c331185}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={Norihito},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7f85dd2de9da6a0924634e1c7c44f955}{%
+           family={Nakada},
+           familyi={N\bibinitperiod},
+           given={Yutaka},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ea60484ead56291b1206f2a40a46e9ab}{%
+           family={Shinohe},
+           familyi={S\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=44781db4f86c8c790eae366c0c16796c}{%
+           family={Etou},
+           familyi={E\bibinitperiod},
+           given={Shinichirou},
+           giveni={S\bibinitperiod}}}%
+        {{hash=868a7b4a2ca204e1b587eb3713c2682a}{%
+           family={Fujiwara},
+           familyi={F\bibinitperiod},
+           given={Tetsuya},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9ff6b00bd2a4def858c7a3f23ff91fd3}{%
+           family={Katayama},
+           familyi={K\bibinitperiod},
+           given={Yasushi},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9589c9d530ea2d023d94569a3745456e}
+      \strng{fullhash}{ddcefd0c086b4e5eda5806f05e2de4ab}
+      \strng{bibnamehash}{9589c9d530ea2d023d94569a3745456e}
+      \strng{authorbibnamehash}{9589c9d530ea2d023d94569a3745456e}
+      \strng{authornamehash}{9589c9d530ea2d023d94569a3745456e}
+      \strng{authorfullhash}{ddcefd0c086b4e5eda5806f05e2de4ab}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 {IEEE} International Solid- State Circuits Conference - ({ISSCC})}
+      \field{month}{2}
+      \field{title}{30.5 A 0.5V {BLE} Transceiver with a 1.9mW {RX} Achieving -96.4dBm Sensitivity and 4.1dB Adjacent Channel Rejection at 1MHz Offset in 22nm {FDSOI}}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1109/isscc19947.2020.9063021
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/isscc19947.2020.9063021
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/isscc19947.2020.9063021
+      \endverb
+    \endentry
     \entry{Planes2012}{inproceedings}{}
       \name{author}{33}{}{%
         {{hash=d4d2c40a4609275eb03b575f5cb23be7}{%
@@ -347,8 +432,8 @@
       \strng{authorbibnamehash}{8cf31a79b0445f84b7f34e43e05b00b5}
       \strng{authornamehash}{8cf31a79b0445f84b7f34e43e05b00b5}
       \strng{authorfullhash}{c3c65c3a99d42f2c631ffd045a53d821}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2012 Symposium on {VLSI} Technology ({VLSIT})}
@@ -595,8 +680,8 @@
       \strng{authorbibnamehash}{7833629adaf08c7851937901cb752049}
       \strng{authornamehash}{7833629adaf08c7851937901cb752049}
       \strng{authorfullhash}{7833629adaf08c7851937901cb752049}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Digital signal processing: principles, algorithms, and applications}
@@ -1382,8 +1467,8 @@
       \strng{authorbibnamehash}{0d0df3a36edd84f6dc6485d80c951f96}
       \strng{authornamehash}{0d0df3a36edd84f6dc6485d80c951f96}
       \strng{authorfullhash}{0d0df3a36edd84f6dc6485d80c951f96}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
@@ -1483,6 +1568,80 @@
       \field{title}{7-6 Stability Analysis}
       \field{year}{2010}
     \endentry
+    \entry{Lundstrom2006}{book}{}
+      \list{publisher}{1}{%
+        {Kluwer Academic Publishers}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{title}{Nanoscale Transistors}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1007/0-387-28003-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/0-387-28003-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/0-387-28003-0
+      \endverb
+    \endentry
+    \entry{Xiang2020}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=aab48a593b7c2ec1d9370ae11c6fdea3}{%
+           family={Xiang},
+           familyi={X\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e62bbb6917a96eeb6cde5452f24d8cd1}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Yongping},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0f0db1237ef28b1353f42aa8f52b268b}{%
+           family={Ayers},
+           familyi={A\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=451f8e5c62fbec604f0d298fd364254e}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8d3346030389bb4358dd53ef845ff0b1}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{fullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
+      \strng{bibnamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authorbibnamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authornamehash}{bf96b327e642ffe504c0419aeda20f31}
+      \strng{authorfullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 {IEEE} Custom Integrated Circuits Conference ({CICC})}
+      \field{month}{3}
+      \field{title}{A 0.5V-to-0.9V 0.2GHz-to-5GHz Ultra-Low-Power Digitally-Assisted Analog Ring {PLL} with Less Than 200ns Lock Time in 22nm {FinFET} {CMOS} Technology}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1109/cicc48029.2020.9075897
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/cicc48029.2020.9075897
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/cicc48029.2020.9075897
+      \endverb
+    \endentry
     \entry{Liu2019}{article}{}
       \name{author}{11}{}{%
         {{hash=680ba965f1288ce628be425682130667}{%
@@ -1551,8 +1710,8 @@
       \strng{authorbibnamehash}{1616fd3056125370b5d058178277a977}
       \strng{authornamehash}{1616fd3056125370b5d058178277a977}
       \strng{authorfullhash}{9ab14be007f775f89fce48196136da85}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
@@ -1571,46 +1730,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1109/jssc.2019.2936967
-      \endverb
-    \endentry
-    \entry{Palaniappan2018}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=eeec8b8f2f4038ed31c73b61e0ddc907}{%
-           family={Palaniappan},
-           familyi={P\bibinitperiod},
-           given={Arjun\bibnamedelima Ramaswami},
-           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-        {{hash=0333e2ea434ea8d31041a911017bb512}{%
-           family={Siek},
-           familyi={S\bibinitperiod},
-           given={Liter},
-           giveni={L\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{e28d634074b704057664b8c79d5152f0}
-      \strng{fullhash}{e28d634074b704057664b8c79d5152f0}
-      \strng{bibnamehash}{e28d634074b704057664b8c79d5152f0}
-      \strng{authorbibnamehash}{e28d634074b704057664b8c79d5152f0}
-      \strng{authornamehash}{e28d634074b704057664b8c79d5152f0}
-      \strng{authorfullhash}{e28d634074b704057664b8c79d5152f0}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2018 {IEEE} Nordic Circuits and Systems Conference ({NORCAS}): {NORCHIP} and International Symposium of System-on-Chip ({SoC})}
-      \field{month}{10}
-      \field{title}{A 0.0186 mm2, 0.65 V Supply, 9.53 ps {RMS} Jitter All-Digital {PLL} for Medical Implants}
-      \field{year}{2018}
-      \verb{doi}
-      \verb 10.1109/norchip.2018.8573491
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1109/norchip.2018.8573491
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1109/norchip.2018.8573491
       \endverb
     \endentry
     \entry{Zhang2019}{inproceedings}{}
@@ -1658,59 +1777,44 @@
       \verb https://doi.org/10.23919/vlsic.2019.8778061
       \endverb
     \endentry
-    \entry{Xiang2020}{inproceedings}{}
-      \name{author}{5}{}{%
-        {{hash=aab48a593b7c2ec1d9370ae11c6fdea3}{%
-           family={Xiang},
-           familyi={X\bibinitperiod},
-           given={Bo},
-           giveni={B\bibinitperiod}}}%
-        {{hash=e62bbb6917a96eeb6cde5452f24d8cd1}{%
-           family={Fan},
-           familyi={F\bibinitperiod},
-           given={Yongping},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=0f0db1237ef28b1353f42aa8f52b268b}{%
-           family={Ayers},
-           familyi={A\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod}}}%
-        {{hash=451f8e5c62fbec604f0d298fd364254e}{%
-           family={Shen},
+    \entry{Palaniappan2018}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=eeec8b8f2f4038ed31c73b61e0ddc907}{%
+           family={Palaniappan},
+           familyi={P\bibinitperiod},
+           given={Arjun\bibnamedelima Ramaswami},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=0333e2ea434ea8d31041a911017bb512}{%
+           family={Siek},
            familyi={S\bibinitperiod},
-           given={James},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8d3346030389bb4358dd53ef845ff0b1}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Dan},
-           giveni={D\bibinitperiod}}}%
+           given={Liter},
+           giveni={L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {IEEE}%
       }
-      \strng{namehash}{bf96b327e642ffe504c0419aeda20f31}
-      \strng{fullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
-      \strng{bibnamehash}{bf96b327e642ffe504c0419aeda20f31}
-      \strng{authorbibnamehash}{bf96b327e642ffe504c0419aeda20f31}
-      \strng{authornamehash}{bf96b327e642ffe504c0419aeda20f31}
-      \strng{authorfullhash}{524f0edd19bdafd0737b0d0dfe285cdb}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \strng{namehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{fullhash}{e28d634074b704057664b8c79d5152f0}
+      \strng{bibnamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authorbibnamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authornamehash}{e28d634074b704057664b8c79d5152f0}
+      \strng{authorfullhash}{e28d634074b704057664b8c79d5152f0}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{2020 {IEEE} Custom Integrated Circuits Conference ({CICC})}
-      \field{month}{3}
-      \field{title}{A 0.5V-to-0.9V 0.2GHz-to-5GHz Ultra-Low-Power Digitally-Assisted Analog Ring {PLL} with Less Than 200ns Lock Time in 22nm {FinFET} {CMOS} Technology}
-      \field{year}{2020}
+      \field{booktitle}{2018 {IEEE} Nordic Circuits and Systems Conference ({NORCAS}): {NORCHIP} and International Symposium of System-on-Chip ({SoC})}
+      \field{month}{10}
+      \field{title}{A 0.0186 mm2, 0.65 V Supply, 9.53 ps {RMS} Jitter All-Digital {PLL} for Medical Implants}
+      \field{year}{2018}
       \verb{doi}
-      \verb 10.1109/cicc48029.2020.9075897
+      \verb 10.1109/norchip.2018.8573491
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1109/cicc48029.2020.9075897
+      \verb https://doi.org/10.1109/norchip.2018.8573491
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1109/cicc48029.2020.9075897
+      \verb https://doi.org/10.1109/norchip.2018.8573491
       \endverb
     \endentry
     \entry{proakis_1993_psd}{inbook}{}
@@ -1735,8 +1839,8 @@
       \strng{authorbibnamehash}{7833629adaf08c7851937901cb752049}
       \strng{authornamehash}{7833629adaf08c7851937901cb752049}
       \strng{authorfullhash}{7833629adaf08c7851937901cb752049}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Digital signal processing: principles, algorithms, and applications}

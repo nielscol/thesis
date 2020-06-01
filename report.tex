@@ -31,7 +31,7 @@
 	\large\fontfamily{\sfdefault}\selectfont \		
 	\begin{abstract} \large\fontfamily{\rmdefault}\selectfont \
 		
-		\vspace{-2em}An integer-N all digital phase locked loop (ADPLL) frequency synthesizer implemented 22nm FD-SOI (22FDX) technology is presented in this paper, achieving a power consumption of \hl{X} $\mu$W at 2.448 GHz, a jitter FOM of \hl{X} dB, and an active area of \hl{X} mm$^2$. This design emphasizes power reducing architectural choices for application to low duty cyce wake up receivers (WURx), utiling low complexity, bias and reference free circuits. Included is a novel, pseudo-differential voltage controlled ring oscillator utilizing FD-SOI backgates to implement both frequency tuning and differential behavior. This oscillator achieves high oscillator tuning gain with rail-to-rail input range, whilst utilizing no current biasing. Capactive DACs are utilized to provide digital control to the oscillator with minimum power draw. A low complexity band-bang phase detector (BBPD) and all digital loop filter, with no divider in steady state implement the remaining portions of the PLL. Calibration of the PLL is implemented utilizing a synchronous counter-based frequency error detection scheme coupled with a coarse bank of tuning capacitors.
+		\vspace{-2em}A power and jitter figure of merit (FOM$_{jitter}$) state of art integer-N all digital phase locked loop (ADPLL) frequency synthesizer implemented 22nm FD-SOI (Global Foundaries 22FDX) technology is presented in this paper. Achieved was a power consumption of 100 $\mu$W at 2.448 GHz, a jitter FOM of -226 dB, and an active area of 0.0051 mm$^2$. This was obtained through an emphasis on power reducing architectural choices for application to low duty cyce wake up receivers (WUR), utilizing low complexity, bias and reference free circuits. Included is a novel, pseudo-differential voltage controlled ring oscillator utilizing FD-SOI backgates to implement both frequency tuning and differential behavior. This oscillator achieves high oscillator tuning gain with rail-to-rail input range, whilst utilizing no current biasing. Capactive DACs are used to provide digital control to the oscillator with minimum power draw. A low complexity band-bang phase detector (BBPD) and all digital proportional-integral (PI) loop filter, with divider-free operation implements the remaining portions of the PLL. Calibration of the PLL is implemented utilizing a synchronous counter-based frequency error detection scheme coupled with a coarse bank of tuning capacitors. Furthermore, a phase noise optimization theory is presented for PI loop-filter designs in a BBPD-PLL, and also for DAC resolution determination in such a PLL. Finally, a theoretical limit for achievable PLL FOM$_{jitter}$ in the proposed design is derived.
 	\end{abstract}
 	% \section*{Abstract}
 	% fjdsfkajjlkf
@@ -66,7 +66,7 @@
 	% \vspace{1em}
 	\large\fontfamily{\rmdefault}\selectfont 
 	
-	The intent of this project is to develop an ultra low power, integer-N ADPLL frequency synthesizer for applications to wake up receiver (WURX) radio circuits. The target technology is Global Foundaries 22FDX fully-depeleted silicon on insulator (FD-SOI), a 22nm process node. The implemented PLL is intended for use in duty cycled wake up receiver WURX circuits applications, with on the order of 1\% active time. Thus, the design must feature low power consumption in inactive (sleep) states, and rapid wake-up/resume. The required specifications for this PLL design are given in table \ref{reqs}\\
+	The intent of this project is to develop an ultra low power, integer-N ADPLL frequency synthesizer for applications to wake up receiver (WUR) radio circuits. The target technology is Global Foundaries 22FDX fully-depeleted silicon on insulator (FD-SOI), a 22nm process node. The implemented PLL is intended for use in duty cycled wake up receiver circuit applications, with on the order of 1\% active time. Thus, the design must feature low power consumption in inactive (sleep) states, and rapid wake-up/resume. The required specifications for this PLL design are given in table \ref{reqs}. \hl{I am going to alter these requirements to be in terms of radio system performance, i.e. BER + modulation scheme, so no strict CNR listed here.}\\
 		\begin{table}[htb!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -81,24 +81,24 @@
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} CNR\tablefootnote{Carrier to noise ratio.} & $\geq$ 20 &  20 dBc  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Reference frequency\tablefootnote{Divided frequencies (powers of 2) are also acceptable.} &  32  &  MHz  \\ 
+				\rule[-1ex]{0pt}{2.5ex} Reference frequency\tablefootnote{Divided frequencies are also acceptable.} &  32  &  MHz  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Synthesized frequency & 2.448 &  MHz  \\ 
+				\rule[-1ex]{0pt}{2.5ex} Synthesized frequency & 2.448 &  GHz  \\ 
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} Area & $\leq$ 0.01 &  mm$^2$  \\ 
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} Lock time (cold-start) & $\leq$ 20 & $\mu$s  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Re-lock time (sleep-resume) & $\leq$ 5 & $\mu$s  \\ 
+				\rule[-1ex]{0pt}{2.5ex} Re-lock time (sleep-resume) & $\leq$ 2 & $\mu$s  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} FOM$_{\Phi n}$\tablefootnote{ FOM$_{\Phi n} = 10\log_{10}\left(\frac{\sigma_{t_j}^2}{(\textnormal{1 s})^2}\cdot\frac{\textnormal{Power}}{\textnormal{1 mW}}\right)$, where $\sigma_{t_j}$ is the measured RMS timing jitter of the PLL.} & $\leq$ -230 & dB  \\ 
-				\hline 
+				% \rule[-1ex]{0pt}{2.5ex} FOM$_{\Phi n}$\tablefootnote{ FOM$_{\Phi n} = 10\log_{10}\left(\frac{\sigma_{t_j}^2}{(\textnormal{1 s})^2}\cdot\frac{\textnormal{Power}}{\textnormal{1 mW}}\right)$, where $\sigma_{t_j}$ is the measured RMS timing jitter of the PLL.} & $\leq$ -230 & dB  \\ 
+				% \hline 
 			\end{tabular} 
 			\caption{Design required specifications.}
 			\label{reqs}
 		\end{table} 
 	\large\fontfamily{\rmdefault}\selectfont 
-	\par This work is in part a continuation of the author's previous work \cite{Me} on the optimization and simulation of integer-N ADPLL, which focused on automation of loop filter design. The architectural proceeded with in this work are motivated through findings of this work, particularly the usage of bang-bang phase detector with proportional-integral (PI) controller based loop filter. This architecture was found to be advantageous in terms of complexity and optimizability, providing for a known good starting point on this project.
+	\par This work is in part a continuation of the author's previous work \cite{Me} on the optimization and simulation of integer-N ADPLLs, which focused on automation of loop filter design. The architectural proceeded with in this work are motivated through findings of this work, particularly the usage of bang-bang phase detector with proportional-integral (PI) controller based loop filter. This architecture was found to be advantageous in terms of complexity and optimizability, providing for a known good starting point on this project.
 
 	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 	% % Preface
@@ -166,7 +166,7 @@
     \pagebreak
     \section{Conclusion} \label{conclusion}
 
-    In this work, an ultra-low power phase locked loop of novel architecture was implemented to achieve ultra-low power operation for the needs of wake up receiver applications. The proposed architecture sucessfully implemented power saving simplifications, including dividerless operation, all-digital loop filter, and novel DCO. The DCO architecture introduced a new pseudo-differential delay cell based voltage controlled ring oscillator topology, operating on backgate connections to implement both frequency tuning and differential operation. This ring oscillator topology exploits characteristics of FD-SOI, which enabled highly linear oscillator gain with rail-to-rail control voltages. The oscillator topology design was shown to operate effectively coupled with a capacitive DAC, resulting in a low energy, low complexity oscillator with fine control of frequency. Theory regarding the design and operation of such oscillators was introduced. Furthermore, theory for filter optimization for BBPD-PLL containing noisy a BBPD was introduced.
+    In this work, an ultra-low power phase locked loop of novel architecture was implemented to achieve ultra-low power operation for the needs of wake up receiver applications, with state of art power (100 $\mu$W) and area (0.0051 mm$^2$). The proposed architecture sucessfully implemented power saving simplifications, including dividerless operation, all-digital loop filter, and novel DCO. The DCO architecture introduced a new pseudo-differential delay cell based voltage controlled ring oscillator topology, operating on backgate connections to implement both frequency tuning and differential operation. This ring oscillator topology exploits characteristics of FD-SOI, which enabled highly linear oscillator gain with rail-to-rail control voltages. The oscillator topology design was shown to operate effectively coupled with a capacitive DAC, resulting in a low energy, low complexity oscillator with fine control of frequency. Theory regarding the design and operation of such oscillators was introduced. Furthermore, theory for filter optimization of PI-controller BBPD-PLLs was derived, and a theoretical result for best case jitter and jitter FOM for such a topology was derived. Specifically, it was seen that PI-controller BBPD-PLL jitter is proportional directly to oscillator phase noise power, and inversely proportional to reference frequency. In the case of implementation with ring oscillators, the fundamental limit for jitter is inversely proportioal to reference frequency, implying it is best to maximize reference frequency for PI-controller BBPD-PLLs if possible.
 
 
 	% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 

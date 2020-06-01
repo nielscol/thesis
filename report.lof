@@ -30,144 +30,154 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {15}{\ignorespaces Full PLL additive noise model.\relax }}{31}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces ADPLL Architecture.\relax }}{33}{figure.caption.19}
+\contentsline {figure}{\numberline {16}{\ignorespaces ADPLL Architecture.\relax }}{34}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces PLL sleep and resume operation.\relax }}{34}{figure.caption.20}
+\contentsline {figure}{\numberline {17}{\ignorespaces PLL sleep and resume operation.\relax }}{35}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {18}{\ignorespaces PLL floorplan.\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {18}{\ignorespaces PLL floorplan.\relax }}{36}{figure.caption.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {19}{\ignorespaces BBPD-PLL full noise model.\relax }}{36}{figure.caption.23}
+\contentsline {figure}{\numberline {19}{\ignorespaces BBPD-PLL full noise model.\relax }}{37}{figure.caption.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {20}{\ignorespaces Bang-bang phase detector with D flip-flop.\relax }}{37}{figure.caption.24}
+\contentsline {figure}{\numberline {20}{\ignorespaces Bang-bang phase detector with D flip-flop.\relax }}{38}{figure.caption.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {21}{\ignorespaces BBPD output expectation and jitter PDF versus input time differential.\relax }}{38}{figure.caption.25}
+\contentsline {figure}{\numberline {21}{\ignorespaces BBPD output expectation and jitter PDF versus input time differential.\relax }}{39}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {22}{\ignorespaces \textbf {(a)} Noisy BBPD nonlinear model \textbf {(b)} Noisy BBPD linearized model\relax }}{38}{figure.caption.26}
+\contentsline {figure}{\numberline {22}{\ignorespaces \textbf {(a)} Noisy BBPD nonlinear model \textbf {(b)} Noisy BBPD linearized model\relax }}{39}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {23}{\ignorespaces True single-phase clock (TSPC) D flip-flop, positive edge triggered.\relax }}{39}{figure.caption.27}
+\contentsline {figure}{\numberline {23}{\ignorespaces True single-phase clock (TSPC) D flip-flop, positive edge triggered.\relax }}{40}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {24}{\ignorespaces \textbf {(a)} 22 FDX threshold voltage versus body bias, \textbf {(b)} Rate of change of threshold voltage versus body bias.\relax }}{41}{figure.caption.29}
+\contentsline {figure}{\numberline {24}{\ignorespaces \textbf {(a)} 22 FDX threshold voltage versus body bias, \textbf {(b)} Rate of change of threshold voltage versus body bias.\relax }}{42}{figure.caption.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {25}{\ignorespaces \textbf {(a)} 22 FDX Extracted threshold voltage versus channel length, \textbf {(b)} Extracted body effect coefficient.\relax }}{41}{figure.caption.30}
+\contentsline {figure}{\numberline {25}{\ignorespaces \textbf {(a)} 22 FDX extracted threshold voltage versus channel length, \textbf {(b)} Extracted body effect coefficient.\relax }}{42}{figure.caption.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {26}{\ignorespaces 22FDX ring oscillator channel length sweep versus \textbf {(a)} FOM, \textbf {(b)} Oscillation frequency.\relax }}{43}{figure.caption.33}
+\contentsline {figure}{\numberline {26}{\ignorespaces 22FDX ring oscillator channel length sweep versus \textbf {(a)} FOM, \textbf {(b)} Oscillation frequency.\relax }}{44}{figure.caption.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {27}{\ignorespaces 22FDX ring oscillator channel length sweep versus \textbf {(a)} Power, \textbf {(b)} Phase noise at 1 MHz carrier offset (SSB).\relax }}{43}{figure.caption.34}
+\contentsline {figure}{\numberline {27}{\ignorespaces 22FDX ring oscillator channel length sweep versus \textbf {(a)} Power, \textbf {(b)} Phase noise at 1 MHz carrier offset (SSB).\relax }}{44}{figure.caption.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {28}{\ignorespaces Model for ring oscillator.\relax }}{44}{figure.caption.35}
+\contentsline {figure}{\numberline {28}{\ignorespaces Model for ring oscillator.\relax }}{45}{figure.caption.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {29}{\ignorespaces Approximate model for ring oscillator inverter delay cell.\relax }}{44}{figure.caption.36}
+\contentsline {figure}{\numberline {29}{\ignorespaces Approximate model for ring oscillator inverter delay cell.\relax }}{45}{figure.caption.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {30}{\ignorespaces Backgate-tuned ring oscillator with coarse tuning capacitor bank.\relax }}{50}{figure.caption.37}
+\contentsline {figure}{\numberline {30}{\ignorespaces Backgate-tuned ring oscillator with coarse tuning capacitor bank.\relax }}{51}{figure.caption.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {31}{\ignorespaces FD-SOI backgate-coupled inverter topology, .\relax }}{51}{figure.caption.38}
+\contentsline {figure}{\numberline {31}{\ignorespaces FD-SOI backgate-coupled inverter topology, .\relax }}{52}{figure.caption.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {32}{\ignorespaces \textbf {(a)} Common backgate inverter, \textbf {(b)} Linearized circuit, \textbf {(c)} Simplified linearized model.\relax }}{52}{figure.caption.39}
+\contentsline {figure}{\numberline {32}{\ignorespaces \textbf {(a)} Common backgate inverter, \textbf {(b)} Linearized circuit, \textbf {(c)} Simplified linearized model.\relax }}{53}{figure.caption.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {33}{\ignorespaces \textbf {(a)} Pseudodifferential backgate-coupled inverter circuit, \textbf {(b)} Linearized circuit.\relax }}{52}{figure.caption.40}
+\contentsline {figure}{\numberline {33}{\ignorespaces \textbf {(a)} Pseudodifferential backgate-coupled inverter circuit, \textbf {(b)} Linearized circuit.\relax }}{53}{figure.caption.40}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {34}{\ignorespaces Backgate tunable backgate-coupled pseudodifferential delay cell in\textbf {(a)} Parallel, \textbf {(b)} Telescopic implementations.\relax }}{54}{figure.caption.41}
+\contentsline {figure}{\numberline {34}{\ignorespaces Circuit to extract self-biased common mode level.\relax }}{55}{figure.caption.41}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {35}{\ignorespaces Complementary tuning of backgate voltages to achieve frequency tuning.\relax }}{54}{figure.caption.42}
+\contentsline {figure}{\numberline {35}{\ignorespaces \textbf {(a)} Optimal width PFET/LVTNFET, \textbf {(b)} Optimal width PFET/SLVTNFET.\relax }}{55}{figure.caption.42}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {36}{\ignorespaces \textbf {(a)} Optimal width PFET/LVTNFET, \textbf {(b)} Optimal width PFET/SLVTNFET.\relax }}{55}{figure.caption.43}
+\contentsline {figure}{\numberline {36}{\ignorespaces Backgate tunable backgate-coupled pseudodifferential delay cell in\textbf {(a)} Parallel, \textbf {(b)} Telescopic implementations.\relax }}{56}{figure.caption.43}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {37}{\ignorespaces Backgate coupled pseudo-differential inverter delay cell with fine and medium tuning ranges.\relax }}{57}{figure.caption.44}
+\contentsline {figure}{\numberline {37}{\ignorespaces Complementary tuning of backgate voltages to achieve frequency tuning.\relax }}{56}{figure.caption.44}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {38}{\ignorespaces \textbf {(a)} Oscillator single-ended waveforms, \textbf {(b)} Oscillator common mode voltage waveform.\relax }}{57}{figure.caption.45}
+\contentsline {figure}{\numberline {38}{\ignorespaces Pseudo-differential backgate-coupled inverter delay cell with fine and medium backgate-based tuning.\relax }}{59}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {39}{\ignorespaces Basic differential ring oscillator circuit.\relax }}{58}{figure.caption.46}
+\contentsline {figure}{\numberline {39}{\ignorespaces Basic differential ring oscillator circuit.\relax }}{60}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {40}{\ignorespaces Third subharmonic to quadrature full rate conversion.\relax }}{58}{figure.caption.47}
+\contentsline {figure}{\numberline {40}{\ignorespaces Third subharmonic to quadrature full rate conversion.\relax }}{60}{figure.caption.47}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {41}{\ignorespaces Ring oscillator delay cell symbol.\relax }}{58}{figure.caption.48}
+\contentsline {figure}{\numberline {41}{\ignorespaces Ring oscillator delay cell full circuit.\relax }}{61}{figure.caption.48}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {42}{\ignorespaces Ring oscillator delay cell full circuit.\relax }}{59}{figure.caption.49}
+\contentsline {figure}{\numberline {42}{\ignorespaces \textbf {(a)} Ring oscillator delay cell symbol, \textbf {(b)} DCO Reset scheme.\relax }}{61}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {43}{\ignorespaces Ring oscillator full schematic.\relax }}{60}{figure.caption.50}
+\contentsline {figure}{\numberline {43}{\ignorespaces Ring oscillator full schematic.\relax }}{62}{figure.caption.50}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {44}{\ignorespaces Implementation of filter.\relax }}{62}{figure.caption.51}
+\contentsline {figure}{\numberline {44}{\ignorespaces Delay cell slice layout (in microns).\relax }}{63}{figure.caption.52}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {45}{\ignorespaces PI-controller PLL pole-zero locations.\relax }}{63}{figure.caption.52}
+\contentsline {figure}{\numberline {45}{\ignorespaces Delay cell arrangement in layout to result in similar wirelengths between stages.\relax }}{63}{figure.caption.53}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {46}{\ignorespaces Phase noise power (normalized) versus $\alpha $.\relax }}{66}{figure.caption.53}
+\contentsline {figure}{\numberline {46}{\ignorespaces Implementation of filter.\relax }}{65}{figure.caption.54}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {47}{\ignorespaces Simplified model of BBPD-PLL\relax }}{67}{figure.caption.54}
+\contentsline {figure}{\numberline {47}{\ignorespaces PI-controller PLL pole-zero locations.\relax }}{66}{figure.caption.55}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {48}{\ignorespaces \textbf {(a)} Worst case cyclostationary behavior of BBPD-PLL, \textbf {(b)} Resulting in spurs from worst case cyclostationary behavior.\relax }}{68}{figure.caption.55}
+\contentsline {figure}{\numberline {48}{\ignorespaces Phase noise power (normalized) versus $\alpha $.\relax }}{68}{figure.caption.56}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {49}{\ignorespaces PI-controller PLL phase margin versus damping ratio.\relax }}{72}{figure.caption.56}
+\contentsline {figure}{\numberline {49}{\ignorespaces Simplified model of BBPD-PLL\relax }}{70}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {50}{\ignorespaces PI-controller implementation for combination of BBPD and synchronous counter usage.\relax }}{73}{figure.caption.57}
+\contentsline {figure}{\numberline {50}{\ignorespaces \textbf {(a)} Worst case cyclostationary behavior of BBPD-PLL, \textbf {(b)} Resulting in spurs from worst case cyclostationary behavior.\relax }}{70}{figure.caption.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {51}{\ignorespaces Simulation with 0.5\% initial frequency error: \textbf {(a)} Loop filter transient response, \textbf {(b)} PLL output instantaneous frequency.\relax }}{74}{figure.caption.58}
+\contentsline {figure}{\numberline {51}{\ignorespaces \textbf {(a)} Simulated emergent bang bang phase noise component of PLL phase noise, \textbf {(b)} Total output phase noise (normalized) versus $\alpha $.\relax }}{72}{figure.caption.59}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {52}{\ignorespaces Simulation with 12 MHz (0.5\%) initial frequency error: \textbf {(a)} BBPD/TDC detector responses, \textbf {(b)} PLL output phase noise power spectrum.\relax }}{74}{figure.caption.59}
+\contentsline {figure}{\numberline {52}{\ignorespaces PI-controller PLL phase margin versus damping ratio.\relax }}{75}{figure.caption.60}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {53}{\ignorespaces Monte-Carlo simulation with 1000 samples, 20\% RMS deviation in KDCO, and 60 MHz (2.5\%) RMS deviation in initial frequency error \textbf {(a)} Frequency transient responses, \textbf {(b)} Lock time histogram.\relax }}{75}{figure.caption.60}
+\contentsline {figure}{\numberline {53}{\ignorespaces PI-controller implementation for combination of BBPD and synchronous counter usage.\relax }}{76}{figure.caption.61}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {54}{\ignorespaces 10b CDAC.\relax }}{76}{figure.caption.62}
+\contentsline {figure}{\numberline {54}{\ignorespaces 10b CDAC.\relax }}{78}{figure.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {55}{\ignorespaces 3b CDAC.\relax }}{77}{figure.caption.63}
+\contentsline {figure}{\numberline {55}{\ignorespaces 3b CDAC.\relax }}{79}{figure.caption.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {56}{\ignorespaces ASM chart for PLL state machine.\relax }}{79}{figure.caption.65}
+\contentsline {figure}{\numberline {56}{\ignorespaces Voltage to phase noise conversion.\relax }}{80}{figure.caption.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {57}{\ignorespaces Basic low to high domain level shifter.\relax }}{80}{figure.caption.66}
+\contentsline {figure}{\numberline {57}{\ignorespaces Backgate-coupled pseudodifferential buffer.\relax }}{81}{figure.caption.65}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {58}{\ignorespaces Voltage to phase noise conversion.\relax }}{82}{figure.caption.67}
+\contentsline {figure}{\numberline {58}{\ignorespaces Standard synchronous counter circuit.\relax }}{82}{figure.caption.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {59}{\ignorespaces Backgate-coupled pseudodifferential buffer.\relax }}{83}{figure.caption.68}
+\contentsline {figure}{\numberline {59}{\ignorespaces Count to phase error decoder with handling of counter wrapping.\relax }}{82}{figure.caption.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {60}{\ignorespaces PLL Power breakdown.\relax }}{85}{figure.caption.72}
+\contentsline {figure}{\numberline {60}{\ignorespaces ASM chart for PLL state machine.\relax }}{85}{figure.caption.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {61}{\ignorespaces PLL phase noise SSB spectral density.\relax }}{86}{figure.caption.74}
+\contentsline {figure}{\numberline {61}{\ignorespaces Basic low to high domain level shifter.\relax }}{86}{figure.caption.69}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {62}{\ignorespaces PLL start up transient.\relax }}{86}{figure.caption.75}
+\contentsline {figure}{\numberline {62}{\ignorespaces Simulation with 0.5\% initial frequency error: \textbf {(a)} Loop filter transient response, \textbf {(b)} PLL output instantaneous frequency.\relax }}{87}{figure.caption.70}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {63}{\ignorespaces Ring oscillator phase noise (SSB).\relax }}{87}{figure.caption.77}
+\contentsline {figure}{\numberline {63}{\ignorespaces Simulation with 12 MHz (0.5\%) initial frequency error: \textbf {(a)} BBPD/TDC detector responses, \textbf {(b)} PLL output phase noise power spectrum.\relax }}{87}{figure.caption.71}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {64}{\ignorespaces Variation of oscillator frequency from Monte-Carlo variation/mismatch simulation.\relax }}{87}{figure.caption.78}
+\contentsline {figure}{\numberline {64}{\ignorespaces Monte-Carlo simulation with 1000 samples, 20\% RMS deviation in KDCO, and 60 MHz (2.5\%) RMS deviation in initial frequency error \textbf {(a)} Frequency transient responses, \textbf {(b)} Lock time histogram.\relax }}{88}{figure.caption.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {65}{\ignorespaces Supply voltage versus ($\pm $ 10\% from 0.8V) \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{88}{figure.caption.80}
+\contentsline {figure}{\numberline {65}{\ignorespaces PLL Power breakdown.\relax }}{89}{figure.caption.75}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {66}{\ignorespaces Medium tuning range versus \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{88}{figure.caption.81}
+\contentsline {figure}{\numberline {66}{\ignorespaces PLL phase noise SSB spectral density.\relax }}{90}{figure.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {67}{\ignorespaces Fine tuning range versus \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{89}{figure.caption.82}
+\contentsline {figure}{\numberline {67}{\ignorespaces PLL start up transient.\relax }}{90}{figure.caption.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {68}{\ignorespaces Variation of VCO fine tuning gain from Monte-Carlo variation/mismatch simulation.\relax }}{89}{figure.caption.83}
+\contentsline {figure}{\numberline {68}{\ignorespaces Ring oscillator phase noise (SSB).\relax }}{91}{figure.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {69}{\ignorespaces \textbf {(a)} Oscillator single-ended waveforms, \textbf {(b)} Oscillator common mode voltage waveform.\relax }}{89}{figure.caption.84}
+\contentsline {figure}{\numberline {69}{\ignorespaces Variation of oscillator frequency from Monte-Carlo variation/mismatch simulation.\relax }}{91}{figure.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {70}{\ignorespaces 10b CDAC single-ended \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{90}{figure.caption.85}
+\contentsline {figure}{\numberline {70}{\ignorespaces Supply voltage versus ($\pm $ 10\% from 0.8V) \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{92}{figure.caption.83}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {71}{\ignorespaces 10b CDAC differential \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{90}{figure.caption.86}
+\contentsline {figure}{\numberline {71}{\ignorespaces Medium tuning range versus \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{92}{figure.caption.84}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {72}{\ignorespaces 3b CDAC differential \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{91}{figure.caption.87}
+\contentsline {figure}{\numberline {72}{\ignorespaces Fine tuning range versus \textbf {(a)} Oscillation Frequency, \textbf {(b)} VCO gain.\relax }}{93}{figure.caption.85}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {73}{\ignorespaces BBPD extracted jitter \textbf {(a)} Cumulative Distribution Function, \textbf {(b)} Probability Distribution Function.\relax }}{91}{figure.caption.88}
+\contentsline {figure}{\numberline {73}{\ignorespaces Variation of VCO fine tuning gain from Monte-Carlo variation/mismatch simulation.\relax }}{93}{figure.caption.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {74}{\ignorespaces \textbf {(a)} FOM$_{jitter}$ versus power from \cite {Liu2019} (JSSC 2019), \textbf {(b)} FOM$_{jitter}$ versus area from \cite {Liu2020} (SSCL 2020).\relax }}{95}{figure.caption.94}
+\contentsline {figure}{\numberline {74}{\ignorespaces \textbf {(a)} Oscillator single-ended waveforms, \textbf {(b)} Oscillator common mode voltage waveform.\relax }}{93}{figure.caption.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {75}{\ignorespaces Noise tranients in DAC output during switching.\relax }}{97}{figure.caption.95}
+\contentsline {figure}{\numberline {75}{\ignorespaces 10b CDAC single-ended \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{94}{figure.caption.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {76}{\ignorespaces Full six stage oscillator layout with capacitor tuning bank, reset switches, and output buffer.\relax }}{101}{figure.caption.96}
+\contentsline {figure}{\numberline {76}{\ignorespaces 10b CDAC differential \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{94}{figure.caption.89}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {77}{\ignorespaces Unit delay stage pseudodifferential inverter.\relax }}{102}{figure.caption.97}
+\contentsline {figure}{\numberline {77}{\ignorespaces 3b CDAC differential \textbf {(a)} Integral Nonlinearity, \textbf {(b)} Differential Nonlinearity.\relax }}{95}{figure.caption.90}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {78}{\ignorespaces Capaitor tuning bank.\relax }}{102}{figure.caption.98}
+\contentsline {figure}{\numberline {78}{\ignorespaces BBPD extracted jitter \textbf {(a)} Cumulative Distribution Function, \textbf {(b)} Probability Distribution Function.\relax }}{95}{figure.caption.91}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {79}{\ignorespaces 10 bit CDAC layout.\relax }}{103}{figure.caption.99}
+\contentsline {figure}{\numberline {79}{\ignorespaces \textbf {(a)} FOM$_{jitter}$ versus power from \cite {Liu2019} (JSSC 2019), \textbf {(b)} FOM$_{jitter}$ versus area from \cite {Liu2020} (SSCL 2020). Note, "This work" refers to that described in the source papers.\relax }}{101}{figure.caption.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {80}{\ignorespaces 64 unit capacitor bank.\relax }}{104}{figure.caption.100}
+\contentsline {figure}{\numberline {80}{\ignorespaces Noise tranients in DAC output during switching.\relax }}{104}{figure.caption.98}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {81}{\ignorespaces CDAC switch.\relax }}{104}{figure.caption.101}
+\contentsline {figure}{\numberline {81}{\ignorespaces Full six stage oscillator layout with capacitor tuning bank, reset switches, and output buffer.\relax }}{109}{figure.caption.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {82}{\ignorespaces 3 bit CDAC layout.\relax }}{105}{figure.caption.102}
+\contentsline {figure}{\numberline {82}{\ignorespaces Unit delay stage pseudodifferential inverter.\relax }}{110}{figure.caption.100}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {83}{\ignorespaces Pseudodifferential inverter buffer cell.\relax }}{106}{figure.caption.103}
+\contentsline {figure}{\numberline {83}{\ignorespaces Capaitor tuning bank.\relax }}{110}{figure.caption.101}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {84}{\ignorespaces Single ended bang-bang phase detector.\relax }}{107}{figure.caption.104}
+\contentsline {figure}{\numberline {84}{\ignorespaces 10 bit CDAC layout.\relax }}{111}{figure.caption.102}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {85}{\ignorespaces Pseudodifferential input bang-bang phase detector.\relax }}{107}{figure.caption.105}
+\contentsline {figure}{\numberline {85}{\ignorespaces 64 unit capacitor bank.\relax }}{112}{figure.caption.103}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {86}{\ignorespaces Place and route generated logic for PLL.\relax }}{108}{figure.caption.106}
+\contentsline {figure}{\numberline {86}{\ignorespaces CDAC switch.\relax }}{112}{figure.caption.104}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {87}{\ignorespaces 3 bit CDAC layout.\relax }}{113}{figure.caption.105}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {88}{\ignorespaces Pseudodifferential inverter buffer cell.\relax }}{114}{figure.caption.106}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {89}{\ignorespaces Single ended bang-bang phase detector.\relax }}{115}{figure.caption.107}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {90}{\ignorespaces Pseudodifferential input bang-bang phase detector.\relax }}{115}{figure.caption.108}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {91}{\ignorespaces Place and route generated logic for PLL.\relax }}{116}{figure.caption.109}
