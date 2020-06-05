@@ -339,7 +339,7 @@
 	\subsubsection{Phase Noise Figures of Merit}
 	A common method to assign a figure of merit (FOM) to oscillator phase noise performance is to utilize the below relation \cite{Kinget1999}. Such a model assumes linear tradeoffs between power, frequency, and phase noise, and assumes that the rolloff of phase noise will occur with -20 dB/decade. A Lower FOM here is better.
 	\begin{equation}\label{eq:fom_pn}
-		\textnormal{FOM}_{\textnormal{pn}} = 10\log_{10}\left(\frac{P_{DC}}{\textnormal{1 mW}}\cdot\left(\frac{\Delta f}{f_0}\right)^2\right) + \mathcal{L}(\Delta f)
+		\textnormal{FOM}_{\textnormal{pn}} =  \mathcal{L}(\Delta f) + 10\log_{10}\left(\left(\frac{\Delta f}{f_0}\right)^2 \frac{P_{DC}}{\textnormal{1 mW}} \right)
 	\end{equation}
 	Another FOM applied to PLLs is provided below, based on the RMS jitter of the PLL \cite{XiangGao2009}. Here, RMS jitter is used as the phase spectrum of a PLL is often more complicated than a simple oscillator, containing spurs, in-band phase noise supression, and peaking resulting from the PLL loop filter. It should be noted that RMS jitter (in time) is tied directly to total phase noise power, as expected by Parseval's theorem \cite{parseval_1799}.  Lower is better again with this FOM. 
 	\begin{equation}\label{eq:fom_jitter}

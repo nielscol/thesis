@@ -63,56 +63,59 @@
 \BOOKMARK [3][-]{subsubsection.4.4.6}{Filter Design for Synchronous counter}{subsection.4.4}% 63
 \BOOKMARK [3][-]{subsubsection.4.4.7}{PI-controller phase margin}{subsection.4.4}% 64
 \BOOKMARK [3][-]{subsubsection.4.4.8}{Loop Filter Implementation}{subsection.4.4}% 65
-\BOOKMARK [2][-]{subsection.4.5}{CDAC - Fine Range}{section.4}% 66
-\BOOKMARK [3][-]{subsubsection.4.5.1}{Circuit}{subsection.4.5}% 67
-\BOOKMARK [2][-]{subsection.4.6}{CDAC - Medium Range}{section.4}% 68
-\BOOKMARK [3][-]{subsubsection.4.6.1}{Circuit}{subsection.4.6}% 69
-\BOOKMARK [2][-]{subsection.4.7}{Output buffer}{section.4}% 70
-\BOOKMARK [3][-]{subsubsection.4.7.1}{Circuit}{subsection.4.7}% 71
-\BOOKMARK [2][-]{subsection.4.8}{Synchronous Counter Phase Detector}{section.4}% 72
-\BOOKMARK [3][-]{subsubsection.4.8.1}{Implementation}{subsection.4.8}% 73
-\BOOKMARK [2][-]{subsection.4.9}{Control and Calibration Logic}{section.4}% 74
-\BOOKMARK [2][-]{subsection.4.10}{Level Shifter}{section.4}% 75
-\BOOKMARK [3][-]{subsubsection.4.10.1}{Circuit}{subsection.4.10}% 76
-\BOOKMARK [3][-]{subsubsection.4.10.2}{Behavioral Verification of PLL Design}{subsection.4.10}% 77
-\BOOKMARK [1][-]{section.5}{Results}{}% 78
-\BOOKMARK [2][-]{subsection.5.1}{Power breakdown}{section.5}% 79
-\BOOKMARK [2][-]{subsection.5.2}{Area Breakdown}{section.5}% 80
-\BOOKMARK [2][-]{subsection.5.3}{Phase Noise}{section.5}% 81
-\BOOKMARK [2][-]{subsection.5.4}{Start-up Transient}{section.5}% 82
-\BOOKMARK [2][-]{subsection.5.5}{Voltage Controlled Oscillator}{section.5}% 83
-\BOOKMARK [3][-]{subsubsection.5.5.1}{Phase Noise}{subsection.5.5}% 84
-\BOOKMARK [3][-]{subsubsection.5.5.2}{Frequency}{subsection.5.5}% 85
-\BOOKMARK [3][-]{subsubsection.5.5.3}{Tuning}{subsection.5.5}% 86
-\BOOKMARK [3][-]{subsubsection.5.5.4}{Waveforms}{subsection.5.5}% 87
-\BOOKMARK [2][-]{subsection.5.6}{10b CDAC}{section.5}% 88
-\BOOKMARK [2][-]{subsection.5.7}{3b CDAC}{section.5}% 89
-\BOOKMARK [2][-]{subsection.5.8}{Bang-bang phase detector}{section.5}% 90
-\BOOKMARK [2][-]{subsection.5.9}{Loop filter }{section.5}% 91
-\BOOKMARK [3][-]{subsubsection.5.9.1}{Optimal Paramters}{subsection.5.9}% 92
-\BOOKMARK [3][-]{subsubsection.5.9.2}{Digital Implementation Parameters}{subsection.5.9}% 93
-\BOOKMARK [2][-]{subsection.5.10}{Logic}{section.5}% 94
-\BOOKMARK [1][-]{section.6}{Discussion}{}% 95
-\BOOKMARK [2][-]{subsection.6.1}{Performance Limit for Ring Oscillator BBPD PLLs with PI-controllers}{section.6}% 96
-\BOOKMARK [2][-]{subsection.6.2}{State of art}{section.6}% 97
-\BOOKMARK [2][-]{subsection.6.3}{Areas of improvement}{section.6}% 98
-\BOOKMARK [3][-]{subsubsection.6.3.1}{LC Oscillator}{subsection.6.3}% 99
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Coarse calibration}{subsection.6.3}% 100
-\BOOKMARK [3][-]{subsubsection.6.3.3}{Subharmonic oscillator}{subsection.6.3}% 101
-\BOOKMARK [3][-]{subsubsection.6.3.4}{CDAC switching noise}{subsection.6.3}% 102
-\BOOKMARK [3][-]{subsubsection.6.3.5}{Ignored Flicker Noise}{subsection.6.3}% 103
-\BOOKMARK [1][-]{section.7}{Conclusion}{}% 104
-\BOOKMARK [1][-]{appendix.A}{Layout}{}% 105
-\BOOKMARK [2][-]{subsection.A.1}{Ring Oscillator}{appendix.A}% 106
-\BOOKMARK [3][-]{subsubsection.A.1.1}{Full oscillator layout}{subsection.A.1}% 107
-\BOOKMARK [3][-]{subsubsection.A.1.2}{Pseudodifferential inverter delay cell}{subsection.A.1}% 108
-\BOOKMARK [3][-]{subsubsection.A.1.3}{Capaitor tuning bank}{subsection.A.1}% 109
-\BOOKMARK [2][-]{subsection.A.2}{10b CDAC}{appendix.A}% 110
-\BOOKMARK [3][-]{subsubsection.A.2.1}{Full CDAC Layout}{subsection.A.2}% 111
-\BOOKMARK [3][-]{subsubsection.A.2.2}{64 unit capacitor sub-bank}{subsection.A.2}% 112
-\BOOKMARK [2][-]{subsection.A.3}{CDAC unit switch}{appendix.A}% 113
-\BOOKMARK [2][-]{subsection.A.4}{3b CDAC}{appendix.A}% 114
-\BOOKMARK [2][-]{subsection.A.5}{Buffer}{appendix.A}% 115
-\BOOKMARK [2][-]{subsection.A.6}{BBPD}{appendix.A}% 116
-\BOOKMARK [2][-]{subsection.A.7}{SPNR Logic}{appendix.A}% 117
-\BOOKMARK [1][-]{appendix.B}{Estimating PSD with Autoregressive Model}{}% 118
+\BOOKMARK [2][-]{subsection.4.5}{Digitizing the VCO}{section.4}% 66
+\BOOKMARK [2][-]{subsection.4.6}{CDAC - Fine Range}{section.4}% 67
+\BOOKMARK [3][-]{subsubsection.4.6.1}{Circuit}{subsection.4.6}% 68
+\BOOKMARK [2][-]{subsection.4.7}{CDAC - Medium Range}{section.4}% 69
+\BOOKMARK [3][-]{subsubsection.4.7.1}{Circuit}{subsection.4.7}% 70
+\BOOKMARK [2][-]{subsection.4.8}{Output buffer}{section.4}% 71
+\BOOKMARK [3][-]{subsubsection.4.8.1}{Circuit}{subsection.4.8}% 72
+\BOOKMARK [2][-]{subsection.4.9}{Synchronous Counter Phase Detector}{section.4}% 73
+\BOOKMARK [3][-]{subsubsection.4.9.1}{Implementation}{subsection.4.9}% 74
+\BOOKMARK [2][-]{subsection.4.10}{Control and Calibration Logic}{section.4}% 75
+\BOOKMARK [2][-]{subsection.4.11}{Level Shifter}{section.4}% 76
+\BOOKMARK [3][-]{subsubsection.4.11.1}{Circuit}{subsection.4.11}% 77
+\BOOKMARK [3][-]{subsubsection.4.11.2}{Behavioral Verification of PLL Design}{subsection.4.11}% 78
+\BOOKMARK [1][-]{section.5}{Results}{}% 79
+\BOOKMARK [2][-]{subsection.5.1}{Power breakdown}{section.5}% 80
+\BOOKMARK [2][-]{subsection.5.2}{Area Breakdown}{section.5}% 81
+\BOOKMARK [2][-]{subsection.5.3}{Phase Noise}{section.5}% 82
+\BOOKMARK [2][-]{subsection.5.4}{Start-up Transient}{section.5}% 83
+\BOOKMARK [2][-]{subsection.5.5}{Voltage Controlled Oscillator}{section.5}% 84
+\BOOKMARK [3][-]{subsubsection.5.5.1}{Phase Noise}{subsection.5.5}% 85
+\BOOKMARK [3][-]{subsubsection.5.5.2}{Frequency}{subsection.5.5}% 86
+\BOOKMARK [3][-]{subsubsection.5.5.3}{Tuning}{subsection.5.5}% 87
+\BOOKMARK [3][-]{subsubsection.5.5.4}{Waveforms}{subsection.5.5}% 88
+\BOOKMARK [2][-]{subsection.5.6}{10b CDAC}{section.5}% 89
+\BOOKMARK [2][-]{subsection.5.7}{3b CDAC}{section.5}% 90
+\BOOKMARK [2][-]{subsection.5.8}{Bang-bang phase detector}{section.5}% 91
+\BOOKMARK [2][-]{subsection.5.9}{Loop filter }{section.5}% 92
+\BOOKMARK [3][-]{subsubsection.5.9.1}{Optimal Paramters}{subsection.5.9}% 93
+\BOOKMARK [3][-]{subsubsection.5.9.2}{Digital Implementation Parameters}{subsection.5.9}% 94
+\BOOKMARK [2][-]{subsection.5.10}{Logic}{section.5}% 95
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 96
+\BOOKMARK [2][-]{subsection.6.1}{Radio System Performance}{section.6}% 97
+\BOOKMARK [2][-]{subsection.6.2}{Performance Limit for Ring Oscillator BBPD PLLs with PI-controllers}{section.6}% 98
+\BOOKMARK [2][-]{subsection.6.3}{State of art}{section.6}% 99
+\BOOKMARK [2][-]{subsection.6.4}{Areas of improvement}{section.6}% 100
+\BOOKMARK [3][-]{subsubsection.6.4.1}{LC Oscillator}{subsection.6.4}% 101
+\BOOKMARK [3][-]{subsubsection.6.4.2}{Coarse calibration}{subsection.6.4}% 102
+\BOOKMARK [3][-]{subsubsection.6.4.3}{Subharmonic oscillator}{subsection.6.4}% 103
+\BOOKMARK [3][-]{subsubsection.6.4.4}{CDAC switching noise}{subsection.6.4}% 104
+\BOOKMARK [3][-]{subsubsection.6.4.5}{Ignored Flicker Noise}{subsection.6.4}% 105
+\BOOKMARK [3][-]{subsubsection.6.4.6}{Synchtonous Counter}{subsection.6.4}% 106
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 107
+\BOOKMARK [1][-]{appendix.A}{Layout}{}% 108
+\BOOKMARK [2][-]{subsection.A.1}{Ring Oscillator}{appendix.A}% 109
+\BOOKMARK [3][-]{subsubsection.A.1.1}{Full oscillator layout}{subsection.A.1}% 110
+\BOOKMARK [3][-]{subsubsection.A.1.2}{Pseudodifferential inverter delay cell}{subsection.A.1}% 111
+\BOOKMARK [3][-]{subsubsection.A.1.3}{Capaitor tuning bank}{subsection.A.1}% 112
+\BOOKMARK [2][-]{subsection.A.2}{10b CDAC}{appendix.A}% 113
+\BOOKMARK [3][-]{subsubsection.A.2.1}{Full CDAC Layout}{subsection.A.2}% 114
+\BOOKMARK [3][-]{subsubsection.A.2.2}{64 unit capacitor sub-bank}{subsection.A.2}% 115
+\BOOKMARK [2][-]{subsection.A.3}{CDAC unit switch}{appendix.A}% 116
+\BOOKMARK [2][-]{subsection.A.4}{3b CDAC}{appendix.A}% 117
+\BOOKMARK [2][-]{subsection.A.5}{Buffer}{appendix.A}% 118
+\BOOKMARK [2][-]{subsection.A.6}{BBPD}{appendix.A}% 119
+\BOOKMARK [2][-]{subsection.A.7}{SPNR Logic}{appendix.A}% 120
+\BOOKMARK [1][-]{appendix.B}{Estimating PSD with Autoregressive Model}{}% 121

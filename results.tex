@@ -415,6 +415,7 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 			\label{filter_params_bbpd_low_noise}
 		\end{table}   
 		\subsubsection{Digital Implementation Parameters}
+		Output integrator is the has 1 sign bit, 13 integer bits (same a DCO bits), and 4 fractional bits (determined as the minimum number from both gears). Total size of the output of the integrator is 18 bits.
 		\begin{table}[h!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -424,17 +425,25 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Value (digital) } & \cellcolor{gray!40}\textbf{Value Error}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Total dataword bits  & 16 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Total dataword bits {\color{red} (gear 1)} & 12 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Sign bits  & 1 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Sign bits {\color{red} (gear 1)} & 1 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Integer bits & 4 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Integer bits {\color{red} (gear 1)} & 11 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Fractional bits  & 11 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Fractional bits {\color{red} (gear 1)} & 0 & & \\ 
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{red} (gear 1)} & $2.301440\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{red} (gear 1)} & $-2.115054\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Total dataword bits {\color{blue} (gear 2)} & 10 & & \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Sign bits {\color{blue} (gear 2)} & 1 & & \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Integer bits {\color{blue} (gear 2)} & 5 & & \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} Fractional bits {\color{blue} (gear 2)} & 4 & & \\ 
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{blue} (gear 2)} & $2.300073\times10^1$ & \texttt{0bX}  & $+x\times10^{-x}$ \\
 				\hline 

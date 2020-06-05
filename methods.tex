@@ -64,7 +64,7 @@ The primary objective in this work is to obtain a very low $100\mu$W power consu
 		\begin{figure}[htb!]
 	        \centering
 	        \includegraphics[width=0.75\textwidth, angle=0]{./figs/design/pll_floorplan3}
-		    \caption{PLL floorplan.}
+		    \caption{PLL floorplan (units in microns).}
 		\end{figure}
 
 \subsubsection{Dividerless PLL}
@@ -236,7 +236,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.6\textwidth, angle=0]{./figs/design/tspc_}
+			        \includegraphics[width=0.55\textwidth, angle=0]{./figs/design/tspc_}
 			    \caption{True single-phase clock (TSPC) D flip-flop, positive edge triggered.}
 			    \label{fig:tspc_dff}
 			\end{figure}
@@ -511,7 +511,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 		\begin{figure}[htb!]
 	        \centering
-	        \begin{subfigure}{.5\textwidth}
+	        \begin{subfigure}{.45\textwidth}
 	            \centering
 	            \includegraphics[width=\linewidth]{figs/design/inv_rc_model}
 	            \caption{Inverter approximate model.}
@@ -720,7 +720,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 			\begin{figure}[htb!]
 			    \centering
-			    \begin{subfigure}{0.33\textwidth}
+			    \begin{subfigure}{0.25\textwidth}
 			        \centering
 			        \includegraphics[width=1\textwidth, angle=0]{./figs/design/fig_10a_}
 			        \caption{ }
@@ -745,7 +745,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 			\begin{figure}[htb!]
 			    \centering
-			    \begin{subfigure}{0.3\textwidth}
+			    \begin{subfigure}{0.25\textwidth}
 			        \centering
 			        \includegraphics[width=1\textwidth, angle=0]{./figs/design/pseudodiff_bw}
 			        \caption{ }
@@ -782,7 +782,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.25\textwidth, angle=0]{./figs/design/inv_vm}
+			        \includegraphics[width=0.2\textwidth, angle=0]{./figs/design/inv_vm}
 			    \caption{Circuit to extract self-biased common mode level.}
 			    \label{fig:inv_vm}
 			\end{figure}
@@ -889,7 +889,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 
 
 	\subsubsection{Final Ring Oscillator Implementation}
-	With a selection of inverter topology and number of delay cells, a final circuit topology for the ring oscillator has been devised. The oscillator is comprised of six basic delay cell elements shown in figure \ref{fig:delay_cell_circuit}, which contains (1) a backgate-coupled and tunable pseudodifferential inverter, (2) an adjustable capacitor bank, (3) reset switches, and (4), a buffer. A simplified symbol for the delay cell is shown in figure \ref{fig:delay_cell_symbol}, and the placement of the delay cells into a full ring oscillator is shown in figure \ref{fig:full_6sg_ro}. This delay cell was devised from the base inverter topology in order to obtain several goals. First of which, is the ability to adjust frequency for process, voltage and temperature variation. To achieve this, the adjustable capacitor bank is added to tune the oscillation frequency with greater range than achievable with the backgate tuning. The second goal is to be able to reset the oscillator to a known phase at start up, which is implemented via addition of switches at the output nodes which force the nodes to rail levels when a reset condition is asserted. This is such that when reset is de-asserted in tandem with a clock edge for the PLL, the initial edge of the oscillator sampled by a phase detector will be in sync with the clock, as shown in figure \ref{fig:dco_reset}. The third goal is to remove any effect of external noise and loading on the oscillator, for which a buffer has been added to each delay cell, that the external world connects to. Table \ref{tab:dly_dev_size} contains the devices sizes used to implement the delay cell of figure \ref{fig:delay_cell_circuit}.
+	With a selection of inverter topology and number of delay cells, a final circuit topology for the ring oscillator has been devised. The oscillator is comprised of six basic delay cell elements shown in figure \ref{fig:delay_cell_circuit}, which contains (1) a backgate-coupled and tunable pseudodifferential inverter, (2) an adjustable capacitor bank, (3) reset switches, and (4), a buffer. A simplified symbol for the delay cell is shown in figure \ref{fig:delay_cell_symbol}, and the placement of the delay cells into a full ring oscillator is shown in figure \ref{fig:full_6sg_ro}. This delay cell was devised from the base inverter topology in order to obtain several goals. First of which, is the ability to adjust frequency for process, voltage and temperature variation. To achieve this, the adjustable capacitor bank is added to tune the oscillation frequency with greater range than achievable with the backgate tuning. The second goal is to be able to reset the oscillator to a known phase at start up, which is implemented via addition of switches at the output nodes which force the nodes to rail levels when a reset condition is asserted. This is such that when reset is de-asserted in tandem with a clock edge for the PLL, the initial edge of the oscillator sampled by a phase detector will be in sync with the clock, as shown in figure \ref{fig:dco_reset}. The third goal is to remove any effect of external noise and loading on the oscillator, for which a buffer has been added to each delay cell, that the external world connects to. This is discussed in section \ref{sec:buffer}. Table \ref{tab:dly_dev_size} contains the devices sizes used to implement the delay cell of figure \ref{fig:delay_cell_circuit}.
 
 			\begin{figure}[htb!]
 			        \centering
@@ -1260,7 +1260,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 	\begin{equation}
 		K_{opt} = \frac{(2\pi\alpha_{opt} f_{ref})^2}{3+\sqrt{10}}
 	\end{equation}
-	Computation of the value of constant $\beta$ is not straightforward, so it has been solved numerically through discrete time simulation of a PLL with BBPD and PI-controller. It has been determined that at the optimum, $\beta$ = 1.0088433 and accordingly $\alpha_{opt}$ = 0.07669725. Furthermore, $\beta_1$ = 0.919552 and $\beta_2$ = 1.097068. These values were observed to be independent of PLL frequency, oscillator phase noise and reference and DCO gain. An example case of this simulation is shown in figure \ref{fig:em_bb_pn}, where the ratio $\beta_1$ of equation \ref{eq:bb_jitter_} is seen with the vertical lines. Figure \ref{fig:opt_alpha_full} shows the effect of $\alpha$ versus total integrated phase noise power. Phase noise grows asymptotically with $\alpha$ = 0 and $\alpha$ = 0.136. 
+	Computation of the value of constant $\beta$ is not straightforward, so it has been solved numerically through discrete time simulation of a PLL with BBPD and PI-controller. This was obtained via a behavioral simulation in steady state over 1000000 reference cycles, with $\beta$ varied until the prediction of $\sigma^2_{\Phi_{n_{em}}}$ and its value from simulation converged within a tolerance of 10$^{-5}$. It has been determined that at the optimum, $\beta_{opt}$ = 0.8953860 and accordingly $\alpha_{opt}$ = 0.08467602. Furthermore, $\beta_1$ = 0.8498677 and $\beta_2$ = 1.0527732. These values were observed to be independent of PLL frequency, oscillator phase noise and reference and DCO gain. An example case of this simulation is shown in figure \ref{fig:em_bb_pn}, where the ratio $\beta_1$ of equation \ref{eq:bb_jitter_} is seen with the vertical lines. Figure \ref{fig:opt_alpha_full} shows the effect of $\alpha$ versus total integrated phase noise power. Phase noise grows asymptotically with $\alpha$ = 0 and $\alpha$ = 0.1503. 
 
 	\begin{figure}[htb!]
 	    \centering
@@ -1284,7 +1284,7 @@ In the divider-based PLL theory (section \ref{sec:pll_output_noise}), the derive
 Application of the determined optimal parameters into equation \ref{eq:total_pn_pow} results in equation \ref{eq:optimal_pn_pow}. 
 
 	\begin{equation}\label{eq:optimal_pn_pow}
-		\left.\sigma_{\Phi_{n}}^2\right|_{\alpha_{opt}} = 81.9353\cdot\frac{S_{0_{osc}}}{f_{ref}} = 81.9353\cdot \frac{\mathcal{L}_{osc}(f)f^2}{f_{ref}} \hspace{0.5em} [\textnormal{rad}^2]
+		\left.\sigma_{\Phi_{n}}^2\right|_{\alpha_{opt}} = 74.79376\cdot\frac{S_{0_{osc}}}{f_{ref}} = 74.79376\cdot \frac{\mathcal{L}_{osc}(f)f^2}{f_{ref}} \hspace{0.5em} [\textnormal{rad}^2]
 	\end{equation}
 
 
@@ -1294,16 +1294,16 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 	% In the case of this work with a target of 2.448 GHz, 16 MHz reference, 100 $\mu$W power, and 300K ambient temperature, the theoretical obtainable CNR is 21.4 dB, or $\sigma_{\Phi_{n}}^2$ = 0.012 rad$^2$.
 	Computated discrete time filter coefficients for this optimization case are provided in equations \ref{eq:b0_bb} and \ref{eq:b1_bb}.
 	\begin{align}
-		b_0 &= \frac{\alpha_{opt}\sqrt{81.9353\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}\sqrt{3+\sqrt{10}}}\left(1+\frac{\pi\alpha_{opt}}{\sqrt{3+\sqrt{10}}}\right)\label{eq:b0_bb}\\
-		&= 0.769071 \frac{\sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}}\left(1+\frac{\pi\alpha_{opt}}{\sqrt{3+\sqrt{10}}}\right) \\
-		b_1 &= -\frac{\alpha_{opt}\sqrt{81.9353\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}\sqrt{3+\sqrt{10}}} \label{eq:b1_bb}\\
-		&=0.701027 \frac{\sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}}
+		b_0 &= \frac{\alpha_{opt}\sqrt{74.79376\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}\sqrt{3+\sqrt{10}}}\left(1+\frac{\pi\alpha_{opt}}{\sqrt{3+\sqrt{10}}}\right)\label{eq:b0_bb}\\
+		&= 0.8186975 \frac{\sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}}\\
+		b_1 &= -\frac{\alpha_{opt}\sqrt{74.79376\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}\sqrt{3+\sqrt{10}}} \label{eq:b1_bb}\\
+		&=-0.739456 \frac{\sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}}
 	\end{align}
 
 	\subsubsection{Choice of Optimization Strategy}
 	Depending on the implementation, the noise contributions from the phase detector jitter may exceed the emergent bang bang phase noise components. This may be the case in high frequency PLLs, e.g. mm-wave PLLs, where cycle periods are short. For 2.4 GHz operation in 22FDX, this poses less of a problem. The theory of section \ref{sec:bb_noise} ignores detector jitter while considering emergent effects, and section \ref{sec:opt_lf_noisy_bbpd} ignores emergent behavior, while considering BBPD jitter. The recommended strategy therefore to calculate the optimal filter design using both theories, and select the one that results in a larger total phase noise value $\sigma_{\Phi_{n}}^2$, as that will be the dominant noise mode. 
 
-	In this work, 80$\mu$W oscillator power at 2.448 GHz, 16 MHz reference, and 300K ambient temperature, $K_{DCO}$ = 4.2 kHz/LSB, oscillator noise density at 1 Hz of $\mathcal{L}(f)|_{f=1}$ = 11885 rad$^2$/Hz, and a detector jitter of 1.4 ps RMS, leads to a CNR of 17.2 dB when optimizing for oscillator plus jitter-inclusive BBPD noise, and a CNR of 12.2 dB when optimizing for oscillator noise plus emergent bang bang phase noise and jitterless detector noise. Selecting the worse valued result as the accurate model for this implementation then implies that this work should be optimized with the later model. 
+	In this work, 80$\mu$W oscillator power at 2.448 GHz, 16 MHz reference, and 300K ambient temperature, $K_{DCO}$ = 4.2 kHz/LSB, oscillator noise density at 1 Hz of $\mathcal{L}(f)|_{f=1}$ = 11885 rad$^2$/Hz, and a detector jitter of 1.4 ps RMS, leads to a CNR of 17.2 dB when optimizing for oscillator plus jitter-inclusive BBPD noise, and a CNR of 14.6 dB when optimizing for oscillator noise plus emergent bang bang phase noise and jitterless detector noise. Selecting the worse valued result as the accurate model for this implementation then implies that this work should be optimized with the later model. 
 
 	The final optimized filter parameters for the design of this work are in results section \ref{sec:rec_lf}.
 
@@ -1391,9 +1391,17 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 
 
 		\subsubsection{Loop Filter Implementation}
-			The loop filter has been chosen to be implemented with separate portions to construct the feedforward paths for each phase detector of the PI-controller, but with a common integrator at the output, as shown in figure \ref{fig:pi_dig_imp}. This approach is intended to reduce dynamic power in steady state operation (using the BBPD). The rationale is that the synchronous counter is a linear detector, thus requires multipliers in the datapath to implement the filter, whereas the BBPD only outputs two values (+1 and -1), so the multipliers can be replaced with multiplexers that select between two sets of possible products ($\pm b_0$ and $\pm b_1$) depending on the input. It is lower energy to operate a multiplexer than an array multiplier due to substantially lower complexity of logic, so in steady state BBPD operation, substantial power savings will be seen. The usage of a common integrator at the output for both detector modes allows for seamless continuity of output value during transition between detector modes. 
+			The loop filter has been chosen to be implemented with separate portions to construct the feedforward paths for each phase detector of the PI-controller, but with a common integrator at the output, as shown in figure \ref{fig:pi_dig_imp}. This approach is intended to reduce dynamic power in steady state operation (using the BBPD). The rationale is that the synchronous counter is a linear detector, thus requires multipliers in the datapath to implement the filter, whereas the BBPD only outputs two values (+1 and -1), so the multipliers can be replaced with multiplexers that select between two sets of possible products ($\pm b_0$ and $\pm b_1$) depending on the input. It is lower energy to operate a multiplexer than an array multiplier due to substantially lower complexity of logic, so in steady state BBPD operation, substantial power savings will be seen. The usage of a common integrator at the output for both detector modes allows for seamless continuity of output value during transition between detector modes. \hl{bbpd mux inputs need to be reversed}
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.9\textwidth, angle=0]{./figs/design/mux_datapath}
+			    \caption{PI-controller implementation for combination of BBPD and synchronous counter usage.}
+			    \label{fig:pi_dig_imp}
+			\end{figure}
 
-			The computed filter coefficients $\{b_0$, $b_1\}$ for the PLL must be digitized into finite length signed two's complement words. A two's complement data word contains one sign bit, and variable number of bits representing the integer and fractional portions of the encoded number. The author of this work has previously devised a method \cite{Me} for automatically computing the number of bits required to represent a filter in PLL. First, the selection of number of integer bits \texttt{int\_bits} is determined by considering the integer part of the discrete filter coefficients. If the integer portions of the filter coefficients $\{b_0$, $b_1\}$ are divided into positive and negative valued sets \texttt{pos\_ints} and \texttt{neg\_ints}, the total integer bits required is therefore given in equation \ref{eq:int_bits}. Computation of the fractional portion is more complicated, and is based on reducing the quantization noise floor of the loop filter below other noise components of the PLL. The PLL design framework from \cite{Me} will be used in this work for determining the minimum digitized representation size of filter coefficients.
+			The computed filter coefficients $\{b_0$, $b_1\}$ for the PLL must be digitized into finite length signed two's complement words. A two's complement data word contains one sign bit, and variable number of bits representing the integer and fractional portions of the encoded number. The author of this work has previously devised a method \cite{Me} for automatically computing the number of bits required to represent a filter in PLL. First, the selection of number of integer bits \texttt{int\_bits} is determined by considering the integer part of the discrete filter coefficients. If the integer portions of the filter coefficients $\{b_0$, $b_1\}$ are divided into positive and negative valued sets \texttt{pos\_ints} and \texttt{neg\_ints}, the total integer bits required is therefore given in equation \ref{eq:int_bits}. Computation of the fractional portion is more complicated, and is based on reducing the quantization noise floor of the loop filter below the phase detector noise level of the PLL. The PLL design framework from \cite{Me} will be used in this work for determining the minimum digitized representation size of filter coefficients. This has been automatically computed such that the filter at most adds 0.1 dB of noise compared to BBPD noise components. Furthermore, the number of bits is optimized to minimize mean filter error below a limit, 0.1 dB is used in this work. Results from this optimization are shown in figure \ref{fig:lf_bits_opt}, where it is found for the BBPD mode, the minimum number of bits is 10, with 5 integer bits and 4 fractional bits. Optimization for the synchronous counter mode shows that 11 integer bits and no fractional bits are needed for that mode. Overall, to facilitate the different word sizes, a common 15-bit integer and 8-bit fraction dataword is used throughout the loop filter implementation, with mapping of datawords between different representations as needed.
+
+			% It should also be noted that the output integrator is signed, however, the loop filter cannot use a negative control word. Therefore, the sign bit is not used by the DCO, and is rather used as an overflow indicator, implying that the PLL is out of calibration because the loop filter it out of its nominal range. Recalibration can then be triggered by the sign bit.
 			\begin{align}
 				\mathtt{pos\_int\_bits} &= \left\lfloor \log_2\left(\max\left(\left\lfloor \mathtt{pos\_ints} \right\rfloor\right)\right) \right\rfloor +1\\
 				\mathtt{neg\_int\_bits} &= \left\lceil \log_2\left(\max\left(\left\lfloor \mathtt{neg\_ints} \right\rfloor\right)\right) \right\rceil\\
@@ -1401,13 +1409,77 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 			\end{align}
 
 
+	\begin{figure}[htb!]
+	    \centering
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/lf_quant_noise}
+	        \caption{ }
+	        \label{fig:lf_quant_noise}
+	    \end{subfigure}%
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/lf_mse}
+	        \caption{ }
+	        \label{fig:lf_mse}
+	    \end{subfigure}
+	    % \caption{x.}
+	    \caption{\textbf{(a)} Loop filter quantization noise versus coefficient dataword size, \textbf{(b)} Loop filter MSE versus coefficient dataword size.}
+	    \label{fig:lf_bits_opt}
+	\end{figure} 
+
+
+	 It should be noted that the implemented loop filter will have greater number of bits than the DAC it controls. The assumption in this work is that only the integer portion of the loop filter output is used to control the DCO. Having additional fractional bits in the loop filter reduces quantization noise generated by the loop filter, and in this work a sufficiently high number of bits are used such that loop filter quantization is negligible compared to other noise sources. 
+
+
+	\begin{lstlisting}[language={Verilog}, caption={Loop filter hardware description.}, label={sim_code2}]
+module lf
+(
+	input in, clk, rst, set_out, lf_en,
+	input signed [13:0] b0, b1,
+	input [12:0] init_out,
+	output reg dco_rst,
+	output reg signed [23:0] accum_reg,
+	output [12:0] lf_out
+);
+	reg last;
+	wire signed [13:0] p0, p1;
+
+	// mux - multipliers
+	assign p0 = in ? ~b0 + 1 : b0; 
+	assign p1 = last ? ~b1 + 1 : b1; 
+
+	// set output
+	assign lf_out = accum_reg[20:8]
+
+	always @ (posedge clk) begin
+    		if (rst) begin
+			accum_reg <= 0;
+			last <= 0;
+			dco_rst <= 1; //this is synchronous
+		end
+		else if (lf_en) begin
+			last <= in;
+			accum_reg <= p0 + p1 + accum_reg;
+			dco_rst <= 0;
+		end
+		if (set_out) begin // set accum register
+			accum_reg[23:21] <= {3{1'b0}};
+			accum_reg[20:8] <= init_out[12:0];
+			accum_reg[7:0] <= {8{1'b0}};
+		end
+	end
+
+endmodule
+	    \end{lstlisting}
+
+
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.75\textwidth, angle=0]{./figs/mux_datapath}
-			    \caption{PI-controller implementation for combination of BBPD and synchronous counter usage.}
-			    \label{fig:pi_dig_imp}
+			        \includegraphics[width=0.9\textwidth, angle=0]{./figs/design/bbpd_lf_only.png}
+			    \caption{Synthesized loop filter.}
+			    \label{fig:bbpd_only_lf_lay}
 			\end{figure}
-			\hl{need to fix this figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \pagebreak
@@ -1481,20 +1553,99 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 % ################################################################################################
 % ################################################################################################
 
+	\FloatBarrier\pagebreak
+	\subsection{Digitizing the VCO}
+	In order to implement a DCO, the VCO core designed in this work (see figure \ref{fig:full_6sg_ro}), must be connected to a set of digital to analog converters (DACs). The oscillator topology implemented requires complementary (differential) generation of backgate biasing voltages in order to tune frequency, as seen in figure \ref{fig:bg_tuning_scheme}. Differential generation is necessary in order to tune both delay cell NMOS and PMOS device threshold voltages simulataneously with the same effect. This is because NFETs see reduction in $V_{TH}$ with \textit{increasing} backgate bias, while PFETs see reduction in $V_{TH}$ with \textit{decreasing} backgate bias, i.e. they are complementary. The oscillator core has two differential sets of tuning connections, one each for fine and medium tuning ranges, so accordingly two differential DACs must be used to digitize the VCO. The base DAC design implemented in this work is single ended, so the scheme demonstrated in figure \ref{fig:se_to_diff_cdac} is applied with two single ended DACs to implement a differential DAC. The design of the individual DACs is described in the following sections, employing a capactive DAC (CDAC) topology.
+	\begin{figure}[htb!]
+	    \centering
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/se_to_diff_cdac}
+	        \caption{ }
+	        \label{fig:se_to_diff_cdac}
+	    \end{subfigure}%
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/dac_out}
+	        \caption{ }
+	        \label{fig:dac_out}
+	    \end{subfigure}
+	    % \caption{x.}
+	    \label{fig:diff_dac}
+	    \caption{\textbf{(a)} Differential DAC implemented from two single ended CDACs, \textbf{(b)} Output voltages versus input code.}
+	\end{figure}
+
+	Using the differential DACs, the DCO is implemented as in figure \ref{fig:dco_block}. A $\textnormal{N}_{med}$-bit differential CDAC is used for medium frequency tuning, and a $\textnormal{N}_{fine}$-bit differential CDAC is used for fine frequency tuning. Both tuning ranges are controlled by the same DCO control word, where the fine CDAC is connected to the lowest $\textnormal{N}_{fine}$-bits of the input (loop filter output), and the medium DAC is connected to the next $\textnormal{N}_{med}$-bits. Figure \ref{fig:tuning_dco} illustrates the frequency tuning versus DCO control code characteristic, where it is expected there will be discontinuities observed for when the medium DAC output changes. With process, voltage and temperature variation, it should not expected that a perfectly linear DCO code-frequency trend with the divided medium and fine tuning range approach. Rather, it is safest to engineer the $K_{VCO}$ of the tuning ranges and the DAC resolution such that all medium settings result in overlapping frequency ranges with the adjacent medium tuning codes, so that there are no gaps in frequency. Ideally, the overlap $\Delta f_{OL}$ should much be larger than the expected RMS variation of the loop filter output while the PLL is in steady state. This ensures that the PLL may stay locked in steady state without significant probability of the DAC code from hitting a discontinuity, and possibly resulting in loss of lock.
+
+
+	\begin{figure}[htb!]
+	    \centering
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/dco_block}
+	        \caption{ }
+	        \label{fig:dco_block}
+	    \end{subfigure}%
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/design/tuning_dco}
+	        \caption{ }
+	        \label{fig:tuning_dco}
+	    \end{subfigure}
+	    % \caption{x.}
+	    \label{fig:dco_design}
+	    \caption{\textbf{(a)} DCO implementation from ring VCO and differential CDACs, \textbf{(b)} Resulting DCO frequency versus input code.}
+	\end{figure} 
+
+	The RMS variation of the loop filter output may be calculated, using the filter coefficient results for the optimized BBPD-PLL PI-controller from section \ref{sec:bb_noise}. It is observed that the optimal filter coefficients in equations \ref{eq:b0_bb} and \ref{eq:b1_bb} hold the proportionality in equation \ref{eq:b0_b1_prop}. It is also noted the PI-controller output with the BBPD may only increment by $\pm|b_0-b_1|$, or $\pm|b_0+b_1|$, accordingly the proportionality in equation \ref{eq:b0_b1_prop2} also holds. Thus if the magnitude by which the loop filter changes is constrained in proportion $\sqrt{S_{0_{osc}}f_{ref}}/K_{DCO}$, it is expected that the overall spread determined by RMS variation $\sigma_{u_{LF,SS}}$ of the loop filter output will hold the same proportionality. Analytically, it is hard to predict a BBPD output sequence and resulting distribution of the loop filter output in steady state due to emergent PLL behaviors, so a behavioral simulation utilizing optimized loop filter coefficients was run to a factor of proportionality $\xi$ for the equation \ref{eq:b0_b1_prop3}. It was found $\xi$ = 0.803245. Figure \ref{fig:lf_out_hist} demonstrates the relationship of equation \ref{eq:b0_b1_prop3} observed in the simulated loop filter output.
+
+	\begin{equation}\label{eq:b0_b1_prop}
+		|b_0| \propto |b_1| \propto \frac{\sqrt{S_{0_{osc}}f_{ref}}}{K_{DCO}}
+	\end{equation}
+	\begin{equation}\label{eq:b0_b1_prop2}
+		|b_0-b1| \propto |b_0-b_1|  \frac{\sqrt{S_{0_{osc}}f_{ref}}}{K_{DCO}} 
+	\end{equation}
+	\begin{equation}\label{eq:b0_b1_prop3}
+		\sigma_{u_{LF,SS}} =  \xi \frac{\sqrt{S_{0_{osc}}f_{ref}}}{K_{DCO,fine}} 
+	\end{equation}
+
+			\begin{figure}[htb!]
+			        \centering
+			        \includegraphics[width=0.6\textwidth, angle=0]{./figs/design/lf_out_hist}
+			    \caption{Loop filter output histogram of deviation from mean value in steady state.}
+			    \label{fig:lf_out_hist}
+			\end{figure}
+	The overlap between frequency ranges of adjacent medium tuning settings is given in equation \ref{eq:overlap}, with DCO gains $K_{DCO,fine}$ for the fine range and  $K_{DCO,med}$ for the medium range. Normalizing by $K_{DCO,fine}$ results in equation \ref{eq:overlap2}, giving the overlap in terms of fine DAC codes $\Delta u_{OL,fine}$. Noting the relationship of $K_{VCO}$ and $K_{DCO}$ takes the form in equation \ref{eq:kdco_kvco_rels}, the result in equation \ref{eq:overlap3} is obtained. In order to constrain the overlap of the medium ranges to be much larger than the RMS variation $\sigma_{u_{LF,SS}}$ of the loop filter output, a constraint of $\Delta u_{OL,fine} >$ $6 \sigma_{u_{LF,SS}}$ is used, yielding the expression in equation \ref{eq:nmedbits} for number of medium bits. The overlap of $6 \sigma_{u_{LF,SS}}$ allows for a guarenteed point of steady state operation for all frequencies with atleast $\pm 3\sigma$ of separation from discontinuities.
+	\begin{equation}\label{eq:overlap}
+		\Delta f_{OL} = 2^{N_{fine}}K_{DCO,fine} - K_{DCO,med}
+	\end{equation}
+	\begin{equation}\label{eq:overlap2}
+		\Delta u_{OL,fine} =\frac{\Delta f_{OL}}{K_{DCO,fine}} = 2^{N_{fine}} - \frac{K_{DCO,med}}{K_{DCO,fine}}
+	\end{equation}
+	\begin{align}\label{eq:kdco_kvco_rels}
+		K_{DCO, fine} = \frac{V_{DD}K_{VCO,fine}}{2^{N_{fine}}}, \hspace{2em}& K_{DCO,med} = \frac{V_{DD}K_{VCO,med}}{2^{N_{med}}}
+	\end{align}
+	\begin{equation}\label{eq:overlap3}
+		\Delta u_{OL,fine} = 2^{N_{fine}}\left(1 - 2^{-N_{med}}\frac{K_{VCO,med}}{K_{VCO,fine}}\right)
+	\end{equation}
+	\begin{equation}\label{eq:nmedbits}
+		N_{med} = \left\lceil-\log_2\left[\frac{K_{VCO,fine}}{K_{VCO,med}} \left(1 - \frac{6\xi\sqrt{S_{0_{osc}}f_{ref}}}{K_{DCO,fine}2^{N_{fine}}}\right)\right] \right\rceil
+	\end{equation}
+
 % ################################################################################################
 % ################################################################################################
 	\FloatBarrier
 	\subsection{CDAC - Fine Range}
-	The required DAC resolution for using a VCO as a DCO may be analyzed in terms of the smallest possible change of the output of the loop filter. In \ref{sec:bb_noise}, it was found that the possible increments for the loop filter are $\lfloor b_0+b_1 \rfloor$, $\lfloor b_0-b_1 \rfloor$, $\lfloor -b_0+b_1 \rfloor$, $\lfloor -b_0-b_1 \rfloor$. Evaluating these different possibilities, it is determined that the smallest magnitude occurs with $|b_0+b_1|$. This should be atleast be unity, corresponding to one LSB change of the DAC, to avoid quantizing this increment to zero. Using equations \ref{eq:b0}, \ref{eq:b1}, and  $|b_0+b_1| \geq 1$ results in in equation \ref{eq:dac_constraint}.
+	The required DAC resolution for using a VCO as a DCO may be determined by constraining the smallest possible change of the output of the loop filter to be greater than unity. This constraint ensures that changes in the loop filter are always manifested as changes in the DAC output, not quantized to zero. In \ref{sec:bb_noise}, it was found that the possible increments for the loop filter are $\lfloor b_0+b_1 \rfloor$, $\lfloor b_0-b_1 \rfloor$, $\lfloor -b_0+b_1 \rfloor$, $\lfloor -b_0-b_1 \rfloor$. Evaluating these different possibilities, it is determined that the smallest magnitude occurs with $\pm|b_0+b_1|$. Using equations \ref{eq:b0}, \ref{eq:b1}, and  $|b_0+b_1| \geq 1$ results in in equation \ref{eq:dac_constraint}.
 	\begin{equation}\label{eq:dac_constraint}
 		|b_0+b_1| = \frac{\sqrt{K}}{2f_{ref}} \geq 1
 	\end{equation}
 	Applying this to the filter coefficients in the case of the bang-bang emergent phase noise optimized case, equations \ref{eq:b0_bb} and \ref{eq:b1_bb}, results in the constraint for $K_{DCO}$ in equations  \ref{eq:dac_constraint2} and \ref{eq:kdco_constraint}.
 	\begin{equation}\label{eq:dac_constraint2}
-		|b_0+b_1| = \frac{\pi\alpha_{opt}^2\sqrt{81.9353\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}(3+\sqrt{10})} = 0.0680446\cdot \frac{ \sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}} \geq 1
+		|b_0+b_1| = \frac{\pi\alpha_{opt}^2\sqrt{74.79376\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}(3+\sqrt{10})} = 0.07924138\cdot \frac{ \sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}} \geq 1
 	\end{equation}
 	\begin{equation}\label{eq:kdco_constraint}
-		K_{DCO} \leq 0.0680446\cdot \sqrt{S_{0_{osc}} f_{ref}}
+		K_{DCO} \leq 0.07924138\cdot \sqrt{S_{0_{osc}} f_{ref}}
 	\end{equation}
 
 	% \begin{equation}\label{eq:kdco_constraint}
@@ -1506,9 +1657,9 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 	\end{equation}
 	Combining \ref{eq:kdco_constraint} and \ref{eq:kdco_kvco} result in an expression for minimum number of DAC bits (using rail to rail reference levels), given in equation \ref{eq:min_dac_bits}
 	\begin{equation}\label{eq:min_dac_bits}
-		N_{min} = \left\lceil \log_2\left( \frac{V_{DD}K_{VCO}}{0.0680446\sqrt{S_{0_{osc}} f_{ref}}} \right)\right\rceil
+		N_{min} = \left\lceil \log_2\left( \frac{V_{DD}K_{VCO}}{0.07924138\sqrt{S_{0_{osc}} f_{ref}}} \right)\right\rceil
 	\end{equation}
-	Using the values $S_{0_{osc}}$ = 11885 and $K_{VCO}$ = 5.378 kHz/mV obtained from phase noise simulation of the oscillator, $f_{ref}$ = 16 MHz, $V_{DD}$ = 0.8, the minimum number of bits is $N_{min}$ = 8 bits. It has been decided therefore that to add a factor of safety, a 10 bit CDAC for fine tuning will be implmented. Higher resolution results in lower quantization noise added into the system by the DAC.
+	Using the values $S_{0_{osc}}$ = 11885 and $K_{VCO}$ = 5.378 kHz/mV obtained from phase noise simulation of the oscillator, $f_{ref}$ = 16 MHz, $V_{DD}$ = 0.8, the minimum number of bits is $N_{min}$ = 7 bits.  A 10 bit CDAC for fine tuning was implemented, given sufficient area was available for doing so. The extra bits of resolultion will result in lower quantization noise added into the system by the DAC.
 
 		\subsubsection{Circuit}
 		It was attempted to maximize capacitance for a 10 bit DAC in an area constrained to 50 $\mu$m x 15 $\mu$m (arrived at from the target PLL floor plan). MOM capacitors with 2.185 fF per unit were achieved with a unit cell of dimension 3$\mu$m x 200 nm, using 5 metal layers (C1-C5) to form the capacitor. The total capacitance is 2.24 pF, and the implementation area is 52 $\mu$m x 16 $\mu$m. The simulation results for this CDAC are in results section \ref{sec:res_cdac_10b}, and the layout in appendix \ref{sec:lay_cdac_10b}.
@@ -1523,16 +1674,17 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 		% \subsubsection{Layout}
 	\FloatBarrier
 	\subsection{CDAC - Medium Range}
-	Selection of the medium tuning range DAC resolution has been cordinated with the fine range to provide continuity of tuning. Both tuning ranges are operated in steady state mode from the loop filter output, where if the fine CDAC is $N_{fine}$ bits, and the medium CDAD is $N_{med}$ bits, the fine CDAC is connected to the lowest $N_{fine}$ bits of the loop filter output, and the medium DAC is connected to the next $N_{med}$ bits. The $K_{DCO}$ granularity of the medium range LSB must be larger than that of the MSB for the fine range, but smaller than that total range of the fine range. The inequality in equation \ref{eq:3b_cdac_ineq} determines the range of bits which those criteria are satisfied.
-	\begin{equation}\label{eq:3b_cdac_ineq}
-		\log_2\left( \frac{K_{VCO,med}}{K_{VCO,fine}}\right) \leq N \leq \log_2\left( \frac{2K_{VCO,med}}{K_{VCO,fine}}\right)
-	\end{equation}
-	For the implemented oscillator, $K_{VCO,med}$ = 30.92 kHz/mV, and $K_{VCO,fine}$ = 5.378 kHz/mV. Thus the acceptable range of bits is 2.52 $\leq$ N $\leq$ 3.52. Therefore, the number of bits for the medium DAC is 3 bits.
+	Using the result of equation \ref{eq:nmedbits}, and the selection of a 10-bit fine CDAC, $K_{VCO,med}$ = 30.92 kHz/mV, and $K_{VCO,fine}$ = 5.378 kHz/mV, it is determined that at least 3 DAC bits are needed to provide satisfactory overlap of the DCO frequency ranges achieved with medium DAC tuning.
+	%  Consideration of selection of the medium tuning range DAC should also be cordinated with the fine range to provide continuity of tuning gain linearity. Both tuning ranges are operated in steady state mode from the loop filter output, where if the fine CDAC is $N_{fine}$ bits, and the medium CDAD is $N_{med}$ bits, the fine CDAC is connected to the lowest $N_{fine}$ bits of the loop filter output, and the medium DAC is connected to the next $N_{med}$ bits. The $K_{DCO}$ granularity of the medium range LSB must be larger than that of the MSB for the fine range, but smaller than that total range of the fine range. The inequality in equation \ref{eq:3b_cdac_ineq} determines the range of bits which those criteria are satisfied.
+	% \begin{equation}\label{eq:3b_cdac_ineq}
+	% 	\log_2\left( \frac{K_{VCO,med}}{K_{VCO,fine}}\right) \leq N \leq \log_2\left( \frac{2K_{VCO,med}}{K_{VCO,fine}}\right)
+	% \end{equation}
+	% For the implemented oscillator, $K_{VCO,med}$ = 30.92 kHz/mV, and $K_{VCO,fine}$ = 5.378 kHz/mV. Thus the acceptable range of bits is 2.52 $\leq$ N $\leq$ 3.52. Therefore, the number of bits for the medium DAC is 3 bits.
 		\subsubsection{Circuit}
 		The unit capacitance used in 249 fF/cap, yielding 2pF total capacitance. The size of the unit capacitor was selected to make the total capacitance near that of the 10b CDAC. The simulation results for this CDAC are in results section \ref{sec:res_cdac_3b}, and the layout in appendix \ref{sec:lay_cdac_3b}.
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=\textwidth, angle=0]{./figs/design/cdac_3b}
+			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/design/cdac_3b}
 			    \caption{3b CDAC.}
 			    \label{fig:3b_cdac_cir}
 			\end{figure}
@@ -1540,8 +1692,10 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 
 % ################################################################################################
 % ################################################################################################
+
+
 	\FloatBarrier\pagebreak
-	\subsection{Output buffer}
+	\subsection{Output buffer}\label{sec:buffer}
 		Without a buffer, the frequency of the ring oscillator becomes external load dependent. Furthermore, the output of the ring oscillator is rather slow, this can result in issues with voltage-to-phase noise conversion. Thus a buffered PLL output is beneficial to the PLL operation. Analyzing the voltage-to-phase conversion, the frequency of the oscillator is first defined as in equation \ref{eq:osc_freq_buff} (from equation \ref{eq:ro_osc_freq}), where $N$ is the stage count, $t_{pd}$ is the stage propagation delay, and $\tau$ is the RC time constant of a stage. 
 		\begin{equation}\label{eq:osc_freq_buff}
 			f_{osc} = \frac{1}{2N t_{pd}} = \frac{1}{2\ln(2)N \tau}
@@ -1579,7 +1733,7 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 		The implemented buffer circuit is shown in figure \ref{fig:pd_buffer_circuit}. All devices are (W/L) = 200n/20n, with LVT NFET devices and RVT PFET devices to allow for the usage of a common N-well to form the common backgate for the inverters. The layout of this buffer in appendix \ref{sec:lay_buff}.
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.55\textwidth, angle=0]{./figs/design/pseudiff_buffer}
+			        \includegraphics[width=0.5\textwidth, angle=0]{./figs/design/pseudiff_buffer}
 			    \caption{Backgate-coupled pseudodifferential buffer.}
 			    \label{fig:pd_buffer_circuit}
 			\end{figure}
@@ -1709,7 +1863,7 @@ endmodule
 			The implemented level shifter is a standard low to high voltage domain latch based shifter \cite{weste_harris_2011} shown in figure \ref{fig:level_shifter}. All device dimensions are (W/L) = 200n/20n in RVT technology.
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.9\textwidth, angle=0]{./figs/design/level_shift}
+			        \includegraphics[width=0.5\textwidth, angle=0]{./figs/design/level_shift}
 			    \caption{Basic low to high domain level shifter.}
 			    \label{fig:level_shifter}
 			\end{figure}
@@ -1733,13 +1887,13 @@ endmodule
 			    \centering
 			    \begin{subfigure}{0.5\textwidth}
 			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/trans_loop_filter_fast.pdf}
+			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/design/lf_dco_out}
 			        \caption{ }
-			        \label{fig:trans_lf_fast}
+			        \label{fig:trans_det_fast}
 			    \end{subfigure}%
 			    \begin{subfigure}{0.5\textwidth}
 			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/trans_inst_freq_fast.pdf}
+			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/design/pipll_freq}
 			        \caption{ }
 			        \label{fig:trans_inst_freq_fast}
 			    \end{subfigure}
@@ -1749,22 +1903,9 @@ endmodule
 			\end{figure}
 
 			\begin{figure}[htb!]
-			    \centering
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/trans_tdc_bbpd_fast.pdf}
-			        \caption{ }
-			        \label{fig:trans_det_fast}
-			    \end{subfigure}%
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \center\includegraphics[width=1.0\textwidth, angle=0]{figs/trans_phase_noise_fast.pdf}
-			        \caption{ }
-			        \label{fig:trans_phase_noise_fast}
-			    \end{subfigure}
-			    % \caption{Approximate model for ring oscillator inverter delay cell.}
-			    \label{fig:trans_sim2_fast}
-			    \caption{Simulation with 12 MHz (0.5\%) initial frequency error: \textbf{(a)} BBPD/TDC detector responses, \textbf{(b)} PLL output phase noise power spectrum.}
+			    \center\includegraphics[width=0.6\textwidth, angle=0]{figs/design/pipll_pn_psd2}
+			    \caption{PLL output phase noise power spectrum.}
+			    \label{fig:behav_sim_psd}
 			\end{figure}
 
 		\FloatBarrier
@@ -1804,7 +1945,9 @@ endmodule
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \textbf{Lock time 99 \% CI upper bound} & X & $\mu$s\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Residual phase modulation} & X $\times10^{-X}$ & rad$^2$\\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Residual phase modulation} & X $\times10^{-X}$ & 0.062 rad$_{RMS}$\\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Carrier to noise ratio} & X $\times10^{-X}$ & 24.1 dBc\\ 
 				\hline 
 			\end{tabular} 
 
@@ -1813,8 +1956,10 @@ endmodule
 			\caption{PLL parameters extracted from variance and parameter sweep simulations.}
 			\label{simulation_params_fast}
 		\end{table}
+		Note: Predicted RMS phase noise from filter design equations and simulation are same.
 		\FloatBarrier{\color{white}.}
 
+		\hl{Sweep of frequency error with BBPD-only state up. What is lock time??? Base on LF setting and not inst. frequ}
 
 
 % ################################################################################################
