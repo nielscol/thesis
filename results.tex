@@ -1,151 +1,182 @@
-\subsection{Power breakdown}
-
-		\begin{table}[htb!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|c|c|c|c|c|}
+The following sections provide system and component level performance results of the implemented PLL based from parasitic extracted transistor level simulations of the design.
+\subsection{Power Breakdown}
+\vspace{-1em}
+\FloatBarrier
+\begin{figure}[htb!]
+	\begin{floatrow}
+	\ffigbox{%
+		\includegraphics[width=0.5\textwidth, angle=0]{./figs/results/power_bkdn}
+	}{%
+		\caption{PLL Power breakdown.}
+		\label{fig:pow_bkdn}
+	}
+	\capbtabbox{%
+		\def\arraystretch{1.5}		
+		\setlength\arrayrulewidth{0.75pt}
+		\setlength{\tabcolsep}{1em} % for the horizontal padding
+			\begin{tabular}{|c|c|c|}
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{VCO} & \cellcolor{gray!40}\textbf{BBPD} & \cellcolor{gray!40}\textbf{Digital}& \cellcolor{gray!40}\textbf{CDACs} & \cellcolor{gray!40}\textbf{SUM} \\ 
+				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Power [$\mu$W]} & \cellcolor{gray!40}\textbf{\% of Total}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} 79.06 $\mu$W& 3.47 $\mu$W &  X $\mu$W  & X $ \mu$W & $\leq$ 100  $\mu$W\\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO + Buffer} &  90.62 & 95.4 \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} & 0.071 &  $<$ 0.01  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1.33 &  1.40  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  0.462 &  0.49  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  2.51 &  2.64  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  95.0 &  100  \\ 
 				\hline 
 			\end{tabular} 
-			\caption{Power breakdown.}
-			\label{tab:power_bkdn}
-		\end{table}   
-
-		% \begin{table}[htb!]
-		% 	\centering
-		% 	\def\arraystretch{1.5}		
-		% 	\setlength\arrayrulewidth{0.75pt}
-		% 	\setlength{\tabcolsep}{1em} % for the horizontal padding
-		% 	\begin{tabular}{|c|c|c|}
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Power [$\mu$W]} & \cellcolor{gray!40}\textbf{\% of Total}\\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{VCO} &  227.8 & 4.5  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} &  735.0 &  14.4  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1607.7 &  31.5  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  5.31 &  0.1  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  1800 &  35.3  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{Other} &  724.2 &  14.2  \\ 
-		% 		\hline 
-		% 		\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  5100 &  100  \\ 
-		% 		\hline 
-		% 	\end{tabular} 
-		% 	\caption{Power breakdown.}
-		% 	\label{tab:power_bkdn}
-		% \end{table}   
-
-
-		\begin{figure}[htb!]
-	        \centering
-	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
-		    \caption{PLL Power breakdown.}
-		    \label{fig:pow_bkdn}
-		\end{figure}
-
+	}{%
+		\caption{Power breakdown.}
+		\label{tab:power_bkdn}
+	}
+	\end{floatrow}
+\end{figure}		
+{\color{white}.}
+\FloatBarrier
+\vspace{-3em}
 \subsection{Area Breakdown}
-The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The breakdown of the implemented area is in table \ref{tab:area_bkdn}.
-
-		\begin{table}[htb!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
+\vspace{-1em}
+\begin{figure}[htb!]
+	\begin{floatrow}
+	\ffigbox{%
+		\includegraphics[width=0.5\textwidth, angle=0]{./figs/results/area_bkdn}
+	}{%
+		\caption{PLL Area breakdown.}
+		\label{fig:area_bkdn}
+	}
+	\capbtabbox{%
+		\def\arraystretch{1.5}		
+		\setlength\arrayrulewidth{0.75pt}
+		\setlength{\tabcolsep}{1em} % for the horizontal padding
 			\begin{tabular}{|c|c|c|}
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Area [$\mu$m$^2$]} & \cellcolor{gray!40}\textbf{\% of Total}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO} &  227.8 & 4.5  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO + Buffer} &  177.1 & 4.85 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} &  735.0 &  14.4  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} &  735.0 &  20.14 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1607.7 &  31.5  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1607.7 &  44.05  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  5.31 &  0.1  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  5.31 &  0.15  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  1800 &  35.3  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  610.2 &  16.72  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Other} &  724.2 &  14.2  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Other/routing} &  514.7 &  14.10  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  5100 &  100  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  3650 &  100  \\ 
 				\hline 
 			\end{tabular} 
-			\caption{Area breakdown.}
-			\label{tab:area_bkdn}
-		\end{table}   
+	}{%
+		\caption{Area breakdown.}
+		\label{tab:area_bkdn}
+	}
+	\end{floatrow}
+\end{figure}	
 
-
-\subsection{Phase Noise}
-	\hl{Bandwidth and integrated phase noise power values.}
-		\begin{figure}[htb!]
-	        \centering
-	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
-		    \caption{PLL phase noise SSB spectral density.}
-		    \label{fig:sim_pll_psd}
-		\end{figure}
-
-\subsection{Start-up Transient}
-	\hl{Lock time value.}
-		\begin{figure}[htb!]
-	        \centering
-	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
-		    \caption{PLL start up transient.}
-		    \label{fig:sim_pll_trans}
-		\end{figure}
 {\color{white}.}
+\FloatBarrier
 
-\FloatBarrier\pagebreak
+
+\subsection{PLL Phase Noise}
+
+	\begin{figure}[htb!]
+	    \centering
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/pll_pn_final_100u}
+	        \caption{ }
+	        \label{fig:sim_pll_psd}
+	    \end{subfigure}%
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/jitter_hist}
+	        \caption{ }
+	        \label{fig:pll_jit_hist}
+	    \end{subfigure}
+	    % \caption{x.}
+	    \caption{\textbf{(a)} PLL phase noise SSB spectral density, \textbf{(b)} PLL jitter histogram.}
+	    \label{fig:pll_pn_jit}
+	\end{figure} 
+
+\begin{table}[htb!]
+	\def\arraystretch{1.5}		
+	\setlength\arrayrulewidth{0.75pt}
+	\setlength{\tabcolsep}{1em} % for the horizontal padding
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{RMS Integrated Jitter} \tablefootnote{Up to 100 MHz}& 18.4 & ps \\ 
+		\hline 
+		% \rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
+		% \hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_\textnormal{\textbf{jitter}}$} &  -224.9 & dB  \\ 
+		\hline 
+	\end{tabular} 
+			\caption{PLL phase noise and jitter performance values.}
+			\label{tab:pll_pn_jit_vals}
+\end{table}
+
+
+
+
+% \subsection{Start-up Transient}
+% 	\hl{Lock time value.}
+% 		\begin{figure}[htb!]
+% 	        \centering
+% 	        \includegraphics[width=0.65\textwidth, angle=0]{example-image}
+% 		    \caption{PLL start up transient.}
+% 		    \label{fig:sim_pll_trans}
+% 		\end{figure}
+% {\color{white}.}
+
+\FloatBarrier
 \subsection{Voltage Controlled Oscillator}\label{sec:ro_results}
 
-		\begin{table}[htb!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|c|c|c|}
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_{pn}$} & -157.2 & dB  \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Power} &  79.06 &  $\mu$W  \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{RMS Frequency Variance} &  34.5 / 4.2 &  MHz / \%  \\ 
-				\hline 
-			\end{tabular} 
-			\caption{Ring oscillator performance parameters.}
-			\label{tab:ro_perf}
-		\end{table}   
 
-	\subsubsection{Phase Noise}
+	\subsubsection{Oscillator Phase Noise}
 		\begin{figure}[htb!]
-	        \centering
-	        \includegraphics[width=0.55\textwidth, angle=0]{./figs/results/osc_pnoise}
-		    \caption{Ring oscillator phase noise (SSB).}
-		    \label{fig:ro_pnoise}
-		\end{figure}
+			\begin{floatrow}
+			\ffigbox{%
+				\includegraphics[width=0.55\textwidth, angle=0]{./figs/results/ro_pn_flicker}
+			}{%
+			    \caption{Ring oscillator phase noise (SSB).}
+			    \label{fig:ro_pnoise}
+			}
+			\capbtabbox{%
+				\def\arraystretch{1.5}		
+				\setlength\arrayrulewidth{0.75pt}
+				\setlength{\tabcolsep}{1em} % for the horizontal padding
+				\begin{tabular}{|c|c|c|}
+					\hline 
+					\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
+					\hline 
+					\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_{pn}$} & -158.9 & dB  \\ 
+					\hline 
+					% \rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
+					% \hline 
+					\rule[-1ex]{0pt}{2.5ex} \textbf{Flicker corner} &  2.00 & MHz  \\ 
+					\hline 
+				\end{tabular} 
+			}{%
+				\caption{Ring oscillator performance parameters.}
+				\label{tab:ro_perf}
+			}
+			\end{floatrow}
+		\end{figure}	
+		{\color{white}.}
+
+
 	\FloatBarrier
 
-	\subsubsection{Frequency}
-		\begin{figure}[htb!]
-	        \centering
-	        \includegraphics[width=0.55\textwidth, angle=0]{./figs/results/freq_pdf}
-		    \caption{Variation of oscillator frequency from Monte-Carlo variation/mismatch simulation.}
-		    \label{fig:freq_variation}
-		\end{figure}
-	\FloatBarrier
-	\subsubsection{Tuning}
+	\subsubsection{VCO Tuning}\FloatBarrier
 		\begin{table}[h!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -153,20 +184,18 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 			\setlength{\tabcolsep}{1em} % for the horizontal padding
 			\begin{tabular}{|l|r|l|r|l|}
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Mode} & \cellcolor{gray!40}\textbf{VCO Gain} & \cellcolor{gray!40}\textbf{Units} & \cellcolor{gray!40}\textbf{Normalized gain}& \cellcolor{gray!40}\textbf{Units}\\ 
+				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Mode} & \cellcolor{gray!40}\textbf{VCO Gain (K$_\textnormal{\textbf{VCO,fine}}$)}  & \cellcolor{gray!40}\textbf{Units} & \cellcolor{gray!40}\textbf{Normalized gain}& \cellcolor{gray!40}\textbf{Units}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Supply tuning}  & 2.588 & MHz/mV & 317.2 &\%/V\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Supply tuning}  & 2.677 & MHz/mV & 328 &\%/V\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Medium tuning}  & 30.92 & kHz/mV  & 3.789 &\%/V\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Medium tuning}  & 39.76 & kHz/mV  & 4.50 &\%/V\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Fine tuning}  & 5.378 & kHz/mV & 0.659 & \%/V\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Capacitor tuning} & 9782 & kHz/cap & 1.19 & \%/cap\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Fine tuning}  & 5.529 & kHz/mV & 0.677 & \%/V\\
 				\hline 
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}
 			% \label{asgn_specs}
-			\caption{PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.}
+			\caption{Extracted VCO gain values.}
 			\label{tab:vco_gains}
 		\end{table} 
 
@@ -228,16 +257,46 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 	    \caption{Fine tuning range versus \textbf{(a)} Oscillation Frequency, \textbf{(b)} VCO gain.}
 	\end{figure} 
 
+{\color{white}.}\FloatBarrier
+	\subsubsection{VCO Monte Carlo Simulation}
 
-
-		\begin{figure}[htb!]
+	\begin{figure}[htb!]
+	    \centering
+	    \begin{subfigure}{0.5\textwidth}
 	        \centering
-	        \includegraphics[width=0.5\textwidth, angle=0]{./figs/results/kvco_pdf}
-		    \caption{Variation of VCO fine tuning gain from Monte-Carlo variation/mismatch simulation.}
-		    \label{fig:kvco_variation}
-		\end{figure}
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/freq_hist_final}
+	        \caption{ }
+	        \label{fig:freq_variation}
+	    \end{subfigure}%
+	    \begin{subfigure}{0.5\textwidth}
+	        \centering
+	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/kvco_hist_final}
+	        \caption{ }
+	        \label{fig:kvco_variation}
+	    \end{subfigure}
+	    % \caption{x.}
+	    \caption{\textbf{(a)} Variation of oscillator frequency from Monte-Carlo variation/mismatch simulation, \textbf{(b)} Variation of VCO fine tuning gain from Monte-Carlo variation/mismatch simulation.}
+	    \label{fig:mc_sim_results}
+	\end{figure} 
+	\begin{table}[htb!]
+		\def\arraystretch{1.5}		
+		\setlength\arrayrulewidth{0.75pt}
+		\setlength{\tabcolsep}{1em} % for the horizontal padding
+		\begin{tabular}{|c|c|c|}
+			\hline 
+			\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{RMS Variance} & \cellcolor{gray!40}\textbf{Units}\\ 
+			\hline 
+			\rule[-1ex]{0pt}{2.5ex} \textbf{Frequency}&  36.762 \textbf{/} {\color{blue}4.50} &  MHz \textbf{/} {\color{blue}\%}  \\ 
+			\hline 
+			\rule[-1ex]{0pt}{2.5ex} \textbf{K$_\textnormal{\textbf{VCO, fine}}$} &  0.2467 \textbf{/} {\color{blue}4.67} &  MHz \textbf{/} {\color{blue}\%}  \\ 
+			\hline 
+		\end{tabular} 
+		\caption{Ring oscillator Monte Carlo simulation extracted values.}
+		\label{tab:mc_results}
+	\end{table}
 
-	\FloatBarrier
+	{\color{white}.}
+	\FloatBarrier\pagebreak
 	\subsubsection{Waveforms}
 			\begin{figure}[htb!]
 			    \centering
@@ -259,26 +318,27 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 			\end{figure} 
 	\FloatBarrier
 \FloatBarrier
-\subsection{10b CDAC}\label{sec:res_cdac_10b}
+\subsection{Oscillator Digitization}
+\subsubsection{10b CDAC}\label{sec:res_cdac_10b}
 
-	\begin{figure}[htb!]
-	    \centering
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/10b_cdac_se_inl}
-	        \caption{ }
-	        \label{fig:10b_cdac_se_inl}
-	    \end{subfigure}%
-	    \begin{subfigure}{0.5\textwidth}
-	        \centering
-	        \includegraphics[width=1\textwidth, angle=0]{./figs/results/10b_cdac_se_dnl}
-	        \caption{ }
-	        \label{fig:10b_cdac_se_dnl}
-	    \end{subfigure}
-	    % \caption{x.}
-	    \label{fig:10b_cdac_se_nonlinearity}
-	    \caption{10b CDAC single-ended \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
-	\end{figure} 
+	% \begin{figure}[htb!]
+	%     \centering
+	%     \begin{subfigure}{0.5\textwidth}
+	%         \centering
+	%         \includegraphics[width=1\textwidth, angle=0]{./figs/results/10b_cdac_se_inl}
+	%         \caption{ }
+	%         \label{fig:10b_cdac_se_inl}
+	%     \end{subfigure}%
+	%     \begin{subfigure}{0.5\textwidth}
+	%         \centering
+	%         \includegraphics[width=1\textwidth, angle=0]{./figs/results/10b_cdac_se_dnl}
+	%         \caption{ }
+	%         \label{fig:10b_cdac_se_dnl}
+	%     \end{subfigure}
+	%     % \caption{x.}
+	%     \label{fig:10b_cdac_se_nonlinearity}
+	%     \caption{10b CDAC single-ended \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
+	% \end{figure} 
 
 
 
@@ -298,12 +358,12 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 	    \end{subfigure}
 	    % \caption{x.}
 	    \label{fig:10b_cdac_diff_nonlinearity}
-	    \caption{10b CDAC differential \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
+	    \caption{Differential 10b CDAC \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
 	\end{figure} 
 
-
+{\color{white}.}
 \FloatBarrier\pagebreak
-\subsection{3b CDAC}\label{sec:res_cdac_3b}
+\subsubsection{3b CDAC}\label{sec:res_cdac_3b}
 
 	\begin{figure}[htb!]
 	    \centering
@@ -321,14 +381,32 @@ The implemented area is 60 $\mu$m $\times$ 85 $\mu$m, or 0.0051 mm$^2$. The brea
 	    \end{subfigure}
 	    % \caption{x.}
 	    \label{fig:3b_cdac_nonlinearity}
-	    \caption{3b CDAC differential \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
+	    \caption{Differential  3b CDAC \textbf{(a)} Integral Nonlinearity, \textbf{(b)} Differential Nonlinearity.}
 	\end{figure} 
 
+\FloatBarrier
+\subsubsection{DCO Gain}
+\begin{table}[htb!]
+	\def\arraystretch{1.5}		
+	\setlength\arrayrulewidth{0.75pt}
+	\setlength{\tabcolsep}{1em} % for the horizontal padding
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{K$_\textnormal{\textbf{DCO, fine}}$} & 4.2 $\pm$ 0.53\tablefootnote{With $\pm 3 \sigma$ of process variation coverage.} & KHz/LSB \\ 
+		\hline 
+		% \rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
+		% \hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{K$_\textnormal{\textbf{DCO, med}}$} &  2.00 & KHz/LSB  \\ 
+		\hline 
+	\end{tabular} 
+			\caption{DCO Gain values from final VCO gain and DAC results.}
+			\label{tab:dco_gain}
+\end{table}
 
 \FloatBarrier
-\subsection{Bang-bang phase detector}\label{sec:res_bbpd}
-With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
-
+\subsection{Bang-bang Phase Detector}\label{sec:res_bbpd}
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -347,10 +425,25 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 	    \label{fig:bbpd_jitter_dist}
 	    \caption{BBPD extracted jitter \textbf{(a)} Cumulative Distribution Function, \textbf{(b)} Probability Distribution Function.}
 	\end{figure} 
+\FloatBarrier
+\begin{table}[htb!]
+	\def\arraystretch{1.5}		
+	\setlength\arrayrulewidth{0.75pt}
+	\setlength{\tabcolsep}{1em} % for the horizontal padding
+	\begin{tabular}{|c|c|c|}
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
+		\hline 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{RMS Jitter} & 1.342 \tablefootnote{With noise simulated up to 20 GHz} & ps \\ 
+		\hline 
+	\end{tabular} 
+			\caption{BBPD jitter extracted values.}
+			\label{tab:bbpd_jitter}
+\end{table}
 
 \FloatBarrier\pagebreak
-\subsection{Loop filter }\label{sec:rec_lf}
-	\subsubsection{Optimal Paramters}
+\subsection{Loop Filter }\label{sec:rec_lf}
+	\subsubsection{Optimized Filter Parameters}
 		\begin{table}[h!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -360,53 +453,21 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $1.6400055\times10^{15}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $1.2008153\times12^{13}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $3.904893\times10^{11}$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $3.8686562\times10^{7}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.928457\times10^4$ &  \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $2.2328113\times10^{1}$ &  \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $3.222697\times10^5$ & Hz\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$}  & $2.7575807\times10^5$ & Hz\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $4.369015\times10^4$  &\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $24.746023\times10^1$  &\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.92845\times10^4$  & \\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-22.328113\times10^1$  & \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $1.6\times10^6$ & Hz \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $1.369080$ & MHz \\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.65873\times10^{-7}$ & seconds \\
-				\hline 
-			\end{tabular} 
-			% \caption{Assigned specifications for branch line hybrid design.}
-			% \label{asgn_specs}
-			\caption{PLL parameters determined from filter design and optimization process for fast lock speed with synchronous counter feedback.}
-			\label{filter_params_fast_lock}
-		\end{table}   
-
-		\begin{table}[h!]
-			\centering
-			\def\arraystretch{1.5}		
-			\setlength\arrayrulewidth{0.75pt}
-			\setlength{\tabcolsep}{1em} % for the horizontal padding
-			\begin{tabular}{|l|r|l|}
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Unit }\\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K$}  & $9.64757\times12^{12}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_i$}  & $2.991366\times10^{7}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$K_p$}  & $1.926152\times10^{1}$ &  \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$f_z$} & $0.494343\times10^5$ & Hz\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $2.300073\times10^1$  &\\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-1.926152\times10^1$  & \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated bandwidth & $1.227156\times10^6$ & Hz \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Estimated lock time & $9.65873\times10^{-7}$ & seconds \\
+				\rule[-1ex]{0pt}{2.5ex} Estimated RMS jitter & $13.5851$ & ps \\
 				\hline 
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}
@@ -414,8 +475,7 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 			\caption{PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.}
 			\label{filter_params_bbpd_low_noise}
 		\end{table}   
-		\subsubsection{Digital Implementation Parameters}
-		Output integrator is the has 1 sign bit, 13 integer bits (same a DCO bits), and 4 fractional bits (determined as the minimum number from both gears). Total size of the output of the integrator is 18 bits.
+		\subsubsection{Digital Filter Implementation Parameters}
 		\begin{table}[h!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -425,30 +485,19 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Value (digital) } & \cellcolor{gray!40}\textbf{Value Error}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Total dataword bits {\color{red} (gear 1)} & 12 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Sign bits & 1 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Sign bits {\color{red} (gear 1)} & 1 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Integer bits & 5 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Integer bits {\color{red} (gear 1)} & 11 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Fractional bits & 8 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Fractional bits {\color{red} (gear 1)} & 0 & & \\ 
+				\rule[-1ex]{0pt}{2.5ex} Total dataword bits & 14 & & \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{red} (gear 1)} & $2.301440\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$}  & $2.474609375\times10^1$ & \texttt{0b01100010111111}  & $+6.9880465\times10^{-5}$\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{red} (gear 1)} & $-2.115054\times10^2$ & \texttt{0bX}  & $+x\times10^{-x}$\\
+				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$}  & $-2.2328125\times10^1$ & \texttt{0b10100110101100}  & $-1.1305756\times10^{-5}$\\
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Total dataword bits {\color{blue} (gear 2)} & 10 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Sign bits {\color{blue} (gear 2)} & 1 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Integer bits {\color{blue} (gear 2)} & 5 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} Fractional bits {\color{blue} (gear 2)} & 4 & & \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_0$} {\color{blue} (gear 2)} & $2.300073\times10^1$ & \texttt{0bX}  & $+x\times10^{-x}$ \\
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{$b_1$} {\color{blue} (gear 2)} & $-1.926152\times10^1$ & \texttt{0bX}  & $+x\times10^{-x}$\\
-				\hline 
+
 			\end{tabular} 
 			% \caption{Assigned specifications for branch line hybrid design.}
 			% \label{asgn_specs}
@@ -456,7 +505,9 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 			\label{dig_filter_params_fast}
 		\end{table}  
 
-\FloatBarrier\subsection{Logic}
+{\color{white}.}
+\FloatBarrier\pagebreak
+\subsection{Logic}
 
 		\begin{table}[htb!]
 			\centering
@@ -467,19 +518,40 @@ With noise simulated up to 20 GHz, the RMS jitter of the detector is 1.342ps.
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Count } & \cellcolor{gray!40}\textbf{Area [$\mu$m$^2$]}& \cellcolor{gray!40}\textbf{Area (\% total)}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Sequential (DFF)} &  210 & 228.8 & 31.9 \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Sequential (DFF)} &  39 & 57.1 & 31.9 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Inverter} & 112 & 14.9 & 2.1  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Inverter} & 29 & 3.86 & 2.2  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic Gates} & 684 & 472.9 & 66.0  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic Gates} & 265 & 117.9 & 65.9  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} & 1006 & 716.9 & 100  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} & 333 & 178.9 & 100  \\ 
 				\hline 
 			\end{tabular} 
-			\caption{Synthesisized logic counts.}
+			\caption{Synthesized logic counts.}
 			\label{tab:log_synth}
 		\end{table}   
 
+		\begin{table}[htb!]
+			\centering
+			\def\arraystretch{1.5}		
+			\setlength\arrayrulewidth{0.75pt}
+			\setlength{\tabcolsep}{1em} % for the horizontal padding
+			\begin{tabular}{|c|c|c|c|}
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Voltage} & \cellcolor{gray!40}\textbf{Corner} & \cellcolor{gray!40}\textbf{Temperature [C]}& \cellcolor{gray!40}\textbf{Power [$\mu$W]}\\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} 0.59 & SS & 40 & 2.33 \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} 0.59 & TT & 40 & 2.51  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} 0.65 & TT & 25 & 12.1  \\ 
+				\hline 
+			\end{tabular} 
+			\caption{Power consumption.}
+			\label{tab:log_synth_power}
+		\end{table}   
 
 % \FloatBarrier\subsection{Synchronous counter}
 % Power consumption
+\FloatBarrier
+{\color{white}.}

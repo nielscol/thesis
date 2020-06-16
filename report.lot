@@ -2,32 +2,40 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {1}{\ignorespaces Design required specifications.\relax }}{3}{table.caption.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2}{\ignorespaces Power budget for design process.\relax }}{36}{table.caption.21}
+\contentsline {table}{\numberline {2}{\ignorespaces Radio system derived PLL performance specifications.\relax }}{16}{figure.caption.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3}{\ignorespaces Schematic simulation of TSPC DFF.\relax }}{40}{table.caption.28}
+\contentsline {table}{\numberline {3}{\ignorespaces Power budget for design process.\relax }}{37}{table.caption.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4}{\ignorespaces 22FDX core NFET threshold voltage and body effect coefficient extraction.\relax }}{43}{table.caption.31}
+\contentsline {table}{\numberline {4}{\ignorespaces Delay Stage Device Sizes.\relax }}{68}{figure.caption.45}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5}{\ignorespaces 22FDX core PFET threshold voltage and body effect coefficient extraction.\relax }}{43}{table.caption.32}
+\contentsline {table}{\numberline {5}{\ignorespaces Estimated and simulated PLL performance parameters.\relax }}{82}{table.caption.62}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {6}{\ignorespaces Delay Stage Device Sizes.\relax }}{62}{table.caption.51}
+\contentsline {table}{\numberline {6}{\ignorespaces Power breakdown.\relax }}{83}{figure.caption.63}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7}{\ignorespaces PLL parameters extracted from variance and parameter sweep simulations.\relax }}{93}{table.caption.78}
+\contentsline {table}{\numberline {7}{\ignorespaces Area breakdown.\relax }}{83}{figure.caption.64}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {8}{\ignorespaces Power breakdown.\relax }}{94}{table.caption.79}
+\contentsline {table}{\numberline {8}{\ignorespaces PLL phase noise and jitter performance values.\relax }}{84}{table.caption.66}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {9}{\ignorespaces Area breakdown.\relax }}{94}{table.caption.81}
+\contentsline {table}{\numberline {9}{\ignorespaces Ring oscillator performance parameters.\relax }}{84}{figure.caption.67}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {10}{\ignorespaces Ring oscillator performance parameters.\relax }}{96}{table.caption.84}
+\contentsline {table}{\numberline {10}{\ignorespaces Extracted VCO gain values.\relax }}{85}{table.caption.68}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {11}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with TDC feedback.\relax }}{97}{table.caption.87}
+\contentsline {table}{\numberline {11}{\ignorespaces Ring oscillator Monte Carlo simulation extracted values.\relax }}{86}{table.caption.73}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {12}{\ignorespaces PLL parameters determined from filter design and optimization process for fast lock speed with synchronous counter feedback.\relax }}{101}{table.caption.97}
+\contentsline {table}{\numberline {12}{\ignorespaces DCO Gain values from final VCO gain and DAC results.\relax }}{88}{table.caption.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {13}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{101}{table.caption.98}
+\contentsline {table}{\numberline {13}{\ignorespaces BBPD jitter extracted values.\relax }}{89}{table.caption.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {14}{\ignorespaces Loop filter digitized coefficients.\relax }}{102}{table.caption.99}
+\contentsline {table}{\numberline {14}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{89}{table.caption.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {15}{\ignorespaces Synthesisized logic counts.\relax }}{102}{table.caption.100}
+\contentsline {table}{\numberline {15}{\ignorespaces Loop filter digitized coefficients.\relax }}{89}{table.caption.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {16}{\ignorespaces PLL parameters determined from filter design and optimization process for minimum phase noise with BBPD.\relax }}{107}{table.caption.102}
+\contentsline {table}{\numberline {16}{\ignorespaces Synthesized logic counts.\relax }}{90}{table.caption.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {17}{\ignorespaces Power consumption.\relax }}{90}{table.caption.83}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {18}{\ignorespaces State of art comparison of PLLs.\relax }}{95}{table.caption.85}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {19}{\ignorespaces 22nm FD-SOI process NMOS device threshold voltage and body effect coefficient extraction.\relax }}{115}{table.caption.101}
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {20}{\ignorespaces 22nm FD-SOI process PMOS device threshold voltage and body effect coefficient extraction.\relax }}{115}{table.caption.102}

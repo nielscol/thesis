@@ -8,3 +8,5 @@ OUTPUT /home/cole/Documents/pll/thesis_paper/disco.log
 INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+OUTPUT /home/cole/Documents/pll/thesis_paper/disco.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

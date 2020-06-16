@@ -1,7 +1,7 @@
 import yaml
 
-LINES_PER_PAGE = 35
-ARRAY_STRETCH = 1.3
+LINES_PER_PAGE = 36
+ARRAY_STRETCH = 1.0
 
 files = [
     "appendix.tex",
@@ -11,7 +11,7 @@ files = [
     "methods.tex",
     "report.tex",
     "theory.tex",
-    "theory2.tex",
+    # "theory2.tex",
     "results.tex",
 ]
 
@@ -21,7 +21,7 @@ punctuation = [
     "+", "-", "/", "*",
     "{", "}", "[", "]",
     "<", ">", "_", "^",
-    "\\", "|", "="
+    "\\", "|", "=", "&",
 ]
 
 whitespace = [
@@ -105,13 +105,13 @@ for word in list(defs):
 
 def make_table(acronyms, defs):
     s = ""
-    s += "\t\\begin{table}[htb!]\n"
-    s += "\t\\renewcommand*{\\arraystretch}{%.2f}\\large\n"%ARRAY_STRETCH
+    # s += "\t\\begin{table}[htb!]\n"
+    s += "\t{\\renewcommand*{\\arraystretch}{%.2f}\\large\n"%ARRAY_STRETCH
     s += "\t\\begin{tabular}{@{}ll}\n"
     for acronym in acronyms:
         s += "\t\t\\textbf{\\textsf{%s}}\t&\t%s \\\\\n"%(acronym, defs[acronym])
-    s += "\t\\end{tabular}\n"
-    s += "\t\\end{table}\n"
+    s += "\t\\end{tabular}}\n"
+    # s += "\t\\end{table}\n"
     return s
 
 s = ""
@@ -132,6 +132,8 @@ for n, page in enumerate(pages):
     if n==0:
         s += "\\section*{Abbreviations.}\n"
     s += make_table(page, defs)
+    if n!=len(pages)-1:
+        s += "\t\FloatBarrier\pagebreak\n"
 
 # print("\nGenerated abbrev.tex:")
 print(s)

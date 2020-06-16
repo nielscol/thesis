@@ -1,28 +1,35 @@
-{ADPLL: All digital phase locked loop, AR: Autoregressive, BBPD: Bang-bang phase detector,
-  BER: Bit error rate, BFGS: Broyden-Fletcher-Goldfarb-Shanno, BOX: Burried-oxide,
+{'&X': '', AD: '', ADC: Analog to digital converter, ADPLL: All digital phase locked
+    loop, AR: Autoregressive, ASM: Algorithmic state machine, BBPD: Bang-bang phase
+    detector, BER: Bit error rate, BFGS: Broyden-Fletcher-Goldfarb-Shanno, BOX: Buried-oxide,
   BT: Bandwidth-time produce, BW: Bandwidth, CDAC: Capacitive digital to analog converter,
-  CDF: Cumulative distribution function, CI: Confidence interval, CLK: Clock, CM: Common
-    mode, CMOS: Complementary metal oxide semiconductor, CMRR: Common mode rejection
-    ratio, CNR: Carrier to noise ratio, DAC: Digital to analog converter, DC: Direct
-    current, DCO: Digitally controlled oscillator, DFF: D flip flop, DFT: Discrete
-    Fourier transform, DIV: Divider, DNL: Differential non-linearity, FDSOI: Fully
-    depleted silicon on insulator, FET: Field effect transistor, FFT: Fast Fourier
-    transform, FM: Frequency modulation, FOM: Figure of merit, FSK: Frequency shift
-    keying, FSM: Finite state machine, GSS: Golden section search, HVTPFET: High threshold
-    voltage PFET, IF: Intermediate frequency, IIR: Infinite impulse response, INL: Integral
-    nonlinearity, ISF: Impulse sensitivity function, ISM: Industrial, KDCO: DCO Gain,
-  LC: Inductor-capacitor, LF: Loop filter, LO: Local oscillator, LSB: Least significant
-    bit, LVTNFET: Low voltage threshold NFET, MMSE: Minimum mean squared error, MOSFET: Metal
-    oxide semiconductor filed effect transistor, MSE: Mean squared error, NF: Noise
-    figure, NFET: N-channel field effect transistor, NMOS: N-channel metal oxide semiconductor,
-  OOK: On-off keying, OTW: Oscillator tuning word, PD: Phase detector, PDF: Probability
-    distribution function, PFET: P-channel FET, PI: Proportional-integral, PID: Proportional-integral-derivative,
+  CDAD: '', CDF: Cumulative distribution function, CI: Confidence interval, CICC: '',
+  CLK: Clock, CM: Common mode, CMOS: Complementary metal oxide semiconductor, CMRR: Common
+    mode rejection ratio, CNR: Carrier to noise ratio, CP: Charge pump, DAC: Digital
+    to analog converter, DC: Direct current, DCO: Digitally controlled oscillator,
+  DFF: D flip-flop, DFT: Discrete Fourier transform, DIV: Divider, DM: '', DNL: Differential
+    non-linearity, FDSOI: Fully depleted silicon on insulator, FDX: '', FET: Field
+    effect transistor, FFT: Fast Fourier transform, FLL: '', FM: Frequency modulation,
+  FOM: Figure of merit, FSK: Frequency shift keying, FSM: Finite state machine, GMSK: Gaussian
+    minimum shift keying, GSS: Golden section search, HVTPFET: High threshold voltage
+    PFET, HVTPMOS: High voltage threshold PMOS, IF: Intermediate frequency, IIR: Infinite
+    impulse response, IL: '', INL: Integral nonlinearity, IQ: In phase - Quadrature
+    phase, ISF: Impulse sensitivity function, ISM: Industrial, JSSC: '', KDCO: DCO
+    Gain, LC: Inductor-capacitor, LF: Loop filter, LO: Local oscillator, LSB: Least
+    significant bit, LVT: '', LVTNFET: Low voltage threshold NFET, LVTNMOS: Low voltage
+    threshold NMOS, MMSE: Minimum mean squared error, MOM: Metal-oxide-metal, MOSFET: Metal
+    oxide semiconductor field effect transistor, MSB: Most significant bit, MSE: Mean
+    squared error, NF: Noise figure, NFET: N-channel field effect transistor, NMOS: N-channel
+    metal oxide semiconductor, NORCHIP: '', ODZ: '', OL: '', OOK: On-off keying, OR: '',
+  OTW: Oscillator tuning word, PD: Phase detector, PDF: Probability distribution function,
+  PFD: Phase frequency detector, PFET: P-channel FET, PI: Proportional-integral, PID: Proportional-integral-derivative,
   PLL: Phase locked loop, PM: Phase margin, PMOS: P-channel metal oxide semiconductor,
-  PN: Phase noise, PSD: Power spectral density, PSK: Phase shift keying, PVT: Process,
-  RC: Resistor-capacitor, RMS: Root mean squared, RO: Ring oscillator, RST: Reset,
-  RVT: Regular voltage threshold, SFDR: Spurious free dynamic range, SLVTNFET: Super-low
-    voltage threshold NFET, SNR: Signal to noise ratio, SOI: Silicon on insulator,
-  SSB: Single side band, TDC: Time to digital converter, TF: Transfer function, TODO: '',
-  TSPC: True single phase circuit, ULPPLL: Ultra low power phase locked loop, UTBB: Ultra-thin
-    body BOX, VCO: Voltage controlled oscillator, WUC: Wake up call, WUR: Wake up
-    receiver, scientific and medicine: null, voltage and temperature: null}
+  PN: Phase noise, PSD: Power spectral density, PSK: Phase shift keying, PVT: Process
+    voltage and technology, RC: Resistor-capacitor, RF: Radio frequency, RM: '', RMS: Root
+    mean squared, RO: Ring oscillator, RST: Reset, RVT: Regular voltage threshold,
+  RVTPMOS: Regular voltage threshold PMOS, SAR: '', SCPD: '', SFDR: Spurious free
+    dynamic range, SLVTNFET: Super-low voltage threshold NFET, SLVTNMOS: Super-low
+    voltage threshold NMOS, SNR: Signal to noise ratio, SOI: Silicon on insulator,
+  SS: '', SSB: Single side band, SSCL: '', SUM: '', TDC: Time to digital converter,
+  TF: Transfer function, TODO: '', TSPC: True single phase circuit, TT: '', ULPPLL: Ultra
+    low power phase locked loop, UTBB: Ultra-thin body BOX, VCO: Voltage controlled
+    oscillator, WIP: '', WUC: Wake up call, WUR: Wake up receiver, X&: '', XY: ''}
