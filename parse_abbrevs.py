@@ -1,7 +1,7 @@
 import yaml
 
-LINES_PER_PAGE = 36
-ARRAY_STRETCH = 1.0
+LINES_PER_PAGE = 32
+ARRAY_STRETCH = 1.1
 
 files = [
     "appendix.tex",

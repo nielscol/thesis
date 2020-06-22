@@ -1,15 +1,15 @@
 	\appendix
 	\section{Verilog}\label{sec:verilog}
 
-		\subsection{Loop Filter} \label{sec:lf_verilog}
+		\subsection{Loop Filter and Reset Logic} \label{sec:lf_verilog}
 
 	\begin{lstlisting}[language={Verilog}, caption={Loop filter hardware description.}, label={sim_code2}]
-module lf_bbpd
+module lf
 (
 	input in, clk, rst, set_out, lf_en,
 	input signed [13:0] b0, b1,
 	input [12:0] init_out,
-	output reg dco_rst, dac_rst,
+	output reg vco_rst, dac_rst,
 	output [12:0] lf_out, lf_out_n
 );
 	reg last, wait_cycle1, wait_cycle2;
@@ -34,22 +34,22 @@ module lf_bbpd
 	assign lf_out_n = (~lf_rounded)|{13{dac_rst}};
 
 	always @ (posedge clk) begin
-    	if (rst) begin 	// RST cycle 1: DCO+DAC RST
+    if (rst) begin 	// RST cycle 1: DCO+DAC RST
 			dac_rst <= 1; 	// Assert DCO/DAC rst synchronously
-			dco_rst <= 1; 
+			vco_rst <= 1; 
 		end
 		else if ((!rst)&&(dac_rst)) begin  
 			dac_rst <= 0;		// RST Cycle 2: de-assert dac_rst,		
 			wait_cycle1 <= 1;
 		end
 		else if (wait_cycle1) begin
-			dco_rst <= 0;			// RST cycle 3: Wait 1 cycle
-			wait_cycle1 <= 0;	// Allow BBPD to gain sample
+			vco_rst <= 0;			// RST cycle 3: Wait 1 cycle
+			wait_cycle1 <= 0;	// before BBPD sampling, no lf update
 			wait_cycle2 <= 1;		
 		end
 		else if (wait_cycle2) begin
 			wait_cycle2 <= 0;	// RST cycle 4: Wait 1 cycle
-			last <= in;				// Record initial BBPD sample
+			last <= in;				// Record initial BBPD sample, no lf update
 		end
 		else if (lf_en) begin 	// Normal operation
 			last <= in;
@@ -175,9 +175,9 @@ endmodule
 
 		It is observed that the threshold voltage slopes of figure \ref{fig:vth_groupa} are not perfectly linear, but for the simplified analytical purposes of this work, they can be approximated as linear. The P-channel devices in the technology of this work show a high degree of linearity, whereas the N-channel devices show variation in slope as in figure \ref{fig:vth_slope_vs_vbs}. It is also observed that the threshold voltage and body effect coefficient vary as channel lengths approach zero, but flatten out for longer device length. A final note is there is substantial variation of $\gamma$ and $V_{TH}$ between device types, so prudent care must be taken in the oscillator for selection of devices and their sizing.
 
-		\begin{equation}
-		V_{th} = V_{th0} - \gamma V_{BS}
-		\end{equation}
+		% \begin{equation}
+		% V_{th} = V_{th0} - \gamma V_{BS}
+		% \end{equation}
 
 		\begin{figure}[htb!]
 		    \centering
@@ -285,7 +285,7 @@ endmodule
 			\end{table} 	
 
 	\FloatBarrier\section{Optimal Selection of Backgate-Coupled Pseudodifferential Inverter Devices}\label{sec:opt_wp_wn}
-		To implement inverters with common backgate wells supporting positive voltage biasing, devices that are over N-wells must be used in the 22nm FD-SOI process utilized in this work. Accordingly, these devices are RVTPMOS, HVTPMOS, SLVTNMOS, LVTNMOS. The devices should be relatively matched in terms of threshold voltage and body effect coefficient. Referencing the extracted device parameters in appendix \ref{sec:fet_extracted_data} (tables \ref{tab:nfet_vth_gamma} and \ref{tab:pfet_vth_gamma}), HVTPMOS is not considered here due to its high threshold voltage, being greater than $V_{DD}/2$ for $V_{DD}=0.8$. Thus, an optimization for ratio of inverter W$_P$/W$_N$ for the circuit shown in figure \ref{fig:inv_vm} was performed. This circuit is used to determine the common mode level $V_{M}$ of a common-backgate inverter achieved through self-biasing. This level is expected to be the crossing level of a backgate-coupled pseudodifferential inverter fabricated with the same devices as the test circuit. This level should be ideally at $V_{DD}/2$, thus the optimization simulation run determined the optimal W$_P$/W$_N$ required in order to achieve $V_{M}$ = $V_{DD}/2$. This optimization was run for inverters of RVTPMOS + LVTNMOS devices, and RVTPMOS + SLVTNMOS devices. The result of this optimization is in figure \ref{fig:opt_ratio}. It is seen that for RVTPMOS + SLVTNMOS, large W$_P$/W$_N$ ratios are required, on the order of 5 or greater. In the RVTPMOS + LVTNMOS combination, a near unity ratio is achieved, with W$_P$/W$_N \in$ [0.8, 1.5] for L $\in$ [20, 100] nm. It is of interest to keep device sizes similar to reduce total device capacitance, so the selection of RVTPMOS + LVTNMOS devices in the 22 nm FD-SOI process of this work has been determined to be the optimal device combination for backgate-coupled pseudodifferential inverter implementation. These devices also possess close backgate coefficients, for LVTNMOS $\gamma \in$ [77.72, 74.85] mV/V and for RVTPMOS $\gamma \in$ [71.51, 74.32] mV/V, for L $\in$ [20, 100] nm. 
+		To implement inverters with common backgate wells supporting positive voltage biasing, devices that are over N-wells must be used in the 22nm FD-SOI process utilized in this work. Accordingly, these devices are RVTPMOS, HVTPMOS, SLVTNMOS, LVTNMOS. The devices should be relatively matched in terms of threshold voltage and body effect coefficient. Referencing the extracted device parameters in appendix \ref{sec:fet_extracted_data} (tables \ref{tab:nfet_vth_gamma} and \ref{tab:pfet_vth_gamma}), HVTPMOS is not considered here due to its high threshold voltage, being greater than $V_{DD}/2$ for $V_{DD}=0.8$. Thus, an optimization for ratio of inverter W$_P$/W$_N$ for the circuit shown in figure \ref{fig:inv_vm} was performed. This circuit is used to determine the common mode level $V_{M}$ of a common-backgate inverter achieved through self-biasing. This level is expected to be the output crossing level of a backgate-coupled pseudodifferential inverter fabricated with the same devices as the test circuit. This level should be ideally at $V_{DD}/2$, thus the optimization simulation run determined the optimal W$_P$/W$_N$ required in order to achieve $V_{M}$ = $V_{DD}/2$. This optimization was run for inverters of RVTPMOS + LVTNMOS devices, and RVTPMOS + SLVTNMOS devices. The result of this optimization is in figure \ref{fig:opt_ratio}. It is seen that for RVTPMOS + SLVTNMOS, large W$_P$/W$_N$ ratios are required, on the order of 5 or greater. In the RVTPMOS + LVTNMOS combination, a near unity ratio is achieved, with W$_P$/W$_N \in$ [0.8, 1.5] for L $\in$ [20, 100] nm. It is of interest to keep device sizes similar to reduce total device capacitance, so the selection of RVTPMOS + LVTNMOS devices in the 22 nm FD-SOI process of this work has been determined to be the optimal device combination for backgate-coupled pseudodifferential inverter implementation. These devices also possess close backgate coefficients, for LVTNMOS $\gamma \in$ [77.72, 74.85] mV/V and for RVTPMOS $\gamma \in$ [71.51, 74.32] mV/V, for L $\in$ [20, 100] nm. 
 
 			\begin{figure}[htb!]
 			        \centering
@@ -309,7 +309,7 @@ endmodule
 			        \label{fig:ratio_slvtn_p}
 			    \end{subfigure}
 			    % \caption{x.}
-			    \caption{\textbf{(a)} Optimal width ratio of RVTPMOS/LVTNMOS, \textbf{(b)} Optimal width ratio of RVTPFET/SLVTNMOS.}
+			    \caption{\textbf{(a)} Optimal width ratio of RVTPMOS/LVTNMOS, \textbf{(b)} Optimal width ratio of RVTPMOS/SLVTNMOS.}
 			    \label{fig:opt_ratio}
 			\end{figure} 
 

@@ -1,4 +1,4 @@
-	\subsection{Fully Depleted Silicon on Insulator (FD-SOI)}
+	\subsection{Fully Depleted Silicon on Insulator (FD-SOI) Process}
 	FD-SOI is a process technology that implements complementary metal oxide semiconductor (CMOS) transistors with an insulating layer of oxide, referred to as a buried oxide (BOX), between the channel of the transistors and the silicon substrate \cite{Planes2012}. The addition of such an oxide reduces capacitances of the fabricated transistors to the silicon substrate, resulting in lower overall device capacitance than in bulk CMOS technologies. Thus higher frequency of operation is possible versus similar sized bulk process nodes. A further feature introduced by FD-SOI technology is the ability to form isolated wells beneath fabricated devices \cite{Wiatr2019}, which remain electrically isolated from the transistors via the BOX and from the substrate due to PN junctions inherent in well formation. This opens the possibility to achieve biasing across a wide voltage range in the regions below individual transistors (both for PMOS and NMOS devices), which enables a substantial degree of in-situ tuning of individual transistor threshold voltages by exploitation of the body effect of MOS transistors. The well beneath a FD-SOI transistor is referred to in this work as the "backgate". The implementation of these features in a typical FD-SOI process is shown in figure \ref{fig:22fdx_wells}. 
 	
 			\begin{figure}[htb!]
@@ -11,7 +11,7 @@
 	\subsection{MOSFET Models}
 
 	\subsubsection{I-V Relations}\label{sec:mos_iv}
-	Basic models that describe the large signal current-voltage relations of a Metal Oxide Semiconductor Field Effect Transistor (MOSFET) are introduced here, based wholly from \cite{razavi_2017}. For the purposes of this work, a MOSFET is schematically represented in the manner of figure \ref{fig:mos_symbols}, with gate (G), drain (D), source (S) and backgate (B) terminals. Several operating regimes occur depending on the relation of the terminal voltages. Relevant to the scope of this work, are the linear, saturated and velocity saturated regions of MOSFET operation. Nominally, it is expected that when configured as in figure \ref{fig:vgs_sweep}, sweeping the gate-source voltage ($V_{GS}$), with the drain-source voltage ($V_{DS}$) set greater than zero in the case of a NMOS device, that an increasing amount of current will enter the MOSFET drain after crossing a threshold voltage ($V_{TH}$). $V_{TH}$ is predominantly dependent of physical configuration of a FET (dimensions, doping, material), however is impacted by the backgate bias in what is termed "the body effect". A more detailed description of each operating regime will be given in the following discourse.
+	Basic models that describe the large signal current-voltage relations of a Metal Oxide Semiconductor Field Effect Transistor (MOSFET) are introduced here, based wholly from \cite{razavi_2017}. For the purposes of this work, a MOSFET is schematically represented in the manner of figure \ref{fig:mos_symbols}, with gate (G), drain (D), source (S) and backgate (B) terminals. Several operating regimes occur depending on the relation of the terminal voltages. Relevant to the scope of this work, are the linear, saturated and velocity saturated regions of MOSFET operation. Nominally, it is expected that when configured as in figure \ref{fig:vgs_sweep}, sweeping the gate-source voltage ($V_{GS}$), with the drain-source voltage ($V_{DS}$) set greater than zero in the case of a NMOS device, that an increasing amount of current will enter the MOSFET drain after crossing a threshold voltage ($V_{TH}$). $V_{TH}$ is predominantly dependent on physical configuration of a FET (dimensions, doping, material), however, it is also impacted by the backgate bias in what is termed "the body effect". A more detailed description of each operating regime will be given in the following discourse.
 
 			\begin{figure}[htb!]
 			        \centering
@@ -54,7 +54,7 @@
 	\end{equation}
 
 	\subsubsection{FD-SOI Body Effect}
-	Application of a bias to the substrate below a bulk MOSFET, or to the well below a FD-SOI MOSFET, has a direct effect on the threshold voltage of that device. For a bulk MOSFET, change of body bias affects the width of source-drain and source-body depletions, which consequently can increase or decrease the magnitude of the channel depletion charge as seen by the gate terminal needed to achieve channel inversion. This corresponds to a differential in the threshold voltage. %
+	Application of a bias to the substrate below a bulk MOSFET, or to the well below a FD-SOI MOSFET, has a direct effect on the threshold voltage of that device. For a bulk MOSFET, change of body bias affects the width of source-body and drain-body depletions, which consequently can increase or decrease the magnitude of the channel depletion charge as seen by the gate terminal needed to achieve channel inversion. This corresponds to a differential in the threshold voltage. %
 	%The below equation \cite{razavi_2017} quantifies this effect for bulk devices. $\gamma$ is the body effect coefficient, $2\Phi_F$ represents the MOS surface potential. $V_{TH}$ is non-linearly related to the source-body voltage $V_{SB}$.
 	% \begin{equation}
 	% 	V_{TH} = V_{TH0} + \gamma\left( \sqrt{2\Phi_F + V_{SB}} - \sqrt{|2\Phi_F|} \right)
@@ -63,7 +63,7 @@
 	\begin{equation}
 		V_{d,fg} = \frac{Q_d}{C_{ox,fg}} = \frac{qN_AZ}{C_{ox,fg}} 
 	\end{equation}
-	Supposing that the back gate has capacitance of $C_{ox,bg}$, with bias applied $V_{BS}$, the back gate can be seen to "rob" the front gate of a charge $Q_{bg} = C_{ox,bg}V_{BS}$ when in inversion. Thus results in a partial change of the front gate referred voltage required to obtain channel depletion:
+	Supposing that the back gate has capacitance of $C_{ox,bg}$, with bias applied $V_{BS}$, the back gate can be seen to "rob" the front gate of a charge $Q_{bg} = C_{ox,bg}V_{BS}$ when in inversion. Thus results in a partial change of the front gate-referred voltage required to obtain channel depletion:
 	\begin{equation}
 		V_{d,fg}^{'} = \frac{Q_d-Q_{bg}}{C_{ox,fg}} = \frac{Q_d}{C_{ox,fg}} - \frac{C_{ox,bg}}{C_{ox,fg}}V_{BS} = V_{d,fg}-\Delta V_{th,bg}
 	\end{equation}
@@ -75,7 +75,7 @@
 	\begin{equation}\label{eq:body_coef}
 		\gamma = \frac{C_{ox,bg}}{C_{ox,fg}}
 	\end{equation}
-	Given a nominal threshold voltage of $V_{TH0}$ with no backgate bias, the threshold voltage including the body effect in FD-SOI technology can be modeled as:
+	Given a nominal threshold voltage of $V_{TH0}$ with no backgate bias, the threshold voltage including the body effect in FD-SOI technology can be modeled as such:
 	\begin{equation}\label{eq:body_effect}
 		V_{TH} = V_{TH0} - \gamma V_{BS}
 	\end{equation}
@@ -190,7 +190,7 @@
 			\end{equation}
 
 
-			Observe that the BBPD noise power is constant. If the reference signal is a clock signal with frequency $f_{ref}$, the BBPD noise spectral density is in equation \ref{eq:bbpd_noise_psd}.
+			Observe that the BBPD noise power is constant valued. If the reference signal is a clock signal with frequency $f_{ref}$, the BBPD noise spectral density is in equation \ref{eq:bbpd_noise_psd}.
 			\begin{equation}\label{eq:bbpd_noise_psd}
 				S_{ n_{BBPD}(f)} = \frac{\sigma_{n_{BBPD}}^2}{\Delta f} = \frac{\left(1-\frac{2}{\pi}\right)}{f_{ref}}
 			\end{equation}
@@ -213,13 +213,13 @@
 
 
 		\subsubsection{Loop Filter}
-			A loop filter behaves as the controller of a PLL, namely controlling the phase-frequency response of PLL. The choice of loop filter transfer function significantly affects transient PLL behavior, as well as phase noise performance, as is later described. Here, a pole-zero based controller is defined for use in this work. This is designed to have P poles and Z zeros, and can be represented in the general form of equation \ref{eq:lf_general_form} as a rational function of polynomials of s with filter coefficients given as $\{a_0, ..., a_P\}$ and $\{b_0, ..., b_Z\}$.
+			A loop filter behaves as the controller of a PLL, namely controlling the phase-frequency response of PLL. The choice of the loop filter transfer function significantly affects transient PLL behavior, as well as phase noise performance, as is later described. Here, a pole-zero based controller is defined for use in this work. This is designed to have P poles and Z zeros, and can be represented in the general form of equation \ref{eq:lf_general_form} as a rational function of polynomials of s with filter coefficients given as $\{a_0, ..., a_P\}$ and $\{b_0, ..., b_Z\}$.
 			\begin{equation} \label{eq:lf_general_form}
 				\textnormal{H}_{LF}(s) = \frac{\sum_{j=0}^Z b_js^j}{\sum_{k=0}^P a_ks^k}
 			\end{equation}
 			
 		\subsubsection{Loop Filter Discretization and Digitization}\label{lf-discretization}
-			In PLLs which sample on a fixed interval defined by a reference clock frequency $f_{ref}$, derivation of a discrete time controller model is necessary. This is derived from the general form continuous loop filter (equation \ref{eq:lf_general_form}) via application of a continuous s-domain to discrete z-domain transformation. Strictly speaking, $z^{-1} = e^{-s\Delta T_s}$ for values on the unit circle, i.e. r=1 \cite{proakis_1993_z}. If the PLL sampling rate $f_s$=$f_{ref}$ is constrained to be sufficiently higher than the implemented filter bandwidth (i.e. PLL loop bandwidth, $BW_{loop}$), a simpler transformation using a truncated Taylor series approximation is applicable. Given the $1/\Delta T_s$=$f_{s}$ as the relation for sampling rate, then:
+			In PLLs which sample on a fixed interval defined by a reference clock frequency $f_{ref}$, derivation of a discrete time controller model is necessary. This is derived from the general form continuous loop filter (equation \ref{eq:lf_general_form}) via application of a continuous s-domain to discrete z-domain transformation. Strictly speaking, $z^{-1} = e^{-s\Delta T_s}$ for values on the unit circle, i.e. r = 1 \cite{proakis_1993_z}. If the PLL sampling rate $f_s$ = $f_{ref}$ is constrained to be sufficiently higher than the implemented filter bandwidth (i.e. PLL loop bandwidth, $BW_{loop}$), a simpler transformation using a truncated Taylor series approximation is applicable. Given the $1/\Delta T_s$ = $f_{s}$ as the relation for sampling rate, then:
 			\begin{align*}
 				z^{-1} &= e^{-s\Delta T_s} && \text{(definition of z on unit circle)} \\
 				&= \sum_{k=0}^\infty\frac{(-s\Delta T_s)^k}{k!} && \text{(exponential Taylor series)} \\

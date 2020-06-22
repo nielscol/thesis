@@ -1,5 +1,5 @@
 \section{PLL Architecture}\label{pll_arch}
-To meet the goals of this work to achieve state of art power consumption of $\leq 100\mu$W for 2.448 GHz operation, while maintaining better than 20.56 ps RMS of phase jitter, the PLL architecture of figure figure \ref{fig:pll_arch} has been devised. It comprises primarily of three main components:
+To meet the goals of this work to achieve a state of art power consumption of $\leq 100\mu$W for 2.448 GHz operation, while maintaining better than 20.56 ps RMS of phase jitter, the PLL architecture of figure \ref{fig:pll_arch} has been devised. It comprises primarily of three main components:
 \begin{enumerate}[itemsep=0pt,label=\protect\mycirc{\arabic*}]
 	\setlength\itemsep{-0.8em}
 	\item A bang-bang phase detector.
@@ -107,7 +107,7 @@ The high level rationale for this architecture will be described in the followin
 			\caption{Bang-bang phase detector with D flip-flop.}
 			\label{fig:bbpd_dff}
 		\end{figure}
-		The realization of a BBPD using a digital flip flop introduces additional noise to the system in the form of jitter. Jitter arises as an artifact of circuit and supply noise. For small time differentials between the BBPD inputs X and Y, the output can be stochastically corrupted due to the presence of noise. Furthermore, physical D flip flop implementations exhibit set-up and hold time requirements for data to be stable (to allow internal nodes to settle), so deterministic corruption of phase detection can be imparted if the inputs violate physical timing requirements. These sources of corruption cause BB-PD transfer characteristics in terms of output expectation, $\mathbb{E}[Z]$, with respect to input timing difference $\Delta t_{XY}$ to deviate from an ideal step response, demonstrated in figure \ref{fig:bbpd_jit_pdf}. Analytically, the corruption of the transfer characteristic can be viewed as being caused by an additive phase noise component before the signum operation in the BBPD, as shown in figure \ref{fig:bbpd_noise_nonlinear}. The expectation $\mathbb{E}[Z(\Delta t_{XY})]$ acts as a cumulative distribution function (CDF) for this phase noise component. Thus, differentiation of $\mathbb{E}[Z(\Delta t_{XY})]$ results in a probability distribution function (PDF) P(T=$\Delta t_{xy}$) of this phase noise signal. Statistical analysis of variance of the PDF provides an RMS value for timing jitter of this additive noise source, $\sqrt{\mathrm{Var}[T]} = \sigma_{t,j}$. The RMS timing jitter may be converted to RMS phase error of the noise source as $\sigma_{\Phi_j} = 2\pi f_{osc}\sigma_{t_j}$. This statistical analysis approach has been applied in this work to evaluate BBPD performance.
+		The realization of a BBPD using a digital flip flop introduces additional noise to the system in the form of jitter. Jitter arises as an artifact of circuit and supply noise. For small time differentials between the BBPD inputs X and Y, the output can be stochastically corrupted due to the presence of noise. Furthermore, physical D flip flop implementations exhibit set-up and hold time requirements for data to be stable (to allow internal nodes to settle), so deterministic corruption of phase detection can be imparted if the inputs violate physical timing requirements. These sources of corruption cause BB-PD transfer characteristics in terms of output expectation, $\mathbb{E}[Z]$, with respect to input timing difference $\Delta t_{XY}$ to deviate from an ideal step response, demonstrated in figure \ref{fig:bbpd_jit_pdf}. Analytically, the corruption of the transfer characteristic can be viewed as being caused by an additive phase noise component before the signum operation in the BBPD, as shown in figure \ref{fig:bbpd_noise_nonlinear}. The expectation $\mathbb{E}[Z(\Delta t_{XY})]$ acts as a cumulative distribution function (CDF) for this phase noise component. Thus, differentiation of $\mathbb{E}[Z(\Delta t_{XY})]$ results in a probability distribution function (PDF) P(T=$\Delta t_{xy}$) of this phase noise signal. Statistical analysis of variance of the PDF provides an RMS value for timing jitter of this additive noise source, $\sqrt{\mathrm{Var}[T]} = \sigma_{tj}$. The RMS timing jitter may be converted to RMS phase error of the noise source as $\sigma_{\Phi_j} = 2\pi f_{osc}\sigma_{t_j}$. This statistical analysis approach has been applied in this work to evaluate BBPD performance.
  
 		\begin{figure}[htb!]
 		    \centering
@@ -144,7 +144,7 @@ The high level rationale for this architecture will be described in the followin
 		K_{BBPD} = \sqrt{\frac{2}{\pi}}\cdot\frac{1}{\sigma_{\hat{\Phi}_e}} = \sqrt{\frac{2}{\pi}}\cdot\frac{1}{\sqrt{\sigma_{\Phi_e}^2 + \sigma_{\Phi_j}^2}}
 	\end{equation}
 
-	 It is then observed that the output Z is valued $\pm$1, thus its power is always $\sigma_Z^2$=1. Furthermore:
+	 It is then observed that the output Z is valued $\pm$1, thus its power is always $\sigma_Z^2$ = 1. Furthermore:
 	\begin{equation}
 	 	\sigma^2_{Z} = 1 = K_{BBPD}^2(\sigma^2_{\phi_e} +\sigma^2_{\phi_j})  + \sigma^2_{q_{n,BBPD}}
 	\end{equation}
@@ -247,7 +247,7 @@ The high level rationale for this architecture will be described in the followin
 			    \label{fig:tspc_dff}
 			\end{figure}
 
-		This TSPC design was validated in simulation with regular voltage threshold (RVT) devices in the 22nm FD-SOI process with all devices set to have equal (W/L). (W/L) $\in$ \{100n/20n, 200n/20n\} were tested, and supply voltages of 0.5 and 0.8 volts were tested. It was determined that the implementation with (W/L) = 200n/20n for all devices and $V_{DD}$ = 0.8 was satisfactory, as a low jitter value of 1.342 ps with 0.46 $\mu$W of power consumption was found, far lower than the 5 $\mu$W limit set in the power budget. The excess power allotment not used by the BBPD in the original power budget has been reassigned to the oscillator. Final simulation results for the BBPD are in the results section \ref{sec:res_bbpd}, and the layout in appendix \ref{sec:lay_bbpd}.
+		This TSPC design was validated in simulation with regular voltage threshold (RVT) devices in the 22nm FD-SOI process with all devices set to have equal (W/L). (W/L) $\in$ \{100n/20n, 200n/20n\} were tested, and supply voltages of 0.5 and 0.8 volts were tested. It was determined that the implementation with (W/L) = 200n/20n for all devices and $V_{DD}$ = 0.8 was satisfactory, as a low jitter value of 1.342 ps with 0.39 $\mu$W of power consumption was found, far lower than the 5 $\mu$W limit set in the power budget. The excess power allotment not used by the BBPD in the original power budget has been reassigned to the oscillator. Final simulation results for the BBPD are in the results section \ref{sec:res_bbpd}, and the layout in appendix \ref{sec:lay_bbpd}.
 
 
 		% \end{itemize}
@@ -346,12 +346,12 @@ The high level rationale for this architecture will be described in the followin
 	\begin{enumerate}[itemsep=0pt,label=\protect\mycirc{\arabic*}]
 		\setlength\itemsep{-0.8em}
 		\item Zero steady state error, for accuracy of the synthesized frequency.
-		\item Minimize complexity of implemented logic (i.e. minimize the number of loop filter poles and zeros).
-		\item Low pass response of PLL in closed-loop.
+		\item Minimize complexity of implemented loop filter logic (i.e. minimize the number of loop filter poles and zeros).
+		\item Results in a closed-loop low pass response of the PLL.
 	\end{enumerate}
 	From the author of this work's previous findings \cite{Me}, it was established that the pole-zero filter that best satisfies these requirements is a proportional-integral controller.
 
-\subsection{Proportional-integral Controller Loop Filter}
+\subsection{Proportional-Integral Controller Loop Filter}
  A proportional-integral controller \cite{ogata_2010_pid} is given in equation \ref{eq:pi_pll_tf}, containing an proportional gain term $K_p$, and an integral gain term $K_i$. This can be optionally represented using a pole at zero frequency and a zero at frequency $\omega_z = K_i/K_p$.
 			\begin{equation} \label{eq:pi_pll_tf}
 				\textnormal{H}_{LF}(s) = K_p + \frac{K_i}{s}  = \frac{K_i}{s}\left(\frac{s}{\omega_z} + 1\right) 
@@ -410,7 +410,7 @@ The high level rationale for this architecture will be described in the followin
 			% \FloatBarrier
 			With $\zeta$ is constrained to 1, the final simplified PLL closed loop transfer function is in equation \ref{eq:simp_pi_pll_tf_z1}. The form of this equation is favorable for computing integrations, allowing for a closed form solution to be found for the different PLL phase noise contributions. Furthermore, this transfer function only contains one parameter, $K$, which allows for simple single-variate optimization to be undertaken for the filter design.
 			\begin{equation} \label{eq:simp_pi_pll_tf_z1}
-				T(s) = \frac{2\sqrt{K}s + K }{s^2 + 2\sqrt{K}s + K}
+				T(s) = \frac{2\sqrt{K}s + K }{s^2 + 2\sqrt{K}s + K} = \frac{2\sqrt{K}s + K }{(s + \sqrt{K})^2}
 			\end{equation}
 			
 
@@ -438,7 +438,7 @@ The high level rationale for this architecture will be described in the followin
 				S_{\Phi n_{DCO,out}}(f) &= S_{0_{osc}}\frac{f^2}{\left(f^2+\frac{K}{(2\pi)^2}\right)^2} 
 			\end{align} 
 
-			The total PLL phase noise power associated with the oscillator, $\sigma_{\Phi_{n,DCO}}^2$ is achieved by integrating equation \ref{eq:out_psd_dco_pll4} with respect to frequency.
+			The total PLL phase noise power associated with the oscillator, $\sigma_{\Phi_{n,DCO}}^2$ is computed by integrating equation \ref{eq:out_psd_dco_pll4} with respect to frequency.
 			\begin{align}\label{eq:out_psd_dco_pll5} 
 				\sigma_{\Phi_{n,DCO}}^2 =
 				\int_{-\infty}^{\infty} S_{\Phi n_{DCO,out}}(f)df &=
@@ -463,7 +463,7 @@ The high level rationale for this architecture will be described in the followin
 				+ \frac{K^2}{(2\pi)^4}}{\left(f^2+\frac{K}{(2\pi)^2}\right)^2} 
 			\end{align} 
 
-			The total PLL phase noise power associated with the BBPD, $\sigma_{\Phi_{n,BBPD}}^2$ is achieved by integrating equation \ref{eq:out_psd_bbpd_pll4} with respect to frequency:
+			The total PLL phase noise power associated with the BBPD, $\sigma_{\Phi_{n,BBPD}}^2$ is computed by integrating equation \ref{eq:out_psd_bbpd_pll4} with respect to frequency:
 			\begin{align}\label{eq:out_psd_bbpd_pll5} 
 				\sigma_{\Phi_{n,BBPD}}^2 & =
 				\frac{\frac{\pi}{2}(\sigma^2_{\phi_j} +
@@ -613,7 +613,7 @@ The high level rationale for this architecture will be described in the followin
 	\begin{equation}\label{eq:bb_osc_noise}
 		\sigma_{\Phi_{n}}^2 = \sigma_{\Phi_{n,DCO}}^2 + \sigma^2_{\Phi_{n_{BBPD}}} + \sigma^2_{\Phi_{n_{em}}} = S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} + \sigma^2_{\phi_n}\frac{5\sqrt{K}}{4f_{ref}}\cdot\left(\frac{\pi}{2}-1\right)  + \sigma^2_{\Phi_{n_{em}}}
 	\end{equation}
-	Redefining equation \ref{eq:b1} using equation \ref{eq:bb_osc_noise} as the phase noise power results in equation \ref{eq:b1__}.
+	Redefining equation \ref{eq:b1} using equation \ref{eq:bb_osc_noise} as the phase noise power value results in equation \ref{eq:b1__}.
 		\begin{align}\label{eq:b1__}
 			 b_1 &=  - \frac{\sqrt{K}\sqrt{\sigma_{\Phi_{n,em}}^2 + \sigma_{\Phi_{n,DCO}}^2 + \sigma^2_{\Phi_{n_{BBPD}}} }}{\sqrt{2\pi}K_{DCO}} \\
 			 & = - \frac{\sqrt{K}\sqrt{ \sigma^2_{\Phi_{n_{em}}} +  S_{0_{osc}}\frac{\pi^2}{\sqrt{K}} + \sigma^2_{\phi_n}\frac{5\sqrt{K}}{4f_{ref}}\left(\frac{\pi}{2}-1\right)}  }{\sqrt{2\pi}K_{DCO}}
@@ -886,7 +886,7 @@ Application of the determined optimal parameters into equation \ref{eq:total_pn_
 % ################################################################################################
 % ################################################################################################
 
-\FloatBarrier {\color{white}.}
+% \FloatBarrier {\color{white}.}
 \FloatBarrier\pagebreak
 \section{DCO Design}\label{sec:dco_design}
 The digitally controlled oscillator of this work has been implemented via the digitization of a voltage controlled oscillator (VCO) using digital to analog converters (DACs).  The following sections will describe the implementation of a VCO, and the capacitive DACs used to digitize the VCO. 
@@ -1082,12 +1082,12 @@ The digitally controlled oscillator of this work has been implemented via the di
 		\begin{equation}
 			f_{osc} = \frac{\mu_nC_{ox}}{4\ln2NC}\left(\frac{W}{L}\right)_n\left[V_{DD}\left(\frac{7}{8\ln2}-1\right)-V_{t0}\left(\frac{1}{\ln2}-1\right) + \gamma V_{BS}\left(\frac{1}{\ln2}-1\right) \right]
 		\end{equation}
-		Equivalently, $f_{osc} = f_{0,osc} + \Delta f_{osc}(V_{BS})$, provided $f_{0,osc}$ is the frequency with no backgate bias where. Thus it is found that:
+		Equivalently, $f_{osc} = f_{0,osc} + \Delta f_{osc}(V_{BS})$, provided $f_{0,osc}$ is the frequency with no backgate bias. Thus it is found that:
 		\begin{equation}\label{eq:kvco_}
 			\Delta f_{osc}(V_{BS}) = \gamma V_{BS}\frac{\mu_nC_{ox}}{4\ln2NC}\left(\frac{W}{L}\right)_n\left[\frac{1}{\ln2}-1\right] = K_{VCO}
 		\end{equation}	
 
-		The important finding here is that the change in oscillator frequency is linear with backgate voltage, that is $\Delta f_{osc} \propto V_{BS}$. The expression of \ref{eq:kvco_} also happens to to be the oscillator VCO gain, $K_{VCO}$. Given the wide voltage range that FD-SOI backgates may be biased to, this implies that a highly linear VCO with wide input range may be implemented with backgate tuning. If the backgate voltage is constrained in the range [0, $V_{DD}$], the center frequency $f_c$ of such a VCO is then:
+		The important finding here is that the change in oscillator frequency is linear with backgate voltage, that is $\Delta f_{osc} \propto V_{BS}$. The expression of \ref{eq:kvco_} also happens to to be the VCO gain, $K_{VCO}$. Given the wide voltage range that FD-SOI backgates may be biased to, this implies that a highly linear VCO with a wide input range may be implemented with backgate tuning. If the backgate voltage is constrained in the range [0, $V_{DD}$], the center frequency $f_c$ of such a VCO is then:
 		\begin{equation}
 			f_{c} = \frac{\mu_nC_{ox}}{4\ln2NC}\left(\frac{W}{L}\right)_n\left[V_{DD}\left(\frac{7}{8\ln2}-1+\frac{\gamma}{2\ln2}-\frac{\gamma}{2}\right)-V_{t0}\left(\frac{1}{\ln2}-1\right)\right]
 		\end{equation}
@@ -1095,7 +1095,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 		\begin{equation}\label{eq:tuning_range}
 			\Delta f = \gamma V_{DD}\frac{\mu_nC_{ox}}{4\ln2NC}\left(\frac{W}{L}\right)_n\left[\frac{1}{\ln2}-1\right]
 		\end{equation}
-		Finally, the fractional tuning range of the oscillator found to be that of equation \ref{eq:frac_range}. Notice that this is only a function of supply voltage $V_{DD}$, nominal threshold voltage $V_{t0}$ and body effect coefficient $\gamma$.
+		Finally, the fractional tuning range of the oscillator is found to be that of equation \ref{eq:frac_range}. Notice that this is only a function of supply voltage $V_{DD}$, nominal threshold voltage $V_{t0}$ and body effect coefficient $\gamma$.
 		\begin{equation}\label{eq:frac_range}
 			\frac{\Delta f}{f_c} = \frac{\gamma V_{DD}\left( 1-\ln2 \right)}{V_{DD}\left(\frac{7}{8}-\ln2+\frac{\gamma}{2}-\frac{\gamma}{2}\ln2\right)-V_{t0}\left(1-\ln2\right)}
 		\end{equation}	
@@ -1139,9 +1139,9 @@ The digitally controlled oscillator of this work has been implemented via the di
 		\begin{equation}
 			S^{f_{osc}}_{V_{DD}} = \frac{\Delta f}{f_0}\cdot\frac{1}{\Delta V_{DD}}  = \frac{\left(\frac{7}{8\ln2}-1\right)}{V_{DD}\left(\frac{7}{8\ln2}-1\right)-V_{t0}\left(\frac{1}{\ln2}-1\right)}
 		\end{equation}
-		With $V_{DD}$ = 0.8, $V_{t0}$ = 0.3 (approximately true for the FD-SOI devices of this work), it is expected 340\% change in frequency will result per extra volt of applied bias. Of course, this is linearized, and one does not expect to apply an extra 1V of supply bias to a 0.8V oscillator. Realistically, the supply can be tuned $\pm$ 10\%, which corresponds to a $\pm$27.2\% tuning range of the oscillator. Supply tuning stands as a viable coarse tuning mechanism for the oscillator, however, fine tuning is more limited due to difficulty in achieving a small resolution step (e.g 10 bits in $V_{DD}$ = 0.8V $\pm$10\% corresponds to 156 $\mu$V/LSB, and 26 m\%/LSB of frequency tuning).
+		With $V_{DD}$ = 0.8, $V_{t0}$ = 0.3 (approximately true for the FD-SOI devices of this work), it is expected 340\% change in frequency will result per extra volt of applied bias. Of course, this is linearized, and one does not expect to apply an extra 1V of supply bias to a 0.8V oscillator. Realistically, the supply can be tuned $\pm$ 10\%, which corresponds to a $\pm$27.2\% tuning range of the oscillator. Supply tuning stands as a viable coarse tuning mechanism for the oscillator, however, fine tuning is more limited due to difficulty in achieving a small resolution step. For example, 10 bits within $V_{DD}$ = 0.8V $\pm$10\% in this work corresponds to 156 $\mu$V/LSB, and 26 m\%/LSB of frequency tuning.
 
-		\par In the case of backgate tuning, the change (proportion) of frequency per volt of applied backgate bias is:
+		\par In the case of backgate tuning, the change in proportion of frequency per volt of applied backgate bias is:
 		\begin{equation}
 			S^{f_{osc}}_{V_{BG}} = \frac{\Delta f}{f_0}\cdot\frac{1}{\Delta V_{BG}}  = \frac{\gamma \left(\frac{1}{\ln2}-1\right)}{V_{DD}\left(\frac{7}{8\ln2}-1\right)-V_{t0}\left(\frac{1}{\ln2}-1\right)}
 		\end{equation}
@@ -1151,7 +1151,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 		\begin{equation}
 			\frac{S^{f_{osc}}_{V_{DD}}}{S^{f_{osc}}_{V_{BG}}} =  \frac{\frac{7}{8\ln2}-1}{\gamma \left(\frac{1}{\ln2}-1\right)}
 		\end{equation}
-		Under the aforementioned biasing conditions, it is expected that 8.4x finer control can be achieved with backgate tuning per unit of applied bias. The wide backgate voltage ranges allowed for with FD-SOI technology furthermore permit for design of a voltage-DAC based control scheme which will achieve far smaller frequency resolution than with supply voltage tuning. Therefore, motivated by these findings, the pursuit of a backgate tuned ring oscillator has been undertaken in this work.
+		Under the aforementioned biasing conditions, it is expected that 8.4x finer control can be achieved with backgate tuning per unit of applied bias. The wide backgate voltage range allowed for with FD-SOI technology furthermore permits for design of a voltage-DAC based control scheme which will achieve far smaller frequency resolution than with supply voltage tuning. Therefore, motivated by these findings, the pursuit of a backgate tuned ring oscillator has been undertaken in this work.
 
 		% \subsubsection{Capacitor-based coase tuning scheme}
 		% It is observed that oscillator frequency of ring oscillator is capacitance dependent. Thus if a bank of quantized capacitances may be switched into the oscillator, coarse control of frequency can be implemented. Figure \ref{fig:rosc_tuning} demonstrates the effect of such a tuning scheme, for increasing capacitance settings C0-C3. Under such a scheme it is important to ensure that the frequency ranges acheived through backgate tuning overlap between successive capacitor settings to ensure continuity of frequencies accessible by the oscillator. 
@@ -1169,12 +1169,12 @@ The digitally controlled oscillator of this work has been implemented via the di
 		
 		\FloatBarrier\pagebreak
 		\subsection{Pseudodifferential Backgate-Coupled Inverter Delay Cell}\label{sec:pd_inv}
-		To utilize backgate tuning for frequency control, a suitable delay cell design must be devised. Accordingly, the delay topology used in this work has been derived from the FD-SOI pseudodifferential backgate coupled inverter delay cell of \cite{Jacquemod2019}, shown in figure \ref{fig:bg_inv_jacqu}. This inverter uses two single ended FD-SOI inverters, with the backgates of the transistors in a given inverter connected together. This is implemented with a common well structure below the two transistors of each inverter. Nominally, to avoid forward biasing of the well-substrate diodes, a N-doped well or a triple well is used, with well potentials constrained to be $\geq$ 0. The result of this well configuration and the FD-SOI BOX layer is that the backgate terminals of the PMOS and NMOS may be tuned in tandem across a wide positive voltage range. This is not possible in bulk technology. In the FD-SOI process used in this work, such well configurations allow biasing from 0 to +2V, which is inclusive of the full rail-to-rail range of a circuit supplied with $V_{DD}$ = 0.8V, as in this work. Thus, in figure \ref{fig:bg_inv_jacqu}, when the two FD-SOI sub-cells inverter cells connected with the shown cross-coupled output and backgate configuration, safe well biasing is achieved. The backgate cross-coupled configuration has the effect of inducing differential behavior in the circuit, as positive feedback is introduced. It should be noted that the cell of figure \ref{fig:bg_inv_jacqu} does not employ backgate-based tuning to tune cell delay. This work proposes a modification to the topology which implements both backgate differential coupling and backgate frequency (delay) tuning.
+		To utilize backgate tuning for frequency control, a suitable delay cell design must be devised. Accordingly, the delay topology used in this work has been derived from the FD-SOI pseudodifferential backgate coupled inverter delay cell of \cite{Jacquemod2019}, whose construction is shown in figure \ref{fig:bg_inv_jacqu}. This inverter uses two single ended FD-SOI inverters, with the backgates of the transistors in a given inverter connected together. This is implemented with a common well structure below the two transistors of each inverter. Nominally, to avoid forward biasing of the well-substrate diodes, a N-doped well (or a triple well) is used, with well potentials constrained to be $\geq$ 0. The result of this well configuration and the FD-SOI BOX layer is that the backgate terminals of the PMOS and NMOS may be tuned in tandem across a wide positive voltage range. This is not possible in bulk technology. In the FD-SOI process used in this work, such well configurations allow biasing from 0 to +2V, which is inclusive of the full rail-to-rail range of a circuit supplied with $V_{DD}$ = 0.8V, as in this work. Thus, in figure \ref{fig:bg_inv_jacqu}, when the two FD-SOI sub-cells inverter cells connected with the shown cross-coupled output and backgate configuration, safe well biasing is achieved. The backgate cross-coupled configuration has the effect of inducing differential behavior in the circuit, as positive feedback is introduced. It should be noted that the cell of figure \ref{fig:bg_inv_jacqu} does not employ backgate-based tuning to tune cell delay. This work proposes a modification to the topology which implements both backgate differential coupling and backgate frequency (delay) tuning.
 
 		\begin{figure}[htb!]
 		        \centering
-		        \includegraphics[width=0.58\textwidth, angle=0]{./figs/design/jacqu2-1-large.png}
-		    \caption{FD-SOI backgate-coupled inverter topology \cite{Jacquemod2019}.}
+		        \includegraphics[width=0.75\textwidth, angle=0]{./figs/design/pseudodiff_inv_xsection}
+		    \caption{FD-SOI backgate-coupled inverter topology.}
 		    \label{fig:bg_inv_jacqu}
 		\end{figure}	
 
@@ -1283,7 +1283,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 				K_{VCO, telescopic}^{'} = \frac{K_{VCO}}{R}
 			\end{equation}
 
-			These two topologies present different trade offs between frequency and achievable power. Inspecting equation \ref{eq:osc_pow_consumption}, it is seen that oscillator power consumption is proportional to device (W/L) used in the delay cells. For low power, low effective (W/L) is desirable. In the case of the parallel delay stage, an effective (W/L)$_{parallel}^{'}$ is arrived at by adding the device (W/L)'s of the cross-coupled and frequency tuning sub-inverters, yielding (W/L)$_{parallel}^{'}$ = (1+R)(W/L). In the telescopical case, assuming R=1, it is observed that to two FETs with size (W/L) cascaded have an effective (W/L)$_{tele}^{'}$ = 0.5(W/L). It is expected that minimum power attainable is achieved by utilizing the smallest available devices size in a technology, that is (W$_{min}$/L$_{min}$), with R=1. Comparing the telescopic and parallel cases, it is seen that (W/L)$_{parallel}^{'}$/(W/L)$_{tele}^{'}$ = 4, implying that the power consumption of the parallel stage can be presumed to be four times that of the series design with equal device sizes. In the case of this work, scaling of power is very important, and it has been found that the parallel topology was unable to achieve small enough $K_{VCO}$ needed in this work with satisfactory power consumption. This is due to the need to increase R to reduce $K_{VCO,parallel}^{'}$, which correspondingly increases power due to greater effective inverter width. Thus, a telescopic topology has been pursued in this work.
+			These two topologies present different trade offs between frequency and achievable power. Inspecting equation \ref{eq:osc_pow_consumption}, it is seen that oscillator power consumption is proportional to device (W/L) used in the delay cells. For low power, low effective (W/L) is desirable. In the case of the parallel delay stage, an effective (W/L)$_{parallel}^{'}$ is arrived at by adding the (W/L)'s of devices within the cross-coupled and frequency tuning sub-inverters, yielding (W/L)$_{parallel}^{'}$ = (1+R)(W/L). This assumes equal NMOS and PMOS devices. In the telescopical case, assuming R = 1, it is observed that to two FETs with size (W/L) cascaded have an effective (W/L)$_{tele}^{'}$ = 0.5(W/L). It is expected that minimum power attainable is achieved by utilizing the smallest available devices size in a technology, that is (W$_{min}$/L$_{min}$), with R = 1. Comparing the telescopic and parallel cases, it is seen that (W/L)$_{parallel}^{'}$/(W/L)$_{tele}^{'}$ = 4, implying that the power consumption of the parallel stage can be presumed to be four times that of the telescopic design with equal device sizes. In the case of this work, scaling of power is very important, and it has been found that the parallel topology was unable to achieve small enough $K_{VCO}$ needed in this work with satisfactory power consumption. This is due to the need to increase R to reduce $K_{VCO,parallel}^{'}$, which correspondingly increases power due to greater effective inverter width. Thus, a telescopic topology has been pursued in this work.
 
 			\begin{figure}[htb!]
 			        \centering
@@ -1295,9 +1295,10 @@ The digitally controlled oscillator of this work has been implemented via the di
 
 		% {\color{white}.}\FloatBarrier
 		% \subsubsection{Final Delay Circuit}
-	The final delay cell inverter topology employed in this work is shown in figure \ref{fig:delay_cell_pd_inv}, which is the previous telescopic topology with a modification to enable simultaneous fine and coarse tuning ranges. This modification is achieved with the addition of a second transistor to each the header and footer of the telescopic stage. Transistors M$_{1x}$ and M$_{5x}$ implement medium granularity tuning, and transistors M$_{2x}$ and M$_{6x}$ implement fine granularity tuning. Defining R = W$_{1x}$/W$_{2x}$ = W$_{5x}$/W$_{6x} >$ 1, tuning the parameter R can be utilized to provide different tuning gains for the two ranges with respect to the applied backgate biases. This topology has been arrived at due to the finding that with the DACs implemented in this work, it was not possible to simultaneously achieve a wide tuning range with satisfactorily small $K_{DCO}$ resolution with a single set of backgates. For sizing of devices, it is recommended to select a channel length selected based on the findings for FOM$_{jitter}$ versus channel length in section \ref{sec:chan_len_22fdx}, picking the longest channel length possible. Then, the width of all devices (set equal) should be varied until the target power is achieved. Finally, the header and footer device widths should be varied until satisfactory $K_{VCO}$ values are found for the delay cell topology. Achieving design goals with this topology may require several iterations with layout.
+	The final delay cell inverter topology employed in this work is shown in figure \ref{fig:delay_cell_pd_inv}, which is the previous telescopic topology with a modification to enable simultaneous fine and coarse tuning ranges. This modification is achieved with the addition of a second transistor to each the header and footer of the telescopic stage. Transistors M$_{1x}$ and M$_{5x}$ implement medium granularity tuning, and transistors M$_{2x}$ and M$_{6x}$ implement fine granularity tuning. Defining R = W$_{1x}$/W$_{2x}$ = W$_{5x}$/W$_{6x} >$ 1, tuning the parameter R can be utilized to provide different tuning gains for the two ranges with respect to the applied backgate biases. This topology has been arrived at due to the finding that with the DACs implemented in this work, it was not possible to simultaneously achieve a wide tuning range with satisfactorily small $K_{DCO}$ resolution with a single set of backgates. For sizing of devices, it is recommended to select a channel length based on the findings for FOM$_{jitter}$ versus channel length in section \ref{sec:chan_len_22fdx}, picking the longest channel length possible. Then, the width of all devices (set equal) should be varied until the target power is achieved. Finally, the header and footer device widths should be varied until satisfactory $K_{VCO}$ values are found for the delay cell topology. Achieving design goals with this topology may require several iterations with layout.
 
 	{\color{white}.}\FloatBarrier
+	\vspace{-1em}
 	\subsection{Oscillator Implementation}
 	\subsubsection{Number of Ring Oscillator Stages}\label{sec:num_stages}
 	In the process of simulating the proposed delay cell in the 22nm FD-SOI technology, it has been determined that a two stage differential ring oscillator, generating in-phase and quadrature phase signals, will not oscillate. With a delay stage propagation time of $t_{pd}$, the cycle period is $1/f_{osc} = 2Nt_{pd}$, where in this case the number of stages $N$ = 2. Every node is expected to switch two times per cycle, therefore it is determined that the switching period of a given node is equal to $2t_{pd}$. Previously, it has been determined that the propagation delay for the RC dominated ring oscillator is $\ln(2)\tau$, resulting in a switching period of $2\ln(2)\tau$. If the oscillator swings from 0 to $V_{DD}$ with exponential dependence, in a time period of $2\ln(2)\tau$, a change of 0.75$V_{DD}$ is expected at the oscillator nodes. This implies that a two stage ring oscillator will not fully saturate to the rails, and therefore results in an extinction of oscillation as seen via simulation. Originally, it was planned to implement a two-stage quadrature VCO at 2.448 GHz, however due to the infeasibility of this, alternative configurations were attempted. First was a 4-stage oscillator at 2.448 GHz, however, it was seen that it was not possible to achieve the desired power and phase noise requirements with the proposed telescopic backgate-coupled delay cell in the 22nm FD-SOI process used. Thus, another alternative, being a subharmonic oscillator operating at 1/3 of 2.448 GHz was considered. This was implemented as a 6-stage differential ring oscillator, as shown in figure \ref{fig:basic_6stg_ro}, which oscillates at 816 MHz. With 6 differential stages, 12 oscillator phases are created, and it is possible to derive a quadrature 2.448 GHz sampling clock by combining with digital logic the different 816 MHz oscillator phases, as shown in figure \ref{fig:ro_phases}. With this topology, it was found to be feasible to implement a 816 MHz, 6-stage oscillator in 22nm FD-SOI that meets power and phase noise requirements defined for the design.
@@ -1305,7 +1306,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/design/ro_6st_simple}
+			        \includegraphics[width=0.75\textwidth, angle=0]{./figs/design/ro_6st_simple}
 			    \caption{Basic differential ring oscillator circuit.}
 			    \label{fig:basic_6stg_ro}
 			\end{figure}
@@ -1437,7 +1438,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 
 	\FloatBarrier\pagebreak
 	\subsection{Digitizing the VCO}
-	In order to implement a DCO, the VCO core designed in this work (see figure \ref{fig:full_6sg_ro}), must be connected to a set of digital to analog converters (DACs). The oscillator topology implemented requires complementary (differential) generation of backgate biasing voltages in order to tune frequency, as seen in figure \ref{fig:bg_tuning_scheme}. Differential generation is necessary in order to tune both delay cell NMOS and PMOS device threshold voltages simultaneously with the same effect. This is because in an inverter configuration, NMOS devices see reduction in $V_{TH}$ with \textit{increasing} backgate bias relative to ground, while PMOS devices see reduction in $V_{TH}$ with \textit{decreasing} backgate bias relative to ground, i.e. they are complementary. The oscillator core has two differential sets of tuning connections, one each for fine and medium tuning ranges, so accordingly two differential DACs must be used to digitize the VCO. The base DAC design implemented in this work is single ended, so the scheme demonstrated in figure \ref{fig:se_to_diff_cdac} is applied with two single ended DACs to implement a differential DAC. The design of the individual DACs is described in the following sections, employing a capacitive DAC (CDAC) topology.
+	In order to implement a DCO, the VCO core designed in this work (see figure \ref{fig:full_6sg_ro}) must be connected to a set of digital to analog converters (DACs). The oscillator topology implemented requires complementary (differential) generation of backgate biasing voltages in order to tune frequency, as seen in figure \ref{fig:bg_tuning_scheme}. Differential generation is necessary in order to tune both delay cell NMOS and PMOS device threshold voltages simultaneously with the same effect. This is because in an inverter configuration, NMOS devices see reduction in $V_{TH}$ with \textit{increasing} backgate bias relative to ground, while PMOS devices see reduction in $V_{TH}$ with \textit{decreasing} backgate bias relative to ground, i.e. they are complementary. The oscillator core has two differential sets of tuning connections, one each for fine and medium tuning ranges, so accordingly two differential DACs must be used to digitize the VCO. The base DAC design implemented in this work is single ended, so the scheme demonstrated in figure \ref{fig:se_to_diff_cdac} is applied with two single ended DACs to implement a differential DAC. The design of the individual DACs is described in the following sections, employing a capacitive DAC (CDAC) topology.
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -1457,7 +1458,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 	    \caption{\textbf{(a)} Differential DAC implemented from two single ended CDACs, \textbf{(b)} Output voltages versus input code.}
 	\end{figure}
 
-	Using the differential DACs, the DCO is implemented as in figure \ref{fig:dco_block}. A $\textnormal{N}_{med}$-bit differential CDAC is used for medium frequency tuning, and a $\textnormal{N}_{fine}$-bit differential CDAC is used for fine frequency tuning. Both tuning ranges are controlled by the same DCO control word, where the fine CDAC is connected to the lowest $\textnormal{N}_{fine}$-bits of the input (loop filter output), and the medium DAC is connected to the next $\textnormal{N}_{med}$-bits. Figure \ref{fig:tuning_dco} illustrates the frequency tuning versus DCO control code characteristic, where it is expected there will be discontinuities observed for when the medium DAC output changes. With process, voltage and temperature variation, it should not expected that a perfectly linear DCO code-frequency trend exists with the divided medium and fine tuning range approach. Rather, it is safest to engineer the $K_{VCO}$ of the tuning ranges and the DAC resolution such that all medium settings result in overlapping frequency ranges with the adjacent medium tuning codes, so that there are no gaps in frequency. Ideally, the overlap $\Delta f_{OL}$ should much be larger than the expected RMS variation of the loop filter output while the PLL is in steady state. This ensures that a stable position for all frequencies in the tuning range exists, such that the PLL may stay locked in steady state without significant probability of the DCO code from hitting a discontinuity (possibly resulting in loss of lock).
+	Using the differential DACs, the DCO is implemented as in figure \ref{fig:dco_block}. A $\textnormal{N}_{med}$ bit differential CDAC is used for medium frequency tuning, and a $\textnormal{N}_{fine}$ bit differential CDAC is used for fine frequency tuning. Both tuning ranges are controlled by the same DCO control word, where the fine CDAC is connected to the lowest $\textnormal{N}_{fine}$ bits of the input (loop filter output), and the medium DAC is connected to the next $\textnormal{N}_{med}$ bits. Figure \ref{fig:tuning_dco} illustrates the frequency tuning versus DCO control code characteristic, where it is expected there will be discontinuities observed for when the medium DAC output changes. With process, voltage and temperature variation, it should not be expected that a perfectly linear DCO code-frequency trend exists with the divided medium and fine tuning range approach. Rather, it is safest to engineer the $K_{VCO}$ of the tuning ranges and the DAC resolution such that all medium settings result in overlapping frequency ranges with the adjacent medium tuning codes, so that there are no gaps in frequency. Ideally, the overlap $\Delta f_{OL}$ should much be larger than the expected RMS variation of the loop filter output while the PLL is in steady state. This ensures that a stable position for all frequencies in the tuning range exists, such that the PLL may stay locked in steady state without significant probability of the DCO code from hitting a discontinuity (possibly resulting in loss of lock).
 
 
 	\begin{figure}[htb!]
@@ -1522,7 +1523,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 	\begin{equation}\label{eq:dac_constraint}
 		|b_0+b_1| = \frac{\sqrt{K}}{2f_{ref}} \geq 1
 	\end{equation}
-	Applying this to the filter coefficients in the case of the bang-bang emergent phase noise optimized PLL (equations \ref{eq:b0_bb} and \ref{eq:b1_bb}), results in the constraint for $K_{DCO}$ in equations  \ref{eq:dac_constraint2} and \ref{eq:kdco_constraint}.
+	Applying this to the filter coefficients in the case of the bang-bang emergent phase noise optimized PLL (equations \ref{eq:b0_bb} and \ref{eq:b1_bb}) results in the constraint for $K_{DCO}$ in equations  \ref{eq:dac_constraint2} and \ref{eq:kdco_constraint}.
 	\begin{equation}\label{eq:dac_constraint2}
 		|b_0+b_1| = \frac{\pi\alpha_{opt}^2\sqrt{74.79376\cdot2\pi S_{0_{osc}} f_{ref}}}{K_{DCO}(3+\sqrt{10})} = 0.07924138\cdot \frac{ \sqrt{S_{0_{osc}} f_{ref}}}{K_{DCO}} \geq 1
 	\end{equation}
@@ -1537,14 +1538,14 @@ The digitally controlled oscillator of this work has been implemented via the di
 	\begin{equation}\label{eq:kdco_kvco}
 		K_{DCO} = \frac{V_{DD}K_{VCO}}{2^N}
 	\end{equation}
-	Combining \ref{eq:kdco_constraint} and \ref{eq:kdco_kvco} result in an expression for minimum number of DAC bits (using rail to rail reference levels), given in equation \ref{eq:min_dac_bits}.
+	Combining \ref{eq:kdco_constraint} and \ref{eq:kdco_kvco} result in an expression for minimum number of DAC bits (using rail-to-rail reference levels), given in equation \ref{eq:min_dac_bits}.
 	\begin{equation}\label{eq:min_dac_bits}
 		N_{min} = \left\lceil \log_2\left( \frac{V_{DD}K_{VCO}}{0.07924138\sqrt{S_{0_{osc}} f_{ref}}} \right)\right\rceil
 	\end{equation}
 	Using the values $S_{0_{osc}} = \mathcal{L}(f)\cdot f^2$ = 1389 (derived from the implemented oscillator phase noise FOM value of -159 dB), $K_{VCO}$ = 5.529 kHz/mV obtained from phase noise simulation of the oscillator, $f_{ref}$ = 16 MHz, $V_{DD}$ = 0.8, the resulting minimum number of bits is $N_{min}$ = 9 bits.  A 10 bit CDAC for fine tuning was implemented, given sufficient area was available for doing so. The extra bit of resolution will result in lower quantization noise added into the system by the DAC.
 
 		\subsubsection{Circuit}
-		It was attempted to maximize capacitance for a 10 bit DAC in an area constrained to roughly 50 $\mu$m x 15 $\mu$m (arrived at from the target PLL floor plan). MOM capacitors with 2.185 fF per unit were achieved with a unit cell of dimension 3$\mu$m x 200 nm, using 4 metal layers to form the capacitor. The total DAC capacitance is 2.24 pF, and the implementation area is 52 $\mu$m x 16 $\mu$m. The simulation results for this CDAC are in the results section \ref{sec:res_cdac_10b}.
+		The capacitive DAC was implemented using the circuit of figure \ref{fig:10b_cdac_cir}, which is in effect a reconfigurable capacitive voltage divider. It was attempted to maximize the total capacitance for the 10 bit CDAC with an area constrained to roughly 50 $\mu$m x 15 $\mu$m (arrived at from the target PLL floor plan). MOM capacitors with 2.185 fF per unit capacitor C$_0$ were implemented, with the total DAC capacitance being 2.24 pF. All transistors were implemented with (W/L) = 200n/20n, with RVT devices. A DAC reset scheme was devised which shorts both sides of all capacitors to ground when asserted, resetting the capacitor charges. The simulation results for this CDAC are in the results section \ref{sec:res_cdac_10b}.
 	
 			\begin{figure}[htb!]
 			        \centering
@@ -1554,7 +1555,7 @@ The digitally controlled oscillator of this work has been implemented via the di
 			\end{figure}
 
 		\subsubsection{Layout}
-		The CDAC Layout was performed similar to the CDAC in the successive-approximation ADC of \cite{Wulff2017}, where the capacitors are metal-oxide-metal (MOM) capacitors formed using the metal layers of the process. A single unit capacitor, here 200 nm x 3 $\mu$m, occupying four metal layers, is repeated to form a bank of 64 capacitors, as in figure \ref{fig:lay_capbank_}. These capacitors have a common terminal, one free terminal, and a unit capacitance C. Seven bus wires running beneath the capacitor bank and are connected with vias to the capacitors as shown in figure \ref{fig:lay_capbank_}, such that parallel combinations of \{1C, 1C, 2C, 4C, 8C, 16C, and 32C\} are formed. To form the 10b CDAC, 16 of the 64-unit capacitor banks are combined as in figure \ref{fig:lay_cdac_unit}, with the necessary switches and routing. In total, 1024 unit capacitors are implemented in the full 10b CDAC design. The full set of layout images are in appendix \ref{sec:lay_cdac_10b}.
+		The CDAC layout was performed similar to the CDAC in the successive-approximation ADC of \cite{Wulff2017}, where the capacitors are metal-oxide-metal (MOM) capacitors formed using the metal layers of the process. A single unit capacitor, here 200 nm x 3 $\mu$m, occupying four metal layers, is repeated to form a bank of 64 capacitors, as in figure \ref{fig:lay_capbank_}. These capacitors have a common terminal, one free terminal, and a unit capacitance C. Seven bus wires running beneath the capacitor bank and are connected with vias to the capacitors as shown in figure \ref{fig:lay_capbank_}, such that parallel combinations of \{1C, 1C, 2C, 4C, 8C, 16C, and 32C\} are formed. To form the 10b CDAC, 16 of the 64-unit capacitor banks are combined as in figure \ref{fig:lay_cdac_unit}, with the necessary switches and routing. In total, 1024 unit capacitors are implemented in the full 10b CDAC design. The full set of layout images are in appendix \ref{sec:lay_cdac_10b}.
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -1577,35 +1578,36 @@ The digitally controlled oscillator of this work has been implemented via the di
 
 	\FloatBarrier
 	\subsection{CDAC - Medium Range}
-	Using the result of equation \ref{eq:nmedbits}, the selection of a 10-bit fine CDAC, $K_{VCO,med}$ = 39.76 kHz/mV, and $K_{VCO,fine}$ = 5.529 kHz/mV, it is determined that at least 3 DAC bits are needed to provide satisfactory overlap of the DCO frequency ranges achieved through medium DAC tuning.
+	Using the result of equation \ref{eq:nmedbits}, the selection of a 10-bit fine CDAC, $K_{VCO,med}$ = 39.76 kHz/mV, and $K_{VCO,fine}$ = 5.529 kHz/mV, it is determined that at least 3 DAC bits are needed to provide satisfactory overlap of the DCO frequency ranges to be achieved through medium DAC tuning.
 	%  Consideration of selection of the medium tuning range DAC should also be cordinated with the fine range to provide continuity of tuning gain linearity. Both tuning ranges are operated in steady state mode from the loop filter output, where if the fine CDAC is $N_{fine}$ bits, and the medium CDAC is $N_{med}$ bits, the fine CDAC is connected to the lowest $N_{fine}$ bits of the loop filter output, and the medium DAC is connected to the next $N_{med}$ bits. The $K_{DCO}$ granularity of the medium range LSB must be larger than that of the MSB for the fine range, but smaller than that total range of the fine range. The inequality in equation \ref{eq:3b_cdac_ineq} determines the range of bits which those criteria are satisfied.
 	% \begin{equation}\label{eq:3b_cdac_ineq}
 	% 	\log_2\left( \frac{K_{VCO,med}}{K_{VCO,fine}}\right) \leq N \leq \log_2\left( \frac{2K_{VCO,med}}{K_{VCO,fine}}\right)
 	% \end{equation}
 	% For the implemented oscillator, $K_{VCO,med}$ = 30.92 kHz/mV, and $K_{VCO,fine}$ = 5.378 kHz/mV. Thus the acceptable range of bits is 2.52 $\leq$ N $\leq$ 3.52. Therefore, the number of bits for the medium DAC is 3 bits.
 		\subsubsection{Circuit}
-		The unit capacitance implemented is 249 fF/capacitor, yielding 2 pF total capacitance. The size of the unit capacitor was selected to make the total capacitance near that of the 10b CDAC. The simulation results for this CDAC are in the results section \ref{sec:res_cdac_3b}, and the layout in appendix \ref{sec:lay_cdac_3b}.
+		The implemented circuit is in figure \ref{fig:3b_cdac_cir}, being the same topology as the 10 bit CDAC. The unit capacitance C$_0$ here is 249 fF/capacitor, yielding 2 pF total capacitance. The size of the unit capacitor was selected to make the total capacitance near that of the 10b CDAC. The simulation results for this CDAC are in the results section \ref{sec:res_cdac_3b}, and the layout in appendix \ref{sec:lay_cdac_3b}.
 			\begin{figure}[htb!]
 			        \centering
-			        \includegraphics[width=0.8\textwidth, angle=0]{./figs/design/cdac_3b}
+			        \includegraphics[width=0.75\textwidth, angle=0]{./figs/design/cdac_3b}
 			    \caption{3b CDAC.}
 			    \label{fig:3b_cdac_cir}
 			\end{figure}
 		% \subsubsection{Layout}
 
 	\FloatBarrier
+	\vspace{-1em}
 	\subsection{Coordinated VCO and DAC Reset}
-	When starting the PLL, the VCO and DACs must be reset to a known state for deterministic locking to occur with the BBPD. Importantly, the oscillator must begin from a zeroed phase state, synchronous with a clock edge at its start. In this work, these resets are implemented in a synchronous manner, triggered by an external reset signal. The implemented reset sequence requires four reference cycles, and is illustrated in figure \ref{fig:dco_dac_rst}. The below description provides details on the individual steps of the reset sequence.
+	When starting the PLL, the VCO and DACs must be reset to a predictable state for deterministic locking to occur with the BBPD. Importantly, the oscillator must begin from a zeroed phase state, aligned with a clock edge at its start. In this work, these resets are implemented in a synchronous manner, triggered by an external reset signal. The implemented reset sequence requires four reference cycles, and is illustrated in figure \ref{fig:dco_dac_rst}. The below description provides details on the individual steps of the reset sequence.
 \begin{enumerate}[itemsep=0pt,label=\protect\mycirc{\arabic*}]
 	\setlength\itemsep{-0.8em}
-	\item Assert DCO and DAC reset when external \textbf{rst} signal asserted.
+	\item Assert VCO and DAC reset when external \textbf{rst} signal asserted.
 	\item De-asset DAC reset so DAC outputs can settle before starting the oscillator. 
 	\item Start oscillator (synchronized with clock edge), wait one cycle before taking BBPD sample, do not update loop filter.
 	\item Take BBPD sample, do not update loop filter.
 \end{enumerate}
-After the four reset cycles, the PLL enters normal operation where the BBPD is continually sampled and the loop filter is continually updated. This reset scheme is implemented in the loop filter hardware description of appendix \ref{sim_code2}.
+After the four reset cycles, the PLL enters normal operation where the BBPD is continually sampled and the loop filter is continually updated. This reset scheme is implemented in the loop filter Verilog hardware description of appendix \ref{sec:lf_verilog}, which has been hardened into digital logic in the physical PLL design. 
 	\begin{figure}[htb!]
-	    \center\includegraphics[width=0.75\textwidth, angle=0]{figs/design/dco_dac_rst}
+	    \center\includegraphics[width=0.70\textwidth, angle=0]{figs/design/rst_vco_dac}
 	    \caption{DCO reset scheme.}
 	    \label{fig:dco_dac_rst}
 	\end{figure}
@@ -1616,7 +1618,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 	\FloatBarrier
 	\vspace{-2em}
 	\subsection{Output Buffer}\label{sec:buffer}
-		Without a buffer, the frequency of the ring oscillator becomes external load dependent. Furthermore, as the output of the ring oscillator is rather slow in terms of edge time, this can result in issues with voltage-to-phase noise conversion. Thus, a buffered PLL output is beneficial to the PLL operation. Analyzing the voltage-to-phase conversion, the frequency of the oscillator is first defined as in equation \ref{eq:osc_freq_buff} (from equation \ref{eq:ro_osc_freq}), where $N$ is the stage count, $t_{pd}$ is the stage propagation delay, and $\tau$ is the RC time constant of a stage. 
+		Without a buffer, the frequency of the ring oscillator becomes external load dependent. Furthermore, as the output of the ring oscillator is rather slow in terms of edge time, this can result in issues with voltage-to-phase noise conversion. Thus, a buffered PLL output is beneficial to the PLL operation. Analyzing the voltage-to-phase noise conversion, the frequency of the oscillator is first defined as in equation \ref{eq:osc_freq_buff} (from equation \ref{eq:ro_osc_freq}), where $N$ is the stage count, $t_{pd}$ is the stage propagation delay, and $\tau$ is the RC time constant of a stage. 
 		\begin{equation}\label{eq:osc_freq_buff}
 			f_{osc} = \frac{1}{2N t_{pd}} = \frac{1}{2\ln(2)N \tau}
 		\end{equation}
@@ -1624,7 +1626,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 		\begin{equation}\label{eq:rt_osc_buff}
 			t_{10-90} = 2.2\tau =  \frac{2.2}{2\ln(2)N f_{osc}}
 		\end{equation}		
-		With a supply voltage of $V_{DD}$, the transient waveform (single-ended) for a positive transition of the oscillator is in equation \ref{eq:pos_trans}.
+		With a supply voltage of $V_{DD}$, the transient waveform (single-ended) for a rising-edge transition of the oscillator is in equation \ref{eq:pos_trans}.
 		\begin{equation}\label{eq:pos_trans}
 			V(t) =V_{DD}\left( 1 - e^{-t/\tau} \right)
 		\end{equation}		
@@ -1642,7 +1644,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 			\begin{equation}\label{eq:vnoise_to_pnoise}
 					\sigma_{\Phi_{CM}} = 2\pi f_{osc}\left(\left.\frac{dV}{dt}\right|_{V_{CM}}\right)^{-1}\sigma_{V_{CM}} = \frac{2\pi}{V_{DD}\ln(2)N} 
 			\end{equation}
-		In the case of this work, where $V_{DD}$ = 0.8V and N = 6 stages, 1 mV of RMS noise converts to 1.89 mrad RMS of phase noise. It is expected that supply noise can be a significant contributor to voltage noise seen on the internal oscillator nodes. To reduce supply coupling to phase noise, the pseudodifferential buffer circuit of figure \ref{fig:pd_buffer_circuit} is implemented as it provides some advantages in terms of suppressing common mode noise present on the oscillator nodes. This circuit is identical to the backgate-coupled pseudodifferential inverter topology considered in section \ref{sec:pd_inv}. Using the common mode gain $A_{CM}$ in equation \ref{eq:pd_cm_gain}, and the differential mode gain $A_{DM}$ for this circuit in equation \ref{eq:pd_dm_gain2}, the common mode rejection ratio (CMRR) of this circuit can be defined as in equation \ref{eq:cmrr}. With proper selection of parameters, CMRR can be much greater than unity. Supply noise is expected to be manifested as a common mode component on the oscillator nodes (i.e. the input nodes of the differential buffer), so a CMRR greater than unity would imply that the buffer circuit can help suppress the supply noise, resulting in lower phase noise on the buffered outputs versus a non-differential buffer circuit.
+		In the case of this work, where $V_{DD}$ = 0.8V and N = 6 stages, 1 mV of RMS noise converts to 1.89 mrad RMS of phase noise. It is expected that supply noise can be a significant contributor to voltage noise seen on the internal oscillator nodes. To reduce supply coupling to phase noise, the pseudodifferential buffer circuit of figure \ref{fig:pd_buffer_circuit} is implemented as it provides some advantages in terms of suppressing common mode noise present on the oscillator nodes. This circuit is identical to the backgate-coupled pseudodifferential inverter topology considered in section \ref{sec:pd_inv}. Using the common mode gain $A_{CM}$ in equation \ref{eq:pd_cm_gain}, and the differential mode gain $A_{DM}$ for this circuit in equation \ref{eq:pd_dm_gain2}, the common mode rejection ratio (CMRR) of this circuit can be defined as in equation \ref{eq:cmrr}. With proper selection of parameters, CMRR can be much greater than unity. Supply noise is expected to be manifested as a common mode component on the oscillator nodes (i.e. the input nodes of the differential buffer), so a CMRR greater than unity would imply that the buffer circuit can help suppress the common mode supply noise component, resulting in lower phase noise on the buffered outputs versus using a non-differentially buffered circuit.
 				\begin{equation}\label{eq:cmrr}
 					CMRR = \left|\frac{1+\gamma G_m R_o}{1-\gamma G_m R_o}\right|
 				\end{equation}
@@ -1650,7 +1652,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 
 		
 		\subsubsection{Circuit}
-		The implemented buffer circuit is shown in figure \ref{fig:pd_buffer_circuit}. All devices are (W/L) = 200n/20n, with LVTNMOS devices and RVTPMOS devices to allow for the usage of a common N-wells to form the common backgates for the sub-inverters. The layout of this buffer in appendix \ref{sec:lay_buff}.
+		The implemented buffer circuit is shown in figure \ref{fig:pd_buffer_circuit}. All devices are (W/L) = 200n/20n, with LVTNMOS devices and RVTPMOS devices to allow for the usage of a common N-wells to form the common backgates for the sub-inverters. The layout of this buffer is in appendix \ref{sec:lay_buff}.
 			\begin{figure}[htb!]
 			        \centering
 			        \includegraphics[width=0.4\textwidth, angle=0]{./figs/design/pseudiff_buffer}
@@ -1782,7 +1784,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 
 		\vspace{-1em}
 		\subsubsection{Circuit}
-			The implemented level shifter is a standard low to high voltage domain latch based shifter \cite{weste_harris_2011} shown in figure \ref{fig:level_shifter}. All device dimensions are (W/L) = 200n/20n in RVT technology. The layout for this cell is provided in appendix \ref{sec:lay_ls}.
+			The implemented level shifter is a standard low to high voltage domain latch-based shifter \cite{weste_harris_2011} shown in figure \ref{fig:level_shifter}. All device dimensions are (W/L) = 200n/20n in RVT technology. The layout for this cell is provided in appendix \ref{sec:lay_ls}.
 			
 			\vspace{-0.5em}
 			\begin{figure}[htb!]
@@ -1803,7 +1805,7 @@ After the four reset cycles, the PLL enters normal operation where the BBPD is c
 
 	\section{Behavioral Verification of Loop Filter/PLL}\label{behav_sim}
 
-		Using the extracted design parameters for ring oscillator phase noise, $K_{VCO}$, BBPD jitter (see results section, \ref{results}), and the proposed loop filter and DAC design methods, a behavioral discrete-time simulation of the PLL design was performed using a simulation framework \cite{Me} developed by the author of this work. The PLL simulation model used accurately allows for jitter and nonlinearity of the BBPD to be captured, as well as effects of quantization in the loop filter.  This time domain simulation acts as a check for the loop filter design from the linearized filter optimization theory to be verified. Furthermore, this simulation allows for verification of PLL phase noise performance of the design at an ideal level first on short time scales before attempting a full transistor level PLL simulation. Figure \ref{fig:behav_sim_psd} demonstrates the simulated and theoretically estimated power spectral density obtained for the PLL design, and table \ref{behav_simulation_results} contains results for theoretical and simulated PLL jitter values, along with an estimated lock time. In general, the theoretical and simulated values show close agreeance, implying the linearized model of the BBPD-PLL and associated optimization theory developed in this work holds validity in the regime tested. Furthermore, the obtained values for RMS PLL jitter are below the value of 20.56 ps specified as a requirement for this design, suggesting that the phase noise requirements will be satisfied if the design is successfully translated into a transistor level implementation.
+		Using the extracted design parameters for ring oscillator phase noise, $K_{VCO}$, BBPD jitter (see results section, \ref{results}), and the proposed loop filter and DAC design methods, a behavioral discrete-time simulation of the PLL design was performed using a simulation framework \cite{Me} developed by the author of this work. The PLL simulation model used accurately allows for jitter and nonlinearity of the BBPD to be captured, as well as effects of quantization in the loop filter.  This time domain simulation acts as a check for the loop filter design from the linearized filter optimization theory to be verified. Furthermore, this simulation allows for verification of PLL phase noise performance of the design at an ideal level first on short time scales before attempting a full transistor level PLL simulation. Figure \ref{fig:behav_sim_psd} demonstrates the simulated and theoretically estimated power spectral density obtained for the PLL design, and table \ref{behav_simulation_results} contains results for theoretical and simulated PLL jitter values, along with an estimated lock time. In general, the theoretical and simulated values show close agreement, implying the linearized model of the BBPD-PLL and associated optimization theory developed in this work holds validity in the regime tested. Furthermore, the obtained values for RMS PLL jitter are below the value of 20.56 ps specified as a requirement for this design, suggesting that the phase noise requirements will be satisfied if the design is successfully translated into a transistor level implementation.
 
 
 		% Figures \ref{fig:trans_lf_fast} and \ref{fig:trans_inst_freq_fast} demonstrate transient start up of the PLL with an initial frequency error of X\% (X MHz), which is the worst case expectation here. Figure \ref{fig:trans_det_fast} shows the output of the sychronous counter and BBPD. Lock is achieved at X $\mu$s. The computed phase noise spectrum is in figure \ref{fig:trans_phase_noise_fast}.

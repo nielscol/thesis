@@ -1,6 +1,7 @@
 The following sections provide system and component level performance results of the implemented PLL based from parasitic extracted transistor level simulations of the design.
 \subsection{Power Breakdown}
 \vspace{-1em}
+The power consumption of the PLL is dominated by the oscillator and buffer, accounting for 76.4\% and 19.1\% of the total respectively as seen in figure \ref{fig:pow_bkdn} and table \ref{tab:power_bkdn}. The remaining portions of the PLL only account for a very small portion of the power consumption, being 4.6\%, implying a high energy efficiency of those components.
 \FloatBarrier
 \begin{figure}[htb!]
 	\begin{floatrow}
@@ -18,17 +19,19 @@ The following sections provide system and component level performance results of
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Power [$\mu$W]} & \cellcolor{gray!40}\textbf{\% of Total}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO + Buffer} &  90.62 & 95.4 \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Oscillator} &  72.24 & 76.4 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} & 0.071 &  $<$ 0.01  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Buffer} &  18.03 & 19.1 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1.33 &  1.40  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{3b CDAC} & 0.071 &  0.1  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  0.462 &  0.49  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{10b CDAC} &  1.33 &  1.4  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  2.51 &  2.64  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  0.390 &  0.4  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  95.0 &  100  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  2.51 &  2.7  \\ 
+				\hline 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  \textbf{94.571} &  \textbf{100}  \\ 
 				\hline 
 			\end{tabular} 
 	}{%
@@ -41,6 +44,7 @@ The following sections provide system and component level performance results of
 \FloatBarrier
 \vspace{-3em}
 \subsection{Area Breakdown}
+The area of the implemented PLL is dominated by the contributions from the differential 3b and 10b CDACs, accounting for a total of 64.2\% of the active area as seen in figure \ref{fig:area_bkdn} and table \ref{tab:area_bkdn}. This high proportion is due to the implementation of four single ended CDACs in total, requiring a large area. Routing and emtpy space outsize of the DACs, oscillator, logic and BBPD account for just 14.1\% of the area, indicating a dense layout. 
 \vspace{-1em}
 \begin{figure}[htb!]
 	\begin{floatrow}
@@ -58,19 +62,19 @@ The following sections provide system and component level performance results of
 				\hline 
 				\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Component} & \cellcolor{gray!40}\textbf{Area [$\mu$m$^2$]} & \cellcolor{gray!40}\textbf{\% of Total}\\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO + Buffer} &  177.1 & 4.85 \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{VCO + Buffer} &  177.1 & 4.9 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 3b CDAC} &  735.0 &  20.14 \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{3b CDAC} &  735.0 &  20.1 \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{2x 10b CDAC} &  1607.7 &  44.05  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{10b CDAC} &  1607.7 &  44.1  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  5.31 &  0.15  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{BBPD} &  5.31 &  0.1  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  610.2 &  16.72  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Logic} &  610.2 &  16.7  \\ 
 				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Other/routing} &  514.7 &  14.10  \\ 
-				\hline 
-				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  3650 &  100  \\ 
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Other/routing} &  514.7 &  14.1  \\ 
+				\hline
+				\rule[-1ex]{0pt}{2.5ex} \textbf{Total} &  \textbf{3650} &  \textbf{100}  \\ 
 				\hline 
 			\end{tabular} 
 	}{%
@@ -85,7 +89,7 @@ The following sections provide system and component level performance results of
 
 
 \subsection{PLL Phase Noise}
-
+The single sideband phase noise power spectral density of the implemented PLL is in figure \ref{fig:sim_pll_psd}. A histogram of absolute jitter of the simulated PLL is in figure \ref{fig:pll_jit_hist}. A result for RMS integrated jitter of the PLL is in table \ref{tab:pll_pn_jit_vals}, with additionally a calculated jitter FOM value using the power results in table \ref{tab:power_bkdn}.
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -139,9 +143,10 @@ The following sections provide system and component level performance results of
 
 \FloatBarrier
 \subsection{Voltage Controlled Oscillator}\label{sec:ro_results}
-
+Results regarding phase noise, tuning and Monte Carlo variational analysis of the implemented voltage controlled oscillator are in this section.
 
 	\subsubsection{Oscillator Phase Noise}
+	The simulated single sideband phase noise power spectral density of the implemented voltage controlled oscillator is in figure \ref{fig:ro_pnoise}, with lines fitted to the -30 dB/decade and -20 dB/decade regions of the phase noise. Table \ref{tab:ro_perf} provide extracted values for phase noise FOM of the PLL (see equation \ref{eq:fom_pn}) for phase noise offsets of 1 MHz and 10 MHz from the carrier, and a measured value for the flicker noise corner frequency. The corner frequency is rather high, at 2 MHz, and results in the 1 MHz FOM value to be degraded by 4.16 dB versus the 10 MHz measurement.
 		\begin{figure}[htb!]
 			\begin{floatrow}
 			\ffigbox{%
@@ -158,7 +163,9 @@ The following sections provide system and component level performance results of
 					\hline 
 					\rule[-1ex]{0pt}{2.5ex} \cellcolor{gray!40}\textbf{Parameter} & \cellcolor{gray!40}\textbf{Value} & \cellcolor{gray!40}\textbf{Units}\\ 
 					\hline 
-					\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_{pn}$} & -158.9 & dB  \\ 
+					\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_{pn}$}, $\Delta f $ = 1 MHz & -160.4 & dB  \\ 
+					\hline 
+					\rule[-1ex]{0pt}{2.5ex} \textbf{FOM$_{pn}$} $\Delta f, $ = 10 MHz& -164.56 & dB  \\ 
 					\hline 
 					% \rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
 					% \hline 
@@ -177,6 +184,7 @@ The following sections provide system and component level performance results of
 	\FloatBarrier
 
 	\subsubsection{VCO Tuning}\FloatBarrier
+	The oscillator tuning was characterized by sweeping the supply voltage, and the medium and fine backgate tuning range voltages. Results for tuning gain at nominal biasing ($V_{DD}$ = 0.81, 0.405V backgate bias) are provided in table \ref{tab:vco_gains}, which have been used in the loop filter design. It should be noted that the supply tuning has extremely high gain, 328 \%/V, in comparison to the 0.677 \%/V and 4.5 \%/V observed in the medium and fine ranges, suggesting good granularity is achieved with the implemented tuning scheme. Results for frequency versus supply voltage and VCO gain versus supply voltage are in figure \ref{fig:osc_f_vs_vdd} and \ref{fig:osc_f_gain_vs_vdd}. Results for frequency versus the medium tuning range and VCO gain versus the medium tuning  are in figure \ref{fig:osc_f_vs_med} and \ref{fig:osc_f_gain_vs_med}. Finally, results for frequency versus the fine tuning range and VCO gain versus the fine tuning  are in figure \ref{fig:osc_f_vs_fine} and \ref{fig:osc_f_gain_vs_fine}. The fine tuning range demonstrates good linearity, with $K_{VCO} \in$ [5.35, 5.60] kHz/mV for the full biasing range. The high linearity implies the closed loop characteristics of the PLL should be consistent across the different bias settings. The medium tuning range exhibits a sublinear characteristic, decreasing in frequency gain with increased bias, however this should be insignificant as the medium tuning setting should be static in steady state.
 		\begin{table}[h!]
 			\centering
 			\def\arraystretch{1.5}		
@@ -259,7 +267,7 @@ The following sections provide system and component level performance results of
 
 {\color{white}.}\FloatBarrier
 	\subsubsection{VCO Monte Carlo Simulation}
-
+	To characterize the effect of process variation on the implemented oscillator, a Monte Carlo simulation of process variation and mismatch was run to extract a distribution for oscillator frequency (in figure \ref{fig:freq_variation}) and fine tuning $K_{VCO}$ (in figure \ref{fig:kvco_variation}). Nominal core biasing of $V_{DD}$ = 0.81V was used, with 200 simulation samples. The resulting extracted values for RMS variance of the oscillator are in table \ref{tab:mc_results}, showing 4.5 \% and 4.67 \% RMS variation from the mean expected for the frequency and $K_{VCO}$ respectively. The frequency variation should be correctable via implementation of frequency calibration, and the $K_{VCO}$ variation is small and should not have a major impact on the closed loop PLL dynamics. 
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -296,31 +304,32 @@ The following sections provide system and component level performance results of
 	\end{table}
 
 	{\color{white}.}
-	\FloatBarrier\pagebreak
-	\subsubsection{Waveforms}
-			\begin{figure}[htb!]
-			    \centering
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \includegraphics[width=1\textwidth, angle=0]{./figs/results/osc_se_waves}
-			        \caption{ }
-			        \label{fig:osc_se_waves}
-			    \end{subfigure}%
-			    \begin{subfigure}{0.5\textwidth}
-			        \centering
-			        \includegraphics[width=1\textwidth, angle=0]{./figs/results/osc_cmv}
-			        \caption{ }
-			        \label{fig:osc_cmv}
-			    \end{subfigure}
-			    % \caption{x.}
-			    \label{fig:osc_waves}
-			    \caption{\textbf{(a)} Oscillator single-ended waveforms, \textbf{(b)} Oscillator common mode voltage waveform.}
-			\end{figure} 
-	\FloatBarrier
-\FloatBarrier
+% 	\FloatBarrier\pagebreak
+% 	\subsubsection{Waveforms}
+% 			\begin{figure}[htb!]
+% 			    \centering
+% 			    \begin{subfigure}{0.5\textwidth}
+% 			        \centering
+% 			        \includegraphics[width=1\textwidth, angle=0]{./figs/results/osc_se_waves}
+% 			        \caption{ }
+% 			        \label{fig:osc_se_waves}
+% 			    \end{subfigure}%
+% 			    \begin{subfigure}{0.5\textwidth}
+% 			        \centering
+% 			        \includegraphics[width=1\textwidth, angle=0]{./figs/results/osc_cmv}
+% 			        \caption{ }
+% 			        \label{fig:osc_cmv}
+% 			    \end{subfigure}
+% 			    % \caption{x.}
+% 			    \label{fig:osc_waves}
+% 			    \caption{\textbf{(a)} Oscillator single-ended waveforms, \textbf{(b)} Oscillator common mode voltage waveform.}
+% 			\end{figure} 
+% 	\FloatBarrier
+% \FloatBarrier
 \subsection{Oscillator Digitization}
+Results for implementation of the DACs which digitize the VCO and the corresponding DCO gains of the digitized VCO are in this section. 
 \subsubsection{10b CDAC}\label{sec:res_cdac_10b}
-
+The implemented 10b differential CDAC was simulated with an input code sweep in order to extract results for integral nonlinearity (figure \ref{fig:10b_cdac_diff_inl}) and differential nonlinearity (figure \ref{fig:10b_cdac_diff_dnl}). A total gain error of approximately 2 LSB is seen across the input code range, with a maximum differential nonlinearity of 0.54 LSB. This implies high accuracy of the implemented CDAC, with no missing codes. 
 	% \begin{figure}[htb!]
 	%     \centering
 	%     \begin{subfigure}{0.5\textwidth}
@@ -364,6 +373,7 @@ The following sections provide system and component level performance results of
 {\color{white}.}
 \FloatBarrier\pagebreak
 \subsubsection{3b CDAC}\label{sec:res_cdac_3b}
+The implemented 3b differential CDAC was simulated with an input code sweep in order to extract results for integral nonlinearity (figure \ref{fig:cdac_3b_inl}) and differential nonlinearity (figure \ref{fig:cdac_3b_dnl}). A total gain error of 0.08 LSB is seen across the input code range, with a maximum differential nonlinearity of 0.012 LSB, implying high accuracy and no missing codes.
 
 	\begin{figure}[htb!]
 	    \centering
@@ -386,6 +396,7 @@ The following sections provide system and component level performance results of
 
 \FloatBarrier
 \subsubsection{DCO Gain}
+Applying the expected LSB magnitude for the implemented DACs to the extracted VCO gains of table \ref{tab:vco_gains} yields the DCO gain values for the medium and fine ranges of the final implemented DCO in table \ref{tab:dco_gain}.
 \begin{table}[htb!]
 	\def\arraystretch{1.5}		
 	\setlength\arrayrulewidth{0.75pt}
@@ -398,15 +409,16 @@ The following sections provide system and component level performance results of
 		\hline 
 		% \rule[-1ex]{0pt}{2.5ex} $S_{0_{osc}}$ &  11885 &  rad$^2$/Hz  \\ 
 		% \hline 
-		\rule[-1ex]{0pt}{2.5ex} \textbf{K$_\textnormal{\textbf{DCO, med}}$} &  2.00 & KHz/LSB  \\ 
+		\rule[-1ex]{0pt}{2.5ex} \textbf{K$_\textnormal{\textbf{DCO, med}}$} &  2.00 & MHz/LSB  \\ 
 		\hline 
 	\end{tabular} 
 			\caption{DCO Gain values from final VCO gain and DAC results.}
 			\label{tab:dco_gain}
 \end{table}
 
-\FloatBarrier
+\FloatBarrier\pagebreak
 \subsection{Bang-bang Phase Detector}\label{sec:res_bbpd}
+Simulation of the implemented bang-bang phase detector to extract its jitter characteristics have been performed, to result in the output expectation versus input timing differential plot of figure \ref{fig:bbpd_cdf}, and the jitter probability distribution plot of figure \ref{fig:bbpd_pdf}. The final RMS jitter value of the implemented detector is in table \ref{tab:bbpd_jitter}. This value, 1.342 ps RMS, is small compared to the oscillation cycle period of 1225.5 ps, and results in a low impact to the PLL noise.
 	\begin{figure}[htb!]
 	    \centering
 	    \begin{subfigure}{0.5\textwidth}
@@ -443,6 +455,7 @@ The following sections provide system and component level performance results of
 
 \FloatBarrier\pagebreak
 \subsection{Loop Filter }\label{sec:rec_lf}
+Utilizing the extracted design values of the PLL for oscillator phase noise, DCO gain, and phase detector jitter, the optimization theories of sections \ref{sec:opt_lf_noisy_bbpd} and \ref{sec:bb_noise} have been applied to calculate optimal loop filter parameters, whose results are given in table \ref{filter_params_bbpd_low_noise} (undigitized) and table \ref{dig_filter_params_fast} (digitized).
 	\subsubsection{Optimized Filter Parameters}
 		\begin{table}[h!]
 			\centering
@@ -508,6 +521,7 @@ The following sections provide system and component level performance results of
 {\color{white}.}
 \FloatBarrier\pagebreak
 \subsection{Logic}
+Results for the synthesis and place and route of the loop filter logic are provided here. The logic count of the implemented design is in table \ref{tab:log_synth}, and the expected power consumption are in figure \ref{tab:log_synth_power}.
 
 		\begin{table}[htb!]
 			\centering

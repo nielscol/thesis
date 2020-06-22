@@ -44,6 +44,12 @@
       \field{month}{12}
       \field{title}{Python Framework for Design and Simulation of Integer-N ADPLLs}
       \field{year}{2019}
+      \verb{urlraw}
+      \verb https://github.com/nielscol/tfe4580-report/blob/master/report.pdf
+      \endverb
+      \verb{url}
+      \verb https://github.com/nielscol/tfe4580-report/blob/master/report.pdf
+      \endverb
     \endentry
     \entry{Jiang2017}{inproceedings}{}
       \name{author}{8}{}{%
@@ -97,8 +103,8 @@
       \strng{authorbibnamehash}{f82e20b27c9cc12227f64bcffa331f85}
       \strng{authornamehash}{f82e20b27c9cc12227f64bcffa331f85}
       \strng{authorfullhash}{9728f4671b82e47f4c9b8257d6bbd997}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 {IEEE} International Solid-State Circuits Conference ({ISSCC})}
@@ -152,8 +158,8 @@
       \strng{authorbibnamehash}{32d83f81f04da103523fd86258c3ad3a}
       \strng{authornamehash}{32d83f81f04da103523fd86258c3ad3a}
       \strng{authorfullhash}{83067fe5be92fd04fcedfbe4c895ba18}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2017 {IEEE} Radio Frequency Integrated Circuits Symposium ({RFIC})}
@@ -237,8 +243,8 @@
       \strng{authorbibnamehash}{9589c9d530ea2d023d94569a3745456e}
       \strng{authornamehash}{9589c9d530ea2d023d94569a3745456e}
       \strng{authorfullhash}{ddcefd0c086b4e5eda5806f05e2de4ab}
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2020 {IEEE} International Solid- State Circuits Conference - ({ISSCC})}
@@ -813,8 +819,8 @@
       \strng{authorbibnamehash}{c7a8cbdc611fb566c84f257674d0a44f}
       \strng{authornamehash}{c7a8cbdc611fb566c84f257674d0a44f}
       \strng{authorfullhash}{c7a8cbdc611fb566c84f257674d0a44f}
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Design of monolithic phase-locked loops and clock recovery circuits tutorial}
@@ -1175,8 +1181,8 @@
       \strng{authorbibnamehash}{f648435daf9387bedd8195da8887ed4a}
       \strng{authornamehash}{f648435daf9387bedd8195da8887ed4a}
       \strng{authorfullhash}{f648435daf9387bedd8195da8887ed4a}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
@@ -1449,8 +1455,8 @@
       \strng{authorbibnamehash}{89f8acc357a52f941eeea0000d1fa10d}
       \strng{authornamehash}{89f8acc357a52f941eeea0000d1fa10d}
       \strng{authorfullhash}{89f8acc357a52f941eeea0000d1fa10d}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Communications}
@@ -1669,8 +1675,8 @@
       \strng{authorbibnamehash}{f9d3256cf0e47ab92b52c70225f871df}
       \strng{authornamehash}{f9d3256cf0e47ab92b52c70225f871df}
       \strng{authorfullhash}{f9d3256cf0e47ab92b52c70225f871df}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{{IEEE} Journal of Solid-State Circuits}
@@ -1713,8 +1719,8 @@
       \strng{authorbibnamehash}{c8018a5738691ff0f3741c898510bdef}
       \strng{authornamehash}{c8018a5738691ff0f3741c898510bdef}
       \strng{authorfullhash}{c8018a5738691ff0f3741c898510bdef}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{CMOS VLSI design: a circuits and systems perspective}
